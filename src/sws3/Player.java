@@ -3,7 +3,7 @@ package sws3;
 import java.util.ArrayList;
 
 public class Player implements Comparable{
-	private static int nextID=0;//keeps track of the player id
+	private static int nextID=1;//keeps track of the player id
 	private int id;
 	private String scoutLine8,scoutLine9,scoutLine10,line13,fName,lName,line15,line16,line18,line19;
 	private int curSHO,curPLA,curSTK,curCHK,curPOS,curHIT,curSKA,curEND,PEN,curFAC,
@@ -44,7 +44,8 @@ public class Player implements Comparable{
 			//non player file instance variables
 			double age
 	){ 
-		id=nextID++;
+		id=nextID;
+                nextID++;
 		this.curSHO=curSHO;this.curPLA=curPLA;this.curSTK=curSTK;this.curCHK=curCHK;this.curPOS=curPOS;this.curHIT=curHIT;this.curSKA=curSKA;this.curEND=curEND;this.PEN=PEN;this.curFAC=curFAC;
 		this.LEA=LEA;this.curSTR=curSTR;this.POT=POT;this.CON=CON;this.GRD=GRD;this.curFGT=curFGT;this.CLK=CLK;this.TEAM=TEAM;this.POSI=POSI;this.country=country;this.handed=handed;
 		this.bYear=bYear;this.bDay=bDay;this.bMonth=bMonth;this.salary=salary;this.contractYr=contractYr;this.draftYr=draftYr;this.draftRd=draftRd;this.draftTeam=draftTeam;this.rights=rights;

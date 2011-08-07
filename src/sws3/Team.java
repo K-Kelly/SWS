@@ -255,4 +255,44 @@ public class Team {
         return icon;
       }
         }
+        public Object[] getLeftWing(){
+            ArrayList<String>lw=new ArrayList<String>();
+            for (Player p:allPlayers){
+                if (p.getStringPosition().equals("L"))
+                    lw.add(p.getFullName());
+        }
+            return lw.toArray();
+}
+        public Object[] getCenter(){
+            ArrayList<String>c=new ArrayList<String>();
+            for (Player p:allPlayers){
+                if (p.getStringPosition().equals("C"))
+                    c.add(p.getFullName());
+        }
+            return c.toArray();
+}
+        public Object[] getRightWing(){
+            ArrayList<String>rw=new ArrayList<String>();
+            for (Player p:allPlayers){
+                if (p.getStringPosition().equals("R"))
+                    rw.add(p.getFullName());
+        }
+            return rw.toArray();
+}
+        public Object[] getDefense(){
+            ArrayList<String>d=new ArrayList<String>();
+            for (Player p:allPlayers){
+                if (p.getStringPosition().equals("D"))
+                    d.add(p.getFullName());
+        }
+            return d.toArray();
+}
+        public Object[] getGoalie(){
+            ArrayList<String>g=new ArrayList<String>();
+            for (Player p:allPlayers){
+                if (p.getStringPosition().equals("G"))
+                    g.add(p.getFullName());
+        }
+            return g.toArray();
+}
 }
