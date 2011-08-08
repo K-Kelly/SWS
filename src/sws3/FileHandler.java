@@ -467,7 +467,17 @@ public class FileHandler {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-
 	}
+        public void writeLinesFile(ArrayList<String>id,String fileName){
+            try{
+            PrintWriter out = new PrintWriter(filePath+fileName+".lns");
+            for (String s: id){
+                out.println(s);
+            }
+           out.close();
+        }
+            catch(Throwable t){
+                t.printStackTrace();
+            }
+    }
 }

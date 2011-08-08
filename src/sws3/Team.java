@@ -18,7 +18,6 @@ public class Team {
 		proPlayers=new ArrayList<Player>();
 		prospects=new ArrayList<Player>();
                 this.id=id;
-                System.out.println("Size of players list: "+allPlayers.size());
 	}
 
 	/**
@@ -255,41 +254,41 @@ public class Team {
         return icon;
       }
         }
-        public Object[] getLeftWing(){
+        public Object[] getLeftWing(ArrayList<Player>players){
             ArrayList<String>lw=new ArrayList<String>();
-            for (Player p:allPlayers){
+            for (Player p:players){
                 if (p.getStringPosition().equals("L"))
                     lw.add(p.getFullName());
         }
             return lw.toArray();
 }
-        public Object[] getCenter(){
+        public Object[] getCenter(ArrayList<Player>players){
             ArrayList<String>c=new ArrayList<String>();
-            for (Player p:allPlayers){
+            for (Player p:players){
                 if (p.getStringPosition().equals("C"))
                     c.add(p.getFullName());
         }
             return c.toArray();
 }
-        public Object[] getRightWing(){
+        public Object[] getRightWing(ArrayList<Player>players){
             ArrayList<String>rw=new ArrayList<String>();
-            for (Player p:allPlayers){
+            for (Player p:players){
                 if (p.getStringPosition().equals("R"))
                     rw.add(p.getFullName());
         }
             return rw.toArray();
 }
-        public Object[] getDefense(){
+        public Object[] getDefense(ArrayList<Player>players){
             ArrayList<String>d=new ArrayList<String>();
-            for (Player p:allPlayers){
+            for (Player p:players){
                 if (p.getStringPosition().equals("D"))
                     d.add(p.getFullName());
         }
             return d.toArray();
 }
-        public Object[] getGoalie(){
+        public Object[] getGoalie(ArrayList<Player>players){
             ArrayList<String>g=new ArrayList<String>();
-            for (Player p:allPlayers){
+            for (Player p:players){
                 if (p.getStringPosition().equals("G"))
                     g.add(p.getFullName());
         }

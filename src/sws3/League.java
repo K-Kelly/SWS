@@ -11,7 +11,6 @@ public class League {
 	private ArrayList<Team>teamsList=new ArrayList<Team>(); 
 	
 	public League(TreeSet<Player>playerList,long salaryCap){
-            System.out.println("size of league player:"+playerList.size());
 		this.salaryCap=salaryCap;
 		this.playerList=playerList;
 		teamMap=new HashMap<String,ArrayList<Player>>();	
@@ -89,12 +88,9 @@ public class League {
 	 * creates a map of teams to their players.
 	 */
 	public void createTeamMap(){
-            System.out.println(teamMap);
 		for (Player p:playerList){
                     try{
-
 			ArrayList<Player>temp=teamMap.get(p.getStringTeam());
-                        System.out.println(p.getlName());
 			temp.add(p);
 			teamMap.remove(p.getStringTeam());
 			teamMap.put(p.getStringTeam(), temp);

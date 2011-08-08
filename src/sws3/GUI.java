@@ -38,10 +38,9 @@ public class GUI extends javax.swing.JFrame {
 		fH.readFromPlayersFile();
 		league=new League(fH.getSortedPlayers(),salaryCap);
                 league.createTeamMap();
-		teamList=league.createTeams();
-                
-                System.out.println(teamList.size());
+		teamList=league.createTeams();            
 		playerSet=fH.getSortedPlayers();
+                System.out.println("Num Players: "+playerSet.size());
 		//create list
 		list.add(wGP);
 		list.add(wG);
@@ -149,6 +148,8 @@ public class GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         playerTab = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         playerIcon = new javax.swing.JLabel();
@@ -328,15 +329,6 @@ public class GUI extends javax.swing.JFrame {
         numPlayersPro = new javax.swing.JFormattedTextField();
         numPlayersFarm = new javax.swing.JFormattedTextField();
         numPlayersProsp = new javax.swing.JFormattedTextField();
-        proSalaryLabel1 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        proList = new javax.swing.JList();
-        farmListLabel = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        farmList = new javax.swing.JList();
-        prospectsListLabel = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        prospectsList = new javax.swing.JList();
         jScrollPane5 = new javax.swing.JScrollPane();
         lwList = new javax.swing.JList();
         lwListLabel = new javax.swing.JLabel();
@@ -369,8 +361,6 @@ public class GUI extends javax.swing.JFrame {
         gBackup = new javax.swing.JFormattedTextField();
         dpair1L = new javax.swing.JFormattedTextField();
         dpair1R = new javax.swing.JFormattedTextField();
-        dpair1R1 = new javax.swing.JFormattedTextField();
-        dpair1L1 = new javax.swing.JFormattedTextField();
         dPair2R = new javax.swing.JFormattedTextField();
         dpair2L = new javax.swing.JFormattedTextField();
         dpair3R = new javax.swing.JFormattedTextField();
@@ -380,10 +370,46 @@ public class GUI extends javax.swing.JFrame {
         timeLine2 = new javax.swing.JFormattedTextField();
         timeLine3 = new javax.swing.JFormattedTextField();
         timeLine4 = new javax.swing.JFormattedTextField();
-        tacticLine1 = new javax.swing.JFormattedTextField();
-        tacticLine2 = new javax.swing.JFormattedTextField();
-        tacticLine3 = new javax.swing.JFormattedTextField();
-        tacticLine4 = new javax.swing.JFormattedTextField();
+        proTeamButton = new javax.swing.JRadioButton();
+        farmTeamButton = new javax.swing.JRadioButton();
+        prospectsButton = new javax.swing.JRadioButton();
+        allButton = new javax.swing.JRadioButton();
+        TacticsLine1 = new javax.swing.JComboBox();
+        TacticsPP1 = new javax.swing.JComboBox();
+        timePP2 = new javax.swing.JFormattedTextField();
+        lwLinePP1 = new javax.swing.JFormattedTextField();
+        lwLinePP2 = new javax.swing.JFormattedTextField();
+        cLinePP2 = new javax.swing.JFormattedTextField();
+        cLinePP1 = new javax.swing.JFormattedTextField();
+        rwLinePP2 = new javax.swing.JFormattedTextField();
+        rwLinePP1 = new javax.swing.JFormattedTextField();
+        dpairLPP1 = new javax.swing.JFormattedTextField();
+        dpairRPP1 = new javax.swing.JFormattedTextField();
+        dPairRPP2 = new javax.swing.JFormattedTextField();
+        dpairLPP2 = new javax.swing.JFormattedTextField();
+        timePP1 = new javax.swing.JFormattedTextField();
+        TacticsPP2 = new javax.swing.JComboBox();
+        rwPK1 = new javax.swing.JFormattedTextField();
+        dPairRPK1 = new javax.swing.JFormattedTextField();
+        dpairLPK1 = new javax.swing.JFormattedTextField();
+        lwPK1 = new javax.swing.JFormattedTextField();
+        TacticsLine2 = new javax.swing.JComboBox();
+        TacticsLine3 = new javax.swing.JComboBox();
+        TacticsLine4 = new javax.swing.JComboBox();
+        linesLabel1 = new javax.swing.JLabel();
+        linesLabel2 = new javax.swing.JLabel();
+        dPairRPK2 = new javax.swing.JFormattedTextField();
+        rwPK2 = new javax.swing.JFormattedTextField();
+        lwPK2 = new javax.swing.JFormattedTextField();
+        dpairLPK2 = new javax.swing.JFormattedTextField();
+        linesLabel3 = new javax.swing.JLabel();
+        linesLabel4 = new javax.swing.JLabel();
+        TacticsPK1 = new javax.swing.JComboBox();
+        timePK1 = new javax.swing.JFormattedTextField();
+        TacticsPK2 = new javax.swing.JComboBox();
+        timePK2 = new javax.swing.JFormattedTextField();
+        linesLabel5 = new javax.swing.JLabel();
+        createLinesButton = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         openMenu = new javax.swing.JMenuItem();
@@ -396,6 +422,8 @@ public class GUI extends javax.swing.JFrame {
         setResizable(false);
 
         playerTab.setName("Player"); // NOI18N
+
+        jPanel1.setMaximumSize(new java.awt.Dimension(15000, 15000));
 
         java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("sws3/Bundle"); // NOI18N
         playerIcon.setText(bundle1.getString("GUI.playerIcon.text")); // NOI18N
@@ -1760,17 +1788,20 @@ public class GUI extends javax.swing.JFrame {
                                                 .addComponent(click, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(clickLabel)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(statusLabel)))
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                                    .addComponent(mainPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(altPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                                    .addComponent(clickLabel)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(statusLabel))))
                                         .addGap(18, 18, 18))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(searchPlayer)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                                .addComponent(mainPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(altPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(56, 56, 56))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(chkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1845,93 +1876,90 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(ceilSTR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(252, 252, 252))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(wP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(wGWG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(ceilingLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(pLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(gwgLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(ceilingLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                                    .addComponent(wP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(wGWG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(ceilingLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                                    .addComponent(pLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(gwgLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(ceilingLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addComponent(curCHK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(curPOS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(curHIT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(curSKA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(curEND, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(curPEN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(curFAC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(curLEA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(curFIG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(curSTR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(POT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(CON, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(GRD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(INJ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addComponent(ceilCHK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addGap(36, 36, 36)
-                                                        .addComponent(ceilPOS1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addGap(72, 72, 72)
-                                                        .addComponent(ceilHIT1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addGap(108, 108, 108)
-                                                        .addComponent(ceilSKA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addGap(144, 144, 144)
-                                                        .addComponent(ceilEND1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addGap(180, 180, 180)
-                                                        .addComponent(ceilPEN1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addGap(216, 216, 216)
-                                                        .addComponent(ceilFAC1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addGap(252, 252, 252)
-                                                        .addComponent(ceilLEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addGap(288, 288, 288)
-                                                        .addComponent(ceilFIG1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addGap(324, 324, 324)
-                                                        .addComponent(ceilSTR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(mP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(curCHK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(mGWG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(curPOS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(curHIT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(curSKA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(curEND, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(curPEN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(curFAC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(curLEA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(curFIG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(curSTR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(POT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(CON, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(GRD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(INJ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(ceilCHK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(bStreakP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bStreakGWG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                                .addGap(36, 36, 36)
+                                                .addComponent(ceilPOS1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(72, 72, 72)
+                                                .addComponent(ceilHIT1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(108, 108, 108)
+                                                .addComponent(ceilSKA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(144, 144, 144)
+                                                .addComponent(ceilEND1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(180, 180, 180)
+                                                .addComponent(ceilPEN1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(216, 216, 216)
+                                                .addComponent(ceilFAC1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(252, 252, 252)
+                                                .addComponent(ceilLEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(288, 288, 288)
+                                                .addComponent(ceilFIG1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(324, 324, 324)
+                                                .addComponent(ceilSTR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                            .addComponent(curStreakP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(similarPlayerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(curStreakP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(similarPlayerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(19, 19, 19)))
+                                        .addComponent(mP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(mGWG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(bStreakP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(bStreakGWG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(projOF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1953,12 +1981,13 @@ public class GUI extends javax.swing.JFrame {
                                         .addComponent(trainOA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(farmOF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(36, 36, 36)
-                                        .addComponent(farmDF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(72, 72, 72)
                                         .addComponent(farmOA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE))))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(36, 36, 36)
+                                        .addComponent(farmDF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(180, 180, 180))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(careerP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1971,23 +2000,19 @@ public class GUI extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(playerIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(11, 11, 11)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(mainPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(altPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel1)
-                                .addComponent(draftHeaderLabel)
-                                .addComponent(ConsideringLabel))))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(draftHeaderLabel)
+                            .addComponent(ConsideringLabel)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(searchPlayer))))
+                            .addComponent(searchPlayer)
+                            .addComponent(mainPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(altPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rightsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2174,10 +2199,9 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(trainOA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(farmOA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(mGP, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(weeklyLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2199,15 +2223,18 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(bStreakA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(bStreakP, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(bStreakGWG, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(weeklyLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(careerG, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(careerA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(careerP, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(weeklyLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(55, 55, 55)
-                .addComponent(playerID)
+                            .addComponent(weeklyLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(careerG, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(careerA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(careerP, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(weeklyLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(55, 55, 55)
+                        .addComponent(playerID))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(1266, 1266, 1266))
         );
 
@@ -2218,6 +2245,11 @@ public class GUI extends javax.swing.JFrame {
         playerTab.addTab(bundle1.getString("GUI.jPanel1.TabConstraints.tabTitle"), jPanel1); // NOI18N
 
         proListLabel.setPreferredSize(new java.awt.Dimension(1119, 1000));
+        proListLabel.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                proListLabelPropertyChange(evt);
+            }
+        });
 
         teamSearchField.setText(bundle1.getString("GUI.teamSearchField.text")); // NOI18N
         teamSearchField.setToolTipText(bundle1.getString("GUI.teamSearchField.toolTipText")); // NOI18N
@@ -2381,37 +2413,11 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        proSalaryLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        proSalaryLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        proSalaryLabel1.setLabelFor(salaryAmtLabel);
-        proSalaryLabel1.setText(bundle1.getString("GUI.proSalaryLabel1.text")); // NOI18N
-        proSalaryLabel1.setToolTipText(bundle1.getString("GUI.proSalaryLabel1.toolTipText")); // NOI18N
-
-        proList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        proList.setDragEnabled(true);
-        jScrollPane2.setViewportView(proList);
-
-        farmListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
-        farmListLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        farmListLabel.setLabelFor(salaryAmtLabel);
-        farmListLabel.setText(bundle1.getString("GUI.farmListLabel.text")); // NOI18N
-        farmListLabel.setToolTipText(bundle1.getString("GUI.farmListLabel.toolTipText")); // NOI18N
-
-        jScrollPane3.setViewportView(farmList);
-
-        prospectsListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
-        prospectsListLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        prospectsListLabel.setLabelFor(salaryAmtLabel);
-        prospectsListLabel.setText(bundle1.getString("GUI.prospectsListLabel.text")); // NOI18N
-        prospectsListLabel.setToolTipText(bundle1.getString("GUI.prospectsListLabel.toolTipText")); // NOI18N
-
-        jScrollPane4.setViewportView(prospectsList);
-
         lwList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         lwList.setDragEnabled(true);
         jScrollPane5.setViewportView(lwList);
 
-        lwListLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lwListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         lwListLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lwListLabel.setLabelFor(salaryAmtLabel);
         lwListLabel.setText(bundle1.getString("GUI.lwListLabel.text")); // NOI18N
@@ -2421,7 +2427,7 @@ public class GUI extends javax.swing.JFrame {
         cList.setDragEnabled(true);
         jScrollPane6.setViewportView(cList);
 
-        cListLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        cListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         cListLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cListLabel.setLabelFor(salaryAmtLabel);
         cListLabel.setText(bundle1.getString("GUI.cListLabel.text")); // NOI18N
@@ -2441,7 +2447,7 @@ public class GUI extends javax.swing.JFrame {
         dList.setDragEnabled(true);
         jScrollPane8.setViewportView(dList);
 
-        dListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
+        dListLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         dListLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         dListLabel.setLabelFor(salaryAmtLabel);
         dListLabel.setText(bundle1.getString("GUI.dListLabel.text")); // NOI18N
@@ -2451,13 +2457,13 @@ public class GUI extends javax.swing.JFrame {
         gList.setDragEnabled(true);
         jScrollPane9.setViewportView(gList);
 
-        gListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
+        gListLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         gListLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         gListLabel.setLabelFor(salaryAmtLabel);
         gListLabel.setText(bundle1.getString("GUI.gListLabel.text")); // NOI18N
         gListLabel.setToolTipText(bundle1.getString("GUI.gListLabel.toolTipText")); // NOI18N
 
-        linesLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        linesLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         linesLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         linesLabel.setLabelFor(salaryAmtLabel);
         linesLabel.setText(bundle1.getString("GUI.linesLabel.text")); // NOI18N
@@ -2495,10 +2501,6 @@ public class GUI extends javax.swing.JFrame {
 
         dpair1R.setText(bundle1.getString("GUI.dpair1R.text")); // NOI18N
 
-        dpair1R1.setText(bundle1.getString("GUI.dpair1R1.text")); // NOI18N
-
-        dpair1L1.setText(bundle1.getString("GUI.dpair1L1.text")); // NOI18N
-
         dPair2R.setText(bundle1.getString("GUI.dPair2R.text")); // NOI18N
 
         dpair2L.setText(bundle1.getString("GUI.dpair2L.text")); // NOI18N
@@ -2507,7 +2509,7 @@ public class GUI extends javax.swing.JFrame {
 
         dpair3L.setText(bundle1.getString("GUI.dpair3L.text")); // NOI18N
 
-        linesTacticsLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        linesTacticsLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         linesTacticsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         linesTacticsLabel.setLabelFor(salaryAmtLabel);
         linesTacticsLabel.setText(bundle1.getString("GUI.linesTacticsLabel.text")); // NOI18N
@@ -2521,13 +2523,143 @@ public class GUI extends javax.swing.JFrame {
 
         timeLine4.setText(bundle1.getString("GUI.timeLine4.text")); // NOI18N
 
-        tacticLine1.setText(bundle1.getString("GUI.tacticLine1.text")); // NOI18N
+        buttonGroup1.add(proTeamButton);
+        proTeamButton.setSelected(true);
+        proTeamButton.setText(bundle1.getString("GUI.proTeamButton.text")); // NOI18N
+        proTeamButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                proTeamButtonActionPerformed(evt);
+            }
+        });
 
-        tacticLine2.setText(bundle1.getString("GUI.tacticLine2.text")); // NOI18N
+        buttonGroup1.add(farmTeamButton);
+        farmTeamButton.setText(bundle1.getString("GUI.farmTeamButton.text")); // NOI18N
+        farmTeamButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                farmTeamButtonActionPerformed(evt);
+            }
+        });
 
-        tacticLine3.setText(bundle1.getString("GUI.tacticLine3.text")); // NOI18N
+        buttonGroup1.add(prospectsButton);
+        prospectsButton.setText(bundle1.getString("GUI.prospectsButton.text")); // NOI18N
+        prospectsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                prospectsButtonActionPerformed(evt);
+            }
+        });
 
-        tacticLine4.setText(bundle1.getString("GUI.tacticLine4.text")); // NOI18N
+        buttonGroup1.add(allButton);
+        allButton.setText(bundle1.getString("GUI.allButton.text")); // NOI18N
+        allButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                allButtonActionPerformed(evt);
+            }
+        });
+
+        TacticsLine1.setMaximumRowCount(5);
+        TacticsLine1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Run & Gun", "Passing Plays", "Dump & Chase", "Hit & Grind", "Neutral Zone Trap" }));
+
+        TacticsPP1.setMaximumRowCount(5);
+        TacticsPP1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Shooting", "Screen & Shoot", "Passing Plays", "Crash the Net", "Shot From Point" }));
+
+        timePP2.setText(bundle1.getString("GUI.timePP2.text")); // NOI18N
+
+        lwLinePP1.setText(bundle1.getString("GUI.lwLinePP1.text")); // NOI18N
+
+        lwLinePP2.setText(bundle1.getString("GUI.lwLinePP2.text")); // NOI18N
+
+        cLinePP2.setText(bundle1.getString("GUI.cLinePP2.text")); // NOI18N
+
+        cLinePP1.setText(bundle1.getString("GUI.cLinePP1.text")); // NOI18N
+
+        rwLinePP2.setText(bundle1.getString("GUI.rwLinePP2.text")); // NOI18N
+
+        rwLinePP1.setText(bundle1.getString("GUI.rwLinePP1.text")); // NOI18N
+
+        dpairLPP1.setText(bundle1.getString("GUI.dpairLPP1.text")); // NOI18N
+
+        dpairRPP1.setText(bundle1.getString("GUI.dpairRPP1.text")); // NOI18N
+
+        dPairRPP2.setText(bundle1.getString("GUI.dPairRPP2.text")); // NOI18N
+
+        dpairLPP2.setText(bundle1.getString("GUI.dpairLPP2.text")); // NOI18N
+
+        timePP1.setText(bundle1.getString("GUI.timePP1.text")); // NOI18N
+
+        TacticsPP2.setMaximumRowCount(5);
+        TacticsPP2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Shooting", "Screen & Shoot", "Passing Plays", "Crash the Net", "Shot From Point" }));
+
+        rwPK1.setText(bundle1.getString("GUI.rwPK1.text")); // NOI18N
+
+        dPairRPK1.setText(bundle1.getString("GUI.dPairRPK1.text")); // NOI18N
+
+        dpairLPK1.setText(bundle1.getString("GUI.dpairLPK1.text")); // NOI18N
+
+        lwPK1.setText(bundle1.getString("GUI.lwPK1.text")); // NOI18N
+
+        TacticsLine2.setMaximumRowCount(5);
+        TacticsLine2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Run & Gun", "Passing Plays", "Dump & Chase", "Hit & Grind", "Neutral Zone Trap" }));
+
+        TacticsLine3.setMaximumRowCount(5);
+        TacticsLine3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Run & Gun", "Passing Plays", "Dump & Chase", "Hit & Grind", "Neutral Zone Trap" }));
+
+        TacticsLine4.setMaximumRowCount(5);
+        TacticsLine4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Run & Gun", "Passing Plays", "Dump & Chase", "Hit & Grind", "Neutral Zone Trap" }));
+
+        linesLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        linesLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        linesLabel1.setLabelFor(salaryAmtLabel);
+        linesLabel1.setText(bundle1.getString("GUI.linesLabel1.text")); // NOI18N
+        linesLabel1.setToolTipText(bundle1.getString("GUI.linesLabel1.toolTipText")); // NOI18N
+
+        linesLabel2.setFont(new java.awt.Font("Tahoma", 1, 11));
+        linesLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        linesLabel2.setLabelFor(salaryAmtLabel);
+        linesLabel2.setText(bundle1.getString("GUI.linesLabel2.text")); // NOI18N
+        linesLabel2.setToolTipText(bundle1.getString("GUI.linesLabel2.toolTipText")); // NOI18N
+
+        dPairRPK2.setText(bundle1.getString("GUI.dPairRPK2.text")); // NOI18N
+
+        rwPK2.setText(bundle1.getString("GUI.rwPK2.text")); // NOI18N
+
+        lwPK2.setText(bundle1.getString("GUI.lwPK2.text")); // NOI18N
+
+        dpairLPK2.setText(bundle1.getString("GUI.dpairLPK2.text")); // NOI18N
+
+        linesLabel3.setFont(new java.awt.Font("Tahoma", 1, 11));
+        linesLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        linesLabel3.setLabelFor(salaryAmtLabel);
+        linesLabel3.setText(bundle1.getString("GUI.linesLabel3.text")); // NOI18N
+        linesLabel3.setToolTipText(bundle1.getString("GUI.linesLabel3.toolTipText")); // NOI18N
+
+        linesLabel4.setFont(new java.awt.Font("Tahoma", 1, 11));
+        linesLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        linesLabel4.setLabelFor(salaryAmtLabel);
+        linesLabel4.setText(bundle1.getString("GUI.linesLabel4.text")); // NOI18N
+        linesLabel4.setToolTipText(bundle1.getString("GUI.linesLabel4.toolTipText")); // NOI18N
+
+        TacticsPK1.setMaximumRowCount(5);
+        TacticsPK1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Aggressive", "Loose Box", "Passive Box", "Small Box", "Tight Box" }));
+
+        timePK1.setText(bundle1.getString("GUI.timePK1.text")); // NOI18N
+
+        TacticsPK2.setMaximumRowCount(5);
+        TacticsPK2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Aggressive", "Loose Box", "Passive Box", "Small Box", "Tight Box" }));
+
+        timePK2.setText(bundle1.getString("GUI.timePK2.text")); // NOI18N
+
+        linesLabel5.setFont(new java.awt.Font("Tahoma", 1, 11));
+        linesLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        linesLabel5.setLabelFor(salaryAmtLabel);
+        linesLabel5.setText(bundle1.getString("GUI.linesLabel5.text")); // NOI18N
+        linesLabel5.setToolTipText(bundle1.getString("GUI.linesLabel5.toolTipText")); // NOI18N
+
+        createLinesButton.setText(bundle1.getString("GUI.createLinesButton.text")); // NOI18N
+        createLinesButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createLinesButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout proListLabelLayout = new javax.swing.GroupLayout(proListLabel);
         proListLabel.setLayout(proListLabelLayout);
@@ -2536,44 +2668,224 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(proListLabelLayout.createSequentialGroup()
                 .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(proListLabelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(proListLabelLayout.createSequentialGroup()
+                                .addGap(47, 47, 47)
+                                .addComponent(lwListLabel)
+                                .addGap(141, 141, 141)
+                                .addComponent(cListLabel))
+                            .addGroup(proListLabelLayout.createSequentialGroup()
+                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(4, 4, 4)
+                                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(proListLabelLayout.createSequentialGroup()
+                                                .addComponent(dListLabel)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(gListLabel))
+                                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(proListLabelLayout.createSequentialGroup()
+                                                .addGap(4, 4, 4)
+                                                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, proListLabelLayout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(linesLabel1)
+                                                .addGap(19, 19, 19))))
+                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(linesLabel3)
+                                            .addComponent(linesLabel2)
+                                            .addComponent(linesLabel5, javax.swing.GroupLayout.Alignment.LEADING))
+                                        .addGap(18, 18, 18)))
+                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                        .addGap(44, 44, 44)
+                                        .addComponent(dpairLPP2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(dPairRPP2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                        .addGap(43, 43, 43)
+                                        .addComponent(dpairLPP1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(dpairRPP1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                        .addGap(43, 43, 43)
+                                        .addComponent(dpair1L, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(dpair1R, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                        .addGap(44, 44, 44)
+                                        .addComponent(dpair3L, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(dpair3R, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(proListLabelLayout.createSequentialGroup()
+                                                .addGap(118, 118, 118)
+                                                .addComponent(linesLabel))
+                                            .addGroup(proListLabelLayout.createSequentialGroup()
+                                                .addComponent(lwLine1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(cLine1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(rwLine1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(10, 10, 10)
+                                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(proListLabelLayout.createSequentialGroup()
+                                                .addComponent(timeLine1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(TacticsLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(linesTacticsLabel)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, proListLabelLayout.createSequentialGroup()
+                                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, proListLabelLayout.createSequentialGroup()
+                                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                                        .addComponent(lwLine3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(cLine3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(rwLine3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                                        .addComponent(lwLine2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(cLine2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(rwLine2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                                        .addComponent(timeLine3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(TacticsLine3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                                        .addComponent(timeLine2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(TacticsLine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, proListLabelLayout.createSequentialGroup()
+                                                .addGap(44, 44, 44)
+                                                .addComponent(dpair2L, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(dPair2R, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, proListLabelLayout.createSequentialGroup()
+                                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                                        .addComponent(dpairLPK1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(dPairRPK1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                                        .addComponent(lwPK1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(rwPK1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                                        .addComponent(timePK1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(TacticsPK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, proListLabelLayout.createSequentialGroup()
+                                                        .addComponent(gStarting, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(gBackup, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(linesLabel4)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(createLinesButton)
+                                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                                        .addComponent(timePK2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(TacticsPK2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(proListLabelLayout.createSequentialGroup()
+                                                            .addComponent(dpairLPK2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(dPairRPK2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, proListLabelLayout.createSequentialGroup()
+                                                            .addComponent(lwPK2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(rwPK2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, proListLabelLayout.createSequentialGroup()
+                                                    .addComponent(lwLinePP2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(cLinePP2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(rwLinePP2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                    .addComponent(timePP2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(TacticsPP2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, proListLabelLayout.createSequentialGroup()
+                                                    .addComponent(lwLinePP1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(cLinePP1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(rwLinePP1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(10, 10, 10)
+                                                    .addComponent(timePP1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(TacticsPP1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, proListLabelLayout.createSequentialGroup()
+                                                    .addComponent(lwLine4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(cLine4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(rwLine4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                    .addComponent(timeLine4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(TacticsLine4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addGap(278, 278, 278))))))
+                    .addGroup(proListLabelLayout.createSequentialGroup()
                         .addComponent(teamIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(proListLabelLayout.createSequentialGroup()
-                                .addComponent(proSalaryLabel)
+                                .addComponent(proTeamButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(farmSalaryLabel))
-                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                .addComponent(proSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(farmTeamButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(farmSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                .addGap(72, 72, 72)
-                                .addComponent(numPlayersLabel))
-                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                .addGap(90, 90, 90)
-                                .addComponent(numPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(numPlayersPro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(numPlayersLabel1))
+                                .addComponent(prospectsButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(numPlayersFarm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(numPlayersLabel2)
-                                    .addComponent(farmListLabel))
+                                .addComponent(allButton))
+                            .addGroup(proListLabelLayout.createSequentialGroup()
                                 .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(proListLabelLayout.createSequentialGroup()
+                                        .addComponent(proSalaryLabel)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(farmSalaryLabel))
+                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                        .addComponent(proSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(farmSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                        .addGap(72, 72, 72)
+                                        .addComponent(numPlayersLabel))
+                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                        .addGap(90, 90, 90)
+                                        .addComponent(numPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(numPlayersPro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(numPlayersLabel1)
+                                            .addComponent(rwListLabel, javax.swing.GroupLayout.Alignment.TRAILING))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(numPlayersFarm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(numPlayersLabel2))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(numPlayersLabel3)
                                             .addGroup(proListLabelLayout.createSequentialGroup()
                                                 .addGap(10, 10, 10)
                                                 .addComponent(numPlayersProsp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(68, 68, 68)
+                                        .addGap(85, 85, 85)
                                         .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(proListLabelLayout.createSequentialGroup()
                                                 .addComponent(proOFLabel)
@@ -2588,134 +2900,16 @@ public class GUI extends javax.swing.JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(proOA, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addGroup(proListLabelLayout.createSequentialGroup()
-                                        .addGap(82, 82, 82)
-                                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                                .addGap(47, 47, 47)
-                                                .addComponent(lwListLabel)
-                                                .addGap(141, 141, 141)
-                                                .addComponent(cListLabel))
-                                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(4, 4, 4)
-                                                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(4, 4, 4)
-                                                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                                .addGap(367, 367, 367)
-                                                .addComponent(rwListLabel))))))
-                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                .addComponent(teamSearchField, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(teamSearchButton))))
-                    .addGroup(proListLabelLayout.createSequentialGroup()
-                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                .addGap(58, 58, 58)
-                                .addComponent(proSalaryLabel1))
-                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                .addGap(128, 128, 128)
-                                .addComponent(linesLabel)))
-                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(proListLabelLayout.createSequentialGroup()
+                                        .addComponent(teamSearchField, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(6, 6, 6)
-                                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(proListLabelLayout.createSequentialGroup()
-                                        .addGap(315, 315, 315)
-                                        .addComponent(linesTacticsLabel)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, proListLabelLayout.createSequentialGroup()
-                                        .addComponent(dListLabel)
-                                        .addGap(85, 85, 85))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, proListLabelLayout.createSequentialGroup()
-                                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(proListLabelLayout.createSequentialGroup()
-                                        .addGap(62, 62, 62)
-                                        .addComponent(gListLabel))))
-                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addComponent(prospectsListLabel))))
-                    .addGroup(proListLabelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lwLine2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lwLine1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lwLine3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lwLine4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                .addComponent(cLine1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rwLine1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(dpair1L, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(dpair1R, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(timeLine1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tacticLine1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                .addComponent(cLine2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rwLine2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(dpair2L, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(dPair2R, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(timeLine2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tacticLine2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(proListLabelLayout.createSequentialGroup()
-                                        .addComponent(cLine3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(rwLine3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(dpair3L, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(dpair3R, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(proListLabelLayout.createSequentialGroup()
-                                        .addComponent(cLine4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(rwLine4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(18, 18, 18)
-                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(proListLabelLayout.createSequentialGroup()
-                                        .addComponent(timeLine4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tacticLine4, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(proListLabelLayout.createSequentialGroup()
-                                        .addComponent(timeLine3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tacticLine3, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                    .addGroup(proListLabelLayout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(gStarting, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(gBackup, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(264, Short.MAX_VALUE))
-            .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(proListLabelLayout.createSequentialGroup()
-                    .addGap(305, 305, 305)
-                    .addComponent(dpair1L1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(dpair1R1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(746, Short.MAX_VALUE)))
+                                        .addComponent(teamSearchButton)))))))
+                .addContainerGap())
+            .addGroup(proListLabelLayout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(950, Short.MAX_VALUE))
         );
         proListLabelLayout.setVerticalGroup(
             proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2733,9 +2927,6 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(proSalaryLabel)
                             .addComponent(farmSalaryLabel)
                             .addComponent(numPlayersLabel)
-                            .addComponent(proOFLabel)
-                            .addComponent(proDFLabel)
-                            .addComponent(proOALabel)
                             .addComponent(numPlayersLabel1)
                             .addComponent(numPlayersLabel2)
                             .addComponent(numPlayersLabel3))
@@ -2744,30 +2935,27 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(farmSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(proSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(numPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(proOffense, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(proDefense, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(proOA, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(numPlayersPro, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(numPlayersFarm, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(numPlayersProsp, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(numPlayersProsp, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(proListLabelLayout.createSequentialGroup()
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(proOFLabel)
+                            .addComponent(proDFLabel)
+                            .addComponent(proOALabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(proOffense, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(proDefense, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(proOA, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(proListLabelLayout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(proSalaryLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(prospectsListLabel)
-                                .addComponent(farmListLabel)))
-                        .addGap(6, 6, 6)
-                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(19, 19, 19)
                         .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(linesLabel)
-                            .addComponent(linesTacticsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(proListLabelLayout.createSequentialGroup()
+                            .addComponent(proTeamButton)
+                            .addComponent(farmTeamButton)
+                            .addComponent(prospectsButton)
+                            .addComponent(allButton))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lwListLabel)
@@ -2779,63 +2967,127 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jScrollPane6, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                .addComponent(dListLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, proListLabelLayout.createSequentialGroup()
-                                .addComponent(gListLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(dListLabel)
+                            .addComponent(gListLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane9, javax.swing.GroupLayout.Alignment.TRAILING, 0, 0, Short.MAX_VALUE)
+                            .addComponent(jScrollPane8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(proListLabelLayout.createSequentialGroup()
-                        .addComponent(lwLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lwLine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cLine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rwLine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dpair2L, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dPair2R, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(timeLine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tacticLine2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(linesLabel)
+                            .addComponent(linesTacticsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lwLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(cLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(rwLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(timeLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(TacticsLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(dpair1L, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dpair1R, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(proListLabelLayout.createSequentialGroup()
+                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lwLine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cLine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rwLine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(dpair2L, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(dPair2R, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lwLine3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cLine3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rwLine3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(dpair3L, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(dpair3R, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(proListLabelLayout.createSequentialGroup()
+                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(timeLine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TacticsLine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(32, 32, 32)
+                                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(timeLine3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TacticsLine3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lwLine4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cLine4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rwLine4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(timeLine4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TacticsLine4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lwLinePP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(linesLabel1))
+                            .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(cLinePP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(rwLinePP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(timePP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(TacticsPP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(dpairLPP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dpairRPP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lwLinePP2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cLinePP2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rwLinePP2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(timePP2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TacticsPP2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(linesLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(dpairLPP2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dPairRPP2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(linesLabel4)
+                            .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(proListLabelLayout.createSequentialGroup()
+                                    .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lwPK2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(rwPK2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(dpairLPK2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(dPairRPK2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(proListLabelLayout.createSequentialGroup()
+                                    .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(linesLabel3)
+                                        .addComponent(lwPK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(rwPK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(dpairLPK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(dPairRPK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(cLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(rwLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(dpair1L, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(dpair1R, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(timeLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(tacticLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(timePK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TacticsPK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(timePK2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TacticsPK2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lwLine3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cLine3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rwLine3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dpair3L, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dpair3R, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(timeLine3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tacticLine3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lwLine4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cLine4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rwLine4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(timeLine4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tacticLine4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(gStarting, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(gBackup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(508, 508, 508))
-            .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, proListLabelLayout.createSequentialGroup()
-                    .addContainerGap(846, Short.MAX_VALUE)
-                    .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(dpair1L1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(dpair1R1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(134, 134, 134)))
+                    .addComponent(gBackup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(linesLabel5)
+                    .addComponent(createLinesButton))
+                .addGap(637, 637, 637))
         );
 
         playerTab.addTab(bundle1.getString("GUI.proListLabel.TabConstraints.tabTitle"), proListLabel); // NOI18N
@@ -2866,11 +3118,11 @@ public class GUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(playerTab, javax.swing.GroupLayout.PREFERRED_SIZE, 1005, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(playerTab, javax.swing.GroupLayout.PREFERRED_SIZE, 988, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(playerTab, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(playerTab, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         playerTab.getAccessibleContext().setAccessibleName(bundle.getString("GUI.jTabbedPane1.AccessibleContext.accessibleName")); // NOI18N
@@ -2927,10 +3179,6 @@ public class GUI extends javax.swing.JFrame {
 		}
 	}//GEN-LAST:event_searchPlayerActionPerformed
 
-	private void teamSearchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamSearchFieldActionPerformed
-		
-	}//GEN-LAST:event_teamSearchFieldActionPerformed
-
 	private void similarPlayerListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_similarPlayerListValueChanged
 		try{
 			searchField.setText(similarPlayerList.getSelectedValue().toString());
@@ -2947,37 +3195,123 @@ public class GUI extends javax.swing.JFrame {
 		}
 	}//GEN-LAST:event_searchFieldKeyPressed
 
-        private void teamSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamSearchButtonActionPerformed
-            updateGUIToTeam();
-        }//GEN-LAST:event_teamSearchButtonActionPerformed
-
-        private void numPlayersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numPlayersActionPerformed
+        private void numPlayersProspActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numPlayersProspActionPerformed
             // TODO add your handling code here:
-        }//GEN-LAST:event_numPlayersActionPerformed
-
-        private void proOffenseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proOffenseActionPerformed
-            // TODO add your handling code here:
-        }//GEN-LAST:event_proOffenseActionPerformed
-
-        private void proDefenseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proDefenseActionPerformed
-            // TODO add your handling code here:
-        }//GEN-LAST:event_proDefenseActionPerformed
-
-        private void proOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proOAActionPerformed
-            // TODO add your handling code here:
-        }//GEN-LAST:event_proOAActionPerformed
-
-        private void numPlayersProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numPlayersProActionPerformed
-            // TODO add your handling code here:
-        }//GEN-LAST:event_numPlayersProActionPerformed
+}//GEN-LAST:event_numPlayersProspActionPerformed
 
         private void numPlayersFarmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numPlayersFarmActionPerformed
             // TODO add your handling code here:
-        }//GEN-LAST:event_numPlayersFarmActionPerformed
+}//GEN-LAST:event_numPlayersFarmActionPerformed
 
-        private void numPlayersProspActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numPlayersProspActionPerformed
+        private void numPlayersProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numPlayersProActionPerformed
             // TODO add your handling code here:
-        }//GEN-LAST:event_numPlayersProspActionPerformed
+}//GEN-LAST:event_numPlayersProActionPerformed
+
+        private void proOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proOAActionPerformed
+            // TODO add your handling code here:
+}//GEN-LAST:event_proOAActionPerformed
+
+        private void proDefenseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proDefenseActionPerformed
+            // TODO add your handling code here:
+}//GEN-LAST:event_proDefenseActionPerformed
+
+        private void proOffenseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proOffenseActionPerformed
+            // TODO add your handling code here:
+}//GEN-LAST:event_proOffenseActionPerformed
+
+        private void numPlayersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numPlayersActionPerformed
+            // TODO add your handling code here:
+}//GEN-LAST:event_numPlayersActionPerformed
+
+        private void teamSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamSearchButtonActionPerformed
+            updateGUIToTeam();
+}//GEN-LAST:event_teamSearchButtonActionPerformed
+
+        private void teamSearchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamSearchFieldActionPerformed
+
+}//GEN-LAST:event_teamSearchFieldActionPerformed
+
+        private void proListLabelPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_proListLabelPropertyChange
+            // TODO add your handling code here:
+        }//GEN-LAST:event_proListLabelPropertyChange
+
+        private void proTeamButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proTeamButtonActionPerformed
+               updateGUIToTeam();
+
+        }//GEN-LAST:event_proTeamButtonActionPerformed
+
+        private void farmTeamButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_farmTeamButtonActionPerformed
+               updateGUIToTeam();
+        }//GEN-LAST:event_farmTeamButtonActionPerformed
+
+        private void prospectsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prospectsButtonActionPerformed
+              updateGUIToTeam();
+        }//GEN-LAST:event_prospectsButtonActionPerformed
+
+        private void allButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_allButtonActionPerformed
+               updateGUIToTeam();
+        }//GEN-LAST:event_allButtonActionPerformed
+
+        private void createLinesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createLinesButtonActionPerformed
+            String fileName=JOptionPane.showInputDialog("Enter desired file name");
+            System.out.println(fileName);
+            fileName.replaceAll("[.,;:!@#$%^* ]","");
+            if (fileName.equalsIgnoreCase("players")||fileName.equalsIgnoreCase("league"))
+                JOptionPane.showMessageDialog(this,"Bad file name choice");
+            else{
+                ArrayList<String>id=new ArrayList<String>();
+                String startingG=getPlayerId(gStarting.getText());
+                id.add(startingG);
+                id.add(getPlayerId(gBackup.getText()));
+                id.add(getPlayerId(dpair1L.getText()));
+                id.add(getPlayerId(dpair2L.getText()));
+                id.add(getPlayerId(dpair3L.getText()));
+                id.add(getPlayerId(dpair1R.getText()));
+                id.add(getPlayerId(dPair2R.getText()));
+                id.add(getPlayerId(dpair3R.getText()));
+                id.add(getPlayerId(lwLine1.getText()));
+                id.add(getPlayerId(lwLine2.getText()));
+                id.add(getPlayerId(lwLine3.getText()));
+                id.add(getPlayerId(lwLine4.getText()));
+                id.add(getPlayerId(cLine1.getText()));
+                id.add(getPlayerId(cLine2.getText()));
+                id.add(getPlayerId(cLine3.getText()));
+                id.add(getPlayerId(cLine4.getText()));
+                id.add(getPlayerId(rwLine1.getText()));
+                id.add(getPlayerId(rwLine2.getText()));
+                id.add(getPlayerId(rwLine3.getText()));
+                id.add(getPlayerId(rwLine4.getText()));
+                id.add(getPlayerId(dpairLPP1.getText()));
+                id.add(getPlayerId(dpairRPP1.getText()));
+                id.add(getPlayerId(lwLinePP1.getText()));
+                id.add(getPlayerId(cLinePP1.getText()));
+                id.add(getPlayerId(rwLinePP1.getText()));
+                id.add(getPlayerId(dpairLPP2.getText()));
+                id.add(getPlayerId(dPairRPP2.getText()));
+                id.add(getPlayerId(lwLinePP2.getText()));
+                id.add(getPlayerId(cLinePP2.getText()));
+                id.add(getPlayerId(rwLinePP2.getText()));
+                id.add(getPlayerId(dpairLPK1.getText()));
+                id.add(getPlayerId(dPairRPK1.getText()));
+                id.add(getPlayerId(lwPK1.getText()));
+                id.add(getPlayerId(rwPK1.getText()));
+                id.add(startingG);
+                id.add(getPlayerId(dpairLPK2.getText()));
+                id.add(getPlayerId(dPairRPK2.getText()));
+                id.add(getPlayerId(lwPK2.getText()));
+                id.add(getPlayerId(rwPK2.getText()));
+                id.add(startingG);
+                String tactics1=""+TacticsLine1.getSelectedIndex()+" "+TacticsLine2.getSelectedIndex()+" "+TacticsLine3.getSelectedIndex()+" "+TacticsLine4.getSelectedIndex()
+                        +" "+TacticsPP1.getSelectedIndex()+" "+TacticsPP2.getSelectedIndex()+" "+TacticsPK1.getSelectedIndex()+" "+TacticsPK2.getSelectedIndex();
+                id.add(tactics1);
+                String time=""+Integer.parseInt(timeLine1.getText())/10+" "+Integer.parseInt(timeLine2.getText())/10+" "+Integer.parseInt(timeLine3.getText())/10+" "+Integer.parseInt(timeLine4.getText())/10
+                        +" "+Integer.parseInt(timePP1.getText())/10+" "+Integer.parseInt(timePP2.getText())/10+" "+Integer.parseInt(timePK1.getText())/10+" "+Integer.parseInt(timePK2.getText())/10;
+                id.add(time);
+                fH.writeLinesFile(id, fileName);
+            }
+
+
+        }//GEN-LAST:event_createLinesButtonActionPerformed
 
 	public void updateGUIToPlayer(){
 		searchField.setText(foundPlayer.getFullName());
@@ -3008,24 +3342,141 @@ public class GUI extends javax.swing.JFrame {
             numPlayersPro.setText(""+team.getProPlayers().size());
             numPlayersFarm.setText(""+team.getFarmPlayers().size());
             numPlayersProsp.setText(""+team.getProspects().size());
-            lwList.setListData(team.getLeftWing());
-            cList.setListData(team.getCenter());
-            rwList.setListData(team.getRightWing());
-            dList.setListData(team.getDefense());
-            gList.setListData(team.getGoalie());
+            if (proTeamButton.isSelected()){
+                lwList.setListData(team.getLeftWing(team.getProPlayers()));
+                cList.setListData(team.getCenter(team.getProPlayers()));
+                rwList.setListData(team.getRightWing(team.getProPlayers()));
+                dList.setListData(team.getDefense(team.getProPlayers()));
+                gList.setListData(team.getGoalie(team.getProPlayers()));}
+            else if (farmTeamButton.isSelected()){
+                lwList.setListData(team.getLeftWing(team.getFarmPlayers()));
+                cList.setListData(team.getCenter(team.getFarmPlayers()));
+                rwList.setListData(team.getRightWing(team.getFarmPlayers()));
+                dList.setListData(team.getDefense(team.getFarmPlayers()));
+                gList.setListData(team.getGoalie(team.getFarmPlayers()));
+            }
+            else if (prospectsButton.isSelected()){
+                lwList.setListData(team.getLeftWing(team.getProspects()));
+                cList.setListData(team.getCenter(team.getProspects()));
+                rwList.setListData(team.getRightWing(team.getProspects()));
+                dList.setListData(team.getDefense(team.getProspects()));
+                gList.setListData(team.getGoalie(team.getProspects()));
+            }
+            else{
+                lwList.setListData(team.getLeftWing(team.getAllPlayers()));
+                cList.setListData(team.getCenter(team.getAllPlayers()));
+                rwList.setListData(team.getRightWing(team.getAllPlayers()));
+                dList.setListData(team.getDefense(team.getAllPlayers()));
+                gList.setListData(team.getGoalie(team.getAllPlayers()));
+            }
             String[]tempNames=new String[team.getProPlayers().size()];
             for (int i=0;i<tempNames.length;i++)
                 tempNames[i]=team.getProPlayers().get(i).getFullName();
+            avgProOverall();
+            avgProDefense();
+            avgProOffense();
+            strengthOfDrafts();
 
-            proList.setListData(tempNames);
-            tempNames=new String[team.getFarmPlayers().size()];
-            for (int i=0;i<tempNames.length;i++)
-                tempNames[i]=team.getFarmPlayers().get(i).getFullName();
-            farmList.setListData(tempNames);
-            tempNames=new String[team.getProspects().size()];
-            for (int i=0;i<tempNames.length;i++)
-                tempNames[i]=team.getProspects().get(i).getFullName();
-            prospectsList.setListData(tempNames);
+        }
+        public void avgProOverall(){
+            double d=0;
+            double counter=0;
+            for (Team a:teamList){
+                a.sortPlayersToLists();
+                for (Player p:a.getProPlayers()){
+                    d+=p.getOA();
+                    counter++;
+                }
+            }
+            System.out.println("average overall: "+d/counter);
+        }
+
+        public void avgProDefense(){
+            double d=0;
+            double counter=0;
+            for (Team a:teamList){
+                a.sortPlayersToLists();
+                for (Player p:a.getProPlayers()){
+                    d+=p.getDefense();
+                    counter++;
+                }
+            }
+            System.out.println("average defense: "+d/counter);
+        }
+        public void avgProOffense(){
+            double d=0;
+            double counter=0;
+            for (Team a:teamList){
+                a.sortPlayersToLists();
+                for (Player p:a.getProPlayers()){
+                    d+=p.getOffense();
+                    counter++;
+                }
+            }
+            System.out.println("average offense: "+d/counter);
+        }
+        
+        public void strengthOfDrafts(){
+            double d09=0;double c09=0;
+            double d10=0;double c10=0;
+            double d11=0;double c11=0;
+            double d12=0;double c12=0;
+            double d13=0;double c13=0;
+            double d14=0;double c14=0;
+            double d15=0;double c15=0;
+            double d16=0;double c16=0;
+            double d17=0;double c17=0;
+            for (Player p: playerSet){
+                if (p.getDraftYr()==2009){
+                    d09+=p.getpOA()/6;
+                    c09++;
+                }
+                else if (p.getDraftYr()==2010){
+                    d10+=p.getpOA()/6;
+                    c10++;
+                }
+                else if (p.getDraftYr()==2011){
+                    d11+=p.getpOA()/6;
+                    c11++;
+                }
+                else if (p.getDraftYr()==2012){
+                    d12+=p.getpOA()/6;
+                    c12++;
+                }
+                else if (p.getDraftYr()==2013){
+                    d13+=p.getpOA()/6;
+                    c13++;
+                }
+                else if (p.getDraftYr()==2014){
+                    d14+=p.getpOA()/6;
+                    c14++;
+                }
+                else if (p.getDraftYr()==2015){
+                    d15+=p.getpOA()/6;
+                    c15++;
+                }
+                else if (p.getDraftYr()==2016){
+                    d16+=p.getpOA()/6;
+                    c16++;
+                }
+                else if (p.getTEAM()==99){
+                    d17+=p.getpOA()/6;
+                    c17++;
+                }
+            }
+            System.out.println(" 2009 draft average: "+d09/c09+"\n 2010 draft average: "+d10/c10+"\n 2011 draft average: "+d11/c11
+                    +"\n 2012 draft average: "+d12/c12+"\n 2013 draft average: "+d13/c13+"\n 2014 draft average: "+ d14/c14+
+                    "\n 2015 draft average: "+d15/c15+"\n 2016 draft average: "+d16/c16+"\n 2017 draft average: "+d17/c17);
+            
+            
+        }
+        
+        public String getPlayerId(String name){
+            for (Player p: playerSet){
+                if (p.getFullName().equalsIgnoreCase(name))
+                    return ""+p.getId();
+            }
+            return "99999";
         }
 	public void initializeNewFile(){
 		fH.readFromPlayersFile();
@@ -3060,8 +3511,17 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField GRD;
     private javax.swing.JFormattedTextField INJ;
     private javax.swing.JFormattedTextField POT;
+    private javax.swing.JComboBox TacticsLine1;
+    private javax.swing.JComboBox TacticsLine2;
+    private javax.swing.JComboBox TacticsLine3;
+    private javax.swing.JComboBox TacticsLine4;
+    private javax.swing.JComboBox TacticsPK1;
+    private javax.swing.JComboBox TacticsPK2;
+    private javax.swing.JComboBox TacticsPP1;
+    private javax.swing.JComboBox TacticsPP2;
     private javax.swing.JFormattedTextField age;
     private javax.swing.JLabel ageLabel;
+    private javax.swing.JRadioButton allButton;
     private javax.swing.JFormattedTextField altPOSI;
     private javax.swing.JLabel assistLabel;
     private javax.swing.JFormattedTextField bStreakA;
@@ -3069,10 +3529,14 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField bStreakGP;
     private javax.swing.JFormattedTextField bStreakGWG;
     private javax.swing.JFormattedTextField bStreakP;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JFormattedTextField cLine1;
     private javax.swing.JFormattedTextField cLine2;
     private javax.swing.JFormattedTextField cLine3;
     private javax.swing.JFormattedTextField cLine4;
+    private javax.swing.JFormattedTextField cLinePP1;
+    private javax.swing.JFormattedTextField cLinePP2;
     private javax.swing.JList cList;
     private javax.swing.JLabel cListLabel;
     private javax.swing.JFormattedTextField careerA;
@@ -3114,6 +3578,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel conLabel;
     private javax.swing.JFormattedTextField country;
     private javax.swing.JLabel countryLabel;
+    private javax.swing.JButton createLinesButton;
     private javax.swing.JFormattedTextField curCHK;
     private javax.swing.JFormattedTextField curDF;
     private javax.swing.JFormattedTextField curEND;
@@ -3136,14 +3601,20 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JList dList;
     private javax.swing.JLabel dListLabel;
     private javax.swing.JFormattedTextField dPair2R;
+    private javax.swing.JFormattedTextField dPairRPK1;
+    private javax.swing.JFormattedTextField dPairRPK2;
+    private javax.swing.JFormattedTextField dPairRPP2;
     private javax.swing.JLabel dfLabel;
     private javax.swing.JFormattedTextField dpair1L;
-    private javax.swing.JFormattedTextField dpair1L1;
     private javax.swing.JFormattedTextField dpair1R;
-    private javax.swing.JFormattedTextField dpair1R1;
     private javax.swing.JFormattedTextField dpair2L;
     private javax.swing.JFormattedTextField dpair3L;
     private javax.swing.JFormattedTextField dpair3R;
+    private javax.swing.JFormattedTextField dpairLPK1;
+    private javax.swing.JFormattedTextField dpairLPK2;
+    private javax.swing.JFormattedTextField dpairLPP1;
+    private javax.swing.JFormattedTextField dpairLPP2;
+    private javax.swing.JFormattedTextField dpairRPP1;
     private javax.swing.JLabel draftHeaderLabel;
     private javax.swing.JLabel draftLabel;
     private javax.swing.JFormattedTextField draftPos;
@@ -3154,12 +3625,11 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel endLabel;
     private javax.swing.JLabel facLabel;
     private javax.swing.JFormattedTextField farmDF1;
-    private javax.swing.JList farmList;
-    private javax.swing.JLabel farmListLabel;
     private javax.swing.JFormattedTextField farmOA1;
     private javax.swing.JFormattedTextField farmOF1;
     private javax.swing.JFormattedTextField farmSalary;
     private javax.swing.JLabel farmSalaryLabel;
+    private javax.swing.JRadioButton farmTeamButton;
     private javax.swing.JLabel figLabel;
     private javax.swing.JFormattedTextField gBackup;
     private javax.swing.JLabel gLabel;
@@ -3182,9 +3652,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
@@ -3192,13 +3659,22 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JLabel leaLabel;
     private javax.swing.JLabel linesLabel;
+    private javax.swing.JLabel linesLabel1;
+    private javax.swing.JLabel linesLabel2;
+    private javax.swing.JLabel linesLabel3;
+    private javax.swing.JLabel linesLabel4;
+    private javax.swing.JLabel linesLabel5;
     private javax.swing.JLabel linesTacticsLabel;
     private javax.swing.JFormattedTextField lwLine1;
     private javax.swing.JFormattedTextField lwLine2;
     private javax.swing.JFormattedTextField lwLine3;
     private javax.swing.JFormattedTextField lwLine4;
+    private javax.swing.JFormattedTextField lwLinePP1;
+    private javax.swing.JFormattedTextField lwLinePP2;
     private javax.swing.JList lwList;
     private javax.swing.JLabel lwListLabel;
+    private javax.swing.JFormattedTextField lwPK1;
+    private javax.swing.JFormattedTextField lwPK2;
     private javax.swing.JFormattedTextField mA;
     private javax.swing.JFormattedTextField mG;
     private javax.swing.JFormattedTextField mGP;
@@ -3226,7 +3702,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel potLabel;
     private javax.swing.JLabel proDFLabel;
     private javax.swing.JFormattedTextField proDefense;
-    private javax.swing.JList proList;
     private javax.swing.JPanel proListLabel;
     private javax.swing.JFormattedTextField proOA;
     private javax.swing.JLabel proOALabel;
@@ -3234,20 +3709,23 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField proOffense;
     private javax.swing.JFormattedTextField proSalary;
     private javax.swing.JLabel proSalaryLabel;
-    private javax.swing.JLabel proSalaryLabel1;
+    private javax.swing.JRadioButton proTeamButton;
     private javax.swing.JFormattedTextField projDF;
     private javax.swing.JFormattedTextField projOA;
     private javax.swing.JFormattedTextField projOF;
-    private javax.swing.JList prospectsList;
-    private javax.swing.JLabel prospectsListLabel;
+    private javax.swing.JRadioButton prospectsButton;
     private javax.swing.JFormattedTextField rightsField;
     private javax.swing.JLabel rightsLabel;
     private javax.swing.JFormattedTextField rwLine1;
     private javax.swing.JFormattedTextField rwLine2;
     private javax.swing.JFormattedTextField rwLine3;
     private javax.swing.JFormattedTextField rwLine4;
+    private javax.swing.JFormattedTextField rwLinePP1;
+    private javax.swing.JFormattedTextField rwLinePP2;
     private javax.swing.JList rwList;
     private javax.swing.JLabel rwListLabel;
+    private javax.swing.JFormattedTextField rwPK1;
+    private javax.swing.JFormattedTextField rwPK2;
     private javax.swing.JFormattedTextField salaryAmt;
     private javax.swing.JFormattedTextField salaryAmtConsidering;
     private javax.swing.JLabel salaryAmtLabel;
@@ -3267,10 +3745,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel statusLabel;
     private javax.swing.JLabel stkLabel;
     private javax.swing.JLabel strLabel;
-    private javax.swing.JFormattedTextField tacticLine1;
-    private javax.swing.JFormattedTextField tacticLine2;
-    private javax.swing.JFormattedTextField tacticLine3;
-    private javax.swing.JFormattedTextField tacticLine4;
     private javax.swing.JLabel teamIcon;
     private javax.swing.JButton teamSearchButton;
     private javax.swing.JTextField teamSearchField;
@@ -3278,6 +3752,10 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField timeLine2;
     private javax.swing.JFormattedTextField timeLine3;
     private javax.swing.JFormattedTextField timeLine4;
+    private javax.swing.JFormattedTextField timePK1;
+    private javax.swing.JFormattedTextField timePK2;
+    private javax.swing.JFormattedTextField timePP1;
+    private javax.swing.JFormattedTextField timePP2;
     private javax.swing.JFormattedTextField trainDF;
     private javax.swing.JFormattedTextField trainOA;
     private javax.swing.JFormattedTextField trainOF;
