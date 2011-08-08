@@ -8,7 +8,6 @@
  *
  * Created on Mar 23, 2011, 12:33:09 AM
  */
-
 package sws3;
 
 import java.awt.event.KeyEvent;
@@ -17,134 +16,136 @@ import java.util.ArrayList;
 import java.util.TreeSet;
 
 import javax.swing.*;
+
 /**
  *
  * @author Kevin
  */
 public class GUI extends javax.swing.JFrame {
 
-	/** Creates new form GUI */
-	ArrayList<JFormattedTextField>list;
-	FileHandler fH;
-	League league;
-	TreeSet<Player>playerSet;
-	Player foundPlayer=null;
-	ArrayList<Team>teamList;
-	long salaryCap=51500000;
-	public GUI() {
-		initComponents();
-		list=new ArrayList<JFormattedTextField>();
-		fH=new FileHandler(new File("C://Program Files (x86)/Eastside Hockey Manager/saves/simplaying/players.ehm"));
-		fH.readFromPlayersFile();
-		league=new League(fH.getSortedPlayers(),salaryCap);
-                league.createTeamMap();
-		teamList=league.createTeams();            
-		playerSet=fH.getSortedPlayers();
-                System.out.println("Num Players: "+playerSet.size());
-		//create list
-		list.add(wGP);
-		list.add(wG);
-		list.add(wA);
-		list.add(wGWG);
-		list.add(mGP);
-		list.add(mG);
-		list.add(mA);
-		list.add(mGWG);
-		list.add(careerG);
-		list.add(careerA);
-		list.add(careerP);
-		list.add(curStreakG);
-		list.add(curStreakP);
-		list.add(curStreakGP);
-		list.add(bStreakGP);
-		list.add(bStreakGWG);
-		list.add(bStreakA);
-		list.add(bStreakP);
-		list.add(bStreakG);
-		///
-		list.add(mainPOSI);
-		list.add(altPOSI);
-		list.add(rightsField);
-		list.add(draftYr);
-		list.add(draftRd);
-		list.add(draftPos);
-		list.add(draftTeam);
-		list.add(salaryYr);
-		list.add(salaryAmt);
-		list.add(height);
-		list.add(weight);
-		list.add(age);
-		list.add(twoWay);
-		list.add(country);
-		list.add(hand);
-		list.add(click);
-		list.add(curSHO);
-		list.add(curPLA);
-		list.add(curSTK);
-		list.add(curCHK);
-		list.add(curPOS);
-		list.add(curHIT);
-		list.add(curSKA);
-		list.add(curEND);
-		list.add(curPEN);
-		list.add(curFAC);
-		list.add(curLEA);
-		list.add(curFIG);
-		list.add(curSTR);
-		list.add(POT);
-		list.add(CON);
-		list.add(GRD);
-		list.add(INJ);
-		list.add(curOF);
-		list.add(curDF);
-		list.add(curOA);
-		list.add(salaryAmtConsidering);
-		list.add(salaryYrConsidering);
-		list.add(ceilSHO);
-		list.add(ceilPLA);
-		list.add(ceilSTK);
-		list.add(ceilCHK);
-		list.add(ceilPOS);
-		list.add(ceilHIT);
-		list.add(ceilSKA);
-		list.add(ceilEND);
-		list.add(ceilPEN);
-		list.add(ceilFAC);
-		list.add(ceilLEA);
-		list.add(ceilFIG);
-		list.add(ceilSTR);
-		list.add(ceilSHO1);
-		list.add(ceilPLA1);
-		list.add(ceilSTK1);
-		list.add(ceilCHK1);
-		list.add(ceilPOS1);
-		list.add(ceilHIT1);
-		list.add(ceilSKA1);
-		list.add(ceilEND1);
-		list.add(ceilPEN1);
-		list.add(ceilFAC1);
-		list.add(ceilLEA1);
-		list.add(ceilFIG1);
-		list.add(ceilSTR1);
-		list.add(projOF );
-		list.add(projDF);
-		list.add(projOA);
-		list.add(trainOF);
-		list.add(trainDF);
-		list.add(trainOA);
-		list.add(farmOF1);
-		list.add(farmDF1);
-		list.add(farmOA1);
-		list.add(status);
+    /** Creates new form GUI */
+    ArrayList<JFormattedTextField> list;
+    FileHandler fH;
+    League league;
+    TreeSet<Player> playerSet;
+    Player foundPlayer = null;
+    ArrayList<Team> teamList;
+    long salaryCap = 51500000;
 
-	}
+    public GUI() {
+        initComponents();
+        list = new ArrayList<JFormattedTextField>();
+        fH = new FileHandler(new File("C://Program Files (x86)/Eastside Hockey Manager/saves/simplaying/players.ehm"));
+        fH.readFromPlayersFile();
+        league = new League(fH.getSortedPlayers(), salaryCap);
+        league.createTeamMap();
+        teamList = league.createTeams();
+        playerSet = fH.getSortedPlayers();
+        System.out.println("Num Players: " + playerSet.size());
+        //create list
+        list.add(wGP);
+        list.add(wG);
+        list.add(wA);
+        list.add(wGWG);
+        list.add(mGP);
+        list.add(mG);
+        list.add(mA);
+        list.add(mGWG);
+        list.add(careerG);
+        list.add(careerA);
+        list.add(careerP);
+        list.add(curStreakG);
+        list.add(curStreakP);
+        list.add(curStreakGP);
+        list.add(bStreakGP);
+        list.add(bStreakGWG);
+        list.add(bStreakA);
+        list.add(bStreakP);
+        list.add(bStreakG);
+        ///
+        list.add(mainPOSI);
+        list.add(altPOSI);
+        list.add(rightsField);
+        list.add(draftYr);
+        list.add(draftRd);
+        list.add(draftPos);
+        list.add(draftTeam);
+        list.add(salaryYr);
+        list.add(salaryAmt);
+        list.add(height);
+        list.add(weight);
+        list.add(age);
+        list.add(twoWay);
+        list.add(country);
+        list.add(hand);
+        list.add(click);
+        list.add(curSHO);
+        list.add(curPLA);
+        list.add(curSTK);
+        list.add(curCHK);
+        list.add(curPOS);
+        list.add(curHIT);
+        list.add(curSKA);
+        list.add(curEND);
+        list.add(curPEN);
+        list.add(curFAC);
+        list.add(curLEA);
+        list.add(curFIG);
+        list.add(curSTR);
+        list.add(POT);
+        list.add(CON);
+        list.add(GRD);
+        list.add(INJ);
+        list.add(curOF);
+        list.add(curDF);
+        list.add(curOA);
+        list.add(salaryAmtConsidering);
+        list.add(salaryYrConsidering);
+        list.add(ceilSHO);
+        list.add(ceilPLA);
+        list.add(ceilSTK);
+        list.add(ceilCHK);
+        list.add(ceilPOS);
+        list.add(ceilHIT);
+        list.add(ceilSKA);
+        list.add(ceilEND);
+        list.add(ceilPEN);
+        list.add(ceilFAC);
+        list.add(ceilLEA);
+        list.add(ceilFIG);
+        list.add(ceilSTR);
+        list.add(ceilSHO1);
+        list.add(ceilPLA1);
+        list.add(ceilSTK1);
+        list.add(ceilCHK1);
+        list.add(ceilPOS1);
+        list.add(ceilHIT1);
+        list.add(ceilSKA1);
+        list.add(ceilEND1);
+        list.add(ceilPEN1);
+        list.add(ceilFAC1);
+        list.add(ceilLEA1);
+        list.add(ceilFIG1);
+        list.add(ceilSTR1);
+        list.add(projOF);
+        list.add(projDF);
+        list.add(projOA);
+        list.add(trainOF);
+        list.add(trainDF);
+        list.add(trainOA);
+        list.add(farmOF1);
+        list.add(farmDF1);
+        list.add(farmOA1);
+        list.add(status);
 
-	/** This method is called from within the constructor to
-	 * initialize the form.
-	 * WARNING: Do NOT modify this code. The content of this method is
-	 * always regenerated by the Form Editor.
-	 */
-	@SuppressWarnings("unchecked")
+    }
+
+    /** This method is called from within the constructor to
+     * initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is
+     * always regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -410,6 +411,43 @@ public class GUI extends javax.swing.JFrame {
         timePK2 = new javax.swing.JFormattedTextField();
         linesLabel5 = new javax.swing.JLabel();
         createLinesButton = new javax.swing.JButton();
+        draftTab = new javax.swing.JPanel();
+        draftYearList = new javax.swing.JComboBox();
+        cListLabel1 = new javax.swing.JLabel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        draftCList = new javax.swing.JList();
+        lwListLabel1 = new javax.swing.JLabel();
+        dListLabel1 = new javax.swing.JLabel();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        draftDList = new javax.swing.JList();
+        rwListLabel1 = new javax.swing.JLabel();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        draftRwList = new javax.swing.JList();
+        gListLabel1 = new javax.swing.JLabel();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        draftGList = new javax.swing.JList();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        draftLwList = new javax.swing.JList();
+        draftOF = new javax.swing.JFormattedTextField();
+        draftOFLabel = new javax.swing.JLabel();
+        draftOALabel = new javax.swing.JLabel();
+        draftDLabel = new javax.swing.JLabel();
+        draftOA = new javax.swing.JFormattedTextField();
+        draftDF = new javax.swing.JFormattedTextField();
+        draftPOA = new javax.swing.JFormattedTextField();
+        draftDLabel1 = new javax.swing.JLabel();
+        draftOALabel1 = new javax.swing.JLabel();
+        draftOFLabel1 = new javax.swing.JLabel();
+        draftPDF = new javax.swing.JFormattedTextField();
+        draftPOF = new javax.swing.JFormattedTextField();
+        draftTOF = new javax.swing.JFormattedTextField();
+        draftOALabel2 = new javax.swing.JLabel();
+        draftDLabel2 = new javax.swing.JLabel();
+        draftTOA = new javax.swing.JFormattedTextField();
+        draftTDF = new javax.swing.JFormattedTextField();
+        draftOFLabel2 = new javax.swing.JLabel();
+        numPlayersDraft = new javax.swing.JFormattedTextField();
+        numPlayersLabel4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         openMenu = new javax.swing.JMenuItem();
@@ -1798,9 +1836,7 @@ public class GUI extends javax.swing.JFrame {
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                     .addComponent(statusLabel))))
                                         .addGap(18, 18, 18))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(searchPlayer)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                    .addComponent(searchPlayer))
                                 .addGap(56, 56, 56))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(chkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1986,8 +2022,7 @@ public class GUI extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(36, 36, 36)
                                         .addComponent(farmDF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(180, 180, 180))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(careerP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2258,6 +2293,11 @@ public class GUI extends javax.swing.JFrame {
                 teamSearchFieldActionPerformed(evt);
             }
         });
+        teamSearchField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                teamSearchFieldKeyPressed(evt);
+            }
+        });
 
         teamSearchButton.setText(bundle1.getString("GUI.teamSearchButton.text")); // NOI18N
         teamSearchButton.setToolTipText(bundle1.getString("GUI.teamSearchButton.toolTipText")); // NOI18N
@@ -2447,7 +2487,7 @@ public class GUI extends javax.swing.JFrame {
         dList.setDragEnabled(true);
         jScrollPane8.setViewportView(dList);
 
-        dListLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        dListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         dListLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         dListLabel.setLabelFor(salaryAmtLabel);
         dListLabel.setText(bundle1.getString("GUI.dListLabel.text")); // NOI18N
@@ -2457,7 +2497,7 @@ public class GUI extends javax.swing.JFrame {
         gList.setDragEnabled(true);
         jScrollPane9.setViewportView(gList);
 
-        gListLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        gListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         gListLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         gListLabel.setLabelFor(salaryAmtLabel);
         gListLabel.setText(bundle1.getString("GUI.gListLabel.text")); // NOI18N
@@ -2902,14 +2942,13 @@ public class GUI extends javax.swing.JFrame {
                                     .addGroup(proListLabelLayout.createSequentialGroup()
                                         .addComponent(teamSearchField, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(teamSearchButton)))))))
-                .addContainerGap())
-            .addGroup(proListLabelLayout.createSequentialGroup()
-                .addGap(83, 83, 83)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(950, Short.MAX_VALUE))
+                                        .addComponent(teamSearchButton))))))
+                    .addGroup(proListLabelLayout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         proListLabelLayout.setVerticalGroup(
             proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3087,10 +3126,421 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(gBackup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(linesLabel5)
                     .addComponent(createLinesButton))
-                .addGap(637, 637, 637))
+                .addGap(1293, 1293, 1293))
         );
 
         playerTab.addTab(bundle1.getString("GUI.proListLabel.TabConstraints.tabTitle"), proListLabel); // NOI18N
+
+        draftYearList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017" }));
+        draftYearList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                draftYearListMouseClicked(evt);
+            }
+        });
+        draftYearList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                draftYearListActionPerformed(evt);
+            }
+        });
+
+        cListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        cListLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cListLabel1.setLabelFor(salaryAmtLabel);
+        cListLabel1.setText(bundle1.getString("GUI.cListLabel1.text")); // NOI18N
+        cListLabel1.setToolTipText(bundle1.getString("GUI.cListLabel1.toolTipText")); // NOI18N
+
+        draftCList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        draftCList.setDragEnabled(true);
+        jScrollPane10.setViewportView(draftCList);
+
+        lwListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        lwListLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lwListLabel1.setLabelFor(salaryAmtLabel);
+        lwListLabel1.setText(bundle1.getString("GUI.lwListLabel1.text")); // NOI18N
+        lwListLabel1.setToolTipText(bundle1.getString("GUI.lwListLabel1.toolTipText")); // NOI18N
+
+        dListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        dListLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        dListLabel1.setLabelFor(salaryAmtLabel);
+        dListLabel1.setText(bundle1.getString("GUI.dListLabel1.text")); // NOI18N
+        dListLabel1.setToolTipText(bundle1.getString("GUI.dListLabel1.toolTipText")); // NOI18N
+
+        draftDList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        draftDList.setDragEnabled(true);
+        jScrollPane11.setViewportView(draftDList);
+
+        rwListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        rwListLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rwListLabel1.setLabelFor(salaryAmtLabel);
+        rwListLabel1.setText(bundle1.getString("GUI.rwListLabel1.text")); // NOI18N
+        rwListLabel1.setToolTipText(bundle1.getString("GUI.rwListLabel1.toolTipText")); // NOI18N
+
+        draftRwList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        draftRwList.setDragEnabled(true);
+        jScrollPane12.setViewportView(draftRwList);
+
+        gListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        gListLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        gListLabel1.setLabelFor(salaryAmtLabel);
+        gListLabel1.setText(bundle1.getString("GUI.gListLabel1.text")); // NOI18N
+        gListLabel1.setToolTipText(bundle1.getString("GUI.gListLabel1.toolTipText")); // NOI18N
+
+        draftGList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        draftGList.setDragEnabled(true);
+        jScrollPane13.setViewportView(draftGList);
+
+        draftLwList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        draftLwList.setDragEnabled(true);
+        jScrollPane14.setViewportView(draftLwList);
+
+        draftOF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        draftOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftOF.setText(bundle1.getString("GUI.draftOF.text")); // NOI18N
+        draftOF.setMaximumSize(new java.awt.Dimension(61, 25));
+        draftOF.setMinimumSize(new java.awt.Dimension(25, 25));
+        draftOF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                draftOFActionPerformed(evt);
+            }
+        });
+
+        draftOFLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
+        draftOFLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        draftOFLabel.setLabelFor(salaryAmtLabel);
+        draftOFLabel.setText(bundle1.getString("GUI.draftOFLabel.text")); // NOI18N
+        draftOFLabel.setToolTipText(bundle1.getString("GUI.draftOFLabel.toolTipText")); // NOI18N
+
+        draftOALabel.setFont(new java.awt.Font("Tahoma", 1, 11));
+        draftOALabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        draftOALabel.setLabelFor(salaryAmtLabel);
+        draftOALabel.setText(bundle1.getString("GUI.draftOALabel.text")); // NOI18N
+        draftOALabel.setToolTipText(bundle1.getString("GUI.draftOALabel.toolTipText")); // NOI18N
+
+        draftDLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
+        draftDLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        draftDLabel.setLabelFor(salaryAmtLabel);
+        draftDLabel.setText(bundle1.getString("GUI.draftDLabel.text")); // NOI18N
+        draftDLabel.setToolTipText(bundle1.getString("GUI.draftDLabel.toolTipText")); // NOI18N
+
+        draftOA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        draftOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftOA.setText(bundle1.getString("GUI.draftOA.text")); // NOI18N
+        draftOA.setMaximumSize(new java.awt.Dimension(61, 25));
+        draftOA.setMinimumSize(new java.awt.Dimension(25, 25));
+        draftOA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                draftOAActionPerformed(evt);
+            }
+        });
+
+        draftDF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        draftDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftDF.setText(bundle1.getString("GUI.draftDF.text")); // NOI18N
+        draftDF.setMaximumSize(new java.awt.Dimension(61, 25));
+        draftDF.setMinimumSize(new java.awt.Dimension(25, 25));
+        draftDF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                draftDFActionPerformed(evt);
+            }
+        });
+
+        draftPOA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        draftPOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPOA.setText(bundle1.getString("GUI.draftPOA.text")); // NOI18N
+        draftPOA.setMaximumSize(new java.awt.Dimension(61, 25));
+        draftPOA.setMinimumSize(new java.awt.Dimension(25, 25));
+        draftPOA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                draftPOAActionPerformed(evt);
+            }
+        });
+
+        draftDLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        draftDLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        draftDLabel1.setLabelFor(salaryAmtLabel);
+        draftDLabel1.setText(bundle1.getString("GUI.draftDLabel1.text")); // NOI18N
+        draftDLabel1.setToolTipText(bundle1.getString("GUI.draftDLabel1.toolTipText")); // NOI18N
+
+        draftOALabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        draftOALabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        draftOALabel1.setLabelFor(salaryAmtLabel);
+        draftOALabel1.setText(bundle1.getString("GUI.draftOALabel1.text")); // NOI18N
+        draftOALabel1.setToolTipText(bundle1.getString("GUI.draftOALabel1.toolTipText")); // NOI18N
+
+        draftOFLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        draftOFLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        draftOFLabel1.setLabelFor(salaryAmtLabel);
+        draftOFLabel1.setText(bundle1.getString("GUI.draftOFLabel1.text")); // NOI18N
+        draftOFLabel1.setToolTipText(bundle1.getString("GUI.draftOFLabel1.toolTipText")); // NOI18N
+
+        draftPDF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        draftPDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPDF.setText(bundle1.getString("GUI.draftPDF.text")); // NOI18N
+        draftPDF.setMaximumSize(new java.awt.Dimension(61, 25));
+        draftPDF.setMinimumSize(new java.awt.Dimension(25, 25));
+        draftPDF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                draftPDFActionPerformed(evt);
+            }
+        });
+
+        draftPOF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        draftPOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPOF.setText(bundle1.getString("GUI.draftPOF.text")); // NOI18N
+        draftPOF.setMaximumSize(new java.awt.Dimension(61, 25));
+        draftPOF.setMinimumSize(new java.awt.Dimension(25, 25));
+        draftPOF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                draftPOFActionPerformed(evt);
+            }
+        });
+
+        draftTOF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        draftTOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTOF.setText(bundle1.getString("GUI.draftTOF.text")); // NOI18N
+        draftTOF.setMaximumSize(new java.awt.Dimension(61, 25));
+        draftTOF.setMinimumSize(new java.awt.Dimension(25, 25));
+        draftTOF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                draftTOFActionPerformed(evt);
+            }
+        });
+
+        draftOALabel2.setFont(new java.awt.Font("Tahoma", 1, 11));
+        draftOALabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        draftOALabel2.setLabelFor(salaryAmtLabel);
+        draftOALabel2.setText(bundle1.getString("GUI.draftOALabel2.text")); // NOI18N
+        draftOALabel2.setToolTipText(bundle1.getString("GUI.draftOALabel2.toolTipText")); // NOI18N
+
+        draftDLabel2.setFont(new java.awt.Font("Tahoma", 1, 11));
+        draftDLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        draftDLabel2.setLabelFor(salaryAmtLabel);
+        draftDLabel2.setText(bundle1.getString("GUI.draftDLabel2.text")); // NOI18N
+        draftDLabel2.setToolTipText(bundle1.getString("GUI.draftDLabel2.toolTipText")); // NOI18N
+
+        draftTOA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        draftTOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTOA.setText(bundle1.getString("GUI.draftTOA.text")); // NOI18N
+        draftTOA.setMaximumSize(new java.awt.Dimension(61, 25));
+        draftTOA.setMinimumSize(new java.awt.Dimension(25, 25));
+        draftTOA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                draftTOAActionPerformed(evt);
+            }
+        });
+
+        draftTDF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        draftTDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTDF.setText(bundle1.getString("GUI.draftTDF.text")); // NOI18N
+        draftTDF.setMaximumSize(new java.awt.Dimension(61, 25));
+        draftTDF.setMinimumSize(new java.awt.Dimension(25, 25));
+        draftTDF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                draftTDFActionPerformed(evt);
+            }
+        });
+
+        draftOFLabel2.setFont(new java.awt.Font("Tahoma", 1, 11));
+        draftOFLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        draftOFLabel2.setLabelFor(salaryAmtLabel);
+        draftOFLabel2.setText(bundle1.getString("GUI.draftOFLabel2.text")); // NOI18N
+        draftOFLabel2.setToolTipText(bundle1.getString("GUI.draftOFLabel2.toolTipText")); // NOI18N
+
+        numPlayersDraft.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        numPlayersDraft.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        numPlayersDraft.setText(bundle1.getString("GUI.numPlayersDraft.text")); // NOI18N
+        numPlayersDraft.setMaximumSize(new java.awt.Dimension(61, 25));
+        numPlayersDraft.setMinimumSize(new java.awt.Dimension(25, 25));
+        numPlayersDraft.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numPlayersDraftActionPerformed(evt);
+            }
+        });
+
+        numPlayersLabel4.setFont(new java.awt.Font("Tahoma", 1, 11));
+        numPlayersLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        numPlayersLabel4.setLabelFor(salaryAmtLabel);
+        numPlayersLabel4.setText(bundle1.getString("GUI.numPlayersLabel4.text")); // NOI18N
+        numPlayersLabel4.setToolTipText(bundle1.getString("GUI.numPlayersLabel4.toolTipText")); // NOI18N
+
+        javax.swing.GroupLayout draftTabLayout = new javax.swing.GroupLayout(draftTab);
+        draftTab.setLayout(draftTabLayout);
+        draftTabLayout.setHorizontalGroup(
+            draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(draftTabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(draftTabLayout.createSequentialGroup()
+                        .addComponent(draftYearList, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addGap(47, 47, 47)
+                                .addComponent(lwListLabel1)
+                                .addGap(141, 141, 141)
+                                .addComponent(cListLabel1))
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addGap(353, 353, 353)
+                                .addComponent(rwListLabel1)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addGap(80, 80, 80)
+                                .addComponent(dListLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 156, Short.MAX_VALUE)
+                                .addComponent(gListLabel1)
+                                .addGap(75, 75, 75))
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(395, 395, 395))
+                    .addGroup(draftTabLayout.createSequentialGroup()
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(draftOF, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, draftTabLayout.createSequentialGroup()
+                                .addComponent(draftOFLabel)
+                                .addGap(26, 26, 26)))
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(draftDLabel))
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftDF, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(draftOA, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(draftOALabel)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addComponent(draftPOF, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, draftTabLayout.createSequentialGroup()
+                                .addComponent(draftOFLabel1)
+                                .addGap(26, 26, 26)))
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(draftDLabel1))
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftPDF, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(draftPOA, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(draftOALabel1)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addComponent(draftTOF, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, draftTabLayout.createSequentialGroup()
+                                .addComponent(draftOFLabel2)
+                                .addGap(26, 26, 26)))
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(draftDLabel2))
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftTDF, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(draftTOA, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(draftOALabel2)))
+                        .addGap(736, 736, 736))
+                    .addGroup(draftTabLayout.createSequentialGroup()
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(numPlayersLabel4)
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(numPlayersDraft, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(903, Short.MAX_VALUE))))
+        );
+        draftTabLayout.setVerticalGroup(
+            draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(draftTabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(draftTabLayout.createSequentialGroup()
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(dListLabel1)
+                            .addComponent(gListLabel1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                            .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)))
+                    .addGroup(draftTabLayout.createSequentialGroup()
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lwListLabel1)
+                            .addComponent(cListLabel1)
+                            .addComponent(rwListLabel1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane10)
+                            .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(draftYearList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(30, 30, 30)
+                .addComponent(numPlayersLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(numPlayersDraft, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(draftTabLayout.createSequentialGroup()
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(draftOFLabel)
+                            .addComponent(draftDLabel)
+                            .addComponent(draftOALabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(draftOF, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(draftDF, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(draftOA, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(draftTabLayout.createSequentialGroup()
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(draftOFLabel1)
+                            .addComponent(draftDLabel1)
+                            .addComponent(draftOALabel1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(draftPOF, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(draftPDF, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(draftPOA, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(draftTabLayout.createSequentialGroup()
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(draftOFLabel2)
+                            .addComponent(draftDLabel2)
+                            .addComponent(draftOALabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(draftTOF, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(draftTDF, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(draftTOA, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(315, 315, 315))
+        );
+
+        playerTab.addTab(bundle1.getString("GUI.draftTab.TabConstraints.tabTitle"), draftTab); // NOI18N
 
         jMenu1.setText(bundle1.getString("GUI.jMenu1.text")); // NOI18N
 
@@ -3129,70 +3579,69 @@ public class GUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-	
+
 	private void openMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openMenuActionPerformed
-		final JFileChooser fc = new JFileChooser();
-		fc.showOpenDialog(this);
-		fH=new FileHandler (fc.getSelectedFile());
-		this.initializeNewFile();
+            final JFileChooser fc = new JFileChooser();
+            fc.showOpenDialog(this);
+            fH = new FileHandler(fc.getSelectedFile());
+            this.initializeNewFile();
 	}//GEN-LAST:event_openMenuActionPerformed
 
 	private void searchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchFieldActionPerformed
-		// TODO add your handling code here:
+            // TODO add your handling code here:
 	}//GEN-LAST:event_searchFieldActionPerformed
 
 	private void curOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curOAActionPerformed
-		// TODO add your handling code here:
+            // TODO add your handling code here:
 	}//GEN-LAST:event_curOAActionPerformed
 
 	private void projOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_projOAActionPerformed
-		// TODO add your handling code here:
+            // TODO add your handling code here:
 	}//GEN-LAST:event_projOAActionPerformed
 
 	private void trainOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trainOAActionPerformed
-		// TODO add your handling code here:
+            // TODO add your handling code here:
 	}//GEN-LAST:event_trainOAActionPerformed
 
 	private void farmOA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_farmOA1ActionPerformed
-		// TODO add your handling code here:
+            // TODO add your handling code here:
 	}//GEN-LAST:event_farmOA1ActionPerformed
 
 	private void searchPlayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchPlayerActionPerformed
-		String player=searchField.getText().toLowerCase();
-		Player old=foundPlayer;
-		System.out.println(playerSet.size());
-		for (Player p:playerSet){
-			if (p.getFullName().toLowerCase().contains(player)){
-				foundPlayer=p;
-				searchField.setText(p.getFullName());
-			}}
-		if (foundPlayer==old||foundPlayer==null){
-			if (player.contains("o")){
-				player.replace("o", "ö");
-				searchField.setText(player);
-				// searchPlayer.doClick();
-			}
-			//JOptionPane.showMessageDialog(this,"Unable to find player. Try typing the player's full name. Make sure you use correct symbols. Error is also thrown if you are on the same player","Unable to find Player", 1);
-		}
-		else{
-			updateGUIToPlayer();
-		}
+            String player = searchField.getText().toLowerCase();
+            Player old = foundPlayer;
+            System.out.println(playerSet.size());
+            for (Player p : playerSet) {
+                if (p.getFullName().toLowerCase().contains(player)) {
+                    foundPlayer = p;
+                    searchField.setText(p.getFullName());
+                }
+            }
+            if (foundPlayer == old || foundPlayer == null) {
+                if (player.contains("o")) {
+                    player.replace("o", "ö");
+                    searchField.setText(player);
+                    // searchPlayer.doClick();
+                }
+                //JOptionPane.showMessageDialog(this,"Unable to find player. Try typing the player's full name. Make sure you use correct symbols. Error is also thrown if you are on the same player","Unable to find Player", 1);
+            } else {
+                updateGUIToPlayer();
+            }
 	}//GEN-LAST:event_searchPlayerActionPerformed
 
 	private void similarPlayerListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_similarPlayerListValueChanged
-		try{
-			searchField.setText(similarPlayerList.getSelectedValue().toString());
-			searchPlayer.doClick();
-		}
-		catch (Throwable t){
-			t.printStackTrace();
-		}
+            try {
+                searchField.setText(similarPlayerList.getSelectedValue().toString());
+                searchPlayer.doClick();
+            } catch (Throwable t) {
+                t.printStackTrace();
+            }
 	}//GEN-LAST:event_similarPlayerListValueChanged
 
 	private void searchFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchFieldKeyPressed
-		if (evt.getKeyCode()==10){
-			searchPlayer.doClick();
-		}
+            if (evt.getKeyCode() == 10) {
+                searchPlayer.doClick();
+            }
 	}//GEN-LAST:event_searchFieldKeyPressed
 
         private void numPlayersProspActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numPlayersProspActionPerformed
@@ -3228,7 +3677,6 @@ public class GUI extends javax.swing.JFrame {
 }//GEN-LAST:event_teamSearchButtonActionPerformed
 
         private void teamSearchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamSearchFieldActionPerformed
-
 }//GEN-LAST:event_teamSearchFieldActionPerformed
 
         private void proListLabelPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_proListLabelPropertyChange
@@ -3236,31 +3684,31 @@ public class GUI extends javax.swing.JFrame {
         }//GEN-LAST:event_proListLabelPropertyChange
 
         private void proTeamButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proTeamButtonActionPerformed
-               updateGUIToTeam();
+            updateGUIToTeam();
 
         }//GEN-LAST:event_proTeamButtonActionPerformed
 
         private void farmTeamButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_farmTeamButtonActionPerformed
-               updateGUIToTeam();
+            updateGUIToTeam();
         }//GEN-LAST:event_farmTeamButtonActionPerformed
 
         private void prospectsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prospectsButtonActionPerformed
-              updateGUIToTeam();
+            updateGUIToTeam();
         }//GEN-LAST:event_prospectsButtonActionPerformed
 
         private void allButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_allButtonActionPerformed
-               updateGUIToTeam();
+            updateGUIToTeam();
         }//GEN-LAST:event_allButtonActionPerformed
 
         private void createLinesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createLinesButtonActionPerformed
-            String fileName=JOptionPane.showInputDialog("Enter desired file name");
+            String fileName = JOptionPane.showInputDialog("Enter desired file name");
             System.out.println(fileName);
-            fileName.replaceAll("[.,;:!@#$%^* ]","");
-            if (fileName.equalsIgnoreCase("players")||fileName.equalsIgnoreCase("league"))
-                JOptionPane.showMessageDialog(this,"Bad file name choice");
-            else{
-                ArrayList<String>id=new ArrayList<String>();
-                String startingG=getPlayerId(gStarting.getText());
+            fileName.replaceAll("[.,;:!@#$%^* ]", "");
+            if (fileName.equalsIgnoreCase("players") || fileName.equalsIgnoreCase("league")) {
+                JOptionPane.showMessageDialog(this, "Bad file name choice");
+            } else {
+                ArrayList<String> id = new ArrayList<String>();
+                String startingG = getPlayerId(gStarting.getText());
                 id.add(startingG);
                 id.add(getPlayerId(gBackup.getText()));
                 id.add(getPlayerId(dpair1L.getText()));
@@ -3301,11 +3749,11 @@ public class GUI extends javax.swing.JFrame {
                 id.add(getPlayerId(lwPK2.getText()));
                 id.add(getPlayerId(rwPK2.getText()));
                 id.add(startingG);
-                String tactics1=""+TacticsLine1.getSelectedIndex()+" "+TacticsLine2.getSelectedIndex()+" "+TacticsLine3.getSelectedIndex()+" "+TacticsLine4.getSelectedIndex()
-                        +" "+TacticsPP1.getSelectedIndex()+" "+TacticsPP2.getSelectedIndex()+" "+TacticsPK1.getSelectedIndex()+" "+TacticsPK2.getSelectedIndex();
+                String tactics1 = "" + TacticsLine1.getSelectedIndex() + " " + TacticsLine2.getSelectedIndex() + " " + TacticsLine3.getSelectedIndex() + " " + TacticsLine4.getSelectedIndex()
+                        + " " + TacticsPP1.getSelectedIndex() + " " + TacticsPP2.getSelectedIndex() + " " + TacticsPK1.getSelectedIndex() + " " + TacticsPK2.getSelectedIndex();
                 id.add(tactics1);
-                String time=""+Integer.parseInt(timeLine1.getText())/10+" "+Integer.parseInt(timeLine2.getText())/10+" "+Integer.parseInt(timeLine3.getText())/10+" "+Integer.parseInt(timeLine4.getText())/10
-                        +" "+Integer.parseInt(timePP1.getText())/10+" "+Integer.parseInt(timePP2.getText())/10+" "+Integer.parseInt(timePK1.getText())/10+" "+Integer.parseInt(timePK2.getText())/10;
+                String time = "" + Integer.parseInt(timeLine1.getText()) / 10 + " " + Integer.parseInt(timeLine2.getText()) / 10 + " " + Integer.parseInt(timeLine3.getText()) / 10 + " " + Integer.parseInt(timeLine4.getText()) / 10
+                        + " " + Integer.parseInt(timePP1.getText()) / 10 + " " + Integer.parseInt(timePP2.getText()) / 10 + " " + Integer.parseInt(timePK1.getText()) / 10 + " " + Integer.parseInt(timePK2.getText()) / 10;
                 id.add(time);
                 fH.writeLinesFile(id, fileName);
             }
@@ -3313,198 +3761,408 @@ public class GUI extends javax.swing.JFrame {
 
         }//GEN-LAST:event_createLinesButtonActionPerformed
 
-	public void updateGUIToPlayer(){
-		searchField.setText(foundPlayer.getFullName());
-		ArrayList<String>skills=foundPlayer.getAllInfoList();
-		for (int i=0;i<skills.size();i++){
-			list.get(i).setText(skills.get(i));
-		}
-		salaryAmtConsidering.setToolTipText("Team Offering: "+foundPlayer.getStringFromNum(foundPlayer.getOfferTeam()));
-		ArrayList<Player>ap=foundPlayer.getClosePlayerMatches(fH.getPlayerList());
-		String[]a=new String [ap.size()];
-		for (int i=0;i<a.length;i++)
-			a[i]=ap.get(i).getFullName();
-		similarPlayerList.setListData(a);
-                playerID.setText(""+foundPlayer.getId());
+        private void draftYearListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftYearListActionPerformed
+            double tempOf = 0;
+            double tempDf = 0;
+            double tempOA = 0;
+            double pOf = 0;
+            double pDf = 0;
+            double pOA = 0;
+            double tOf = 0;
+            double tDF = 0;
+            double tOA = 0;
+            String yr = (String) draftYearList.getSelectedItem();
+            Team draft = teamList.get(30);
+            if (yr.equalsIgnoreCase("2017")) {//need to detect what current draft year is
+                draftLwList.setListData(draft.getLeftWing(draft.getAllPlayers()));
+                draftCList.setListData(draft.getCenter(draft.getAllPlayers()));
+                draftRwList.setListData(draft.getRightWing(draft.getAllPlayers()));
+                draftDList.setListData(draft.getDefense(draft.getAllPlayers()));
+                draftGList.setListData(draft.getGoalie(draft.getAllPlayers()));
 
-	}
-        public void updateGUIToTeam(){
-            Team team=getTeamSearched(teamSearchField.getText());
-            team.sortPlayersToLists();
-            teamIcon.setIcon(team.getImageIcon(fH.getFilePath()));
-            teamIcon.setText("");
-            proSalary.setText(""+team.getProSalary());
-            farmSalary.setText(""+team.getFarmSalary());
-            numPlayers.setText(""+team.getAllPlayers().size());
-            proOffense.setText(""+team.offenseAverage());
-            proDefense.setText(""+team.defenseAverage());
-            proOA.setText(""+team.overallAverage());
-            numPlayersPro.setText(""+team.getProPlayers().size());
-            numPlayersFarm.setText(""+team.getFarmPlayers().size());
-            numPlayersProsp.setText(""+team.getProspects().size());
-            if (proTeamButton.isSelected()){
-                lwList.setListData(team.getLeftWing(team.getProPlayers()));
-                cList.setListData(team.getCenter(team.getProPlayers()));
-                rwList.setListData(team.getRightWing(team.getProPlayers()));
-                dList.setListData(team.getDefense(team.getProPlayers()));
-                gList.setListData(team.getGoalie(team.getProPlayers()));}
-            else if (farmTeamButton.isSelected()){
-                lwList.setListData(team.getLeftWing(team.getFarmPlayers()));
-                cList.setListData(team.getCenter(team.getFarmPlayers()));
-                rwList.setListData(team.getRightWing(team.getFarmPlayers()));
-                dList.setListData(team.getDefense(team.getFarmPlayers()));
-                gList.setListData(team.getGoalie(team.getFarmPlayers()));
-            }
-            else if (prospectsButton.isSelected()){
-                lwList.setListData(team.getLeftWing(team.getProspects()));
-                cList.setListData(team.getCenter(team.getProspects()));
-                rwList.setListData(team.getRightWing(team.getProspects()));
-                dList.setListData(team.getDefense(team.getProspects()));
-                gList.setListData(team.getGoalie(team.getProspects()));
-            }
-            else{
-                lwList.setListData(team.getLeftWing(team.getAllPlayers()));
-                cList.setListData(team.getCenter(team.getAllPlayers()));
-                rwList.setListData(team.getRightWing(team.getAllPlayers()));
-                dList.setListData(team.getDefense(team.getAllPlayers()));
-                gList.setListData(team.getGoalie(team.getAllPlayers()));
-            }
-            String[]tempNames=new String[team.getProPlayers().size()];
-            for (int i=0;i<tempNames.length;i++)
-                tempNames[i]=team.getProPlayers().get(i).getFullName();
-            avgProOverall();
-            avgProDefense();
-            avgProOffense();
-            strengthOfDrafts();
+                for (Player p : draft.getAllPlayers()) {
+                    tempOf += p.getOffense();
+                    pOf += p.getpOFF();
+                    tOf += p.getTRO();
+                    tempDf += p.getDefense();
+                    pDf += p.getpDF();
+                    tDF += p.getTRD();
+                    tempOA += p.getOA();
+                    pOA += p.getpOA() / 6;
+                    tOA += p.getTROA();
 
+                }
+                String temp = "" + tempOf / draft.getAllPlayers().size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOF.setText("" + temp);
+                temp = "" + tempDf / draft.getAllPlayers().size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftDF.setText(temp);
+                temp = "" + tempOA / draft.getAllPlayers().size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOA.setText(temp);
+                temp = "" + pOf / draft.getAllPlayers().size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOF.setText("" + temp);
+                temp = "" + pDf / draft.getAllPlayers().size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPDF.setText(temp);
+                temp = "" + pOA / draft.getAllPlayers().size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOA.setText(temp);
+
+                temp = "" + tOf / draft.getAllPlayers().size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOF.setText("" + temp);
+                temp = "" + tDF / draft.getAllPlayers().size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTDF.setText(temp);
+                temp = "" + tOA / draft.getAllPlayers().size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOA.setText(temp);
+                numPlayersDraft.setText(""+draft.getAllPlayers().size());
+            } else {
+                draftLwList.setListData(draft.getLeftWing(league.getDrafts().get(yr)));
+                draftCList.setListData(draft.getCenter(league.getDrafts().get(yr)));
+                draftRwList.setListData(draft.getRightWing(league.getDrafts().get(yr)));
+                draftDList.setListData(draft.getDefense(league.getDrafts().get(yr)));
+                draftGList.setListData(draft.getGoalie(league.getDrafts().get(yr)));
+                for (Player p : league.getDrafts().get(yr)) {
+                    tempOf += p.getOffense();
+                    pOf += p.getpOFF();
+                    tOf += p.getTRO();
+                    tempDf += p.getDefense();
+                    pDf += p.getpDF();
+                    tDF += p.getTRD();
+                    tempOA += p.getOA();
+                    pOA += p.getpOA() / 6;
+                    tOA += p.getTROA();
+                }
+                String temp = "" + tempOf / league.getDrafts().get(yr).size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOF.setText("" + temp);
+                temp = "" + tempDf / league.getDrafts().get(yr).size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftDF.setText(temp);
+                temp = "" + tempOA / league.getDrafts().get(yr).size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOA.setText(temp);
+                temp = "" + pOf / league.getDrafts().get(yr).size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOF.setText("" + temp);
+                temp = "" + pDf / league.getDrafts().get(yr).size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPDF.setText(temp);
+                temp = "" + pOA / league.getDrafts().get(yr).size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOA.setText(temp);
+
+                temp = "" + tOf / league.getDrafts().get(yr).size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOF.setText("" + temp);
+                temp = "" + tDF / league.getDrafts().get(yr).size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTDF.setText(temp);
+                temp = "" + tOA / league.getDrafts().get(yr).size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOA.setText(temp);
+                numPlayersDraft.setText(""+league.getDrafts().get(yr).size());
+                
+            }
+
+
+
+        }//GEN-LAST:event_draftYearListActionPerformed
+
+        private void draftYearListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftYearListMouseClicked
+            //   draftYearList.removeAllItems();
+            // for (String s: league.getDrafts().keySet()){
+            //    draftYearList.addItem(s);
+            //}
+            //draftYearList.addItem("2017");
+        }//GEN-LAST:event_draftYearListMouseClicked
+
+        private void teamSearchFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_teamSearchFieldKeyPressed
+            if (evt.getKeyCode() == 10) {
+                updateGUIToTeam();
+            }
+        }//GEN-LAST:event_teamSearchFieldKeyPressed
+
+        private void draftOFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftOFActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_draftOFActionPerformed
+
+        private void draftOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftOAActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_draftOAActionPerformed
+
+        private void draftDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftDFActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_draftDFActionPerformed
+
+        private void draftPOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftPOAActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_draftPOAActionPerformed
+
+        private void draftPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftPDFActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_draftPDFActionPerformed
+
+        private void draftPOFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftPOFActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_draftPOFActionPerformed
+
+        private void draftTOFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftTOFActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_draftTOFActionPerformed
+
+        private void draftTOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftTOAActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_draftTOAActionPerformed
+
+        private void draftTDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftTDFActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_draftTDFActionPerformed
+
+        private void numPlayersDraftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numPlayersDraftActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_numPlayersDraftActionPerformed
+
+    public void updateGUIToPlayer() {
+        searchField.setText(foundPlayer.getFullName());
+        ArrayList<String> skills = foundPlayer.getAllInfoList();
+        for (int i = 0; i < skills.size(); i++) {
+            list.get(i).setText(skills.get(i));
         }
-        public void avgProOverall(){
-            double d=0;
-            double counter=0;
-            for (Team a:teamList){
+        salaryAmtConsidering.setToolTipText("Team Offering: " + foundPlayer.getStringFromNum(foundPlayer.getOfferTeam()));
+        ArrayList<Player> ap = foundPlayer.getClosePlayerMatches(fH.getPlayerList());
+        String[] a = new String[ap.size()];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = ap.get(i).getFullName();
+        }
+        similarPlayerList.setListData(a);
+        playerID.setText("" + foundPlayer.getId());
+
+    }
+
+    public void updateGUIToTeam() {
+        Team team = getTeamSearched(teamSearchField.getText());
+        team.sortPlayersToLists();
+        teamIcon.setIcon(team.getImageIcon(fH.getFilePath()));
+        teamIcon.setText("");
+        proSalary.setText("" + team.getProSalary());
+        farmSalary.setText("" + team.getFarmSalary());
+        numPlayers.setText("" + team.getAllPlayers().size());
+        proOffense.setText("" + team.offenseAverage());
+        proDefense.setText("" + team.defenseAverage());
+        proOA.setText("" + team.overallAverage());
+        numPlayersPro.setText("" + team.getProPlayers().size());
+        numPlayersFarm.setText("" + team.getFarmPlayers().size());
+        numPlayersProsp.setText("" + team.getProspects().size());
+        if (proTeamButton.isSelected()) {
+            lwList.setListData(team.getLeftWing(team.getProPlayers()));
+            cList.setListData(team.getCenter(team.getProPlayers()));
+            rwList.setListData(team.getRightWing(team.getProPlayers()));
+            dList.setListData(team.getDefense(team.getProPlayers()));
+            gList.setListData(team.getGoalie(team.getProPlayers()));
+        } else if (farmTeamButton.isSelected()) {
+            lwList.setListData(team.getLeftWing(team.getFarmPlayers()));
+            cList.setListData(team.getCenter(team.getFarmPlayers()));
+            rwList.setListData(team.getRightWing(team.getFarmPlayers()));
+            dList.setListData(team.getDefense(team.getFarmPlayers()));
+            gList.setListData(team.getGoalie(team.getFarmPlayers()));
+        } else if (prospectsButton.isSelected()) {
+            lwList.setListData(team.getLeftWing(team.getProspects()));
+            cList.setListData(team.getCenter(team.getProspects()));
+            rwList.setListData(team.getRightWing(team.getProspects()));
+            dList.setListData(team.getDefense(team.getProspects()));
+            gList.setListData(team.getGoalie(team.getProspects()));
+        } else {
+            lwList.setListData(team.getLeftWing(team.getAllPlayers()));
+            cList.setListData(team.getCenter(team.getAllPlayers()));
+            rwList.setListData(team.getRightWing(team.getAllPlayers()));
+            dList.setListData(team.getDefense(team.getAllPlayers()));
+            gList.setListData(team.getGoalie(team.getAllPlayers()));
+        }
+        String[] tempNames = new String[team.getProPlayers().size()];
+        for (int i = 0; i < tempNames.length; i++) {
+            tempNames[i] = team.getProPlayers().get(i).getFullName();
+        }
+        avgProOverall();
+        avgProDefense();
+        avgProOffense();
+        strengthOfDrafts();
+
+    }
+
+    public void avgProOverall() {
+        double d = 0;
+        double counter = 0;
+        for (Team a : teamList) {
+            a.sortPlayersToLists();
+            for (Player p : a.getProPlayers()) {
+                d += p.getOA();
+                counter++;
+            }
+        }
+        System.out.println("average overall: " + d / counter);
+    }
+
+    public void avgProDefense() {
+        double d = 0;
+        double counter = 0;
+        for (Team a : teamList) {
+            a.sortPlayersToLists();
+            for (Player p : a.getProPlayers()) {
+                d += p.getDefense();
+                counter++;
+            }
+        }
+        System.out.println("average defense: " + d / counter);
+    }
+
+    public void avgProOffense() {
+        double d = 0;
+        double counter = 0;
+        for (Team a : teamList) {
+            a.sortPlayersToLists();
+            for (Player p : a.getProPlayers()) {
+                d += p.getOffense();
+                counter++;
+            }
+        }
+        System.out.println("average offense: " + d / counter);
+    }
+
+    public void strengthOfDrafts() {
+        double d09 = 0;
+        double c09 = 0;
+        double d10 = 0;
+        double c10 = 0;
+        double d11 = 0;
+        double c11 = 0;
+        double d12 = 0;
+        double c12 = 0;
+        double d13 = 0;
+        double c13 = 0;
+        double d14 = 0;
+        double c14 = 0;
+        double d15 = 0;
+        double c15 = 0;
+        double d16 = 0;
+        double c16 = 0;
+        double d17 = 0;
+        double c17 = 0;
+        for (Player p : playerSet) {
+            if (p.getDraftYr() == 2009) {
+                d09 += p.getpOA() / 6;
+                c09++;
+            } else if (p.getDraftYr() == 2010) {
+                d10 += p.getpOA() / 6;
+                c10++;
+            } else if (p.getDraftYr() == 2011) {
+                d11 += p.getpOA() / 6;
+                c11++;
+            } else if (p.getDraftYr() == 2012) {
+                d12 += p.getpOA() / 6;
+                c12++;
+            } else if (p.getDraftYr() == 2013) {
+                d13 += p.getpOA() / 6;
+                c13++;
+            } else if (p.getDraftYr() == 2014) {
+                d14 += p.getpOA() / 6;
+                c14++;
+            } else if (p.getDraftYr() == 2015) {
+                d15 += p.getpOA() / 6;
+                c15++;
+            } else if (p.getDraftYr() == 2016) {
+                d16 += p.getpOA() / 6;
+                c16++;
+            } else if (p.getTEAM() == 99) {
+                d17 += p.getpOA() / 6;
+                c17++;
+            }
+        }
+        System.out.println(" 2009 draft average: " + d09 / c09 + "\n 2010 draft average: " + d10 / c10 + "\n 2011 draft average: " + d11 / c11
+                + "\n 2012 draft average: " + d12 / c12 + "\n 2013 draft average: " + d13 / c13 + "\n 2014 draft average: " + d14 / c14
+                + "\n 2015 draft average: " + d15 / c15 + "\n 2016 draft average: " + d16 / c16 + "\n 2017 draft average: " + d17 / c17);
+
+
+    }
+
+    public String getPlayerId(String name) {
+        for (Player p : playerSet) {
+            if (p.getFullName().equalsIgnoreCase(name)) {
+                return "" + p.getId();
+            }
+        }
+        return "99999";
+    }
+
+    public void initializeNewFile() {
+        fH.readFromPlayersFile();
+        league = new League(fH.getSortedPlayers(), salaryCap);
+        playerSet = fH.getSortedPlayers();
+    }
+
+    public Team getTeamSearched(String s) {
+        for (Team a : teamList) {
+            if (a.getName().equalsIgnoreCase(s)) {
                 a.sortPlayersToLists();
-                for (Player p:a.getProPlayers()){
-                    d+=p.getOA();
-                    counter++;
-                }
+                System.out.println(a.getAllPlayers().size());
+                return a;
             }
-            System.out.println("average overall: "+d/counter);
         }
+        return new Team("Team Not Found", new ArrayList<Player>(), -1);
+    }
 
-        public void avgProDefense(){
-            double d=0;
-            double counter=0;
-            for (Team a:teamList){
-                a.sortPlayersToLists();
-                for (Player p:a.getProPlayers()){
-                    d+=p.getDefense();
-                    counter++;
-                }
-            }
-            System.out.println("average defense: "+d/counter);
-        }
-        public void avgProOffense(){
-            double d=0;
-            double counter=0;
-            for (Team a:teamList){
-                a.sortPlayersToLists();
-                for (Player p:a.getProPlayers()){
-                    d+=p.getOffense();
-                    counter++;
-                }
-            }
-            System.out.println("average offense: "+d/counter);
-        }
-        
-        public void strengthOfDrafts(){
-            double d09=0;double c09=0;
-            double d10=0;double c10=0;
-            double d11=0;double c11=0;
-            double d12=0;double c12=0;
-            double d13=0;double c13=0;
-            double d14=0;double c14=0;
-            double d15=0;double c15=0;
-            double d16=0;double c16=0;
-            double d17=0;double c17=0;
-            for (Player p: playerSet){
-                if (p.getDraftYr()==2009){
-                    d09+=p.getpOA()/6;
-                    c09++;
-                }
-                else if (p.getDraftYr()==2010){
-                    d10+=p.getpOA()/6;
-                    c10++;
-                }
-                else if (p.getDraftYr()==2011){
-                    d11+=p.getpOA()/6;
-                    c11++;
-                }
-                else if (p.getDraftYr()==2012){
-                    d12+=p.getpOA()/6;
-                    c12++;
-                }
-                else if (p.getDraftYr()==2013){
-                    d13+=p.getpOA()/6;
-                    c13++;
-                }
-                else if (p.getDraftYr()==2014){
-                    d14+=p.getpOA()/6;
-                    c14++;
-                }
-                else if (p.getDraftYr()==2015){
-                    d15+=p.getpOA()/6;
-                    c15++;
-                }
-                else if (p.getDraftYr()==2016){
-                    d16+=p.getpOA()/6;
-                    c16++;
-                }
-                else if (p.getTEAM()==99){
-                    d17+=p.getpOA()/6;
-                    c17++;
-                }
-            }
-            System.out.println(" 2009 draft average: "+d09/c09+"\n 2010 draft average: "+d10/c10+"\n 2011 draft average: "+d11/c11
-                    +"\n 2012 draft average: "+d12/c12+"\n 2013 draft average: "+d13/c13+"\n 2014 draft average: "+ d14/c14+
-                    "\n 2015 draft average: "+d15/c15+"\n 2016 draft average: "+d16/c16+"\n 2017 draft average: "+d17/c17);
-            
-            
-        }
-        
-        public String getPlayerId(String name){
-            for (Player p: playerSet){
-                if (p.getFullName().equalsIgnoreCase(name))
-                    return ""+p.getId();
-            }
-            return "99999";
-        }
-	public void initializeNewFile(){
-		fH.readFromPlayersFile();
-		league=new League(fH.getSortedPlayers(),salaryCap);
-		playerSet=fH.getSortedPlayers();
-	}
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
 
-
-        public Team getTeamSearched(String s){
-            for (Team a: teamList){
-                if (a.getName().equalsIgnoreCase(s)){
-                    a.sortPlayersToLists();
-                    System.out.println(a.getAllPlayers().size());
-                    return a;}
+            public void run() {
+                new GUI().setVisible(true);
             }
-            return new Team("Team Not Found", new ArrayList<Player>(), -1);
-        }
-	/**
-	 * @param args the command line arguments
-	 */
-	public static void main(String args[]) {
-		java.awt.EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				new GUI().setVisible(true);
-			}
-		});
-	}
-
+        });
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFormattedTextField CON;
     private javax.swing.JLabel ConsideringLabel;
@@ -3539,6 +4197,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField cLinePP2;
     private javax.swing.JList cList;
     private javax.swing.JLabel cListLabel;
+    private javax.swing.JLabel cListLabel1;
     private javax.swing.JFormattedTextField careerA;
     private javax.swing.JFormattedTextField careerG;
     private javax.swing.JFormattedTextField careerP;
@@ -3600,6 +4259,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField curStreakP;
     private javax.swing.JList dList;
     private javax.swing.JLabel dListLabel;
+    private javax.swing.JLabel dListLabel1;
     private javax.swing.JFormattedTextField dPair2R;
     private javax.swing.JFormattedTextField dPairRPK1;
     private javax.swing.JFormattedTextField dPairRPK2;
@@ -3615,12 +4275,37 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField dpairLPP1;
     private javax.swing.JFormattedTextField dpairLPP2;
     private javax.swing.JFormattedTextField dpairRPP1;
+    private javax.swing.JList draftCList;
+    private javax.swing.JFormattedTextField draftDF;
+    private javax.swing.JLabel draftDLabel;
+    private javax.swing.JLabel draftDLabel1;
+    private javax.swing.JLabel draftDLabel2;
+    private javax.swing.JList draftDList;
+    private javax.swing.JList draftGList;
     private javax.swing.JLabel draftHeaderLabel;
     private javax.swing.JLabel draftLabel;
+    private javax.swing.JList draftLwList;
+    private javax.swing.JFormattedTextField draftOA;
+    private javax.swing.JLabel draftOALabel;
+    private javax.swing.JLabel draftOALabel1;
+    private javax.swing.JLabel draftOALabel2;
+    private javax.swing.JFormattedTextField draftOF;
+    private javax.swing.JLabel draftOFLabel;
+    private javax.swing.JLabel draftOFLabel1;
+    private javax.swing.JLabel draftOFLabel2;
+    private javax.swing.JFormattedTextField draftPDF;
+    private javax.swing.JFormattedTextField draftPOA;
+    private javax.swing.JFormattedTextField draftPOF;
     private javax.swing.JFormattedTextField draftPos;
     private javax.swing.JFormattedTextField draftRd;
+    private javax.swing.JList draftRwList;
+    private javax.swing.JFormattedTextField draftTDF;
+    private javax.swing.JFormattedTextField draftTOA;
+    private javax.swing.JFormattedTextField draftTOF;
+    private javax.swing.JPanel draftTab;
     private javax.swing.JFormattedTextField draftTeam;
     private javax.swing.JLabel draftTeamLabel;
+    private javax.swing.JComboBox draftYearList;
     private javax.swing.JFormattedTextField draftYr;
     private javax.swing.JLabel endLabel;
     private javax.swing.JLabel facLabel;
@@ -3635,6 +4320,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel gLabel;
     private javax.swing.JList gList;
     private javax.swing.JLabel gListLabel;
+    private javax.swing.JLabel gListLabel1;
     private javax.swing.JFormattedTextField gStarting;
     private javax.swing.JLabel grdLabel;
     private javax.swing.JLabel gwgLabel;
@@ -3652,6 +4338,11 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
@@ -3673,6 +4364,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField lwLinePP2;
     private javax.swing.JList lwList;
     private javax.swing.JLabel lwListLabel;
+    private javax.swing.JLabel lwListLabel1;
     private javax.swing.JFormattedTextField lwPK1;
     private javax.swing.JFormattedTextField lwPK2;
     private javax.swing.JFormattedTextField mA;
@@ -3682,11 +4374,13 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField mP;
     private javax.swing.JFormattedTextField mainPOSI;
     private javax.swing.JFormattedTextField numPlayers;
+    private javax.swing.JFormattedTextField numPlayersDraft;
     private javax.swing.JFormattedTextField numPlayersFarm;
     private javax.swing.JLabel numPlayersLabel;
     private javax.swing.JLabel numPlayersLabel1;
     private javax.swing.JLabel numPlayersLabel2;
     private javax.swing.JLabel numPlayersLabel3;
+    private javax.swing.JLabel numPlayersLabel4;
     private javax.swing.JFormattedTextField numPlayersPro;
     private javax.swing.JFormattedTextField numPlayersProsp;
     private javax.swing.JLabel oaLabel;
@@ -3724,6 +4418,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField rwLinePP2;
     private javax.swing.JList rwList;
     private javax.swing.JLabel rwListLabel;
+    private javax.swing.JLabel rwListLabel1;
     private javax.swing.JFormattedTextField rwPK1;
     private javax.swing.JFormattedTextField rwPK2;
     private javax.swing.JFormattedTextField salaryAmt;
@@ -3774,5 +4469,4 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField weight;
     private javax.swing.JLabel weightLabel;
     // End of variables declaration//GEN-END:variables
-
 }

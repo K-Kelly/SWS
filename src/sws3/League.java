@@ -145,5 +145,21 @@ public class League {
 	public void setTeamMap(HashMap<String, ArrayList<Player>> teamMap) {
 		this.teamMap = teamMap;
 	}
+
+        public HashMap<String, ArrayList<Player>> getDrafts(){
+            HashMap<String, ArrayList<Player>>drafts=new HashMap<String, ArrayList<Player>>();
+            for (Player p:playerList){
+                if (drafts.containsKey(""+p.getDraftYr())){
+                    drafts.get(""+p.getDraftYr()).add(p);
+                }
+                else{
+                    ArrayList<Player>temp=new ArrayList<Player>();
+                    temp.add(p);
+                    drafts.put(""+p.getDraftYr(), temp);
+                }
+            }
+            return drafts;
+
+        }
 	
 }
