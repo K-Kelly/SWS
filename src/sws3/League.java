@@ -8,9 +8,12 @@ public class League {
 	private long salaryCap;
 	private TreeSet<Player>playerList;
 	private HashMap<String,ArrayList<Player>> teamMap;
-	private ArrayList<Team>teamsList=new ArrayList<Team>(); 
+	private ArrayList<Team>teamsList=new ArrayList<Team>();
+        private int currentDraftYear;
+
 	
 	public League(TreeSet<Player>playerList,long salaryCap){
+                currentDraftYear=-1;
 		this.salaryCap=salaryCap;
 		this.playerList=playerList;
 		teamMap=new HashMap<String,ArrayList<Player>>();	
@@ -160,6 +163,12 @@ public class League {
             }
             return drafts;
 
+        }
+        public int getCurrentDraftYear(){
+            return currentDraftYear;
+        }
+        public void setCurrentDraftYear(int draftYear){
+            currentDraftYear=draftYear;
         }
 	
 }

@@ -1,0 +1,167 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x6d9bd1ff, pid=4960, tid=848
+#
+# JRE version: 6.0_20-b02
+# Java VM: Java HotSpot(TM) Client VM (16.3-b01 mixed mode windows-x86 )
+# Problematic frame:
+# V  [jvm.dll+0x10d1ff]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x02515800):  JavaThread "*** Profiler Agent Communication Thread" daemon [_thread_in_vm, id=848, stack(0x048e0000,0x04930000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x00000004
+
+Registers:
+EAX=0x0253752c, EBX=0x00000068, ECX=0x000071ee, EDX=0x00000000
+ESP=0x0492f8b0, EBP=0x0492f8b4, ESI=0x00000000, EDI=0x02451a70
+EIP=0x6d9bd1ff, EFLAGS=0x00010202
+
+Top of Stack: (sp=0x0492f8b0)
+0x0492f8b0:   02515800 0492f8dc 6d9e206f 0253752c
+0x0492f8c0:   04e61154 0253752c 02515800 00000000
+0x0492f8d0:   00000000 00000000 02515800 76ac3e00
+0x0492f8e0:   10002584 02451a70 0253752c 0492f928
+0x0492f8f0:   02515800 202e2248 0492f960 202e2248
+0x0492f900:   04c58de8 04c43040 04e61154 0000003b
+0x0492f910:   02538520 04c43060 04e610a0 02549f47
+0x0492f920:   02515910 0492f968 024d0f80 04c46880 
+
+Instructions: (pc=0x6d9bd1ff)
+0x6d9bd1ef:   cc 55 8b ec 8b 45 08 85 c0 75 02 5d c3 56 8b 30
+0x6d9bd1ff:   8b 46 04 8d 48 08 8b 01 ff 90 94 00 00 00 f6 d8 
+
+
+Stack: [0x048e0000,0x04930000],  sp=0x0492f8b0,  free space=13e0492f394k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x10d1ff]
+V  [jvm.dll+0x13206f]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  org.netbeans.lib.profiler.server.system.Stacks.getMethodNamesForJMethodIds(I[I[I)[B+0
+j  org.netbeans.lib.profiler.server.ProfilerInterface.getMethodNamesForJMethodIds([I)Lorg/netbeans/lib/profiler/wireprotocol/MethodNamesResponse;+18
+j  org.netbeans.lib.profiler.server.ProfilerServer.handleClientCommand(Lorg/netbeans/lib/profiler/wireprotocol/Command;)V+559
+j  org.netbeans.lib.profiler.server.ProfilerServer.listenToClient()V+48
+j  org.netbeans.lib.profiler.server.ProfilerServer.run()V+22
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0253bc00 JavaThread "*** Profiler Agent Special Execution Thread 7" [_thread_blocked, id=4316, stack(0x05060000,0x050b0000)]
+  0x00ea9800 JavaThread "DestroyJavaVM" [_thread_blocked, id=4644, stack(0x00380000,0x003d0000)]
+  0x04c5c800 JavaThread "*** Profiler Agent Special Execution Thread 3" daemon [_thread_blocked, id=2996, stack(0x05660000,0x056b0000)]
+  0x02534400 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=4176, stack(0x05340000,0x05390000)]
+  0x04c00c00 JavaThread "CompilerThread0" daemon [_thread_blocked, id=3244, stack(0x052b0000,0x05300000)]
+  0x0251a000 JavaThread "*** Profiler Agent Special Execution Thread 6" daemon [_thread_blocked, id=4092, stack(0x04a70000,0x04ac0000)]
+  0x02519000 JavaThread "*** JFluid Monitor thread ***" daemon [_thread_blocked, id=3048, stack(0x049e0000,0x04a30000)]
+=>0x02515800 JavaThread "*** Profiler Agent Communication Thread" daemon [_thread_in_vm, id=848, stack(0x048e0000,0x04930000)]
+  0x02510c00 JavaThread "Attach Listener" daemon [_thread_blocked, id=732, stack(0x04850000,0x048a0000)]
+  0x0250dc00 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=3624, stack(0x047c0000,0x04810000)]
+  0x024d6000 JavaThread "Finalizer" daemon [_thread_blocked, id=2224, stack(0x04730000,0x04780000)]
+  0x024cc000 JavaThread "Reference Handler" daemon [_thread_blocked, id=628, stack(0x046a0000,0x046f0000)]
+
+Other Threads:
+  0x024c6c00 VMThread [stack: 0x04650000,0x046a0000] [id=352]
+  0x0253b800 WatcherThread [stack: 0x053d0000,0x05420000] [id=764]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 4992K, used 61K [0x10010000, 0x10570000, 0x15560000)
+  eden space 4480K,   1% used [0x10010000, 0x1001f440, 0x10470000)
+  from space 512K,   0% used [0x10470000, 0x10470000, 0x104f0000)
+  to   space 512K,   0% used [0x104f0000, 0x104f0000, 0x10570000)
+ tenured generation   total 10944K, used 1603K [0x15560000, 0x16010000, 0x20010000)
+   the space 10944K,  14% used [0x15560000, 0x156f0eb0, 0x156f1000, 0x16010000)
+ compacting perm gen  total 12288K, used 7226K [0x20010000, 0x20c10000, 0x24010000)
+   the space 12288K,  58% used [0x20010000, 0x2071eb48, 0x2071ec00, 0x20c10000)
+No shared spaces configured.
+
+Dynamic libraries:
+0x00400000 - 0x00424000 	C:\Program Files (x86)\Java\jdk1.6.0_20\bin\java.exe
+0x771c0000 - 0x77340000 	C:\Windows\SysWOW64\ntdll.dll
+0x75080000 - 0x75190000 	C:\Windows\syswow64\kernel32.dll
+0x76970000 - 0x769b6000 	C:\Windows\syswow64\KERNELBASE.dll
+0x64d00000 - 0x64d34000 	C:\Program Files\Alwil Software\Avast5\snxhk.dll
+0x75470000 - 0x75510000 	C:\Windows\syswow64\ADVAPI32.dll
+0x76ab0000 - 0x76b5c000 	C:\Windows\syswow64\msvcrt.dll
+0x753e0000 - 0x753f9000 	C:\Windows\SysWOW64\sechost.dll
+0x769c0000 - 0x76ab0000 	C:\Windows\syswow64\RPCRT4.dll
+0x74d20000 - 0x74d80000 	C:\Windows\syswow64\SspiCli.dll
+0x74d10000 - 0x74d1c000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x7c340000 - 0x7c396000 	C:\Program Files (x86)\Java\jdk1.6.0_20\jre\bin\msvcr71.dll
+0x6d8b0000 - 0x6db47000 	C:\Program Files (x86)\Java\jdk1.6.0_20\jre\bin\client\jvm.dll
+0x74f80000 - 0x75080000 	C:\Windows\syswow64\USER32.dll
+0x74ef0000 - 0x74f80000 	C:\Windows\syswow64\GDI32.dll
+0x75330000 - 0x7533a000 	C:\Windows\syswow64\LPK.dll
+0x75510000 - 0x755ad000 	C:\Windows\syswow64\USP10.dll
+0x71e30000 - 0x71e62000 	C:\Windows\system32\WINMM.dll
+0x76d60000 - 0x76dc0000 	C:\Windows\system32\IMM32.DLL
+0x75750000 - 0x7581c000 	C:\Windows\syswow64\MSCTF.dll
+0x6cb40000 - 0x6cb8c000 	C:\Windows\system32\apphelp.dll
+0x6d860000 - 0x6d86c000 	C:\Program Files (x86)\Java\jdk1.6.0_20\jre\bin\verify.dll
+0x6d3e0000 - 0x6d3ff000 	C:\Program Files (x86)\Java\jdk1.6.0_20\jre\bin\java.dll
+0x6d340000 - 0x6d348000 	C:\Program Files (x86)\Java\jdk1.6.0_20\jre\bin\hpi.dll
+0x74ee0000 - 0x74ee5000 	C:\Windows\syswow64\PSAPI.DLL
+0x10000000 - 0x10008000 	C:\Users\Kevin\.netbeans\6.9\lib\deployed\jdk16\windows\profilerinterface.dll
+0x6d8a0000 - 0x6d8af000 	C:\Program Files (x86)\Java\jdk1.6.0_20\jre\bin\zip.dll
+0x6d6c0000 - 0x6d6d3000 	C:\Program Files (x86)\Java\jdk1.6.0_20\jre\bin\net.dll
+0x75af0000 - 0x75b25000 	C:\Windows\syswow64\WS2_32.dll
+0x77190000 - 0x77196000 	C:\Windows\syswow64\NSI.dll
+0x72560000 - 0x7259c000 	C:\Windows\system32\mswsock.dll
+0x6cd60000 - 0x6cd66000 	C:\Windows\System32\wship6.dll
+0x72470000 - 0x72475000 	C:\Windows\System32\wshtcpip.dll
+0x6d610000 - 0x6d619000 	C:\Program Files (x86)\Java\jdk1.6.0_20\jre\bin\management.dll
+0x72290000 - 0x722a6000 	C:\Windows\system32\CRYPTSP.dll
+0x72250000 - 0x7228b000 	C:\Windows\system32\rsaenh.dll
+0x72b70000 - 0x72b87000 	C:\Windows\system32\USERENV.dll
+0x72b60000 - 0x72b6b000 	C:\Windows\system32\profapi.dll
+0x72600000 - 0x72610000 	C:\Windows\system32\NLAapi.dll
+0x725f0000 - 0x72600000 	C:\Windows\system32\napinsp.dll
+0x725d0000 - 0x725e2000 	C:\Windows\system32\pnrpnsp.dll
+0x725a0000 - 0x725c4000 	C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live\WLIDNSP.DLL
+0x75a60000 - 0x75ab7000 	C:\Windows\syswow64\SHLWAPI.dll
+0x72510000 - 0x72554000 	C:\Windows\system32\DNSAPI.dll
+0x72500000 - 0x72508000 	C:\Windows\System32\winrnr.dll
+0x724e0000 - 0x724fc000 	C:\Windows\system32\IPHLPAPI.DLL
+0x724d0000 - 0x724d7000 	C:\Windows\system32\WINNSI.DLL
+0x72480000 - 0x72486000 	C:\Windows\system32\rasadhlp.dll
+0x72490000 - 0x724c8000 	C:\Windows\System32\fwpuclnt.dll
+0x6d6e0000 - 0x6d6e9000 	C:\Program Files (x86)\Java\jdk1.6.0_20\jre\bin\nio.dll
+
+VM Arguments:
+jvm_args: -agentpath:C:/Users/Kevin/.netbeans/6.9/lib/deployed/jdk16/windows/profilerinterface.dll=C:\Users\Kevin\.netbeans\6.9\lib,5140,10 -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=C:\Users\Kevin\Documents\NetBeansProjects\SWS5\nbproject\private\profiler 
+java_command: sws3.Main
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=.;C:\Program Files (x86)\Java\jre6\lib\ext\QTJava.zip
+PATH=C:\Python27\;C:\Python27\Scripts;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Wireless WLAN Card;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Git\cmd;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Python27\;C:\Python27\Scripts;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\Dell Wireless WLAN Card;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Git\cmd;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Users\Kevin\AppData\Roaming\Python\Scripts;C:\Program Files\Common Files\Microsoft Shared\Windows Live
+USERNAME=Kevin
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 23 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7601 Service Pack 1
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3
+
+Memory: 4k page, physical 4153716k(1751892k free), swap 8305584k(5732920k free)
+
+vm_info: Java HotSpot(TM) Client VM (16.3-b01) for windows-x86 JRE (1.6.0_20-b02), built on Apr 12 2010 13:52:23 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Mon Aug 08 15:27:26 2011
+elapsed time: 9 seconds
+

@@ -42,6 +42,10 @@ public class GUI extends javax.swing.JFrame {
         teamList = league.createTeams();
         playerSet = fH.getSortedPlayers();
         System.out.println("Num Players: " + playerSet.size());
+        playerTab.setMnemonicAt(0,KeyEvent.VK_1);
+        playerTab.setMnemonicAt(1,KeyEvent.VK_2);
+        playerTab.setMnemonicAt(2,KeyEvent.VK_3);
+       // createDraftList();
         //create list
         list.add(wGP);
         list.add(wG);
@@ -152,7 +156,7 @@ public class GUI extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         playerTab = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
+        playerPanel = new javax.swing.JPanel();
         playerIcon = new javax.swing.JLabel();
         searchField = new javax.swing.JTextField();
         searchPlayer = new javax.swing.JButton();
@@ -448,6 +452,7 @@ public class GUI extends javax.swing.JFrame {
         draftOFLabel2 = new javax.swing.JLabel();
         numPlayersDraft = new javax.swing.JFormattedTextField();
         numPlayersLabel4 = new javax.swing.JLabel();
+        draftOF1 = new javax.swing.JFormattedTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         openMenu = new javax.swing.JMenuItem();
@@ -461,7 +466,7 @@ public class GUI extends javax.swing.JFrame {
 
         playerTab.setName("Player"); // NOI18N
 
-        jPanel1.setMaximumSize(new java.awt.Dimension(15000, 15000));
+        playerPanel.setMaximumSize(new java.awt.Dimension(15000, 15000));
 
         java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("sws3/Bundle"); // NOI18N
         playerIcon.setText(bundle1.getString("GUI.playerIcon.text")); // NOI18N
@@ -1651,29 +1656,29 @@ public class GUI extends javax.swing.JFrame {
         playerID.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         playerID.setText(bundle1.getString("GUI.playerID.text")); // NOI18N
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout playerPanelLayout = new javax.swing.GroupLayout(playerPanel);
+        playerPanel.setLayout(playerPanelLayout);
+        playerPanelLayout.setHorizontalGroup(
+            playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(playerPanelLayout.createSequentialGroup()
+                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(rightsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(draftLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(draftTeamLabel))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(playerIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(draftHeaderLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, playerPanelLayout.createSequentialGroup()
+                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(shoLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(playerPanelLayout.createSequentialGroup()
                                     .addComponent(rightsField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(draftYr, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1681,164 +1686,164 @@ public class GUI extends javax.swing.JFrame {
                                     .addComponent(draftRd, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(draftPos, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(playerPanelLayout.createSequentialGroup()
+                                    .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(playerPanelLayout.createSequentialGroup()
                                             .addGap(19, 19, 19)
                                             .addComponent(ceilingLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, playerPanelLayout.createSequentialGroup()
                                             .addContainerGap()
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                 .addComponent(weeklyLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
                                                 .addComponent(weeklyLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
                                                 .addComponent(ceilingLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
                                                 .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE))
                                             .addGap(26, 26, 26)))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(curSHO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(ceilSHO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(ceilSHO1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(shoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(wGP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(mGP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(playerPanelLayout.createSequentialGroup()
                                     .addGap(12, 12, 12)
                                     .addComponent(weeklyLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
                                     .addComponent(curStreakGP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(playerPanelLayout.createSequentialGroup()
                                     .addGap(20, 20, 20)
                                     .addComponent(weeklyLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                                     .addComponent(bStreakGP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(playerPanelLayout.createSequentialGroup()
                                     .addGap(31, 31, 31)
                                     .addComponent(weeklyLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addComponent(careerG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(careerA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addComponent(bStreakG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(bStreakA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(curStreakG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addComponent(mG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(mA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addComponent(wG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(wA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addComponent(gLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(assistLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addComponent(curPLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(curSTK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addComponent(plaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(stkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(ceilPLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addGap(36, 36, 36)
                                 .addComponent(ceilSTK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(ceilPLA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addGap(36, 36, 36)
                                 .addComponent(ceilSTK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(draftTeam, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(playerPanelLayout.createSequentialGroup()
+                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addGap(20, 20, 20)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(playerPanelLayout.createSequentialGroup()
+                                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addComponent(salaryYr, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(salaryAmt, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addComponent(salaryYrLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(salaryAmtLabel))))
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                     .addComponent(twoWayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                     .addComponent(twoWay, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(playerPanelLayout.createSequentialGroup()
                                                         .addComponent(salaryYrConsidering, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addGap(6, 6, 6)
                                                         .addComponent(salaryAmtConsidering, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                                    .addGroup(playerPanelLayout.createSequentialGroup()
                                                         .addComponent(salaryYrLabelConsidering)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                         .addComponent(salaryAmtLabelConsidering)))
                                                 .addGap(5, 5, 5))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, playerPanelLayout.createSequentialGroup()
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(ConsideringLabel)
                                                 .addGap(27, 27, 27))))
                                     .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(playerPanelLayout.createSequentialGroup()
+                                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(height, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(heightLabel))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, playerPanelLayout.createSequentialGroup()
                                                 .addComponent(weight, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(age, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addComponent(weightLabel)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(ageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGap(18, 18, 18)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(country, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(countryLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(hand, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(handLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addComponent(click, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addGroup(playerPanelLayout.createSequentialGroup()
                                                     .addComponent(mainPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                     .addComponent(altPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGroup(playerPanelLayout.createSequentialGroup()
                                                     .addComponent(clickLabel)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                     .addComponent(statusLabel))))
                                         .addGap(18, 18, 18))
                                     .addComponent(searchPlayer))
                                 .addGap(56, 56, 56))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addComponent(chkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(posLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1872,62 +1877,62 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(dfLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(oaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addComponent(ceilCHK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(576, 576, 576))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addGap(36, 36, 36)
                                 .addComponent(ceilPOS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(540, 540, 540))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addGap(72, 72, 72)
                                 .addComponent(ceilHIT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(504, 504, 504))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addGap(108, 108, 108)
                                 .addComponent(ceilSKA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(468, 468, 468))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addGap(144, 144, 144)
                                 .addComponent(ceilEND, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(432, 432, 432))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addGap(180, 180, 180)
                                 .addComponent(ceilPEN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(396, 396, 396))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addGap(216, 216, 216)
                                 .addComponent(ceilFAC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(360, 360, 360))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addGap(252, 252, 252)
                                 .addComponent(ceilLEA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(324, 324, 324))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addGap(288, 288, 288)
                                 .addComponent(ceilFIG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(288, 288, 288))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addGap(324, 324, 324)
                                 .addComponent(ceilSTR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(252, 252, 252))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(playerPanelLayout.createSequentialGroup()
+                                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(playerPanelLayout.createSequentialGroup()
                                             .addComponent(wP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(wGWG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(ceilingLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(playerPanelLayout.createSequentialGroup()
                                             .addComponent(pLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(gwgLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(ceilingLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addComponent(curCHK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(curPOS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1956,100 +1961,100 @@ public class GUI extends javax.swing.JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(INJ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addComponent(ceilCHK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addGap(36, 36, 36)
                                                 .addComponent(ceilPOS1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addGap(72, 72, 72)
                                                 .addComponent(ceilHIT1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addGap(108, 108, 108)
                                                 .addComponent(ceilSKA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addGap(144, 144, 144)
                                                 .addComponent(ceilEND1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addGap(180, 180, 180)
                                                 .addComponent(ceilPEN1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addGap(216, 216, 216)
                                                 .addComponent(ceilFAC1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addGap(252, 252, 252)
                                                 .addComponent(ceilLEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addGap(288, 288, 288)
                                                 .addComponent(ceilFIG1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addGap(324, 324, 324)
                                                 .addComponent(ceilSTR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, playerPanelLayout.createSequentialGroup()
                                             .addComponent(curStreakP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(similarPlayerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(playerPanelLayout.createSequentialGroup()
                                         .addComponent(mP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(mGWG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(playerPanelLayout.createSequentialGroup()
                                         .addComponent(bStreakP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(bStreakGWG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(playerPanelLayout.createSequentialGroup()
                                         .addComponent(projOF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(projDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(projOA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(playerPanelLayout.createSequentialGroup()
                                         .addComponent(curOF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(curDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(curOA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(playerPanelLayout.createSequentialGroup()
                                         .addComponent(trainOF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(trainDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(trainOA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(farmOF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(playerPanelLayout.createSequentialGroup()
                                         .addGap(72, 72, 72)
                                         .addComponent(farmOA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(playerPanelLayout.createSequentialGroup()
                                         .addGap(36, 36, 36)
                                         .addComponent(farmDF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(180, 180, 180))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(careerP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(playerPanelLayout.createSequentialGroup()
                 .addComponent(playerID, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(1088, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        playerPanelLayout.setVerticalGroup(
+            playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(playerPanelLayout.createSequentialGroup()
+                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(playerIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
                             .addComponent(draftHeaderLabel)
                             .addComponent(ConsideringLabel)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(searchPlayer)
                             .addComponent(mainPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(altPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rightsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(draftLabel)
                     .addComponent(salaryAmtLabel)
@@ -2066,14 +2071,14 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(statusLabel)
                     .addComponent(draftTeamLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(draftYr, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(draftRd, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(draftPos, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(draftTeam, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(rightsField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(salaryYr, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(salaryAmt, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(twoWay, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2087,7 +2092,7 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(click, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(plaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(chkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(posLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2109,94 +2114,94 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(stkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(shoLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(curSHO, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ceilSHO, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ceilingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ceilSHO1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ceilingLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(curPLA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilPLA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilPLA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(curSTK, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilSTK, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilSTK1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(curCHK, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilCHK, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilCHK1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(curPOS, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilPOS, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilPOS1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(curHIT, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilHIT, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilHIT1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(curSKA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilSKA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilSKA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(curEND, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilEND, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilEND1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(curPEN, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilPEN, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilPEN1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(curFAC, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilFAC, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilFAC1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(curLEA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilLEA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilLEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(curFIG, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilFIG, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilFIG1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(curSTR, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ceilSTR, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ceilSTR1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(projOF, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(projDF, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(projOA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(POT, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(CON, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(GRD, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2206,9 +2211,9 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(curOA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(playerPanelLayout.createSequentialGroup()
+                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(trainOF, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ceilingLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(shoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2217,7 +2222,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(pLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(gwgLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(farmOF1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ceilingLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(weeklyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2226,18 +2231,18 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(wA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(wP, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(wGWG, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(trainDF, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(farmDF1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addComponent(trainOA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(farmOA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(mGP, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(weeklyLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(mG, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2245,14 +2250,14 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(mP, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(mGWG, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(curStreakGP, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(curStreakG, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(curStreakP, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(weeklyLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(similarPlayerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(bStreakGP, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(bStreakG, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(bStreakA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2260,14 +2265,14 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(bStreakGWG, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(weeklyLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(careerG, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(careerA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(careerP, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(weeklyLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(55, 55, 55)
                         .addComponent(playerID))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(playerPanelLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(1266, 1266, 1266))
@@ -2277,7 +2282,7 @@ public class GUI extends javax.swing.JFrame {
         ceilingLabel.getAccessibleContext().setAccessibleName(bundle.getString("GUI.jLabel3.AccessibleContext.accessibleName")); // NOI18N
         ceilSHO.getAccessibleContext().setAccessibleDescription(bundle.getString("GUI.ceilSHO.AccessibleContext.accessibleDescription")); // NOI18N
 
-        playerTab.addTab(bundle1.getString("GUI.jPanel1.TabConstraints.tabTitle"), jPanel1); // NOI18N
+        playerTab.addTab(bundle1.getString("GUI.playerPanel.TabConstraints.tabTitle"), playerPanel); // NOI18N
 
         proListLabel.setPreferredSize(new java.awt.Dimension(1119, 1000));
         proListLabel.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
@@ -2455,6 +2460,11 @@ public class GUI extends javax.swing.JFrame {
 
         lwList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         lwList.setDragEnabled(true);
+        lwList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lwListMouseClicked(evt);
+            }
+        });
         jScrollPane5.setViewportView(lwList);
 
         lwListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
@@ -2465,6 +2475,11 @@ public class GUI extends javax.swing.JFrame {
 
         cList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         cList.setDragEnabled(true);
+        cList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cListMouseClicked(evt);
+            }
+        });
         jScrollPane6.setViewportView(cList);
 
         cListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
@@ -2475,6 +2490,11 @@ public class GUI extends javax.swing.JFrame {
 
         rwList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         rwList.setDragEnabled(true);
+        rwList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rwListMouseClicked(evt);
+            }
+        });
         jScrollPane7.setViewportView(rwList);
 
         rwListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
@@ -2485,6 +2505,11 @@ public class GUI extends javax.swing.JFrame {
 
         dList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         dList.setDragEnabled(true);
+        dList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dListMouseClicked(evt);
+            }
+        });
         jScrollPane8.setViewportView(dList);
 
         dListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
@@ -2495,6 +2520,11 @@ public class GUI extends javax.swing.JFrame {
 
         gList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         gList.setDragEnabled(true);
+        gList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                gListMouseClicked(evt);
+            }
+        });
         jScrollPane9.setViewportView(gList);
 
         gListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
@@ -3151,6 +3181,11 @@ public class GUI extends javax.swing.JFrame {
 
         draftCList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         draftCList.setDragEnabled(true);
+        draftCList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                draftCListMouseClicked(evt);
+            }
+        });
         jScrollPane10.setViewportView(draftCList);
 
         lwListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
@@ -3167,6 +3202,11 @@ public class GUI extends javax.swing.JFrame {
 
         draftDList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         draftDList.setDragEnabled(true);
+        draftDList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                draftDListMouseClicked(evt);
+            }
+        });
         jScrollPane11.setViewportView(draftDList);
 
         rwListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
@@ -3177,6 +3217,11 @@ public class GUI extends javax.swing.JFrame {
 
         draftRwList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         draftRwList.setDragEnabled(true);
+        draftRwList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                draftRwListMouseClicked(evt);
+            }
+        });
         jScrollPane12.setViewportView(draftRwList);
 
         gListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
@@ -3187,10 +3232,20 @@ public class GUI extends javax.swing.JFrame {
 
         draftGList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         draftGList.setDragEnabled(true);
+        draftGList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                draftGListMouseClicked(evt);
+            }
+        });
         jScrollPane13.setViewportView(draftGList);
 
         draftLwList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         draftLwList.setDragEnabled(true);
+        draftLwList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                draftLwListMouseClicked(evt);
+            }
+        });
         jScrollPane14.setViewportView(draftLwList);
 
         draftOF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -3198,11 +3253,6 @@ public class GUI extends javax.swing.JFrame {
         draftOF.setText(bundle1.getString("GUI.draftOF.text")); // NOI18N
         draftOF.setMaximumSize(new java.awt.Dimension(61, 25));
         draftOF.setMinimumSize(new java.awt.Dimension(25, 25));
-        draftOF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                draftOFActionPerformed(evt);
-            }
-        });
 
         draftOFLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftOFLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -3227,33 +3277,18 @@ public class GUI extends javax.swing.JFrame {
         draftOA.setText(bundle1.getString("GUI.draftOA.text")); // NOI18N
         draftOA.setMaximumSize(new java.awt.Dimension(61, 25));
         draftOA.setMinimumSize(new java.awt.Dimension(25, 25));
-        draftOA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                draftOAActionPerformed(evt);
-            }
-        });
 
         draftDF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         draftDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         draftDF.setText(bundle1.getString("GUI.draftDF.text")); // NOI18N
         draftDF.setMaximumSize(new java.awt.Dimension(61, 25));
         draftDF.setMinimumSize(new java.awt.Dimension(25, 25));
-        draftDF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                draftDFActionPerformed(evt);
-            }
-        });
 
         draftPOA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         draftPOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         draftPOA.setText(bundle1.getString("GUI.draftPOA.text")); // NOI18N
         draftPOA.setMaximumSize(new java.awt.Dimension(61, 25));
         draftPOA.setMinimumSize(new java.awt.Dimension(25, 25));
-        draftPOA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                draftPOAActionPerformed(evt);
-            }
-        });
 
         draftDLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftDLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -3278,33 +3313,18 @@ public class GUI extends javax.swing.JFrame {
         draftPDF.setText(bundle1.getString("GUI.draftPDF.text")); // NOI18N
         draftPDF.setMaximumSize(new java.awt.Dimension(61, 25));
         draftPDF.setMinimumSize(new java.awt.Dimension(25, 25));
-        draftPDF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                draftPDFActionPerformed(evt);
-            }
-        });
 
         draftPOF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         draftPOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         draftPOF.setText(bundle1.getString("GUI.draftPOF.text")); // NOI18N
         draftPOF.setMaximumSize(new java.awt.Dimension(61, 25));
         draftPOF.setMinimumSize(new java.awt.Dimension(25, 25));
-        draftPOF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                draftPOFActionPerformed(evt);
-            }
-        });
 
         draftTOF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         draftTOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         draftTOF.setText(bundle1.getString("GUI.draftTOF.text")); // NOI18N
         draftTOF.setMaximumSize(new java.awt.Dimension(61, 25));
         draftTOF.setMinimumSize(new java.awt.Dimension(25, 25));
-        draftTOF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                draftTOFActionPerformed(evt);
-            }
-        });
 
         draftOALabel2.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftOALabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -3323,22 +3343,12 @@ public class GUI extends javax.swing.JFrame {
         draftTOA.setText(bundle1.getString("GUI.draftTOA.text")); // NOI18N
         draftTOA.setMaximumSize(new java.awt.Dimension(61, 25));
         draftTOA.setMinimumSize(new java.awt.Dimension(25, 25));
-        draftTOA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                draftTOAActionPerformed(evt);
-            }
-        });
 
         draftTDF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         draftTDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         draftTDF.setText(bundle1.getString("GUI.draftTDF.text")); // NOI18N
         draftTDF.setMaximumSize(new java.awt.Dimension(61, 25));
         draftTDF.setMinimumSize(new java.awt.Dimension(25, 25));
-        draftTDF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                draftTDFActionPerformed(evt);
-            }
-        });
 
         draftOFLabel2.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftOFLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -3351,17 +3361,18 @@ public class GUI extends javax.swing.JFrame {
         numPlayersDraft.setText(bundle1.getString("GUI.numPlayersDraft.text")); // NOI18N
         numPlayersDraft.setMaximumSize(new java.awt.Dimension(61, 25));
         numPlayersDraft.setMinimumSize(new java.awt.Dimension(25, 25));
-        numPlayersDraft.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numPlayersDraftActionPerformed(evt);
-            }
-        });
 
         numPlayersLabel4.setFont(new java.awt.Font("Tahoma", 1, 11));
         numPlayersLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         numPlayersLabel4.setLabelFor(salaryAmtLabel);
         numPlayersLabel4.setText(bundle1.getString("GUI.numPlayersLabel4.text")); // NOI18N
         numPlayersLabel4.setToolTipText(bundle1.getString("GUI.numPlayersLabel4.toolTipText")); // NOI18N
+
+        draftOF1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        draftOF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftOF1.setText(bundle1.getString("GUI.draftOF1.text")); // NOI18N
+        draftOF1.setMaximumSize(new java.awt.Dimension(61, 25));
+        draftOF1.setMinimumSize(new java.awt.Dimension(25, 25));
 
         javax.swing.GroupLayout draftTabLayout = new javax.swing.GroupLayout(draftTab);
         draftTab.setLayout(draftTabLayout);
@@ -3403,13 +3414,23 @@ public class GUI extends javax.swing.JFrame {
                         .addGap(395, 395, 395))
                     .addGroup(draftTabLayout.createSequentialGroup()
                         .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(numPlayersLabel4)
                             .addGroup(draftTabLayout.createSequentialGroup()
-                                .addGap(9, 9, 9)
+                                .addGap(18, 18, 18)
+                                .addComponent(numPlayersDraft, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(903, Short.MAX_VALUE))
+                    .addGroup(draftTabLayout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(draftTabLayout.createSequentialGroup()
                                 .addComponent(draftOF, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, draftTabLayout.createSequentialGroup()
                                 .addComponent(draftOFLabel)
-                                .addGap(26, 26, 26)))
+                                .addGap(26, 26, 26))
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addComponent(draftOF1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                         .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(draftTabLayout.createSequentialGroup()
                                 .addGap(15, 15, 15)
@@ -3468,14 +3489,7 @@ public class GUI extends javax.swing.JFrame {
                             .addGroup(draftTabLayout.createSequentialGroup()
                                 .addGap(22, 22, 22)
                                 .addComponent(draftOALabel2)))
-                        .addGap(736, 736, 736))
-                    .addGroup(draftTabLayout.createSequentialGroup()
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(numPlayersLabel4)
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(numPlayersDraft, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(903, Short.MAX_VALUE))))
+                        .addContainerGap(366, Short.MAX_VALUE))))
         );
         draftTabLayout.setVerticalGroup(
             draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3537,7 +3551,9 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(draftTOF, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(draftTDF, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(draftTOA, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(315, 315, 315))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(draftOF1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(239, 239, 239))
         );
 
         playerTab.addTab(bundle1.getString("GUI.draftTab.TabConstraints.tabTitle"), draftTab); // NOI18N
@@ -3762,152 +3778,13 @@ public class GUI extends javax.swing.JFrame {
         }//GEN-LAST:event_createLinesButtonActionPerformed
 
         private void draftYearListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftYearListActionPerformed
-            double tempOf = 0;
-            double tempDf = 0;
-            double tempOA = 0;
-            double pOf = 0;
-            double pDf = 0;
-            double pOA = 0;
-            double tOf = 0;
-            double tDF = 0;
-            double tOA = 0;
             String yr = (String) draftYearList.getSelectedItem();
             Team draft = teamList.get(30);
             if (yr.equalsIgnoreCase("2017")) {//need to detect what current draft year is
-                draftLwList.setListData(draft.getLeftWing(draft.getAllPlayers()));
-                draftCList.setListData(draft.getCenter(draft.getAllPlayers()));
-                draftRwList.setListData(draft.getRightWing(draft.getAllPlayers()));
-                draftDList.setListData(draft.getDefense(draft.getAllPlayers()));
-                draftGList.setListData(draft.getGoalie(draft.getAllPlayers()));
-
-                for (Player p : draft.getAllPlayers()) {
-                    tempOf += p.getOffense();
-                    pOf += p.getpOFF();
-                    tOf += p.getTRO();
-                    tempDf += p.getDefense();
-                    pDf += p.getpDF();
-                    tDF += p.getTRD();
-                    tempOA += p.getOA();
-                    pOA += p.getpOA() / 6;
-                    tOA += p.getTROA();
-
-                }
-                String temp = "" + tempOf / draft.getAllPlayers().size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOF.setText("" + temp);
-                temp = "" + tempDf / draft.getAllPlayers().size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftDF.setText(temp);
-                temp = "" + tempOA / draft.getAllPlayers().size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOA.setText(temp);
-                temp = "" + pOf / draft.getAllPlayers().size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOF.setText("" + temp);
-                temp = "" + pDf / draft.getAllPlayers().size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPDF.setText(temp);
-                temp = "" + pOA / draft.getAllPlayers().size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOA.setText(temp);
-
-                temp = "" + tOf / draft.getAllPlayers().size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOF.setText("" + temp);
-                temp = "" + tDF / draft.getAllPlayers().size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTDF.setText(temp);
-                temp = "" + tOA / draft.getAllPlayers().size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOA.setText(temp);
-                numPlayersDraft.setText(""+draft.getAllPlayers().size());
+                updateGUIToDraft(draft.getAllPlayers(),draft);
             } else {
-                draftLwList.setListData(draft.getLeftWing(league.getDrafts().get(yr)));
-                draftCList.setListData(draft.getCenter(league.getDrafts().get(yr)));
-                draftRwList.setListData(draft.getRightWing(league.getDrafts().get(yr)));
-                draftDList.setListData(draft.getDefense(league.getDrafts().get(yr)));
-                draftGList.setListData(draft.getGoalie(league.getDrafts().get(yr)));
-                for (Player p : league.getDrafts().get(yr)) {
-                    tempOf += p.getOffense();
-                    pOf += p.getpOFF();
-                    tOf += p.getTRO();
-                    tempDf += p.getDefense();
-                    pDf += p.getpDF();
-                    tDF += p.getTRD();
-                    tempOA += p.getOA();
-                    pOA += p.getpOA() / 6;
-                    tOA += p.getTROA();
-                }
-                String temp = "" + tempOf / league.getDrafts().get(yr).size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOF.setText("" + temp);
-                temp = "" + tempDf / league.getDrafts().get(yr).size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftDF.setText(temp);
-                temp = "" + tempOA / league.getDrafts().get(yr).size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOA.setText(temp);
-                temp = "" + pOf / league.getDrafts().get(yr).size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOF.setText("" + temp);
-                temp = "" + pDf / league.getDrafts().get(yr).size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPDF.setText(temp);
-                temp = "" + pOA / league.getDrafts().get(yr).size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOA.setText(temp);
-
-                temp = "" + tOf / league.getDrafts().get(yr).size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOF.setText("" + temp);
-                temp = "" + tDF / league.getDrafts().get(yr).size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTDF.setText(temp);
-                temp = "" + tOA / league.getDrafts().get(yr).size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOA.setText(temp);
-                numPlayersDraft.setText(""+league.getDrafts().get(yr).size());
-                
+                updateGUIToDraft(league.getDrafts().get(yr),draft);
             }
-
-
-
         }//GEN-LAST:event_draftYearListActionPerformed
 
         private void draftYearListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftYearListMouseClicked
@@ -3924,45 +3801,95 @@ public class GUI extends javax.swing.JFrame {
             }
         }//GEN-LAST:event_teamSearchFieldKeyPressed
 
-        private void draftOFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftOFActionPerformed
-            // TODO add your handling code here:
-        }//GEN-LAST:event_draftOFActionPerformed
+        private void lwListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lwListMouseClicked
+           if (evt.getClickCount()==2){
+               String name=(String)lwList.getSelectedValue();
+               playerTab.setSelectedIndex(0);
+               searchField.setText(name);
+               searchPlayer.doClick();
+           }
+        }//GEN-LAST:event_lwListMouseClicked
 
-        private void draftOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftOAActionPerformed
-            // TODO add your handling code here:
-        }//GEN-LAST:event_draftOAActionPerformed
+        private void cListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cListMouseClicked
+            if (evt.getClickCount()==2){
+               String name=(String)cList.getSelectedValue();
+               playerTab.setSelectedIndex(0);
+               searchField.setText(name);
+               searchPlayer.doClick();
+           }
+        }//GEN-LAST:event_cListMouseClicked
 
-        private void draftDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftDFActionPerformed
-            // TODO add your handling code here:
-        }//GEN-LAST:event_draftDFActionPerformed
+        private void rwListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rwListMouseClicked
+           if (evt.getClickCount()==2){
+               String name=(String)rwList.getSelectedValue();
+               playerTab.setSelectedIndex(0);
+               searchField.setText(name);
+               searchPlayer.doClick();
+           }
+        }//GEN-LAST:event_rwListMouseClicked
 
-        private void draftPOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftPOAActionPerformed
-            // TODO add your handling code here:
-        }//GEN-LAST:event_draftPOAActionPerformed
+        private void dListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dListMouseClicked
+            if (evt.getClickCount()==2){
+               String name=(String)dList.getSelectedValue();
+               playerTab.setSelectedIndex(0);
+               searchField.setText(name);
+               searchPlayer.doClick();
+           }
+        }//GEN-LAST:event_dListMouseClicked
 
-        private void draftPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftPDFActionPerformed
-            // TODO add your handling code here:
-        }//GEN-LAST:event_draftPDFActionPerformed
+        private void gListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gListMouseClicked
+            if (evt.getClickCount()==2){
+               String name=(String)gList.getSelectedValue();
+               playerTab.setSelectedIndex(0);
+               searchField.setText(name);
+               searchPlayer.doClick();
+           }
+        }//GEN-LAST:event_gListMouseClicked
 
-        private void draftPOFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftPOFActionPerformed
-            // TODO add your handling code here:
-        }//GEN-LAST:event_draftPOFActionPerformed
+        private void draftLwListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftLwListMouseClicked
+            if (evt.getClickCount()==2){
+               String name=(String)draftLwList.getSelectedValue();
+               playerTab.setSelectedIndex(0);
+               searchField.setText(name);
+               searchPlayer.doClick();
+           }
+        }//GEN-LAST:event_draftLwListMouseClicked
 
-        private void draftTOFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftTOFActionPerformed
-            // TODO add your handling code here:
-        }//GEN-LAST:event_draftTOFActionPerformed
+        private void draftCListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftCListMouseClicked
+            if (evt.getClickCount()==2){
+               String name=(String)draftCList.getSelectedValue();
+               playerTab.setSelectedIndex(0);
+               searchField.setText(name);
+               searchPlayer.doClick();
+           }
+        }//GEN-LAST:event_draftCListMouseClicked
 
-        private void draftTOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftTOAActionPerformed
-            // TODO add your handling code here:
-        }//GEN-LAST:event_draftTOAActionPerformed
+        private void draftRwListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftRwListMouseClicked
+            if (evt.getClickCount()==2){
+               String name=(String)draftRwList.getSelectedValue();
+               playerTab.setSelectedIndex(0);
+               searchField.setText(name);
+               searchPlayer.doClick();
+           }
+        }//GEN-LAST:event_draftRwListMouseClicked
 
-        private void draftTDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftTDFActionPerformed
-            // TODO add your handling code here:
-        }//GEN-LAST:event_draftTDFActionPerformed
+        private void draftDListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftDListMouseClicked
+            if (evt.getClickCount()==2){
+               String name=(String)draftDList.getSelectedValue();
+               playerTab.setSelectedIndex(0);
+               searchField.setText(name);
+               searchPlayer.doClick();
+           }
+        }//GEN-LAST:event_draftDListMouseClicked
 
-        private void numPlayersDraftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numPlayersDraftActionPerformed
-            // TODO add your handling code here:
-        }//GEN-LAST:event_numPlayersDraftActionPerformed
+        private void draftGListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftGListMouseClicked
+            if (evt.getClickCount()==2){
+               String name=(String)draftGList.getSelectedValue();
+               playerTab.setSelectedIndex(0);
+               searchField.setText(name);
+               searchPlayer.doClick();
+           }
+        }//GEN-LAST:event_draftGListMouseClicked
 
     public void updateGUIToPlayer() {
         searchField.setText(foundPlayer.getFullName());
@@ -4031,6 +3958,81 @@ public class GUI extends javax.swing.JFrame {
 
     }
 
+    public void updateGUIToDraft(ArrayList<Player>p,Team draft){
+            double tempOf = 0;
+            double tempDf = 0;
+            double tempOA = 0;
+            double pOf = 0;
+            double pDf = 0;
+            double pOA = 0;
+            double tOf = 0;
+            double tDF = 0;
+            double tOA = 0;
+                draftLwList.setListData(draft.getLeftWing(p));
+                draftCList.setListData(draft.getCenter(p));
+                draftRwList.setListData(draft.getRightWing(p));
+                draftDList.setListData(draft.getDefense(p));
+                draftGList.setListData(draft.getGoalie(p));
+                for (Player d : p) {
+                    tempOf += d.getOffense();
+                    pOf += d.getpOFF();
+                    tOf += d.getTRO();
+                    tempDf += d.getDefense();
+                    pDf += d.getpDF();
+                    tDF += d.getTRD();
+                    tempOA += d.getOA();
+                    pOA += d.getpOA() / 6;
+                    tOA += d.getTROA();
+                }
+                String temp = "" + tempOf / p.size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOF.setText("" + temp);
+                temp = "" + tempDf / p.size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftDF.setText(temp);
+                temp = "" + tempOA / p.size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOA.setText(temp);
+                temp = "" + pOf / p.size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOF.setText("" + temp);
+                temp = "" + pDf / p.size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPDF.setText(temp);
+                temp = "" + pOA / p.size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOA.setText(temp);
+
+                temp = "" + tOf / p.size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOF.setText("" + temp);
+                temp = "" + tDF / p.size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTDF.setText(temp);
+                temp = "" + tOA / p.size();
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOA.setText(temp);
+                numPlayersDraft.setText(""+p.size());
+                searchPlayer.doClick();
+    }
     public void avgProOverall() {
         double d = 0;
         double counter = 0;
@@ -4133,6 +4135,26 @@ public class GUI extends javax.swing.JFrame {
             }
         }
         return "99999";
+    }
+
+    private void createDraftList(){
+         try {
+            if (league.getCurrentDraftYear()==-1){
+            TreeSet<Integer>draftSort=new TreeSet<Integer>();
+            for(String s:league.getDrafts().keySet()){
+                draftSort.add(Integer.parseInt(s));
+            }
+            System.out.println(draftSort);
+            draftYearList=new JComboBox();
+            for (Integer i:draftSort){
+                draftYearList.addItem(""+i);
+            }
+            league.setCurrentDraftYear(draftSort.last()+1);
+            draftYearList.addItem(""+(draftSort.last()+1));
+            }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
     }
 
     public void initializeNewFile() {
@@ -4290,6 +4312,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel draftOALabel1;
     private javax.swing.JLabel draftOALabel2;
     private javax.swing.JFormattedTextField draftOF;
+    private javax.swing.JFormattedTextField draftOF1;
     private javax.swing.JLabel draftOFLabel;
     private javax.swing.JLabel draftOFLabel1;
     private javax.swing.JLabel draftOFLabel2;
@@ -4336,7 +4359,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
@@ -4391,6 +4413,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel plaLabel;
     private javax.swing.JLabel playerID;
     private javax.swing.JLabel playerIcon;
+    private javax.swing.JPanel playerPanel;
     private javax.swing.JTabbedPane playerTab;
     private javax.swing.JLabel posLabel;
     private javax.swing.JLabel potLabel;
