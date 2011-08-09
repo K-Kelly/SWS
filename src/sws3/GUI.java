@@ -432,27 +432,77 @@ public class GUI extends javax.swing.JFrame {
         draftGList = new javax.swing.JList();
         jScrollPane14 = new javax.swing.JScrollPane();
         draftLwList = new javax.swing.JList();
-        draftOF = new javax.swing.JFormattedTextField();
         draftOFLabel = new javax.swing.JLabel();
         draftOALabel = new javax.swing.JLabel();
         draftDLabel = new javax.swing.JLabel();
-        draftOA = new javax.swing.JFormattedTextField();
-        draftDF = new javax.swing.JFormattedTextField();
-        draftPOA = new javax.swing.JFormattedTextField();
         draftDLabel1 = new javax.swing.JLabel();
         draftOALabel1 = new javax.swing.JLabel();
         draftOFLabel1 = new javax.swing.JLabel();
-        draftPDF = new javax.swing.JFormattedTextField();
-        draftPOF = new javax.swing.JFormattedTextField();
-        draftTOF = new javax.swing.JFormattedTextField();
         draftOALabel2 = new javax.swing.JLabel();
         draftDLabel2 = new javax.swing.JLabel();
-        draftTOA = new javax.swing.JFormattedTextField();
-        draftTDF = new javax.swing.JFormattedTextField();
         draftOFLabel2 = new javax.swing.JLabel();
         numPlayersDraft = new javax.swing.JFormattedTextField();
         numPlayersLabel4 = new javax.swing.JLabel();
+        draftOF = new javax.swing.JFormattedTextField();
+        draftDF = new javax.swing.JFormattedTextField();
+        draftOA = new javax.swing.JFormattedTextField();
+        draftPOF = new javax.swing.JFormattedTextField();
+        draftPDF = new javax.swing.JFormattedTextField();
+        draftPOA = new javax.swing.JFormattedTextField();
+        draftTOF = new javax.swing.JFormattedTextField();
+        draftTDF = new javax.swing.JFormattedTextField();
+        draftTOA = new javax.swing.JFormattedTextField();
+        jLabel3 = new javax.swing.JLabel();
+        draftOA1 = new javax.swing.JFormattedTextField();
+        draftPOF1 = new javax.swing.JFormattedTextField();
         draftOF1 = new javax.swing.JFormattedTextField();
+        draftDF1 = new javax.swing.JFormattedTextField();
+        draftTOA1 = new javax.swing.JFormattedTextField();
+        draftTOF1 = new javax.swing.JFormattedTextField();
+        draftTDF1 = new javax.swing.JFormattedTextField();
+        draftPDF1 = new javax.swing.JFormattedTextField();
+        draftPOA1 = new javax.swing.JFormattedTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        draftOF2 = new javax.swing.JFormattedTextField();
+        draftTOA2 = new javax.swing.JFormattedTextField();
+        draftDF2 = new javax.swing.JFormattedTextField();
+        draftTDF2 = new javax.swing.JFormattedTextField();
+        draftTOF2 = new javax.swing.JFormattedTextField();
+        draftPOA2 = new javax.swing.JFormattedTextField();
+        draftPDF2 = new javax.swing.JFormattedTextField();
+        draftPOF2 = new javax.swing.JFormattedTextField();
+        draftOA2 = new javax.swing.JFormattedTextField();
+        draftPOF3 = new javax.swing.JFormattedTextField();
+        draftOA3 = new javax.swing.JFormattedTextField();
+        draftPOA3 = new javax.swing.JFormattedTextField();
+        draftPDF3 = new javax.swing.JFormattedTextField();
+        draftTDF3 = new javax.swing.JFormattedTextField();
+        draftTOF3 = new javax.swing.JFormattedTextField();
+        draftTOA3 = new javax.swing.JFormattedTextField();
+        draftDF3 = new javax.swing.JFormattedTextField();
+        jLabel6 = new javax.swing.JLabel();
+        draftOF3 = new javax.swing.JFormattedTextField();
+        draftPOF4 = new javax.swing.JFormattedTextField();
+        draftOA4 = new javax.swing.JFormattedTextField();
+        draftPOA4 = new javax.swing.JFormattedTextField();
+        draftPDF4 = new javax.swing.JFormattedTextField();
+        draftTDF4 = new javax.swing.JFormattedTextField();
+        draftTOF4 = new javax.swing.JFormattedTextField();
+        draftTOA4 = new javax.swing.JFormattedTextField();
+        draftDF4 = new javax.swing.JFormattedTextField();
+        jLabel7 = new javax.swing.JLabel();
+        draftOF4 = new javax.swing.JFormattedTextField();
+        draftPOF5 = new javax.swing.JFormattedTextField();
+        draftOA5 = new javax.swing.JFormattedTextField();
+        draftPOA5 = new javax.swing.JFormattedTextField();
+        draftPDF5 = new javax.swing.JFormattedTextField();
+        draftTDF5 = new javax.swing.JFormattedTextField();
+        draftTOF5 = new javax.swing.JFormattedTextField();
+        draftTOA5 = new javax.swing.JFormattedTextField();
+        draftDF5 = new javax.swing.JFormattedTextField();
+        jLabel8 = new javax.swing.JLabel();
+        draftOF5 = new javax.swing.JFormattedTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         openMenu = new javax.swing.JMenuItem();
@@ -460,20 +510,19 @@ public class GUI extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("view/Bundle"); // NOI18N
-        setTitle(bundle.getString("GUI.title")); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("sws3/Bundle"); // NOI18N
+        setTitle(bundle.getString("GUI.title_1")); // NOI18N
         setResizable(false);
 
         playerTab.setName("Player"); // NOI18N
 
         playerPanel.setMaximumSize(new java.awt.Dimension(15000, 15000));
 
-        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("sws3/Bundle"); // NOI18N
-        playerIcon.setText(bundle1.getString("GUI.playerIcon.text")); // NOI18N
+        playerIcon.setText(bundle.getString("GUI.playerIcon.text")); // NOI18N
         playerIcon.setIconTextGap(2);
 
-        searchField.setText(bundle1.getString("GUI.searchField.text")); // NOI18N
-        searchField.setToolTipText(bundle1.getString("GUI.searchField.toolTipText")); // NOI18N
+        searchField.setText(bundle.getString("GUI.searchField.text")); // NOI18N
+        searchField.setToolTipText(bundle.getString("GUI.searchField.toolTipText")); // NOI18N
         searchField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchFieldActionPerformed(evt);
@@ -485,8 +534,8 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        searchPlayer.setText(bundle1.getString("GUI.searchPlayer.text")); // NOI18N
-        searchPlayer.setToolTipText(bundle1.getString("GUI.searchPlayer.toolTipText")); // NOI18N
+        searchPlayer.setText(bundle.getString("GUI.searchPlayer.text")); // NOI18N
+        searchPlayer.setToolTipText(bundle.getString("GUI.searchPlayer.toolTipText")); // NOI18N
         searchPlayer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchPlayerActionPerformed(evt);
@@ -494,16 +543,16 @@ public class GUI extends javax.swing.JFrame {
         });
 
         mainPOSI.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        mainPOSI.setText(bundle1.getString("GUI.mainPOSI.text")); // NOI18N
-        mainPOSI.setToolTipText(bundle1.getString("GUI.mainPOSI.toolTipText")); // NOI18N
+        mainPOSI.setText(bundle.getString("GUI.mainPOSI.text")); // NOI18N
+        mainPOSI.setToolTipText(bundle.getString("GUI.mainPOSI.toolTipText")); // NOI18N
         mainPOSI.setFont(new java.awt.Font("Tahoma", 1, 11));
         mainPOSI.setMaximumSize(new java.awt.Dimension(15, 25));
         mainPOSI.setMinimumSize(new java.awt.Dimension(15, 25));
         mainPOSI.setPreferredSize(new java.awt.Dimension(15, 25));
 
         altPOSI.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        altPOSI.setText(bundle1.getString("GUI.altPOSI.text")); // NOI18N
-        altPOSI.setToolTipText(bundle1.getString("GUI.altPOSI.toolTipText")); // NOI18N
+        altPOSI.setText(bundle.getString("GUI.altPOSI.text")); // NOI18N
+        altPOSI.setToolTipText(bundle.getString("GUI.altPOSI.toolTipText")); // NOI18N
         altPOSI.setFont(new java.awt.Font("Tahoma", 1, 11));
         altPOSI.setMaximumSize(new java.awt.Dimension(15, 25));
         altPOSI.setMinimumSize(new java.awt.Dimension(15, 25));
@@ -511,500 +560,500 @@ public class GUI extends javax.swing.JFrame {
 
         rightsField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         rightsField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        rightsField.setText(bundle1.getString("GUI.rightsField.text")); // NOI18N
-        rightsField.setToolTipText(bundle1.getString("GUI.rightsField.toolTipText")); // NOI18N
+        rightsField.setText(bundle.getString("GUI.rightsField.text")); // NOI18N
+        rightsField.setToolTipText(bundle.getString("GUI.rightsField.toolTipText")); // NOI18N
         rightsField.setPreferredSize(new java.awt.Dimension(30, 20));
 
         rightsLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         rightsLabel.setLabelFor(rightsField);
-        rightsLabel.setText(bundle1.getString("GUI.rightsLabel.text")); // NOI18N
-        rightsLabel.setToolTipText(bundle1.getString("GUI.rightsLabel.toolTipText")); // NOI18N
+        rightsLabel.setText(bundle.getString("GUI.rightsLabel.text")); // NOI18N
+        rightsLabel.setToolTipText(bundle.getString("GUI.rightsLabel.toolTipText")); // NOI18N
         rightsLabel.setPreferredSize(new java.awt.Dimension(30, 25));
 
         draftLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
-        draftLabel.setText(bundle1.getString("GUI.draftLabel.text")); // NOI18N
-        draftLabel.setToolTipText(bundle1.getString("GUI.draftLabel.toolTipText")); // NOI18N
+        draftLabel.setText(bundle.getString("GUI.draftLabel.text")); // NOI18N
+        draftLabel.setToolTipText(bundle.getString("GUI.draftLabel.toolTipText")); // NOI18N
 
         draftYr.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         draftYr.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        draftYr.setText(bundle1.getString("GUI.draftYr.text")); // NOI18N
-        draftYr.setToolTipText(bundle1.getString("GUI.draftYr.toolTipText")); // NOI18N
+        draftYr.setText(bundle.getString("GUI.draftYr.text")); // NOI18N
+        draftYr.setToolTipText(bundle.getString("GUI.draftYr.toolTipText")); // NOI18N
         draftYr.setMaximumSize(new java.awt.Dimension(25, 25));
         draftYr.setMinimumSize(new java.awt.Dimension(25, 25));
         draftYr.setPreferredSize(new java.awt.Dimension(25, 25));
 
         draftRd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         draftRd.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        draftRd.setText(bundle1.getString("GUI.draftRd.text")); // NOI18N
-        draftRd.setToolTipText(bundle1.getString("GUI.draftRd.toolTipText")); // NOI18N
+        draftRd.setText(bundle.getString("GUI.draftRd.text")); // NOI18N
+        draftRd.setToolTipText(bundle.getString("GUI.draftRd.toolTipText")); // NOI18N
         draftRd.setMaximumSize(new java.awt.Dimension(25, 25));
         draftRd.setMinimumSize(new java.awt.Dimension(25, 25));
 
         draftPos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         draftPos.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        draftPos.setText(bundle1.getString("GUI.draftPos.text")); // NOI18N
-        draftPos.setToolTipText(bundle1.getString("GUI.draftPos.toolTipText")); // NOI18N
+        draftPos.setText(bundle.getString("GUI.draftPos.text")); // NOI18N
+        draftPos.setToolTipText(bundle.getString("GUI.draftPos.toolTipText")); // NOI18N
         draftPos.setMaximumSize(new java.awt.Dimension(25, 25));
         draftPos.setMinimumSize(new java.awt.Dimension(25, 25));
         draftPos.setPreferredSize(new java.awt.Dimension(25, 25));
 
         draftTeam.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         draftTeam.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        draftTeam.setText(bundle1.getString("GUI.draftTeam.text")); // NOI18N
-        draftTeam.setToolTipText(bundle1.getString("GUI.draftTeam.toolTipText")); // NOI18N
+        draftTeam.setText(bundle.getString("GUI.draftTeam.text")); // NOI18N
+        draftTeam.setToolTipText(bundle.getString("GUI.draftTeam.toolTipText")); // NOI18N
         draftTeam.setMaximumSize(new java.awt.Dimension(25, 25));
         draftTeam.setMinimumSize(new java.awt.Dimension(25, 25));
 
         draftTeamLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftTeamLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         draftTeamLabel.setLabelFor(draftTeam);
-        draftTeamLabel.setText(bundle1.getString("GUI.draftTeamLabel.text")); // NOI18N
-        draftTeamLabel.setToolTipText(bundle1.getString("GUI.draftTeamLabel.toolTipText")); // NOI18N
+        draftTeamLabel.setText(bundle.getString("GUI.draftTeamLabel.text")); // NOI18N
+        draftTeamLabel.setToolTipText(bundle.getString("GUI.draftTeamLabel.toolTipText")); // NOI18N
 
         draftHeaderLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftHeaderLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        draftHeaderLabel.setText(bundle1.getString("GUI.draftHeaderLabel.text")); // NOI18N
+        draftHeaderLabel.setText(bundle.getString("GUI.draftHeaderLabel.text")); // NOI18N
 
         salaryYr.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         salaryYr.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        salaryYr.setText(bundle1.getString("GUI.salaryYr.text")); // NOI18N
-        salaryYr.setToolTipText(bundle1.getString("GUI.salaryYr.toolTipText")); // NOI18N
+        salaryYr.setText(bundle.getString("GUI.salaryYr.text")); // NOI18N
+        salaryYr.setToolTipText(bundle.getString("GUI.salaryYr.toolTipText")); // NOI18N
         salaryYr.setMaximumSize(new java.awt.Dimension(25, 25));
         salaryYr.setMinimumSize(new java.awt.Dimension(25, 25));
         salaryYr.setPreferredSize(new java.awt.Dimension(25, 25));
 
         salaryAmt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         salaryAmt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        salaryAmt.setText(bundle1.getString("GUI.salaryAmt.text")); // NOI18N
+        salaryAmt.setText(bundle.getString("GUI.salaryAmt.text")); // NOI18N
         salaryAmt.setMaximumSize(new java.awt.Dimension(61, 25));
         salaryAmt.setMinimumSize(new java.awt.Dimension(25, 25));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setLabelFor(salaryAmtLabel);
-        jLabel1.setText(bundle1.getString("GUI.jLabel1.text")); // NOI18N
-        jLabel1.setToolTipText(bundle1.getString("GUI.jLabel1.toolTipText")); // NOI18N
+        jLabel1.setText(bundle.getString("GUI.jLabel1.text")); // NOI18N
+        jLabel1.setToolTipText(bundle.getString("GUI.jLabel1.toolTipText")); // NOI18N
 
         salaryAmtLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         salaryAmtLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         salaryAmtLabel.setLabelFor(salaryAmt);
-        salaryAmtLabel.setText(bundle1.getString("GUI.salaryAmtLabel.text")); // NOI18N
-        salaryAmtLabel.setToolTipText(bundle1.getString("GUI.salaryAmtLabel.toolTipText")); // NOI18N
+        salaryAmtLabel.setText(bundle.getString("GUI.salaryAmtLabel.text")); // NOI18N
+        salaryAmtLabel.setToolTipText(bundle.getString("GUI.salaryAmtLabel.toolTipText")); // NOI18N
 
         salaryYrLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
-        salaryYrLabel.setText(bundle1.getString("GUI.salaryYrLabel.text")); // NOI18N
-        salaryYrLabel.setToolTipText(bundle1.getString("GUI.salaryYrLabel.toolTipText")); // NOI18N
+        salaryYrLabel.setText(bundle.getString("GUI.salaryYrLabel.text")); // NOI18N
+        salaryYrLabel.setToolTipText(bundle.getString("GUI.salaryYrLabel.toolTipText")); // NOI18N
         salaryYrLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         heightLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         heightLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         heightLabel.setLabelFor(height);
-        heightLabel.setText(bundle1.getString("GUI.heightLabel.text")); // NOI18N
-        heightLabel.setToolTipText(bundle1.getString("GUI.heightLabel.toolTipText")); // NOI18N
+        heightLabel.setText(bundle.getString("GUI.heightLabel.text")); // NOI18N
+        heightLabel.setToolTipText(bundle.getString("GUI.heightLabel.toolTipText")); // NOI18N
 
         height.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         height.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        height.setText(bundle1.getString("GUI.height.text")); // NOI18N
-        height.setToolTipText(bundle1.getString("GUI.height.toolTipText")); // NOI18N
+        height.setText(bundle.getString("GUI.height.text")); // NOI18N
+        height.setToolTipText(bundle.getString("GUI.height.toolTipText")); // NOI18N
         height.setMaximumSize(new java.awt.Dimension(25, 25));
         height.setMinimumSize(new java.awt.Dimension(25, 25));
 
         weightLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         weightLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         weightLabel.setLabelFor(weight);
-        weightLabel.setText(bundle1.getString("GUI.weightLabel.text")); // NOI18N
-        weightLabel.setToolTipText(bundle1.getString("GUI.weightLabel.toolTipText")); // NOI18N
+        weightLabel.setText(bundle.getString("GUI.weightLabel.text")); // NOI18N
+        weightLabel.setToolTipText(bundle.getString("GUI.weightLabel.toolTipText")); // NOI18N
 
         weight.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         weight.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        weight.setText(bundle1.getString("GUI.weight.text")); // NOI18N
-        weight.setToolTipText(bundle1.getString("GUI.weight.toolTipText")); // NOI18N
+        weight.setText(bundle.getString("GUI.weight.text")); // NOI18N
+        weight.setToolTipText(bundle.getString("GUI.weight.toolTipText")); // NOI18N
         weight.setMaximumSize(new java.awt.Dimension(40, 25));
         weight.setMinimumSize(new java.awt.Dimension(40, 25));
 
         ageLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         ageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ageLabel.setLabelFor(age);
-        ageLabel.setText(bundle1.getString("GUI.ageLabel.text")); // NOI18N
-        ageLabel.setToolTipText(bundle1.getString("GUI.ageLabel.toolTipText")); // NOI18N
+        ageLabel.setText(bundle.getString("GUI.ageLabel.text")); // NOI18N
+        ageLabel.setToolTipText(bundle.getString("GUI.ageLabel.toolTipText")); // NOI18N
 
         age.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         age.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        age.setText(bundle1.getString("GUI.age.text")); // NOI18N
-        age.setToolTipText(bundle1.getString("GUI.age.toolTipText")); // NOI18N
+        age.setText(bundle.getString("GUI.age.text")); // NOI18N
+        age.setToolTipText(bundle.getString("GUI.age.toolTipText")); // NOI18N
         age.setMaximumSize(new java.awt.Dimension(35, 25));
         age.setMinimumSize(new java.awt.Dimension(35, 25));
 
         twoWay.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         twoWay.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        twoWay.setText(bundle1.getString("GUI.twoWay.text")); // NOI18N
-        twoWay.setToolTipText(bundle1.getString("GUI.twoWay.toolTipText")); // NOI18N
+        twoWay.setText(bundle.getString("GUI.twoWay.text")); // NOI18N
+        twoWay.setToolTipText(bundle.getString("GUI.twoWay.toolTipText")); // NOI18N
         twoWay.setMaximumSize(new java.awt.Dimension(25, 25));
         twoWay.setMinimumSize(new java.awt.Dimension(25, 25));
 
         twoWayLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         twoWayLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         twoWayLabel.setLabelFor(twoWay);
-        twoWayLabel.setText(bundle1.getString("GUI.twoWayLabel.text")); // NOI18N
-        twoWayLabel.setToolTipText(bundle1.getString("GUI.twoWayLabel.toolTipText")); // NOI18N
+        twoWayLabel.setText(bundle.getString("GUI.twoWayLabel.text")); // NOI18N
+        twoWayLabel.setToolTipText(bundle.getString("GUI.twoWayLabel.toolTipText")); // NOI18N
 
         countryLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         countryLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         countryLabel.setLabelFor(country);
-        countryLabel.setText(bundle1.getString("GUI.countryLabel.text")); // NOI18N
-        countryLabel.setToolTipText(bundle1.getString("GUI.countryLabel.toolTipText")); // NOI18N
+        countryLabel.setText(bundle.getString("GUI.countryLabel.text")); // NOI18N
+        countryLabel.setToolTipText(bundle.getString("GUI.countryLabel.toolTipText")); // NOI18N
 
         country.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         country.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        country.setText(bundle1.getString("GUI.country.text")); // NOI18N
-        country.setToolTipText(bundle1.getString("GUI.country.toolTipText")); // NOI18N
+        country.setText(bundle.getString("GUI.country.text")); // NOI18N
+        country.setToolTipText(bundle.getString("GUI.country.toolTipText")); // NOI18N
         country.setMaximumSize(new java.awt.Dimension(125, 25));
         country.setMinimumSize(new java.awt.Dimension(125, 25));
         country.setPreferredSize(new java.awt.Dimension(125, 25));
 
         hand.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         hand.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        hand.setText(bundle1.getString("GUI.hand.text")); // NOI18N
-        hand.setToolTipText(bundle1.getString("GUI.hand.toolTipText")); // NOI18N
+        hand.setText(bundle.getString("GUI.hand.text")); // NOI18N
+        hand.setToolTipText(bundle.getString("GUI.hand.toolTipText")); // NOI18N
         hand.setMaximumSize(new java.awt.Dimension(25, 25));
         hand.setMinimumSize(new java.awt.Dimension(25, 25));
         hand.setPreferredSize(new java.awt.Dimension(7, 25));
 
         handLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         handLabel.setLabelFor(hand);
-        handLabel.setText(bundle1.getString("GUI.handLabel.text")); // NOI18N
+        handLabel.setText(bundle.getString("GUI.handLabel.text")); // NOI18N
         handLabel.setMaximumSize(new java.awt.Dimension(29, 25));
         handLabel.setMinimumSize(new java.awt.Dimension(29, 25));
 
         clickLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         clickLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         clickLabel.setLabelFor(click);
-        clickLabel.setText(bundle1.getString("GUI.clickLabel.text")); // NOI18N
-        clickLabel.setToolTipText(bundle1.getString("GUI.clickLabel.toolTipText")); // NOI18N
+        clickLabel.setText(bundle.getString("GUI.clickLabel.text")); // NOI18N
+        clickLabel.setToolTipText(bundle.getString("GUI.clickLabel.toolTipText")); // NOI18N
 
         click.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         click.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        click.setText(bundle1.getString("GUI.click.text")); // NOI18N
-        click.setToolTipText(bundle1.getString("GUI.click.toolTipText")); // NOI18N
+        click.setText(bundle.getString("GUI.click.text")); // NOI18N
+        click.setToolTipText(bundle.getString("GUI.click.toolTipText")); // NOI18N
         click.setMaximumSize(new java.awt.Dimension(25, 25));
         click.setMinimumSize(new java.awt.Dimension(25, 25));
         click.setPreferredSize(new java.awt.Dimension(25, 25));
 
         shoLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         shoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        shoLabel.setText(bundle1.getString("GUI.shoLabel.text")); // NOI18N
-        shoLabel.setToolTipText(bundle1.getString("GUI.shoLabel.toolTipText")); // NOI18N
+        shoLabel.setText(bundle.getString("GUI.shoLabel.text")); // NOI18N
+        shoLabel.setToolTipText(bundle.getString("GUI.shoLabel.toolTipText")); // NOI18N
         shoLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         shoLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         plaLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         plaLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        plaLabel.setText(bundle1.getString("GUI.plaLabel.text")); // NOI18N
-        plaLabel.setToolTipText(bundle1.getString("GUI.plaLabel.toolTipText")); // NOI18N
+        plaLabel.setText(bundle.getString("GUI.plaLabel.text")); // NOI18N
+        plaLabel.setToolTipText(bundle.getString("GUI.plaLabel.toolTipText")); // NOI18N
         plaLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         plaLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         plaLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         stkLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         stkLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        stkLabel.setText(bundle1.getString("GUI.stkLabel.text")); // NOI18N
-        stkLabel.setToolTipText(bundle1.getString("GUI.stkLabel.toolTipText")); // NOI18N
+        stkLabel.setText(bundle.getString("GUI.stkLabel.text")); // NOI18N
+        stkLabel.setToolTipText(bundle.getString("GUI.stkLabel.toolTipText")); // NOI18N
         stkLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         stkLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         stkLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         chkLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         chkLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        chkLabel.setText(bundle1.getString("GUI.chkLabel.text")); // NOI18N
-        chkLabel.setToolTipText(bundle1.getString("GUI.chkLabel.toolTipText")); // NOI18N
+        chkLabel.setText(bundle.getString("GUI.chkLabel.text")); // NOI18N
+        chkLabel.setToolTipText(bundle.getString("GUI.chkLabel.toolTipText")); // NOI18N
         chkLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         chkLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         chkLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         posLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         posLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        posLabel.setText(bundle1.getString("GUI.posLabel.text")); // NOI18N
-        posLabel.setToolTipText(bundle1.getString("GUI.posLabel.toolTipText")); // NOI18N
+        posLabel.setText(bundle.getString("GUI.posLabel.text")); // NOI18N
+        posLabel.setToolTipText(bundle.getString("GUI.posLabel.toolTipText")); // NOI18N
         posLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         posLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         posLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         hitLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         hitLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        hitLabel.setText(bundle1.getString("GUI.hitLabel.text")); // NOI18N
-        hitLabel.setToolTipText(bundle1.getString("GUI.hitLabel.toolTipText")); // NOI18N
+        hitLabel.setText(bundle.getString("GUI.hitLabel.text")); // NOI18N
+        hitLabel.setToolTipText(bundle.getString("GUI.hitLabel.toolTipText")); // NOI18N
         hitLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         hitLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         hitLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         skaLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         skaLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        skaLabel.setText(bundle1.getString("GUI.skaLabel.text")); // NOI18N
-        skaLabel.setToolTipText(bundle1.getString("GUI.skaLabel.toolTipText")); // NOI18N
+        skaLabel.setText(bundle.getString("GUI.skaLabel.text")); // NOI18N
+        skaLabel.setToolTipText(bundle.getString("GUI.skaLabel.toolTipText")); // NOI18N
         skaLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         skaLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         skaLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         endLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         endLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        endLabel.setText(bundle1.getString("GUI.endLabel.text")); // NOI18N
-        endLabel.setToolTipText(bundle1.getString("GUI.endLabel.toolTipText")); // NOI18N
+        endLabel.setText(bundle.getString("GUI.endLabel.text")); // NOI18N
+        endLabel.setToolTipText(bundle.getString("GUI.endLabel.toolTipText")); // NOI18N
         endLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         endLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         endLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         penLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         penLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        penLabel.setText(bundle1.getString("GUI.penLabel.text")); // NOI18N
-        penLabel.setToolTipText(bundle1.getString("GUI.penLabel.toolTipText")); // NOI18N
+        penLabel.setText(bundle.getString("GUI.penLabel.text")); // NOI18N
+        penLabel.setToolTipText(bundle.getString("GUI.penLabel.toolTipText")); // NOI18N
         penLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         penLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         penLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         facLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         facLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        facLabel.setText(bundle1.getString("GUI.facLabel.text")); // NOI18N
-        facLabel.setToolTipText(bundle1.getString("GUI.facLabel.toolTipText")); // NOI18N
+        facLabel.setText(bundle.getString("GUI.facLabel.text")); // NOI18N
+        facLabel.setToolTipText(bundle.getString("GUI.facLabel.toolTipText")); // NOI18N
         facLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         facLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         facLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         leaLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         leaLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        leaLabel.setText(bundle1.getString("GUI.leaLabel.text")); // NOI18N
-        leaLabel.setToolTipText(bundle1.getString("GUI.leaLabel.toolTipText")); // NOI18N
+        leaLabel.setText(bundle.getString("GUI.leaLabel.text")); // NOI18N
+        leaLabel.setToolTipText(bundle.getString("GUI.leaLabel.toolTipText")); // NOI18N
         leaLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         leaLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         leaLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         figLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         figLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        figLabel.setText(bundle1.getString("GUI.figLabel.text")); // NOI18N
-        figLabel.setToolTipText(bundle1.getString("GUI.figLabel.toolTipText")); // NOI18N
+        figLabel.setText(bundle.getString("GUI.figLabel.text")); // NOI18N
+        figLabel.setToolTipText(bundle.getString("GUI.figLabel.toolTipText")); // NOI18N
         figLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         figLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         figLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         strLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         strLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        strLabel.setText(bundle1.getString("GUI.strLabel.text")); // NOI18N
-        strLabel.setToolTipText(bundle1.getString("GUI.strLabel.toolTipText")); // NOI18N
+        strLabel.setText(bundle.getString("GUI.strLabel.text")); // NOI18N
+        strLabel.setToolTipText(bundle.getString("GUI.strLabel.toolTipText")); // NOI18N
         strLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         strLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         strLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         potLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         potLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        potLabel.setText(bundle1.getString("GUI.potLabel.text")); // NOI18N
-        potLabel.setToolTipText(bundle1.getString("GUI.potLabel.toolTipText")); // NOI18N
+        potLabel.setText(bundle.getString("GUI.potLabel.text")); // NOI18N
+        potLabel.setToolTipText(bundle.getString("GUI.potLabel.toolTipText")); // NOI18N
         potLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         potLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         potLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         conLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         conLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        conLabel.setText(bundle1.getString("GUI.conLabel.text")); // NOI18N
-        conLabel.setToolTipText(bundle1.getString("GUI.conLabel.toolTipText")); // NOI18N
+        conLabel.setText(bundle.getString("GUI.conLabel.text")); // NOI18N
+        conLabel.setToolTipText(bundle.getString("GUI.conLabel.toolTipText")); // NOI18N
         conLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         conLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         conLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         grdLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         grdLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        grdLabel.setText(bundle1.getString("GUI.grdLabel.text")); // NOI18N
-        grdLabel.setToolTipText(bundle1.getString("GUI.grdLabel.toolTipText")); // NOI18N
+        grdLabel.setText(bundle.getString("GUI.grdLabel.text")); // NOI18N
+        grdLabel.setToolTipText(bundle.getString("GUI.grdLabel.toolTipText")); // NOI18N
         grdLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         grdLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         grdLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         injLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         injLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        injLabel.setText(bundle1.getString("GUI.injLabel.text")); // NOI18N
-        injLabel.setToolTipText(bundle1.getString("GUI.injLabel.toolTipText")); // NOI18N
+        injLabel.setText(bundle.getString("GUI.injLabel.text")); // NOI18N
+        injLabel.setToolTipText(bundle.getString("GUI.injLabel.toolTipText")); // NOI18N
         injLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         injLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         injLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         ofLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         ofLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ofLabel.setText(bundle1.getString("GUI.ofLabel.text")); // NOI18N
-        ofLabel.setToolTipText(bundle1.getString("GUI.ofLabel.toolTipText")); // NOI18N
+        ofLabel.setText(bundle.getString("GUI.ofLabel.text")); // NOI18N
+        ofLabel.setToolTipText(bundle.getString("GUI.ofLabel.toolTipText")); // NOI18N
         ofLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         ofLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         ofLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         dfLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         dfLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        dfLabel.setText(bundle1.getString("GUI.dfLabel.text")); // NOI18N
-        dfLabel.setToolTipText(bundle1.getString("GUI.dfLabel.toolTipText")); // NOI18N
+        dfLabel.setText(bundle.getString("GUI.dfLabel.text")); // NOI18N
+        dfLabel.setToolTipText(bundle.getString("GUI.dfLabel.toolTipText")); // NOI18N
         dfLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         dfLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         dfLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         oaLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         oaLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        oaLabel.setText(bundle1.getString("GUI.oaLabel.text")); // NOI18N
-        oaLabel.setToolTipText(bundle1.getString("GUI.oaLabel.toolTipText")); // NOI18N
+        oaLabel.setText(bundle.getString("GUI.oaLabel.text")); // NOI18N
+        oaLabel.setToolTipText(bundle.getString("GUI.oaLabel.toolTipText")); // NOI18N
         oaLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         oaLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         oaLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         curSHO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curSHO.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curSHO.setText(bundle1.getString("GUI.curSHO.text")); // NOI18N
-        curSHO.setToolTipText(bundle1.getString("GUI.curSHO.toolTipText")); // NOI18N
+        curSHO.setText(bundle.getString("GUI.curSHO.text")); // NOI18N
+        curSHO.setToolTipText(bundle.getString("GUI.curSHO.toolTipText")); // NOI18N
         curSHO.setMaximumSize(new java.awt.Dimension(30, 25));
         curSHO.setMinimumSize(new java.awt.Dimension(30, 25));
         curSHO.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curPLA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curPLA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curPLA.setText(bundle1.getString("GUI.curPLA.text")); // NOI18N
-        curPLA.setToolTipText(bundle1.getString("GUI.curPLA.toolTipText")); // NOI18N
+        curPLA.setText(bundle.getString("GUI.curPLA.text")); // NOI18N
+        curPLA.setToolTipText(bundle.getString("GUI.curPLA.toolTipText")); // NOI18N
         curPLA.setMaximumSize(new java.awt.Dimension(30, 25));
         curPLA.setMinimumSize(new java.awt.Dimension(30, 25));
         curPLA.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curSTK.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curSTK.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curSTK.setText(bundle1.getString("GUI.curSTK.text")); // NOI18N
-        curSTK.setToolTipText(bundle1.getString("GUI.curSTK.toolTipText")); // NOI18N
+        curSTK.setText(bundle.getString("GUI.curSTK.text")); // NOI18N
+        curSTK.setToolTipText(bundle.getString("GUI.curSTK.toolTipText")); // NOI18N
         curSTK.setMaximumSize(new java.awt.Dimension(30, 25));
         curSTK.setMinimumSize(new java.awt.Dimension(30, 25));
         curSTK.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curCHK.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curCHK.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curCHK.setText(bundle1.getString("GUI.curCHK.text")); // NOI18N
-        curCHK.setToolTipText(bundle1.getString("GUI.curCHK.toolTipText")); // NOI18N
+        curCHK.setText(bundle.getString("GUI.curCHK.text")); // NOI18N
+        curCHK.setToolTipText(bundle.getString("GUI.curCHK.toolTipText")); // NOI18N
         curCHK.setMaximumSize(new java.awt.Dimension(30, 25));
         curCHK.setMinimumSize(new java.awt.Dimension(30, 25));
         curCHK.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curPOS.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curPOS.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curPOS.setText(bundle1.getString("GUI.curPOS.text")); // NOI18N
-        curPOS.setToolTipText(bundle1.getString("GUI.curPOS.toolTipText")); // NOI18N
+        curPOS.setText(bundle.getString("GUI.curPOS.text")); // NOI18N
+        curPOS.setToolTipText(bundle.getString("GUI.curPOS.toolTipText")); // NOI18N
         curPOS.setMaximumSize(new java.awt.Dimension(30, 25));
         curPOS.setMinimumSize(new java.awt.Dimension(30, 25));
         curPOS.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curHIT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curHIT.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curHIT.setText(bundle1.getString("GUI.curHIT.text")); // NOI18N
-        curHIT.setToolTipText(bundle1.getString("GUI.curHIT.toolTipText")); // NOI18N
+        curHIT.setText(bundle.getString("GUI.curHIT.text")); // NOI18N
+        curHIT.setToolTipText(bundle.getString("GUI.curHIT.toolTipText")); // NOI18N
         curHIT.setMaximumSize(new java.awt.Dimension(30, 25));
         curHIT.setMinimumSize(new java.awt.Dimension(30, 25));
         curHIT.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curSKA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curSKA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curSKA.setText(bundle1.getString("GUI.curSKA.text")); // NOI18N
-        curSKA.setToolTipText(bundle1.getString("GUI.curSKA.toolTipText")); // NOI18N
+        curSKA.setText(bundle.getString("GUI.curSKA.text")); // NOI18N
+        curSKA.setToolTipText(bundle.getString("GUI.curSKA.toolTipText")); // NOI18N
         curSKA.setMaximumSize(new java.awt.Dimension(30, 25));
         curSKA.setMinimumSize(new java.awt.Dimension(30, 25));
         curSKA.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curEND.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curEND.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curEND.setText(bundle1.getString("GUI.curEND.text")); // NOI18N
-        curEND.setToolTipText(bundle1.getString("GUI.curEND.toolTipText")); // NOI18N
+        curEND.setText(bundle.getString("GUI.curEND.text")); // NOI18N
+        curEND.setToolTipText(bundle.getString("GUI.curEND.toolTipText")); // NOI18N
         curEND.setMaximumSize(new java.awt.Dimension(30, 25));
         curEND.setMinimumSize(new java.awt.Dimension(30, 25));
         curEND.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curPEN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curPEN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curPEN.setText(bundle1.getString("GUI.curPEN.text")); // NOI18N
-        curPEN.setToolTipText(bundle1.getString("GUI.curPEN.toolTipText")); // NOI18N
+        curPEN.setText(bundle.getString("GUI.curPEN.text")); // NOI18N
+        curPEN.setToolTipText(bundle.getString("GUI.curPEN.toolTipText")); // NOI18N
         curPEN.setMaximumSize(new java.awt.Dimension(30, 25));
         curPEN.setMinimumSize(new java.awt.Dimension(30, 25));
         curPEN.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curFAC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curFAC.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curFAC.setText(bundle1.getString("GUI.curFAC.text")); // NOI18N
-        curFAC.setToolTipText(bundle1.getString("GUI.curFAC.toolTipText")); // NOI18N
+        curFAC.setText(bundle.getString("GUI.curFAC.text")); // NOI18N
+        curFAC.setToolTipText(bundle.getString("GUI.curFAC.toolTipText")); // NOI18N
         curFAC.setMaximumSize(new java.awt.Dimension(30, 25));
         curFAC.setMinimumSize(new java.awt.Dimension(30, 25));
         curFAC.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curLEA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curLEA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curLEA.setText(bundle1.getString("GUI.curLEA.text")); // NOI18N
-        curLEA.setToolTipText(bundle1.getString("GUI.curLEA.toolTipText")); // NOI18N
+        curLEA.setText(bundle.getString("GUI.curLEA.text")); // NOI18N
+        curLEA.setToolTipText(bundle.getString("GUI.curLEA.toolTipText")); // NOI18N
         curLEA.setMaximumSize(new java.awt.Dimension(30, 25));
         curLEA.setMinimumSize(new java.awt.Dimension(30, 25));
         curLEA.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curFIG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curFIG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curFIG.setText(bundle1.getString("GUI.curFIG.text")); // NOI18N
-        curFIG.setToolTipText(bundle1.getString("GUI.curFIG.toolTipText")); // NOI18N
+        curFIG.setText(bundle.getString("GUI.curFIG.text")); // NOI18N
+        curFIG.setToolTipText(bundle.getString("GUI.curFIG.toolTipText")); // NOI18N
         curFIG.setMaximumSize(new java.awt.Dimension(30, 25));
         curFIG.setMinimumSize(new java.awt.Dimension(30, 25));
         curFIG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curSTR.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curSTR.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curSTR.setText(bundle1.getString("GUI.curSTR.text")); // NOI18N
-        curSTR.setToolTipText(bundle1.getString("GUI.curSTR.toolTipText")); // NOI18N
+        curSTR.setText(bundle.getString("GUI.curSTR.text")); // NOI18N
+        curSTR.setToolTipText(bundle.getString("GUI.curSTR.toolTipText")); // NOI18N
         curSTR.setMaximumSize(new java.awt.Dimension(30, 25));
         curSTR.setMinimumSize(new java.awt.Dimension(30, 25));
         curSTR.setPreferredSize(new java.awt.Dimension(30, 25));
 
         POT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         POT.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        POT.setText(bundle1.getString("GUI.POT.text")); // NOI18N
-        POT.setToolTipText(bundle1.getString("GUI.POT.toolTipText")); // NOI18N
+        POT.setText(bundle.getString("GUI.POT.text")); // NOI18N
+        POT.setToolTipText(bundle.getString("GUI.POT.toolTipText")); // NOI18N
         POT.setMaximumSize(new java.awt.Dimension(30, 25));
         POT.setMinimumSize(new java.awt.Dimension(30, 25));
         POT.setPreferredSize(new java.awt.Dimension(30, 25));
 
         CON.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         CON.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        CON.setText(bundle1.getString("GUI.CON.text")); // NOI18N
-        CON.setToolTipText(bundle1.getString("GUI.CON.toolTipText")); // NOI18N
+        CON.setText(bundle.getString("GUI.CON.text")); // NOI18N
+        CON.setToolTipText(bundle.getString("GUI.CON.toolTipText")); // NOI18N
         CON.setMaximumSize(new java.awt.Dimension(30, 25));
         CON.setMinimumSize(new java.awt.Dimension(30, 25));
         CON.setPreferredSize(new java.awt.Dimension(30, 25));
 
         GRD.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         GRD.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        GRD.setText(bundle1.getString("GUI.GRD.text")); // NOI18N
-        GRD.setToolTipText(bundle1.getString("GUI.GRD.toolTipText")); // NOI18N
+        GRD.setText(bundle.getString("GUI.GRD.text")); // NOI18N
+        GRD.setToolTipText(bundle.getString("GUI.GRD.toolTipText")); // NOI18N
         GRD.setMaximumSize(new java.awt.Dimension(30, 25));
         GRD.setMinimumSize(new java.awt.Dimension(30, 25));
         GRD.setPreferredSize(new java.awt.Dimension(30, 25));
 
         INJ.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         INJ.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        INJ.setText(bundle1.getString("GUI.INJ.text")); // NOI18N
-        INJ.setToolTipText(bundle1.getString("GUI.INJ.toolTipText")); // NOI18N
+        INJ.setText(bundle.getString("GUI.INJ.text")); // NOI18N
+        INJ.setToolTipText(bundle.getString("GUI.INJ.toolTipText")); // NOI18N
         INJ.setMaximumSize(new java.awt.Dimension(30, 25));
         INJ.setMinimumSize(new java.awt.Dimension(30, 25));
         INJ.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curOF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curOF.setText(bundle1.getString("GUI.curOF.text")); // NOI18N
-        curOF.setToolTipText(bundle1.getString("GUI.curOF.toolTipText")); // NOI18N
+        curOF.setText(bundle.getString("GUI.curOF.text")); // NOI18N
+        curOF.setToolTipText(bundle.getString("GUI.curOF.toolTipText")); // NOI18N
         curOF.setMaximumSize(new java.awt.Dimension(30, 25));
         curOF.setMinimumSize(new java.awt.Dimension(30, 25));
         curOF.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curDF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curDF.setText(bundle1.getString("GUI.curDF.text")); // NOI18N
-        curDF.setToolTipText(bundle1.getString("GUI.curDF.toolTipText")); // NOI18N
+        curDF.setText(bundle.getString("GUI.curDF.text")); // NOI18N
+        curDF.setToolTipText(bundle.getString("GUI.curDF.toolTipText")); // NOI18N
         curDF.setMaximumSize(new java.awt.Dimension(30, 25));
         curDF.setMinimumSize(new java.awt.Dimension(30, 25));
         curDF.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curOA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curOA.setText(bundle1.getString("GUI.curOA.text")); // NOI18N
-        curOA.setToolTipText(bundle1.getString("GUI.curOA.toolTipText")); // NOI18N
+        curOA.setText(bundle.getString("GUI.curOA.text")); // NOI18N
+        curOA.setToolTipText(bundle.getString("GUI.curOA.toolTipText")); // NOI18N
         curOA.setMaximumSize(new java.awt.Dimension(30, 25));
         curOA.setMinimumSize(new java.awt.Dimension(30, 25));
         curOA.setPreferredSize(new java.awt.Dimension(30, 25));
@@ -1016,286 +1065,286 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText(bundle1.getString("GUI.jLabel2.text")); // NOI18N
-        jLabel2.setToolTipText(bundle1.getString("GUI.jLabel2.toolTipText")); // NOI18N
+        jLabel2.setText(bundle.getString("GUI.jLabel2.text")); // NOI18N
+        jLabel2.setToolTipText(bundle.getString("GUI.jLabel2.toolTipText")); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(30, 25));
         jLabel2.setMinimumSize(new java.awt.Dimension(30, 25));
 
         salaryAmtConsidering.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         salaryAmtConsidering.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        salaryAmtConsidering.setText(bundle1.getString("GUI.salaryAmtConsidering.text")); // NOI18N
-        salaryAmtConsidering.setToolTipText(bundle1.getString("GUI.salaryAmtConsidering.toolTipText")); // NOI18N
+        salaryAmtConsidering.setText(bundle.getString("GUI.salaryAmtConsidering.text")); // NOI18N
+        salaryAmtConsidering.setToolTipText(bundle.getString("GUI.salaryAmtConsidering.toolTipText")); // NOI18N
         salaryAmtConsidering.setMaximumSize(new java.awt.Dimension(61, 25));
         salaryAmtConsidering.setMinimumSize(new java.awt.Dimension(25, 25));
 
         salaryYrConsidering.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         salaryYrConsidering.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        salaryYrConsidering.setText(bundle1.getString("GUI.salaryYrConsidering.text")); // NOI18N
-        salaryYrConsidering.setToolTipText(bundle1.getString("GUI.salaryYrConsidering.toolTipText")); // NOI18N
+        salaryYrConsidering.setText(bundle.getString("GUI.salaryYrConsidering.text")); // NOI18N
+        salaryYrConsidering.setToolTipText(bundle.getString("GUI.salaryYrConsidering.toolTipText")); // NOI18N
         salaryYrConsidering.setMaximumSize(new java.awt.Dimension(25, 25));
         salaryYrConsidering.setMinimumSize(new java.awt.Dimension(25, 25));
         salaryYrConsidering.setPreferredSize(new java.awt.Dimension(25, 25));
 
         salaryYrLabelConsidering.setFont(new java.awt.Font("Tahoma", 1, 11));
         salaryYrLabelConsidering.setLabelFor(salaryYrConsidering);
-        salaryYrLabelConsidering.setText(bundle1.getString("GUI.salaryYrLabelConsidering.text")); // NOI18N
-        salaryYrLabelConsidering.setToolTipText(bundle1.getString("GUI.salaryYrLabelConsidering.toolTipText")); // NOI18N
+        salaryYrLabelConsidering.setText(bundle.getString("GUI.salaryYrLabelConsidering.text")); // NOI18N
+        salaryYrLabelConsidering.setToolTipText(bundle.getString("GUI.salaryYrLabelConsidering.toolTipText")); // NOI18N
         salaryYrLabelConsidering.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         salaryAmtLabelConsidering.setFont(new java.awt.Font("Tahoma", 1, 11));
         salaryAmtLabelConsidering.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         salaryAmtLabelConsidering.setLabelFor(salaryAmtConsidering);
-        salaryAmtLabelConsidering.setText(bundle1.getString("GUI.salaryAmtLabelConsidering.text")); // NOI18N
-        salaryAmtLabelConsidering.setToolTipText(bundle1.getString("GUI.salaryAmtLabelConsidering.toolTipText")); // NOI18N
+        salaryAmtLabelConsidering.setText(bundle.getString("GUI.salaryAmtLabelConsidering.text")); // NOI18N
+        salaryAmtLabelConsidering.setToolTipText(bundle.getString("GUI.salaryAmtLabelConsidering.toolTipText")); // NOI18N
 
         ConsideringLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         ConsideringLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ConsideringLabel.setLabelFor(salaryAmtLabel);
-        ConsideringLabel.setText(bundle1.getString("GUI.ConsideringLabel.text")); // NOI18N
-        ConsideringLabel.setToolTipText(bundle1.getString("GUI.ConsideringLabel.toolTipText")); // NOI18N
+        ConsideringLabel.setText(bundle.getString("GUI.ConsideringLabel.text")); // NOI18N
+        ConsideringLabel.setToolTipText(bundle.getString("GUI.ConsideringLabel.toolTipText")); // NOI18N
 
         ceilingLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         ceilingLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ceilingLabel.setText(bundle1.getString("GUI.ceilingLabel.text")); // NOI18N
-        ceilingLabel.setToolTipText(bundle1.getString("GUI.ceilingLabel.toolTipText")); // NOI18N
+        ceilingLabel.setText(bundle.getString("GUI.ceilingLabel.text")); // NOI18N
+        ceilingLabel.setToolTipText(bundle.getString("GUI.ceilingLabel.toolTipText")); // NOI18N
         ceilingLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilingLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         ceilSHO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilSHO.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilSHO.setText(bundle1.getString("GUI.ceilSHO.text")); // NOI18N
-        ceilSHO.setToolTipText(bundle1.getString("GUI.ceilSHO.toolTipText")); // NOI18N
+        ceilSHO.setText(bundle.getString("GUI.ceilSHO.text")); // NOI18N
+        ceilSHO.setToolTipText(bundle.getString("GUI.ceilSHO.toolTipText")); // NOI18N
         ceilSHO.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSHO.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSHO.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilPLA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilPLA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilPLA.setText(bundle1.getString("GUI.ceilPLA.text")); // NOI18N
-        ceilPLA.setToolTipText(bundle1.getString("GUI.ceilPLA.toolTipText")); // NOI18N
+        ceilPLA.setText(bundle.getString("GUI.ceilPLA.text")); // NOI18N
+        ceilPLA.setToolTipText(bundle.getString("GUI.ceilPLA.toolTipText")); // NOI18N
         ceilPLA.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilPLA.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilPLA.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilSTK.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilSTK.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilSTK.setText(bundle1.getString("GUI.ceilSTK.text")); // NOI18N
-        ceilSTK.setToolTipText(bundle1.getString("GUI.ceilSTK.toolTipText")); // NOI18N
+        ceilSTK.setText(bundle.getString("GUI.ceilSTK.text")); // NOI18N
+        ceilSTK.setToolTipText(bundle.getString("GUI.ceilSTK.toolTipText")); // NOI18N
         ceilSTK.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSTK.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSTK.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilCHK.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilCHK.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilCHK.setText(bundle1.getString("GUI.ceilCHK.text")); // NOI18N
-        ceilCHK.setToolTipText(bundle1.getString("GUI.ceilCHK.toolTipText")); // NOI18N
+        ceilCHK.setText(bundle.getString("GUI.ceilCHK.text")); // NOI18N
+        ceilCHK.setToolTipText(bundle.getString("GUI.ceilCHK.toolTipText")); // NOI18N
         ceilCHK.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilCHK.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilCHK.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilPOS.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilPOS.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilPOS.setText(bundle1.getString("GUI.ceilPOS.text")); // NOI18N
-        ceilPOS.setToolTipText(bundle1.getString("GUI.ceilPOS.toolTipText")); // NOI18N
+        ceilPOS.setText(bundle.getString("GUI.ceilPOS.text")); // NOI18N
+        ceilPOS.setToolTipText(bundle.getString("GUI.ceilPOS.toolTipText")); // NOI18N
         ceilPOS.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilPOS.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilPOS.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilHIT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilHIT.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilHIT.setText(bundle1.getString("GUI.ceilHIT.text")); // NOI18N
-        ceilHIT.setToolTipText(bundle1.getString("GUI.ceilHIT.toolTipText")); // NOI18N
+        ceilHIT.setText(bundle.getString("GUI.ceilHIT.text")); // NOI18N
+        ceilHIT.setToolTipText(bundle.getString("GUI.ceilHIT.toolTipText")); // NOI18N
         ceilHIT.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilHIT.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilHIT.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilSKA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilSKA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilSKA.setText(bundle1.getString("GUI.ceilSKA.text")); // NOI18N
-        ceilSKA.setToolTipText(bundle1.getString("GUI.ceilSKA.toolTipText")); // NOI18N
+        ceilSKA.setText(bundle.getString("GUI.ceilSKA.text")); // NOI18N
+        ceilSKA.setToolTipText(bundle.getString("GUI.ceilSKA.toolTipText")); // NOI18N
         ceilSKA.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSKA.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSKA.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilEND.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilEND.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilEND.setText(bundle1.getString("GUI.ceilEND.text")); // NOI18N
-        ceilEND.setToolTipText(bundle1.getString("GUI.ceilEND.toolTipText")); // NOI18N
+        ceilEND.setText(bundle.getString("GUI.ceilEND.text")); // NOI18N
+        ceilEND.setToolTipText(bundle.getString("GUI.ceilEND.toolTipText")); // NOI18N
         ceilEND.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilEND.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilEND.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilPEN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilPEN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilPEN.setText(bundle1.getString("GUI.ceilPEN.text")); // NOI18N
-        ceilPEN.setToolTipText(bundle1.getString("GUI.ceilPEN.toolTipText")); // NOI18N
+        ceilPEN.setText(bundle.getString("GUI.ceilPEN.text")); // NOI18N
+        ceilPEN.setToolTipText(bundle.getString("GUI.ceilPEN.toolTipText")); // NOI18N
         ceilPEN.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilPEN.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilPEN.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilFAC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilFAC.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilFAC.setText(bundle1.getString("GUI.ceilFAC.text")); // NOI18N
-        ceilFAC.setToolTipText(bundle1.getString("GUI.ceilFAC.toolTipText")); // NOI18N
+        ceilFAC.setText(bundle.getString("GUI.ceilFAC.text")); // NOI18N
+        ceilFAC.setToolTipText(bundle.getString("GUI.ceilFAC.toolTipText")); // NOI18N
         ceilFAC.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilFAC.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilFAC.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilLEA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilLEA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilLEA.setText(bundle1.getString("GUI.ceilLEA.text")); // NOI18N
-        ceilLEA.setToolTipText(bundle1.getString("GUI.ceilLEA.toolTipText")); // NOI18N
+        ceilLEA.setText(bundle.getString("GUI.ceilLEA.text")); // NOI18N
+        ceilLEA.setToolTipText(bundle.getString("GUI.ceilLEA.toolTipText")); // NOI18N
         ceilLEA.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilLEA.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilLEA.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilFIG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilFIG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilFIG.setText(bundle1.getString("GUI.ceilFIG.text")); // NOI18N
-        ceilFIG.setToolTipText(bundle1.getString("GUI.ceilFIG.toolTipText")); // NOI18N
+        ceilFIG.setText(bundle.getString("GUI.ceilFIG.text")); // NOI18N
+        ceilFIG.setToolTipText(bundle.getString("GUI.ceilFIG.toolTipText")); // NOI18N
         ceilFIG.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilFIG.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilFIG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilSTR.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilSTR.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilSTR.setText(bundle1.getString("GUI.ceilSTR.text")); // NOI18N
-        ceilSTR.setToolTipText(bundle1.getString("GUI.ceilSTR.toolTipText")); // NOI18N
+        ceilSTR.setText(bundle.getString("GUI.ceilSTR.text")); // NOI18N
+        ceilSTR.setToolTipText(bundle.getString("GUI.ceilSTR.toolTipText")); // NOI18N
         ceilSTR.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSTR.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSTR.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilSHO1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilSHO1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilSHO1.setText(bundle1.getString("GUI.ceilSHO1.text")); // NOI18N
-        ceilSHO1.setToolTipText(bundle1.getString("GUI.ceilSHO1.toolTipText")); // NOI18N
+        ceilSHO1.setText(bundle.getString("GUI.ceilSHO1.text")); // NOI18N
+        ceilSHO1.setToolTipText(bundle.getString("GUI.ceilSHO1.toolTipText")); // NOI18N
         ceilSHO1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSHO1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSHO1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilPLA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilPLA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilPLA1.setText(bundle1.getString("GUI.ceilPLA1.text")); // NOI18N
-        ceilPLA1.setToolTipText(bundle1.getString("GUI.ceilPLA1.toolTipText")); // NOI18N
+        ceilPLA1.setText(bundle.getString("GUI.ceilPLA1.text")); // NOI18N
+        ceilPLA1.setToolTipText(bundle.getString("GUI.ceilPLA1.toolTipText")); // NOI18N
         ceilPLA1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilPLA1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilPLA1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilSTK1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilSTK1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilSTK1.setText(bundle1.getString("GUI.ceilSTK1.text")); // NOI18N
-        ceilSTK1.setToolTipText(bundle1.getString("GUI.ceilSTK1.toolTipText")); // NOI18N
+        ceilSTK1.setText(bundle.getString("GUI.ceilSTK1.text")); // NOI18N
+        ceilSTK1.setToolTipText(bundle.getString("GUI.ceilSTK1.toolTipText")); // NOI18N
         ceilSTK1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSTK1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSTK1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilCHK1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilCHK1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilCHK1.setText(bundle1.getString("GUI.ceilCHK1.text")); // NOI18N
-        ceilCHK1.setToolTipText(bundle1.getString("GUI.ceilCHK1.toolTipText")); // NOI18N
+        ceilCHK1.setText(bundle.getString("GUI.ceilCHK1.text")); // NOI18N
+        ceilCHK1.setToolTipText(bundle.getString("GUI.ceilCHK1.toolTipText")); // NOI18N
         ceilCHK1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilCHK1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilCHK1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilPOS1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilPOS1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilPOS1.setText(bundle1.getString("GUI.ceilPOS1.text")); // NOI18N
-        ceilPOS1.setToolTipText(bundle1.getString("GUI.ceilPOS1.toolTipText")); // NOI18N
+        ceilPOS1.setText(bundle.getString("GUI.ceilPOS1.text")); // NOI18N
+        ceilPOS1.setToolTipText(bundle.getString("GUI.ceilPOS1.toolTipText")); // NOI18N
         ceilPOS1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilPOS1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilPOS1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilHIT1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilHIT1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilHIT1.setText(bundle1.getString("GUI.ceilHIT1.text")); // NOI18N
-        ceilHIT1.setToolTipText(bundle1.getString("GUI.ceilHIT1.toolTipText")); // NOI18N
+        ceilHIT1.setText(bundle.getString("GUI.ceilHIT1.text")); // NOI18N
+        ceilHIT1.setToolTipText(bundle.getString("GUI.ceilHIT1.toolTipText")); // NOI18N
         ceilHIT1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilHIT1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilHIT1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilSKA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilSKA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilSKA1.setText(bundle1.getString("GUI.ceilSKA1.text")); // NOI18N
-        ceilSKA1.setToolTipText(bundle1.getString("GUI.ceilSKA1.toolTipText")); // NOI18N
+        ceilSKA1.setText(bundle.getString("GUI.ceilSKA1.text")); // NOI18N
+        ceilSKA1.setToolTipText(bundle.getString("GUI.ceilSKA1.toolTipText")); // NOI18N
         ceilSKA1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSKA1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSKA1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilEND1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilEND1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilEND1.setText(bundle1.getString("GUI.ceilEND1.text")); // NOI18N
-        ceilEND1.setToolTipText(bundle1.getString("GUI.ceilEND1.toolTipText")); // NOI18N
+        ceilEND1.setText(bundle.getString("GUI.ceilEND1.text")); // NOI18N
+        ceilEND1.setToolTipText(bundle.getString("GUI.ceilEND1.toolTipText")); // NOI18N
         ceilEND1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilEND1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilEND1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilPEN1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilPEN1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilPEN1.setText(bundle1.getString("GUI.ceilPEN1.text")); // NOI18N
-        ceilPEN1.setToolTipText(bundle1.getString("GUI.ceilPEN1.toolTipText")); // NOI18N
+        ceilPEN1.setText(bundle.getString("GUI.ceilPEN1.text")); // NOI18N
+        ceilPEN1.setToolTipText(bundle.getString("GUI.ceilPEN1.toolTipText")); // NOI18N
         ceilPEN1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilPEN1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilPEN1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilFAC1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilFAC1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilFAC1.setText(bundle1.getString("GUI.ceilFAC1.text")); // NOI18N
-        ceilFAC1.setToolTipText(bundle1.getString("GUI.ceilFAC1.toolTipText")); // NOI18N
+        ceilFAC1.setText(bundle.getString("GUI.ceilFAC1.text")); // NOI18N
+        ceilFAC1.setToolTipText(bundle.getString("GUI.ceilFAC1.toolTipText")); // NOI18N
         ceilFAC1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilFAC1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilFAC1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilLEA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilLEA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilLEA1.setText(bundle1.getString("GUI.ceilLEA1.text")); // NOI18N
-        ceilLEA1.setToolTipText(bundle1.getString("GUI.ceilLEA1.toolTipText")); // NOI18N
+        ceilLEA1.setText(bundle.getString("GUI.ceilLEA1.text")); // NOI18N
+        ceilLEA1.setToolTipText(bundle.getString("GUI.ceilLEA1.toolTipText")); // NOI18N
         ceilLEA1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilLEA1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilLEA1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilFIG1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilFIG1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilFIG1.setText(bundle1.getString("GUI.ceilFIG1.text")); // NOI18N
-        ceilFIG1.setToolTipText(bundle1.getString("GUI.ceilFIG1.toolTipText")); // NOI18N
+        ceilFIG1.setText(bundle.getString("GUI.ceilFIG1.text")); // NOI18N
+        ceilFIG1.setToolTipText(bundle.getString("GUI.ceilFIG1.toolTipText")); // NOI18N
         ceilFIG1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilFIG1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilFIG1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilSTR1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilSTR1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ceilSTR1.setText(bundle1.getString("GUI.ceilSTR1.text")); // NOI18N
-        ceilSTR1.setToolTipText(bundle1.getString("GUI.ceilSTR1.toolTipText")); // NOI18N
+        ceilSTR1.setText(bundle.getString("GUI.ceilSTR1.text")); // NOI18N
+        ceilSTR1.setToolTipText(bundle.getString("GUI.ceilSTR1.toolTipText")); // NOI18N
         ceilSTR1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSTR1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSTR1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         ceilingLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
         ceilingLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ceilingLabel1.setText(bundle1.getString("GUI.ceilingLabel1.text")); // NOI18N
-        ceilingLabel1.setToolTipText(bundle1.getString("GUI.ceilingLabel1.toolTipText")); // NOI18N
+        ceilingLabel1.setText(bundle.getString("GUI.ceilingLabel1.text")); // NOI18N
+        ceilingLabel1.setToolTipText(bundle.getString("GUI.ceilingLabel1.toolTipText")); // NOI18N
         ceilingLabel1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilingLabel1.setMinimumSize(new java.awt.Dimension(30, 25));
 
         projOF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         projOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        projOF.setText(bundle1.getString("GUI.projOF.text")); // NOI18N
-        projOF.setToolTipText(bundle1.getString("GUI.projOF.toolTipText")); // NOI18N
+        projOF.setText(bundle.getString("GUI.projOF.text")); // NOI18N
+        projOF.setToolTipText(bundle.getString("GUI.projOF.toolTipText")); // NOI18N
         projOF.setMaximumSize(new java.awt.Dimension(30, 25));
         projOF.setMinimumSize(new java.awt.Dimension(30, 25));
         projOF.setPreferredSize(new java.awt.Dimension(30, 25));
 
         projDF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         projDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        projDF.setText(bundle1.getString("GUI.projDF.text")); // NOI18N
-        projDF.setToolTipText(bundle1.getString("GUI.projDF.toolTipText")); // NOI18N
+        projDF.setText(bundle.getString("GUI.projDF.text")); // NOI18N
+        projDF.setToolTipText(bundle.getString("GUI.projDF.toolTipText")); // NOI18N
         projDF.setMaximumSize(new java.awt.Dimension(30, 25));
         projDF.setMinimumSize(new java.awt.Dimension(30, 25));
         projDF.setPreferredSize(new java.awt.Dimension(30, 25));
 
         projOA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         projOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        projOA.setText(bundle1.getString("GUI.projOA.text")); // NOI18N
-        projOA.setToolTipText(bundle1.getString("GUI.projOA.toolTipText")); // NOI18N
+        projOA.setText(bundle.getString("GUI.projOA.text")); // NOI18N
+        projOA.setToolTipText(bundle.getString("GUI.projOA.toolTipText")); // NOI18N
         projOA.setMaximumSize(new java.awt.Dimension(30, 25));
         projOA.setMinimumSize(new java.awt.Dimension(30, 25));
         projOA.setPreferredSize(new java.awt.Dimension(30, 25));
@@ -1307,24 +1356,24 @@ public class GUI extends javax.swing.JFrame {
 
         trainOF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         trainOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        trainOF.setText(bundle1.getString("GUI.trainOF.text")); // NOI18N
-        trainOF.setToolTipText(bundle1.getString("GUI.trainOF.toolTipText")); // NOI18N
+        trainOF.setText(bundle.getString("GUI.trainOF.text")); // NOI18N
+        trainOF.setToolTipText(bundle.getString("GUI.trainOF.toolTipText")); // NOI18N
         trainOF.setMaximumSize(new java.awt.Dimension(30, 25));
         trainOF.setMinimumSize(new java.awt.Dimension(30, 25));
         trainOF.setPreferredSize(new java.awt.Dimension(30, 25));
 
         trainDF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         trainDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        trainDF.setText(bundle1.getString("GUI.trainDF.text")); // NOI18N
-        trainDF.setToolTipText(bundle1.getString("GUI.trainDF.toolTipText")); // NOI18N
+        trainDF.setText(bundle.getString("GUI.trainDF.text")); // NOI18N
+        trainDF.setToolTipText(bundle.getString("GUI.trainDF.toolTipText")); // NOI18N
         trainDF.setMaximumSize(new java.awt.Dimension(30, 25));
         trainDF.setMinimumSize(new java.awt.Dimension(30, 25));
         trainDF.setPreferredSize(new java.awt.Dimension(30, 25));
 
         trainOA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         trainOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        trainOA.setText(bundle1.getString("GUI.trainOA.text")); // NOI18N
-        trainOA.setToolTipText(bundle1.getString("GUI.trainOA.toolTipText")); // NOI18N
+        trainOA.setText(bundle.getString("GUI.trainOA.text")); // NOI18N
+        trainOA.setToolTipText(bundle.getString("GUI.trainOA.toolTipText")); // NOI18N
         trainOA.setMaximumSize(new java.awt.Dimension(30, 25));
         trainOA.setMinimumSize(new java.awt.Dimension(30, 25));
         trainOA.setPreferredSize(new java.awt.Dimension(30, 25));
@@ -1336,31 +1385,31 @@ public class GUI extends javax.swing.JFrame {
 
         ceilingLabel2.setFont(new java.awt.Font("Tahoma", 1, 11));
         ceilingLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ceilingLabel2.setText(bundle1.getString("GUI.ceilingLabel2.text")); // NOI18N
-        ceilingLabel2.setToolTipText(bundle1.getString("GUI.ceilingLabel2.toolTipText")); // NOI18N
+        ceilingLabel2.setText(bundle.getString("GUI.ceilingLabel2.text")); // NOI18N
+        ceilingLabel2.setToolTipText(bundle.getString("GUI.ceilingLabel2.toolTipText")); // NOI18N
         ceilingLabel2.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilingLabel2.setMinimumSize(new java.awt.Dimension(30, 25));
 
         farmOF1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         farmOF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        farmOF1.setText(bundle1.getString("GUI.farmOF1.text")); // NOI18N
-        farmOF1.setToolTipText(bundle1.getString("GUI.farmOF1.toolTipText")); // NOI18N
+        farmOF1.setText(bundle.getString("GUI.farmOF1.text")); // NOI18N
+        farmOF1.setToolTipText(bundle.getString("GUI.farmOF1.toolTipText")); // NOI18N
         farmOF1.setMaximumSize(new java.awt.Dimension(30, 25));
         farmOF1.setMinimumSize(new java.awt.Dimension(30, 25));
         farmOF1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         farmDF1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         farmDF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        farmDF1.setText(bundle1.getString("GUI.farmDF1.text")); // NOI18N
-        farmDF1.setToolTipText(bundle1.getString("GUI.farmDF1.toolTipText")); // NOI18N
+        farmDF1.setText(bundle.getString("GUI.farmDF1.text")); // NOI18N
+        farmDF1.setToolTipText(bundle.getString("GUI.farmDF1.toolTipText")); // NOI18N
         farmDF1.setMaximumSize(new java.awt.Dimension(30, 25));
         farmDF1.setMinimumSize(new java.awt.Dimension(30, 25));
         farmDF1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         farmOA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         farmOA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        farmOA1.setText(bundle1.getString("GUI.farmOA1.text")); // NOI18N
-        farmOA1.setToolTipText(bundle1.getString("GUI.farmOA1.toolTipText")); // NOI18N
+        farmOA1.setText(bundle.getString("GUI.farmOA1.text")); // NOI18N
+        farmOA1.setToolTipText(bundle.getString("GUI.farmOA1.toolTipText")); // NOI18N
         farmOA1.setMaximumSize(new java.awt.Dimension(30, 25));
         farmOA1.setMinimumSize(new java.awt.Dimension(30, 25));
         farmOA1.setPreferredSize(new java.awt.Dimension(30, 25));
@@ -1372,15 +1421,15 @@ public class GUI extends javax.swing.JFrame {
 
         ceilingLabel3.setFont(new java.awt.Font("Tahoma", 1, 11));
         ceilingLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ceilingLabel3.setText(bundle1.getString("GUI.ceilingLabel3.text")); // NOI18N
-        ceilingLabel3.setToolTipText(bundle1.getString("GUI.ceilingLabel3.toolTipText")); // NOI18N
+        ceilingLabel3.setText(bundle.getString("GUI.ceilingLabel3.text")); // NOI18N
+        ceilingLabel3.setToolTipText(bundle.getString("GUI.ceilingLabel3.toolTipText")); // NOI18N
         ceilingLabel3.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilingLabel3.setMinimumSize(new java.awt.Dimension(30, 25));
 
         status.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         status.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        status.setText(bundle1.getString("GUI.status.text")); // NOI18N
-        status.setToolTipText(bundle1.getString("GUI.status.toolTipText")); // NOI18N
+        status.setText(bundle.getString("GUI.status.text")); // NOI18N
+        status.setToolTipText(bundle.getString("GUI.status.toolTipText")); // NOI18N
         status.setMaximumSize(new java.awt.Dimension(25, 25));
         status.setMinimumSize(new java.awt.Dimension(25, 25));
         status.setPreferredSize(new java.awt.Dimension(7, 25));
@@ -1388,8 +1437,8 @@ public class GUI extends javax.swing.JFrame {
         statusLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         statusLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         statusLabel.setLabelFor(status);
-        statusLabel.setText(bundle1.getString("GUI.statusLabel.text")); // NOI18N
-        statusLabel.setToolTipText(bundle1.getString("GUI.statusLabel.toolTipText")); // NOI18N
+        statusLabel.setText(bundle.getString("GUI.statusLabel.text")); // NOI18N
+        statusLabel.setToolTipText(bundle.getString("GUI.statusLabel.toolTipText")); // NOI18N
 
         similarPlayerList.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "No Matches" };
@@ -1397,7 +1446,7 @@ public class GUI extends javax.swing.JFrame {
             public Object getElementAt(int i) { return strings[i]; }
         });
         similarPlayerList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        similarPlayerList.setToolTipText(bundle1.getString("GUI.similarPlayerList.toolTipText")); // NOI18N
+        similarPlayerList.setToolTipText(bundle.getString("GUI.similarPlayerList.toolTipText")); // NOI18N
         similarPlayerList.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         similarPlayerList.setSelectionBackground(new java.awt.Color(120, 210, 120));
         similarPlayerList.setValueIsAdjusting(true);
@@ -1410,251 +1459,251 @@ public class GUI extends javax.swing.JFrame {
 
         weeklyLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         weeklyLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        weeklyLabel.setText(bundle1.getString("GUI.weeklyLabel.text")); // NOI18N
-        weeklyLabel.setToolTipText(bundle1.getString("GUI.weeklyLabel.toolTipText")); // NOI18N
+        weeklyLabel.setText(bundle.getString("GUI.weeklyLabel.text")); // NOI18N
+        weeklyLabel.setToolTipText(bundle.getString("GUI.weeklyLabel.toolTipText")); // NOI18N
         weeklyLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         weeklyLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         shoLabel1.setFont(new java.awt.Font("Tahoma", 1, 12));
         shoLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        shoLabel1.setText(bundle1.getString("GUI.shoLabel1.text")); // NOI18N
-        shoLabel1.setToolTipText(bundle1.getString("GUI.shoLabel1.toolTipText")); // NOI18N
+        shoLabel1.setText(bundle.getString("GUI.shoLabel1.text")); // NOI18N
+        shoLabel1.setToolTipText(bundle.getString("GUI.shoLabel1.toolTipText")); // NOI18N
         shoLabel1.setMaximumSize(new java.awt.Dimension(30, 25));
         shoLabel1.setMinimumSize(new java.awt.Dimension(30, 25));
 
         gLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         gLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        gLabel.setText(bundle1.getString("GUI.gLabel.text")); // NOI18N
-        gLabel.setToolTipText(bundle1.getString("GUI.gLabel.toolTipText")); // NOI18N
+        gLabel.setText(bundle.getString("GUI.gLabel.text")); // NOI18N
+        gLabel.setToolTipText(bundle.getString("GUI.gLabel.toolTipText")); // NOI18N
         gLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         gLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         assistLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         assistLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        assistLabel.setText(bundle1.getString("GUI.assistLabel.text")); // NOI18N
-        assistLabel.setToolTipText(bundle1.getString("GUI.assistLabel.toolTipText")); // NOI18N
+        assistLabel.setText(bundle.getString("GUI.assistLabel.text")); // NOI18N
+        assistLabel.setToolTipText(bundle.getString("GUI.assistLabel.toolTipText")); // NOI18N
         assistLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         assistLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         pLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         pLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        pLabel.setText(bundle1.getString("GUI.pLabel.text")); // NOI18N
-        pLabel.setToolTipText(bundle1.getString("GUI.pLabel.toolTipText")); // NOI18N
+        pLabel.setText(bundle.getString("GUI.pLabel.text")); // NOI18N
+        pLabel.setToolTipText(bundle.getString("GUI.pLabel.toolTipText")); // NOI18N
         pLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         pLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         gwgLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         gwgLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        gwgLabel.setText(bundle1.getString("GUI.gwgLabel.text")); // NOI18N
-        gwgLabel.setToolTipText(bundle1.getString("GUI.gwgLabel.toolTipText")); // NOI18N
+        gwgLabel.setText(bundle.getString("GUI.gwgLabel.text")); // NOI18N
+        gwgLabel.setToolTipText(bundle.getString("GUI.gwgLabel.toolTipText")); // NOI18N
         gwgLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         gwgLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         wGP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         wGP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        wGP.setText(bundle1.getString("GUI.wGP.text")); // NOI18N
-        wGP.setToolTipText(bundle1.getString("GUI.wGP.toolTipText")); // NOI18N
+        wGP.setText(bundle.getString("GUI.wGP.text")); // NOI18N
+        wGP.setToolTipText(bundle.getString("GUI.wGP.toolTipText")); // NOI18N
         wGP.setMaximumSize(new java.awt.Dimension(30, 25));
         wGP.setMinimumSize(new java.awt.Dimension(30, 25));
         wGP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         wG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         wG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        wG.setText(bundle1.getString("GUI.wG.text")); // NOI18N
-        wG.setToolTipText(bundle1.getString("GUI.wG.toolTipText")); // NOI18N
+        wG.setText(bundle.getString("GUI.wG.text")); // NOI18N
+        wG.setToolTipText(bundle.getString("GUI.wG.toolTipText")); // NOI18N
         wG.setMaximumSize(new java.awt.Dimension(30, 25));
         wG.setMinimumSize(new java.awt.Dimension(30, 25));
         wG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         wA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         wA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        wA.setText(bundle1.getString("GUI.wA.text")); // NOI18N
-        wA.setToolTipText(bundle1.getString("GUI.wA.toolTipText")); // NOI18N
+        wA.setText(bundle.getString("GUI.wA.text")); // NOI18N
+        wA.setToolTipText(bundle.getString("GUI.wA.toolTipText")); // NOI18N
         wA.setMaximumSize(new java.awt.Dimension(30, 25));
         wA.setMinimumSize(new java.awt.Dimension(30, 25));
         wA.setPreferredSize(new java.awt.Dimension(30, 25));
 
         wP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         wP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        wP.setText(bundle1.getString("GUI.wP.text")); // NOI18N
-        wP.setToolTipText(bundle1.getString("GUI.wP.toolTipText")); // NOI18N
+        wP.setText(bundle.getString("GUI.wP.text")); // NOI18N
+        wP.setToolTipText(bundle.getString("GUI.wP.toolTipText")); // NOI18N
         wP.setMaximumSize(new java.awt.Dimension(30, 25));
         wP.setMinimumSize(new java.awt.Dimension(30, 25));
         wP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         wGWG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         wGWG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        wGWG.setText(bundle1.getString("GUI.wGWG.text")); // NOI18N
-        wGWG.setToolTipText(bundle1.getString("GUI.wGWG.toolTipText")); // NOI18N
+        wGWG.setText(bundle.getString("GUI.wGWG.text")); // NOI18N
+        wGWG.setToolTipText(bundle.getString("GUI.wGWG.toolTipText")); // NOI18N
         wGWG.setMaximumSize(new java.awt.Dimension(30, 25));
         wGWG.setMinimumSize(new java.awt.Dimension(30, 25));
         wGWG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         weeklyLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
         weeklyLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        weeklyLabel1.setText(bundle1.getString("GUI.weeklyLabel1.text")); // NOI18N
-        weeklyLabel1.setToolTipText(bundle1.getString("GUI.weeklyLabel1.toolTipText")); // NOI18N
+        weeklyLabel1.setText(bundle.getString("GUI.weeklyLabel1.text")); // NOI18N
+        weeklyLabel1.setToolTipText(bundle.getString("GUI.weeklyLabel1.toolTipText")); // NOI18N
         weeklyLabel1.setMaximumSize(new java.awt.Dimension(30, 25));
         weeklyLabel1.setMinimumSize(new java.awt.Dimension(30, 25));
 
         mGP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         mGP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        mGP.setText(bundle1.getString("GUI.mGP.text")); // NOI18N
-        mGP.setToolTipText(bundle1.getString("GUI.mGP.toolTipText")); // NOI18N
+        mGP.setText(bundle.getString("GUI.mGP.text")); // NOI18N
+        mGP.setToolTipText(bundle.getString("GUI.mGP.toolTipText")); // NOI18N
         mGP.setMaximumSize(new java.awt.Dimension(30, 25));
         mGP.setMinimumSize(new java.awt.Dimension(30, 25));
         mGP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         mG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         mG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        mG.setText(bundle1.getString("GUI.mG.text")); // NOI18N
-        mG.setToolTipText(bundle1.getString("GUI.mG.toolTipText")); // NOI18N
+        mG.setText(bundle.getString("GUI.mG.text")); // NOI18N
+        mG.setToolTipText(bundle.getString("GUI.mG.toolTipText")); // NOI18N
         mG.setMaximumSize(new java.awt.Dimension(30, 25));
         mG.setMinimumSize(new java.awt.Dimension(30, 25));
         mG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         mA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         mA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        mA.setText(bundle1.getString("GUI.mA.text")); // NOI18N
-        mA.setToolTipText(bundle1.getString("GUI.mA.toolTipText")); // NOI18N
+        mA.setText(bundle.getString("GUI.mA.text")); // NOI18N
+        mA.setToolTipText(bundle.getString("GUI.mA.toolTipText")); // NOI18N
         mA.setMaximumSize(new java.awt.Dimension(30, 25));
         mA.setMinimumSize(new java.awt.Dimension(30, 25));
         mA.setPreferredSize(new java.awt.Dimension(30, 25));
 
         mP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         mP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        mP.setText(bundle1.getString("GUI.mP.text")); // NOI18N
-        mP.setToolTipText(bundle1.getString("GUI.mP.toolTipText")); // NOI18N
+        mP.setText(bundle.getString("GUI.mP.text")); // NOI18N
+        mP.setToolTipText(bundle.getString("GUI.mP.toolTipText")); // NOI18N
         mP.setMaximumSize(new java.awt.Dimension(30, 25));
         mP.setMinimumSize(new java.awt.Dimension(30, 25));
         mP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         mGWG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         mGWG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        mGWG.setText(bundle1.getString("GUI.mGWG.text")); // NOI18N
-        mGWG.setToolTipText(bundle1.getString("GUI.mGWG.toolTipText")); // NOI18N
+        mGWG.setText(bundle.getString("GUI.mGWG.text")); // NOI18N
+        mGWG.setToolTipText(bundle.getString("GUI.mGWG.toolTipText")); // NOI18N
         mGWG.setMaximumSize(new java.awt.Dimension(30, 25));
         mGWG.setMinimumSize(new java.awt.Dimension(30, 25));
         mGWG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         weeklyLabel2.setFont(new java.awt.Font("Tahoma", 1, 11));
         weeklyLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        weeklyLabel2.setText(bundle1.getString("GUI.weeklyLabel2.text")); // NOI18N
-        weeklyLabel2.setToolTipText(bundle1.getString("GUI.weeklyLabel2.toolTipText")); // NOI18N
+        weeklyLabel2.setText(bundle.getString("GUI.weeklyLabel2.text")); // NOI18N
+        weeklyLabel2.setToolTipText(bundle.getString("GUI.weeklyLabel2.toolTipText")); // NOI18N
         weeklyLabel2.setMaximumSize(new java.awt.Dimension(30, 25));
         weeklyLabel2.setMinimumSize(new java.awt.Dimension(30, 25));
 
         curStreakGP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curStreakGP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curStreakGP.setText(bundle1.getString("GUI.curStreakGP.text")); // NOI18N
-        curStreakGP.setToolTipText(bundle1.getString("GUI.curStreakGP.toolTipText")); // NOI18N
+        curStreakGP.setText(bundle.getString("GUI.curStreakGP.text")); // NOI18N
+        curStreakGP.setToolTipText(bundle.getString("GUI.curStreakGP.toolTipText")); // NOI18N
         curStreakGP.setMaximumSize(new java.awt.Dimension(30, 25));
         curStreakGP.setMinimumSize(new java.awt.Dimension(30, 25));
         curStreakGP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curStreakG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curStreakG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curStreakG.setText(bundle1.getString("GUI.curStreakG.text")); // NOI18N
-        curStreakG.setToolTipText(bundle1.getString("GUI.curStreakG.toolTipText")); // NOI18N
+        curStreakG.setText(bundle.getString("GUI.curStreakG.text")); // NOI18N
+        curStreakG.setToolTipText(bundle.getString("GUI.curStreakG.toolTipText")); // NOI18N
         curStreakG.setMaximumSize(new java.awt.Dimension(30, 25));
         curStreakG.setMinimumSize(new java.awt.Dimension(30, 25));
         curStreakG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curStreakP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curStreakP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        curStreakP.setText(bundle1.getString("GUI.curStreakP.text")); // NOI18N
-        curStreakP.setToolTipText(bundle1.getString("GUI.curStreakP.toolTipText")); // NOI18N
+        curStreakP.setText(bundle.getString("GUI.curStreakP.text")); // NOI18N
+        curStreakP.setToolTipText(bundle.getString("GUI.curStreakP.toolTipText")); // NOI18N
         curStreakP.setMaximumSize(new java.awt.Dimension(30, 25));
         curStreakP.setMinimumSize(new java.awt.Dimension(30, 25));
         curStreakP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         weeklyLabel3.setFont(new java.awt.Font("Tahoma", 1, 11));
         weeklyLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        weeklyLabel3.setText(bundle1.getString("GUI.weeklyLabel3.text")); // NOI18N
-        weeklyLabel3.setToolTipText(bundle1.getString("GUI.weeklyLabel3.toolTipText")); // NOI18N
+        weeklyLabel3.setText(bundle.getString("GUI.weeklyLabel3.text")); // NOI18N
+        weeklyLabel3.setToolTipText(bundle.getString("GUI.weeklyLabel3.toolTipText")); // NOI18N
         weeklyLabel3.setMaximumSize(new java.awt.Dimension(30, 25));
         weeklyLabel3.setMinimumSize(new java.awt.Dimension(30, 25));
 
         bStreakGP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         bStreakGP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bStreakGP.setText(bundle1.getString("GUI.bStreakGP.text")); // NOI18N
-        bStreakGP.setToolTipText(bundle1.getString("GUI.bStreakGP.toolTipText")); // NOI18N
+        bStreakGP.setText(bundle.getString("GUI.bStreakGP.text")); // NOI18N
+        bStreakGP.setToolTipText(bundle.getString("GUI.bStreakGP.toolTipText")); // NOI18N
         bStreakGP.setMaximumSize(new java.awt.Dimension(30, 25));
         bStreakGP.setMinimumSize(new java.awt.Dimension(30, 25));
         bStreakGP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         bStreakG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         bStreakG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bStreakG.setText(bundle1.getString("GUI.bStreakG.text")); // NOI18N
-        bStreakG.setToolTipText(bundle1.getString("GUI.bStreakG.toolTipText")); // NOI18N
+        bStreakG.setText(bundle.getString("GUI.bStreakG.text")); // NOI18N
+        bStreakG.setToolTipText(bundle.getString("GUI.bStreakG.toolTipText")); // NOI18N
         bStreakG.setMaximumSize(new java.awt.Dimension(30, 25));
         bStreakG.setMinimumSize(new java.awt.Dimension(30, 25));
         bStreakG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         bStreakA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         bStreakA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bStreakA.setText(bundle1.getString("GUI.bStreakA.text")); // NOI18N
-        bStreakA.setToolTipText(bundle1.getString("GUI.bStreakA.toolTipText")); // NOI18N
+        bStreakA.setText(bundle.getString("GUI.bStreakA.text")); // NOI18N
+        bStreakA.setToolTipText(bundle.getString("GUI.bStreakA.toolTipText")); // NOI18N
         bStreakA.setMaximumSize(new java.awt.Dimension(30, 25));
         bStreakA.setMinimumSize(new java.awt.Dimension(30, 25));
         bStreakA.setPreferredSize(new java.awt.Dimension(30, 25));
 
         bStreakP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         bStreakP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bStreakP.setText(bundle1.getString("GUI.bStreakP.text")); // NOI18N
-        bStreakP.setToolTipText(bundle1.getString("GUI.bStreakP.toolTipText")); // NOI18N
+        bStreakP.setText(bundle.getString("GUI.bStreakP.text")); // NOI18N
+        bStreakP.setToolTipText(bundle.getString("GUI.bStreakP.toolTipText")); // NOI18N
         bStreakP.setMaximumSize(new java.awt.Dimension(30, 25));
         bStreakP.setMinimumSize(new java.awt.Dimension(30, 25));
         bStreakP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         bStreakGWG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         bStreakGWG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        bStreakGWG.setText(bundle1.getString("GUI.bStreakGWG.text")); // NOI18N
-        bStreakGWG.setToolTipText(bundle1.getString("GUI.bStreakGWG.toolTipText")); // NOI18N
+        bStreakGWG.setText(bundle.getString("GUI.bStreakGWG.text")); // NOI18N
+        bStreakGWG.setToolTipText(bundle.getString("GUI.bStreakGWG.toolTipText")); // NOI18N
         bStreakGWG.setMaximumSize(new java.awt.Dimension(30, 25));
         bStreakGWG.setMinimumSize(new java.awt.Dimension(30, 25));
         bStreakGWG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         careerG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         careerG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        careerG.setText(bundle1.getString("GUI.careerG.text")); // NOI18N
-        careerG.setToolTipText(bundle1.getString("GUI.careerG.toolTipText")); // NOI18N
+        careerG.setText(bundle.getString("GUI.careerG.text")); // NOI18N
+        careerG.setToolTipText(bundle.getString("GUI.careerG.toolTipText")); // NOI18N
         careerG.setMaximumSize(new java.awt.Dimension(30, 25));
         careerG.setMinimumSize(new java.awt.Dimension(30, 25));
         careerG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         careerA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         careerA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        careerA.setText(bundle1.getString("GUI.careerA.text")); // NOI18N
-        careerA.setToolTipText(bundle1.getString("GUI.careerA.toolTipText")); // NOI18N
+        careerA.setText(bundle.getString("GUI.careerA.text")); // NOI18N
+        careerA.setToolTipText(bundle.getString("GUI.careerA.toolTipText")); // NOI18N
         careerA.setMaximumSize(new java.awt.Dimension(30, 25));
         careerA.setMinimumSize(new java.awt.Dimension(30, 25));
         careerA.setPreferredSize(new java.awt.Dimension(30, 25));
 
         careerP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         careerP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        careerP.setText(bundle1.getString("GUI.careerP.text")); // NOI18N
-        careerP.setToolTipText(bundle1.getString("GUI.careerP.toolTipText")); // NOI18N
+        careerP.setText(bundle.getString("GUI.careerP.text")); // NOI18N
+        careerP.setToolTipText(bundle.getString("GUI.careerP.toolTipText")); // NOI18N
         careerP.setMaximumSize(new java.awt.Dimension(30, 25));
         careerP.setMinimumSize(new java.awt.Dimension(30, 25));
         careerP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         weeklyLabel4.setFont(new java.awt.Font("Tahoma", 1, 11));
         weeklyLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        weeklyLabel4.setText(bundle1.getString("GUI.weeklyLabel4.text")); // NOI18N
-        weeklyLabel4.setToolTipText(bundle1.getString("GUI.weeklyLabel4.toolTipText")); // NOI18N
+        weeklyLabel4.setText(bundle.getString("GUI.weeklyLabel4.text")); // NOI18N
+        weeklyLabel4.setToolTipText(bundle.getString("GUI.weeklyLabel4.toolTipText")); // NOI18N
         weeklyLabel4.setMaximumSize(new java.awt.Dimension(30, 25));
         weeklyLabel4.setMinimumSize(new java.awt.Dimension(30, 25));
 
         similarPlayerLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         similarPlayerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        similarPlayerLabel.setText(bundle1.getString("GUI.similarPlayerLabel.text")); // NOI18N
-        similarPlayerLabel.setToolTipText(bundle1.getString("GUI.similarPlayerLabel.toolTipText")); // NOI18N
+        similarPlayerLabel.setText(bundle.getString("GUI.similarPlayerLabel.text")); // NOI18N
+        similarPlayerLabel.setToolTipText(bundle.getString("GUI.similarPlayerLabel.toolTipText")); // NOI18N
         similarPlayerLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         similarPlayerLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         playerID.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        playerID.setText(bundle1.getString("GUI.playerID.text")); // NOI18N
+        playerID.setText(bundle.getString("GUI.playerID.text")); // NOI18N
 
         javax.swing.GroupLayout playerPanelLayout = new javax.swing.GroupLayout(playerPanel);
         playerPanel.setLayout(playerPanelLayout);
@@ -2278,11 +2327,12 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(1266, 1266, 1266))
         );
 
-        draftLabel.getAccessibleContext().setAccessibleName(bundle.getString("GUI.draftLabel.AccessibleContext.accessibleName")); // NOI18N
-        ceilingLabel.getAccessibleContext().setAccessibleName(bundle.getString("GUI.jLabel3.AccessibleContext.accessibleName")); // NOI18N
-        ceilSHO.getAccessibleContext().setAccessibleDescription(bundle.getString("GUI.ceilSHO.AccessibleContext.accessibleDescription")); // NOI18N
+        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("view/Bundle"); // NOI18N
+        draftLabel.getAccessibleContext().setAccessibleName(bundle1.getString("GUI.draftLabel.AccessibleContext.accessibleName")); // NOI18N
+        ceilingLabel.getAccessibleContext().setAccessibleName(bundle1.getString("GUI.jLabel3.AccessibleContext.accessibleName")); // NOI18N
+        ceilSHO.getAccessibleContext().setAccessibleDescription(bundle1.getString("GUI.ceilSHO.AccessibleContext.accessibleDescription")); // NOI18N
 
-        playerTab.addTab(bundle1.getString("GUI.playerPanel.TabConstraints.tabTitle"), playerPanel); // NOI18N
+        playerTab.addTab(bundle.getString("GUI.playerPanel.TabConstraints.tabTitle"), playerPanel); // NOI18N
 
         proListLabel.setPreferredSize(new java.awt.Dimension(1119, 1000));
         proListLabel.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
@@ -2291,8 +2341,8 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        teamSearchField.setText(bundle1.getString("GUI.teamSearchField.text")); // NOI18N
-        teamSearchField.setToolTipText(bundle1.getString("GUI.teamSearchField.toolTipText")); // NOI18N
+        teamSearchField.setText(bundle.getString("GUI.teamSearchField.text")); // NOI18N
+        teamSearchField.setToolTipText(bundle.getString("GUI.teamSearchField.toolTipText")); // NOI18N
         teamSearchField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 teamSearchFieldActionPerformed(evt);
@@ -2304,50 +2354,50 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        teamSearchButton.setText(bundle1.getString("GUI.teamSearchButton.text")); // NOI18N
-        teamSearchButton.setToolTipText(bundle1.getString("GUI.teamSearchButton.toolTipText")); // NOI18N
+        teamSearchButton.setText(bundle.getString("GUI.teamSearchButton.text")); // NOI18N
+        teamSearchButton.setToolTipText(bundle.getString("GUI.teamSearchButton.toolTipText")); // NOI18N
         teamSearchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 teamSearchButtonActionPerformed(evt);
             }
         });
 
-        teamIcon.setText(bundle1.getString("GUI.teamIcon.text")); // NOI18N
+        teamIcon.setText(bundle.getString("GUI.teamIcon.text")); // NOI18N
         teamIcon.setIconTextGap(2);
 
         proSalaryLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         proSalaryLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         proSalaryLabel.setLabelFor(salaryAmtLabel);
-        proSalaryLabel.setText(bundle1.getString("GUI.proSalaryLabel.text")); // NOI18N
-        proSalaryLabel.setToolTipText(bundle1.getString("GUI.proSalaryLabel.toolTipText")); // NOI18N
+        proSalaryLabel.setText(bundle.getString("GUI.proSalaryLabel.text")); // NOI18N
+        proSalaryLabel.setToolTipText(bundle.getString("GUI.proSalaryLabel.toolTipText")); // NOI18N
 
         farmSalaryLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         farmSalaryLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         farmSalaryLabel.setLabelFor(salaryAmtLabel);
-        farmSalaryLabel.setText(bundle1.getString("GUI.farmSalaryLabel.text")); // NOI18N
-        farmSalaryLabel.setToolTipText(bundle1.getString("GUI.farmSalaryLabel.toolTipText")); // NOI18N
+        farmSalaryLabel.setText(bundle.getString("GUI.farmSalaryLabel.text")); // NOI18N
+        farmSalaryLabel.setToolTipText(bundle.getString("GUI.farmSalaryLabel.toolTipText")); // NOI18N
 
         farmSalary.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         farmSalary.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        farmSalary.setText(bundle1.getString("GUI.farmSalary.text")); // NOI18N
+        farmSalary.setText(bundle.getString("GUI.farmSalary.text")); // NOI18N
         farmSalary.setMaximumSize(new java.awt.Dimension(61, 25));
         farmSalary.setMinimumSize(new java.awt.Dimension(25, 25));
 
         proSalary.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         proSalary.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        proSalary.setText(bundle1.getString("GUI.proSalary.text")); // NOI18N
+        proSalary.setText(bundle.getString("GUI.proSalary.text")); // NOI18N
         proSalary.setMaximumSize(new java.awt.Dimension(61, 25));
         proSalary.setMinimumSize(new java.awt.Dimension(25, 25));
 
         numPlayersLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         numPlayersLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         numPlayersLabel.setLabelFor(salaryAmtLabel);
-        numPlayersLabel.setText(bundle1.getString("GUI.numPlayersLabel.text")); // NOI18N
-        numPlayersLabel.setToolTipText(bundle1.getString("GUI.numPlayersLabel.toolTipText")); // NOI18N
+        numPlayersLabel.setText(bundle.getString("GUI.numPlayersLabel.text")); // NOI18N
+        numPlayersLabel.setToolTipText(bundle.getString("GUI.numPlayersLabel.toolTipText")); // NOI18N
 
         numPlayers.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         numPlayers.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        numPlayers.setText(bundle1.getString("GUI.numPlayers.text")); // NOI18N
+        numPlayers.setText(bundle.getString("GUI.numPlayers.text")); // NOI18N
         numPlayers.setMaximumSize(new java.awt.Dimension(61, 25));
         numPlayers.setMinimumSize(new java.awt.Dimension(25, 25));
         numPlayers.addActionListener(new java.awt.event.ActionListener() {
@@ -2359,24 +2409,24 @@ public class GUI extends javax.swing.JFrame {
         proOFLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         proOFLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         proOFLabel.setLabelFor(salaryAmtLabel);
-        proOFLabel.setText(bundle1.getString("GUI.proOFLabel.text")); // NOI18N
-        proOFLabel.setToolTipText(bundle1.getString("GUI.proOFLabel.toolTipText")); // NOI18N
+        proOFLabel.setText(bundle.getString("GUI.proOFLabel.text")); // NOI18N
+        proOFLabel.setToolTipText(bundle.getString("GUI.proOFLabel.toolTipText")); // NOI18N
 
         proDFLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         proDFLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         proDFLabel.setLabelFor(salaryAmtLabel);
-        proDFLabel.setText(bundle1.getString("GUI.proDFLabel.text")); // NOI18N
-        proDFLabel.setToolTipText(bundle1.getString("GUI.proDFLabel.toolTipText")); // NOI18N
+        proDFLabel.setText(bundle.getString("GUI.proDFLabel.text")); // NOI18N
+        proDFLabel.setToolTipText(bundle.getString("GUI.proDFLabel.toolTipText")); // NOI18N
 
         proOALabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         proOALabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         proOALabel.setLabelFor(salaryAmtLabel);
-        proOALabel.setText(bundle1.getString("GUI.proOALabel.text")); // NOI18N
-        proOALabel.setToolTipText(bundle1.getString("GUI.proOALabel.toolTipText")); // NOI18N
+        proOALabel.setText(bundle.getString("GUI.proOALabel.text")); // NOI18N
+        proOALabel.setToolTipText(bundle.getString("GUI.proOALabel.toolTipText")); // NOI18N
 
         proOffense.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         proOffense.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        proOffense.setText(bundle1.getString("GUI.proOffense.text")); // NOI18N
+        proOffense.setText(bundle.getString("GUI.proOffense.text")); // NOI18N
         proOffense.setMaximumSize(new java.awt.Dimension(61, 25));
         proOffense.setMinimumSize(new java.awt.Dimension(25, 25));
         proOffense.addActionListener(new java.awt.event.ActionListener() {
@@ -2387,7 +2437,7 @@ public class GUI extends javax.swing.JFrame {
 
         proDefense.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         proDefense.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        proDefense.setText(bundle1.getString("GUI.proDefense.text")); // NOI18N
+        proDefense.setText(bundle.getString("GUI.proDefense.text")); // NOI18N
         proDefense.setMaximumSize(new java.awt.Dimension(61, 25));
         proDefense.setMinimumSize(new java.awt.Dimension(25, 25));
         proDefense.addActionListener(new java.awt.event.ActionListener() {
@@ -2398,7 +2448,7 @@ public class GUI extends javax.swing.JFrame {
 
         proOA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         proOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        proOA.setText(bundle1.getString("GUI.proOA.text")); // NOI18N
+        proOA.setText(bundle.getString("GUI.proOA.text")); // NOI18N
         proOA.setMaximumSize(new java.awt.Dimension(61, 25));
         proOA.setMinimumSize(new java.awt.Dimension(25, 25));
         proOA.addActionListener(new java.awt.event.ActionListener() {
@@ -2410,24 +2460,24 @@ public class GUI extends javax.swing.JFrame {
         numPlayersLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
         numPlayersLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         numPlayersLabel1.setLabelFor(salaryAmtLabel);
-        numPlayersLabel1.setText(bundle1.getString("GUI.numPlayersLabel1.text")); // NOI18N
-        numPlayersLabel1.setToolTipText(bundle1.getString("GUI.numPlayersLabel1.toolTipText")); // NOI18N
+        numPlayersLabel1.setText(bundle.getString("GUI.numPlayersLabel1.text")); // NOI18N
+        numPlayersLabel1.setToolTipText(bundle.getString("GUI.numPlayersLabel1.toolTipText")); // NOI18N
 
         numPlayersLabel2.setFont(new java.awt.Font("Tahoma", 1, 11));
         numPlayersLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         numPlayersLabel2.setLabelFor(salaryAmtLabel);
-        numPlayersLabel2.setText(bundle1.getString("GUI.numPlayersLabel2.text")); // NOI18N
-        numPlayersLabel2.setToolTipText(bundle1.getString("GUI.numPlayersLabel2.toolTipText")); // NOI18N
+        numPlayersLabel2.setText(bundle.getString("GUI.numPlayersLabel2.text")); // NOI18N
+        numPlayersLabel2.setToolTipText(bundle.getString("GUI.numPlayersLabel2.toolTipText")); // NOI18N
 
         numPlayersLabel3.setFont(new java.awt.Font("Tahoma", 1, 11));
         numPlayersLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         numPlayersLabel3.setLabelFor(salaryAmtLabel);
-        numPlayersLabel3.setText(bundle1.getString("GUI.numPlayersLabel3.text")); // NOI18N
-        numPlayersLabel3.setToolTipText(bundle1.getString("GUI.numPlayersLabel3.toolTipText")); // NOI18N
+        numPlayersLabel3.setText(bundle.getString("GUI.numPlayersLabel3.text")); // NOI18N
+        numPlayersLabel3.setToolTipText(bundle.getString("GUI.numPlayersLabel3.toolTipText")); // NOI18N
 
         numPlayersPro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         numPlayersPro.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        numPlayersPro.setText(bundle1.getString("GUI.numPlayersPro.text")); // NOI18N
+        numPlayersPro.setText(bundle.getString("GUI.numPlayersPro.text")); // NOI18N
         numPlayersPro.setMaximumSize(new java.awt.Dimension(61, 25));
         numPlayersPro.setMinimumSize(new java.awt.Dimension(25, 25));
         numPlayersPro.addActionListener(new java.awt.event.ActionListener() {
@@ -2438,7 +2488,7 @@ public class GUI extends javax.swing.JFrame {
 
         numPlayersFarm.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         numPlayersFarm.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        numPlayersFarm.setText(bundle1.getString("GUI.numPlayersFarm.text")); // NOI18N
+        numPlayersFarm.setText(bundle.getString("GUI.numPlayersFarm.text")); // NOI18N
         numPlayersFarm.setMaximumSize(new java.awt.Dimension(61, 25));
         numPlayersFarm.setMinimumSize(new java.awt.Dimension(25, 25));
         numPlayersFarm.addActionListener(new java.awt.event.ActionListener() {
@@ -2449,7 +2499,7 @@ public class GUI extends javax.swing.JFrame {
 
         numPlayersProsp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         numPlayersProsp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        numPlayersProsp.setText(bundle1.getString("GUI.numPlayersProsp.text")); // NOI18N
+        numPlayersProsp.setText(bundle.getString("GUI.numPlayersProsp.text")); // NOI18N
         numPlayersProsp.setMaximumSize(new java.awt.Dimension(61, 25));
         numPlayersProsp.setMinimumSize(new java.awt.Dimension(25, 25));
         numPlayersProsp.addActionListener(new java.awt.event.ActionListener() {
@@ -2470,8 +2520,8 @@ public class GUI extends javax.swing.JFrame {
         lwListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         lwListLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lwListLabel.setLabelFor(salaryAmtLabel);
-        lwListLabel.setText(bundle1.getString("GUI.lwListLabel.text")); // NOI18N
-        lwListLabel.setToolTipText(bundle1.getString("GUI.lwListLabel.toolTipText")); // NOI18N
+        lwListLabel.setText(bundle.getString("GUI.lwListLabel.text")); // NOI18N
+        lwListLabel.setToolTipText(bundle.getString("GUI.lwListLabel.toolTipText")); // NOI18N
 
         cList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         cList.setDragEnabled(true);
@@ -2485,8 +2535,8 @@ public class GUI extends javax.swing.JFrame {
         cListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         cListLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cListLabel.setLabelFor(salaryAmtLabel);
-        cListLabel.setText(bundle1.getString("GUI.cListLabel.text")); // NOI18N
-        cListLabel.setToolTipText(bundle1.getString("GUI.cListLabel.toolTipText")); // NOI18N
+        cListLabel.setText(bundle.getString("GUI.cListLabel.text")); // NOI18N
+        cListLabel.setToolTipText(bundle.getString("GUI.cListLabel.toolTipText")); // NOI18N
 
         rwList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         rwList.setDragEnabled(true);
@@ -2500,8 +2550,8 @@ public class GUI extends javax.swing.JFrame {
         rwListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         rwListLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         rwListLabel.setLabelFor(salaryAmtLabel);
-        rwListLabel.setText(bundle1.getString("GUI.rwListLabel.text")); // NOI18N
-        rwListLabel.setToolTipText(bundle1.getString("GUI.rwListLabel.toolTipText")); // NOI18N
+        rwListLabel.setText(bundle.getString("GUI.rwListLabel.text")); // NOI18N
+        rwListLabel.setToolTipText(bundle.getString("GUI.rwListLabel.toolTipText")); // NOI18N
 
         dList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         dList.setDragEnabled(true);
@@ -2515,8 +2565,8 @@ public class GUI extends javax.swing.JFrame {
         dListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         dListLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         dListLabel.setLabelFor(salaryAmtLabel);
-        dListLabel.setText(bundle1.getString("GUI.dListLabel.text")); // NOI18N
-        dListLabel.setToolTipText(bundle1.getString("GUI.dListLabel.toolTipText")); // NOI18N
+        dListLabel.setText(bundle.getString("GUI.dListLabel.text")); // NOI18N
+        dListLabel.setToolTipText(bundle.getString("GUI.dListLabel.toolTipText")); // NOI18N
 
         gList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         gList.setDragEnabled(true);
@@ -2530,72 +2580,72 @@ public class GUI extends javax.swing.JFrame {
         gListLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         gListLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         gListLabel.setLabelFor(salaryAmtLabel);
-        gListLabel.setText(bundle1.getString("GUI.gListLabel.text")); // NOI18N
-        gListLabel.setToolTipText(bundle1.getString("GUI.gListLabel.toolTipText")); // NOI18N
+        gListLabel.setText(bundle.getString("GUI.gListLabel.text")); // NOI18N
+        gListLabel.setToolTipText(bundle.getString("GUI.gListLabel.toolTipText")); // NOI18N
 
         linesLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         linesLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         linesLabel.setLabelFor(salaryAmtLabel);
-        linesLabel.setText(bundle1.getString("GUI.linesLabel.text")); // NOI18N
-        linesLabel.setToolTipText(bundle1.getString("GUI.linesLabel.toolTipText")); // NOI18N
+        linesLabel.setText(bundle.getString("GUI.linesLabel.text")); // NOI18N
+        linesLabel.setToolTipText(bundle.getString("GUI.linesLabel.toolTipText")); // NOI18N
 
-        lwLine1.setText(bundle1.getString("GUI.lwLine1.text")); // NOI18N
+        lwLine1.setText(bundle.getString("GUI.lwLine1.text")); // NOI18N
 
-        lwLine2.setText(bundle1.getString("GUI.lwLine2.text")); // NOI18N
+        lwLine2.setText(bundle.getString("GUI.lwLine2.text")); // NOI18N
 
-        lwLine3.setText(bundle1.getString("GUI.lwLine3.text")); // NOI18N
+        lwLine3.setText(bundle.getString("GUI.lwLine3.text")); // NOI18N
 
-        lwLine4.setText(bundle1.getString("GUI.lwLine4.text")); // NOI18N
+        lwLine4.setText(bundle.getString("GUI.lwLine4.text")); // NOI18N
 
-        cLine1.setText(bundle1.getString("GUI.cLine1.text")); // NOI18N
+        cLine1.setText(bundle.getString("GUI.cLine1.text")); // NOI18N
 
-        cLine2.setText(bundle1.getString("GUI.cLine2.text")); // NOI18N
+        cLine2.setText(bundle.getString("GUI.cLine2.text")); // NOI18N
 
-        cLine3.setText(bundle1.getString("GUI.cLine3.text")); // NOI18N
+        cLine3.setText(bundle.getString("GUI.cLine3.text")); // NOI18N
 
-        cLine4.setText(bundle1.getString("GUI.cLine4.text")); // NOI18N
+        cLine4.setText(bundle.getString("GUI.cLine4.text")); // NOI18N
 
-        rwLine1.setText(bundle1.getString("GUI.rwLine1.text")); // NOI18N
+        rwLine1.setText(bundle.getString("GUI.rwLine1.text")); // NOI18N
 
-        rwLine2.setText(bundle1.getString("GUI.rwLine2.text")); // NOI18N
+        rwLine2.setText(bundle.getString("GUI.rwLine2.text")); // NOI18N
 
-        rwLine3.setText(bundle1.getString("GUI.rwLine3.text")); // NOI18N
+        rwLine3.setText(bundle.getString("GUI.rwLine3.text")); // NOI18N
 
-        rwLine4.setText(bundle1.getString("GUI.rwLine4.text")); // NOI18N
+        rwLine4.setText(bundle.getString("GUI.rwLine4.text")); // NOI18N
 
-        gStarting.setText(bundle1.getString("GUI.gStarting.text")); // NOI18N
+        gStarting.setText(bundle.getString("GUI.gStarting.text")); // NOI18N
 
-        gBackup.setText(bundle1.getString("GUI.gBackup.text")); // NOI18N
+        gBackup.setText(bundle.getString("GUI.gBackup.text")); // NOI18N
 
-        dpair1L.setText(bundle1.getString("GUI.dpair1L.text")); // NOI18N
+        dpair1L.setText(bundle.getString("GUI.dpair1L.text")); // NOI18N
 
-        dpair1R.setText(bundle1.getString("GUI.dpair1R.text")); // NOI18N
+        dpair1R.setText(bundle.getString("GUI.dpair1R.text")); // NOI18N
 
-        dPair2R.setText(bundle1.getString("GUI.dPair2R.text")); // NOI18N
+        dPair2R.setText(bundle.getString("GUI.dPair2R.text")); // NOI18N
 
-        dpair2L.setText(bundle1.getString("GUI.dpair2L.text")); // NOI18N
+        dpair2L.setText(bundle.getString("GUI.dpair2L.text")); // NOI18N
 
-        dpair3R.setText(bundle1.getString("GUI.dpair3R.text")); // NOI18N
+        dpair3R.setText(bundle.getString("GUI.dpair3R.text")); // NOI18N
 
-        dpair3L.setText(bundle1.getString("GUI.dpair3L.text")); // NOI18N
+        dpair3L.setText(bundle.getString("GUI.dpair3L.text")); // NOI18N
 
         linesTacticsLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         linesTacticsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         linesTacticsLabel.setLabelFor(salaryAmtLabel);
-        linesTacticsLabel.setText(bundle1.getString("GUI.linesTacticsLabel.text")); // NOI18N
-        linesTacticsLabel.setToolTipText(bundle1.getString("GUI.linesTacticsLabel.toolTipText")); // NOI18N
+        linesTacticsLabel.setText(bundle.getString("GUI.linesTacticsLabel.text")); // NOI18N
+        linesTacticsLabel.setToolTipText(bundle.getString("GUI.linesTacticsLabel.toolTipText")); // NOI18N
 
-        timeLine1.setText(bundle1.getString("GUI.timeLine1.text")); // NOI18N
+        timeLine1.setText(bundle.getString("GUI.timeLine1.text")); // NOI18N
 
-        timeLine2.setText(bundle1.getString("GUI.timeLine2.text")); // NOI18N
+        timeLine2.setText(bundle.getString("GUI.timeLine2.text")); // NOI18N
 
-        timeLine3.setText(bundle1.getString("GUI.timeLine3.text")); // NOI18N
+        timeLine3.setText(bundle.getString("GUI.timeLine3.text")); // NOI18N
 
-        timeLine4.setText(bundle1.getString("GUI.timeLine4.text")); // NOI18N
+        timeLine4.setText(bundle.getString("GUI.timeLine4.text")); // NOI18N
 
         buttonGroup1.add(proTeamButton);
         proTeamButton.setSelected(true);
-        proTeamButton.setText(bundle1.getString("GUI.proTeamButton.text")); // NOI18N
+        proTeamButton.setText(bundle.getString("GUI.proTeamButton.text")); // NOI18N
         proTeamButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 proTeamButtonActionPerformed(evt);
@@ -2603,7 +2653,7 @@ public class GUI extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(farmTeamButton);
-        farmTeamButton.setText(bundle1.getString("GUI.farmTeamButton.text")); // NOI18N
+        farmTeamButton.setText(bundle.getString("GUI.farmTeamButton.text")); // NOI18N
         farmTeamButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 farmTeamButtonActionPerformed(evt);
@@ -2611,7 +2661,7 @@ public class GUI extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(prospectsButton);
-        prospectsButton.setText(bundle1.getString("GUI.prospectsButton.text")); // NOI18N
+        prospectsButton.setText(bundle.getString("GUI.prospectsButton.text")); // NOI18N
         prospectsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prospectsButtonActionPerformed(evt);
@@ -2619,7 +2669,7 @@ public class GUI extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(allButton);
-        allButton.setText(bundle1.getString("GUI.allButton.text")); // NOI18N
+        allButton.setText(bundle.getString("GUI.allButton.text")); // NOI18N
         allButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 allButtonActionPerformed(evt);
@@ -2632,40 +2682,40 @@ public class GUI extends javax.swing.JFrame {
         TacticsPP1.setMaximumRowCount(5);
         TacticsPP1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Shooting", "Screen & Shoot", "Passing Plays", "Crash the Net", "Shot From Point" }));
 
-        timePP2.setText(bundle1.getString("GUI.timePP2.text")); // NOI18N
+        timePP2.setText(bundle.getString("GUI.timePP2.text")); // NOI18N
 
-        lwLinePP1.setText(bundle1.getString("GUI.lwLinePP1.text")); // NOI18N
+        lwLinePP1.setText(bundle.getString("GUI.lwLinePP1.text")); // NOI18N
 
-        lwLinePP2.setText(bundle1.getString("GUI.lwLinePP2.text")); // NOI18N
+        lwLinePP2.setText(bundle.getString("GUI.lwLinePP2.text")); // NOI18N
 
-        cLinePP2.setText(bundle1.getString("GUI.cLinePP2.text")); // NOI18N
+        cLinePP2.setText(bundle.getString("GUI.cLinePP2.text")); // NOI18N
 
-        cLinePP1.setText(bundle1.getString("GUI.cLinePP1.text")); // NOI18N
+        cLinePP1.setText(bundle.getString("GUI.cLinePP1.text")); // NOI18N
 
-        rwLinePP2.setText(bundle1.getString("GUI.rwLinePP2.text")); // NOI18N
+        rwLinePP2.setText(bundle.getString("GUI.rwLinePP2.text")); // NOI18N
 
-        rwLinePP1.setText(bundle1.getString("GUI.rwLinePP1.text")); // NOI18N
+        rwLinePP1.setText(bundle.getString("GUI.rwLinePP1.text")); // NOI18N
 
-        dpairLPP1.setText(bundle1.getString("GUI.dpairLPP1.text")); // NOI18N
+        dpairLPP1.setText(bundle.getString("GUI.dpairLPP1.text")); // NOI18N
 
-        dpairRPP1.setText(bundle1.getString("GUI.dpairRPP1.text")); // NOI18N
+        dpairRPP1.setText(bundle.getString("GUI.dpairRPP1.text")); // NOI18N
 
-        dPairRPP2.setText(bundle1.getString("GUI.dPairRPP2.text")); // NOI18N
+        dPairRPP2.setText(bundle.getString("GUI.dPairRPP2.text")); // NOI18N
 
-        dpairLPP2.setText(bundle1.getString("GUI.dpairLPP2.text")); // NOI18N
+        dpairLPP2.setText(bundle.getString("GUI.dpairLPP2.text")); // NOI18N
 
-        timePP1.setText(bundle1.getString("GUI.timePP1.text")); // NOI18N
+        timePP1.setText(bundle.getString("GUI.timePP1.text")); // NOI18N
 
         TacticsPP2.setMaximumRowCount(5);
         TacticsPP2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Shooting", "Screen & Shoot", "Passing Plays", "Crash the Net", "Shot From Point" }));
 
-        rwPK1.setText(bundle1.getString("GUI.rwPK1.text")); // NOI18N
+        rwPK1.setText(bundle.getString("GUI.rwPK1.text")); // NOI18N
 
-        dPairRPK1.setText(bundle1.getString("GUI.dPairRPK1.text")); // NOI18N
+        dPairRPK1.setText(bundle.getString("GUI.dPairRPK1.text")); // NOI18N
 
-        dpairLPK1.setText(bundle1.getString("GUI.dpairLPK1.text")); // NOI18N
+        dpairLPK1.setText(bundle.getString("GUI.dpairLPK1.text")); // NOI18N
 
-        lwPK1.setText(bundle1.getString("GUI.lwPK1.text")); // NOI18N
+        lwPK1.setText(bundle.getString("GUI.lwPK1.text")); // NOI18N
 
         TacticsLine2.setMaximumRowCount(5);
         TacticsLine2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Run & Gun", "Passing Plays", "Dump & Chase", "Hit & Grind", "Neutral Zone Trap" }));
@@ -2679,52 +2729,52 @@ public class GUI extends javax.swing.JFrame {
         linesLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
         linesLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         linesLabel1.setLabelFor(salaryAmtLabel);
-        linesLabel1.setText(bundle1.getString("GUI.linesLabel1.text")); // NOI18N
-        linesLabel1.setToolTipText(bundle1.getString("GUI.linesLabel1.toolTipText")); // NOI18N
+        linesLabel1.setText(bundle.getString("GUI.linesLabel1.text")); // NOI18N
+        linesLabel1.setToolTipText(bundle.getString("GUI.linesLabel1.toolTipText")); // NOI18N
 
         linesLabel2.setFont(new java.awt.Font("Tahoma", 1, 11));
         linesLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         linesLabel2.setLabelFor(salaryAmtLabel);
-        linesLabel2.setText(bundle1.getString("GUI.linesLabel2.text")); // NOI18N
-        linesLabel2.setToolTipText(bundle1.getString("GUI.linesLabel2.toolTipText")); // NOI18N
+        linesLabel2.setText(bundle.getString("GUI.linesLabel2.text")); // NOI18N
+        linesLabel2.setToolTipText(bundle.getString("GUI.linesLabel2.toolTipText")); // NOI18N
 
-        dPairRPK2.setText(bundle1.getString("GUI.dPairRPK2.text")); // NOI18N
+        dPairRPK2.setText(bundle.getString("GUI.dPairRPK2.text")); // NOI18N
 
-        rwPK2.setText(bundle1.getString("GUI.rwPK2.text")); // NOI18N
+        rwPK2.setText(bundle.getString("GUI.rwPK2.text")); // NOI18N
 
-        lwPK2.setText(bundle1.getString("GUI.lwPK2.text")); // NOI18N
+        lwPK2.setText(bundle.getString("GUI.lwPK2.text")); // NOI18N
 
-        dpairLPK2.setText(bundle1.getString("GUI.dpairLPK2.text")); // NOI18N
+        dpairLPK2.setText(bundle.getString("GUI.dpairLPK2.text")); // NOI18N
 
         linesLabel3.setFont(new java.awt.Font("Tahoma", 1, 11));
         linesLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         linesLabel3.setLabelFor(salaryAmtLabel);
-        linesLabel3.setText(bundle1.getString("GUI.linesLabel3.text")); // NOI18N
-        linesLabel3.setToolTipText(bundle1.getString("GUI.linesLabel3.toolTipText")); // NOI18N
+        linesLabel3.setText(bundle.getString("GUI.linesLabel3.text")); // NOI18N
+        linesLabel3.setToolTipText(bundle.getString("GUI.linesLabel3.toolTipText")); // NOI18N
 
         linesLabel4.setFont(new java.awt.Font("Tahoma", 1, 11));
         linesLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         linesLabel4.setLabelFor(salaryAmtLabel);
-        linesLabel4.setText(bundle1.getString("GUI.linesLabel4.text")); // NOI18N
-        linesLabel4.setToolTipText(bundle1.getString("GUI.linesLabel4.toolTipText")); // NOI18N
+        linesLabel4.setText(bundle.getString("GUI.linesLabel4.text")); // NOI18N
+        linesLabel4.setToolTipText(bundle.getString("GUI.linesLabel4.toolTipText")); // NOI18N
 
         TacticsPK1.setMaximumRowCount(5);
         TacticsPK1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Aggressive", "Loose Box", "Passive Box", "Small Box", "Tight Box" }));
 
-        timePK1.setText(bundle1.getString("GUI.timePK1.text")); // NOI18N
+        timePK1.setText(bundle.getString("GUI.timePK1.text")); // NOI18N
 
         TacticsPK2.setMaximumRowCount(5);
         TacticsPK2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Aggressive", "Loose Box", "Passive Box", "Small Box", "Tight Box" }));
 
-        timePK2.setText(bundle1.getString("GUI.timePK2.text")); // NOI18N
+        timePK2.setText(bundle.getString("GUI.timePK2.text")); // NOI18N
 
         linesLabel5.setFont(new java.awt.Font("Tahoma", 1, 11));
         linesLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         linesLabel5.setLabelFor(salaryAmtLabel);
-        linesLabel5.setText(bundle1.getString("GUI.linesLabel5.text")); // NOI18N
-        linesLabel5.setToolTipText(bundle1.getString("GUI.linesLabel5.toolTipText")); // NOI18N
+        linesLabel5.setText(bundle.getString("GUI.linesLabel5.text")); // NOI18N
+        linesLabel5.setToolTipText(bundle.getString("GUI.linesLabel5.toolTipText")); // NOI18N
 
-        createLinesButton.setText(bundle1.getString("GUI.createLinesButton.text")); // NOI18N
+        createLinesButton.setText(bundle.getString("GUI.createLinesButton.text")); // NOI18N
         createLinesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createLinesButtonActionPerformed(evt);
@@ -3159,7 +3209,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(1293, 1293, 1293))
         );
 
-        playerTab.addTab(bundle1.getString("GUI.proListLabel.TabConstraints.tabTitle"), proListLabel); // NOI18N
+        playerTab.addTab(bundle.getString("GUI.proListLabel.TabConstraints.tabTitle"), proListLabel); // NOI18N
 
         draftYearList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017" }));
         draftYearList.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -3173,11 +3223,11 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        cListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        cListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         cListLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cListLabel1.setLabelFor(salaryAmtLabel);
-        cListLabel1.setText(bundle1.getString("GUI.cListLabel1.text")); // NOI18N
-        cListLabel1.setToolTipText(bundle1.getString("GUI.cListLabel1.toolTipText")); // NOI18N
+        cListLabel1.setText(bundle.getString("GUI.cListLabel1.text")); // NOI18N
+        cListLabel1.setToolTipText(bundle.getString("GUI.cListLabel1.toolTipText")); // NOI18N
 
         draftCList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         draftCList.setDragEnabled(true);
@@ -3188,17 +3238,17 @@ public class GUI extends javax.swing.JFrame {
         });
         jScrollPane10.setViewportView(draftCList);
 
-        lwListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        lwListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lwListLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lwListLabel1.setLabelFor(salaryAmtLabel);
-        lwListLabel1.setText(bundle1.getString("GUI.lwListLabel1.text")); // NOI18N
-        lwListLabel1.setToolTipText(bundle1.getString("GUI.lwListLabel1.toolTipText")); // NOI18N
+        lwListLabel1.setText(bundle.getString("GUI.lwListLabel1.text")); // NOI18N
+        lwListLabel1.setToolTipText(bundle.getString("GUI.lwListLabel1.toolTipText")); // NOI18N
 
-        dListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        dListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         dListLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         dListLabel1.setLabelFor(salaryAmtLabel);
-        dListLabel1.setText(bundle1.getString("GUI.dListLabel1.text")); // NOI18N
-        dListLabel1.setToolTipText(bundle1.getString("GUI.dListLabel1.toolTipText")); // NOI18N
+        dListLabel1.setText(bundle.getString("GUI.dListLabel1.text")); // NOI18N
+        dListLabel1.setToolTipText(bundle.getString("GUI.dListLabel1.toolTipText")); // NOI18N
 
         draftDList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         draftDList.setDragEnabled(true);
@@ -3209,11 +3259,11 @@ public class GUI extends javax.swing.JFrame {
         });
         jScrollPane11.setViewportView(draftDList);
 
-        rwListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        rwListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         rwListLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         rwListLabel1.setLabelFor(salaryAmtLabel);
-        rwListLabel1.setText(bundle1.getString("GUI.rwListLabel1.text")); // NOI18N
-        rwListLabel1.setToolTipText(bundle1.getString("GUI.rwListLabel1.toolTipText")); // NOI18N
+        rwListLabel1.setText(bundle.getString("GUI.rwListLabel1.text")); // NOI18N
+        rwListLabel1.setToolTipText(bundle.getString("GUI.rwListLabel1.toolTipText")); // NOI18N
 
         draftRwList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         draftRwList.setDragEnabled(true);
@@ -3224,11 +3274,11 @@ public class GUI extends javax.swing.JFrame {
         });
         jScrollPane12.setViewportView(draftRwList);
 
-        gListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
+        gListLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         gListLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         gListLabel1.setLabelFor(salaryAmtLabel);
-        gListLabel1.setText(bundle1.getString("GUI.gListLabel1.text")); // NOI18N
-        gListLabel1.setToolTipText(bundle1.getString("GUI.gListLabel1.toolTipText")); // NOI18N
+        gListLabel1.setText(bundle.getString("GUI.gListLabel1.text")); // NOI18N
+        gListLabel1.setToolTipText(bundle.getString("GUI.gListLabel1.toolTipText")); // NOI18N
 
         draftGList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         draftGList.setDragEnabled(true);
@@ -3248,131 +3298,251 @@ public class GUI extends javax.swing.JFrame {
         });
         jScrollPane14.setViewportView(draftLwList);
 
-        draftOF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        draftOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        draftOF.setText(bundle1.getString("GUI.draftOF.text")); // NOI18N
-        draftOF.setMaximumSize(new java.awt.Dimension(61, 25));
-        draftOF.setMinimumSize(new java.awt.Dimension(25, 25));
-
         draftOFLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftOFLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         draftOFLabel.setLabelFor(salaryAmtLabel);
-        draftOFLabel.setText(bundle1.getString("GUI.draftOFLabel.text")); // NOI18N
-        draftOFLabel.setToolTipText(bundle1.getString("GUI.draftOFLabel.toolTipText")); // NOI18N
+        draftOFLabel.setText(bundle.getString("GUI.draftOFLabel.text")); // NOI18N
+        draftOFLabel.setToolTipText(bundle.getString("GUI.draftOFLabel.toolTipText")); // NOI18N
 
         draftOALabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftOALabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         draftOALabel.setLabelFor(salaryAmtLabel);
-        draftOALabel.setText(bundle1.getString("GUI.draftOALabel.text")); // NOI18N
-        draftOALabel.setToolTipText(bundle1.getString("GUI.draftOALabel.toolTipText")); // NOI18N
+        draftOALabel.setText(bundle.getString("GUI.draftOALabel.text")); // NOI18N
+        draftOALabel.setToolTipText(bundle.getString("GUI.draftOALabel.toolTipText")); // NOI18N
 
         draftDLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftDLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         draftDLabel.setLabelFor(salaryAmtLabel);
-        draftDLabel.setText(bundle1.getString("GUI.draftDLabel.text")); // NOI18N
-        draftDLabel.setToolTipText(bundle1.getString("GUI.draftDLabel.toolTipText")); // NOI18N
-
-        draftOA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        draftOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        draftOA.setText(bundle1.getString("GUI.draftOA.text")); // NOI18N
-        draftOA.setMaximumSize(new java.awt.Dimension(61, 25));
-        draftOA.setMinimumSize(new java.awt.Dimension(25, 25));
-
-        draftDF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        draftDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        draftDF.setText(bundle1.getString("GUI.draftDF.text")); // NOI18N
-        draftDF.setMaximumSize(new java.awt.Dimension(61, 25));
-        draftDF.setMinimumSize(new java.awt.Dimension(25, 25));
-
-        draftPOA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        draftPOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        draftPOA.setText(bundle1.getString("GUI.draftPOA.text")); // NOI18N
-        draftPOA.setMaximumSize(new java.awt.Dimension(61, 25));
-        draftPOA.setMinimumSize(new java.awt.Dimension(25, 25));
+        draftDLabel.setText(bundle.getString("GUI.draftDLabel.text")); // NOI18N
+        draftDLabel.setToolTipText(bundle.getString("GUI.draftDLabel.toolTipText")); // NOI18N
 
         draftDLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftDLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         draftDLabel1.setLabelFor(salaryAmtLabel);
-        draftDLabel1.setText(bundle1.getString("GUI.draftDLabel1.text")); // NOI18N
-        draftDLabel1.setToolTipText(bundle1.getString("GUI.draftDLabel1.toolTipText")); // NOI18N
+        draftDLabel1.setText(bundle.getString("GUI.draftDLabel1.text")); // NOI18N
+        draftDLabel1.setToolTipText(bundle.getString("GUI.draftDLabel1.toolTipText")); // NOI18N
 
         draftOALabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftOALabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         draftOALabel1.setLabelFor(salaryAmtLabel);
-        draftOALabel1.setText(bundle1.getString("GUI.draftOALabel1.text")); // NOI18N
-        draftOALabel1.setToolTipText(bundle1.getString("GUI.draftOALabel1.toolTipText")); // NOI18N
+        draftOALabel1.setText(bundle.getString("GUI.draftOALabel1.text")); // NOI18N
+        draftOALabel1.setToolTipText(bundle.getString("GUI.draftOALabel1.toolTipText")); // NOI18N
 
         draftOFLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftOFLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         draftOFLabel1.setLabelFor(salaryAmtLabel);
-        draftOFLabel1.setText(bundle1.getString("GUI.draftOFLabel1.text")); // NOI18N
-        draftOFLabel1.setToolTipText(bundle1.getString("GUI.draftOFLabel1.toolTipText")); // NOI18N
-
-        draftPDF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        draftPDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        draftPDF.setText(bundle1.getString("GUI.draftPDF.text")); // NOI18N
-        draftPDF.setMaximumSize(new java.awt.Dimension(61, 25));
-        draftPDF.setMinimumSize(new java.awt.Dimension(25, 25));
-
-        draftPOF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        draftPOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        draftPOF.setText(bundle1.getString("GUI.draftPOF.text")); // NOI18N
-        draftPOF.setMaximumSize(new java.awt.Dimension(61, 25));
-        draftPOF.setMinimumSize(new java.awt.Dimension(25, 25));
-
-        draftTOF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        draftTOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        draftTOF.setText(bundle1.getString("GUI.draftTOF.text")); // NOI18N
-        draftTOF.setMaximumSize(new java.awt.Dimension(61, 25));
-        draftTOF.setMinimumSize(new java.awt.Dimension(25, 25));
+        draftOFLabel1.setText(bundle.getString("GUI.draftOFLabel1.text")); // NOI18N
+        draftOFLabel1.setToolTipText(bundle.getString("GUI.draftOFLabel1.toolTipText")); // NOI18N
 
         draftOALabel2.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftOALabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         draftOALabel2.setLabelFor(salaryAmtLabel);
-        draftOALabel2.setText(bundle1.getString("GUI.draftOALabel2.text")); // NOI18N
-        draftOALabel2.setToolTipText(bundle1.getString("GUI.draftOALabel2.toolTipText")); // NOI18N
+        draftOALabel2.setText(bundle.getString("GUI.draftOALabel2.text")); // NOI18N
+        draftOALabel2.setToolTipText(bundle.getString("GUI.draftOALabel2.toolTipText")); // NOI18N
 
         draftDLabel2.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftDLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         draftDLabel2.setLabelFor(salaryAmtLabel);
-        draftDLabel2.setText(bundle1.getString("GUI.draftDLabel2.text")); // NOI18N
-        draftDLabel2.setToolTipText(bundle1.getString("GUI.draftDLabel2.toolTipText")); // NOI18N
-
-        draftTOA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        draftTOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        draftTOA.setText(bundle1.getString("GUI.draftTOA.text")); // NOI18N
-        draftTOA.setMaximumSize(new java.awt.Dimension(61, 25));
-        draftTOA.setMinimumSize(new java.awt.Dimension(25, 25));
-
-        draftTDF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        draftTDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        draftTDF.setText(bundle1.getString("GUI.draftTDF.text")); // NOI18N
-        draftTDF.setMaximumSize(new java.awt.Dimension(61, 25));
-        draftTDF.setMinimumSize(new java.awt.Dimension(25, 25));
+        draftDLabel2.setText(bundle.getString("GUI.draftDLabel2.text")); // NOI18N
+        draftDLabel2.setToolTipText(bundle.getString("GUI.draftDLabel2.toolTipText")); // NOI18N
 
         draftOFLabel2.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftOFLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         draftOFLabel2.setLabelFor(salaryAmtLabel);
-        draftOFLabel2.setText(bundle1.getString("GUI.draftOFLabel2.text")); // NOI18N
-        draftOFLabel2.setToolTipText(bundle1.getString("GUI.draftOFLabel2.toolTipText")); // NOI18N
+        draftOFLabel2.setText(bundle.getString("GUI.draftOFLabel2.text")); // NOI18N
+        draftOFLabel2.setToolTipText(bundle.getString("GUI.draftOFLabel2.toolTipText")); // NOI18N
 
         numPlayersDraft.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         numPlayersDraft.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        numPlayersDraft.setText(bundle1.getString("GUI.numPlayersDraft.text")); // NOI18N
+        numPlayersDraft.setText(bundle.getString("GUI.numPlayersDraft.text")); // NOI18N
         numPlayersDraft.setMaximumSize(new java.awt.Dimension(61, 25));
         numPlayersDraft.setMinimumSize(new java.awt.Dimension(25, 25));
 
         numPlayersLabel4.setFont(new java.awt.Font("Tahoma", 1, 11));
         numPlayersLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         numPlayersLabel4.setLabelFor(salaryAmtLabel);
-        numPlayersLabel4.setText(bundle1.getString("GUI.numPlayersLabel4.text")); // NOI18N
-        numPlayersLabel4.setToolTipText(bundle1.getString("GUI.numPlayersLabel4.toolTipText")); // NOI18N
+        numPlayersLabel4.setText(bundle.getString("GUI.numPlayersLabel4.text")); // NOI18N
+        numPlayersLabel4.setToolTipText(bundle.getString("GUI.numPlayersLabel4.toolTipText")); // NOI18N
 
-        draftOF1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        draftOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftOF.setText(bundle.getString("GUI.draftOF.text")); // NOI18N
+
+        draftDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftDF.setText(bundle.getString("GUI.draftDF.text")); // NOI18N
+
+        draftOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftOA.setText(bundle.getString("GUI.draftOA.text")); // NOI18N
+
+        draftPOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPOF.setText(bundle.getString("GUI.draftPOF.text")); // NOI18N
+
+        draftPDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPDF.setText(bundle.getString("GUI.draftPDF.text")); // NOI18N
+
+        draftPOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPOA.setText(bundle.getString("GUI.draftPOA.text")); // NOI18N
+
+        draftTOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTOF.setText(bundle.getString("GUI.draftTOF.text")); // NOI18N
+
+        draftTDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTDF.setText(bundle.getString("GUI.draftTDF.text")); // NOI18N
+
+        draftTOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTOA.setText(bundle.getString("GUI.draftTOA.text")); // NOI18N
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11));
+        jLabel3.setText(bundle.getString("GUI.jLabel3.text")); // NOI18N
+
+        draftOA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftOA1.setText(bundle.getString("GUI.draftOA1.text")); // NOI18N
+
+        draftPOF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPOF1.setText(bundle.getString("GUI.draftPOF1.text")); // NOI18N
+
         draftOF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        draftOF1.setText(bundle1.getString("GUI.draftOF1.text")); // NOI18N
-        draftOF1.setMaximumSize(new java.awt.Dimension(61, 25));
-        draftOF1.setMinimumSize(new java.awt.Dimension(25, 25));
+        draftOF1.setText(bundle.getString("GUI.draftOF1.text")); // NOI18N
+
+        draftDF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftDF1.setText(bundle.getString("GUI.draftDF1.text")); // NOI18N
+
+        draftTOA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTOA1.setText(bundle.getString("GUI.draftTOA1.text")); // NOI18N
+
+        draftTOF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTOF1.setText(bundle.getString("GUI.draftTOF1.text")); // NOI18N
+
+        draftTDF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTDF1.setText(bundle.getString("GUI.draftTDF1.text")); // NOI18N
+
+        draftPDF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPDF1.setText(bundle.getString("GUI.draftPDF1.text")); // NOI18N
+
+        draftPOA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPOA1.setText(bundle.getString("GUI.draftPOA1.text")); // NOI18N
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11));
+        jLabel4.setText(bundle.getString("GUI.jLabel4.text")); // NOI18N
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11));
+        jLabel5.setText(bundle.getString("GUI.jLabel5.text")); // NOI18N
+
+        draftOF2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftOF2.setText(bundle.getString("GUI.draftOF2.text")); // NOI18N
+
+        draftTOA2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTOA2.setText(bundle.getString("GUI.draftTOA2.text")); // NOI18N
+
+        draftDF2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftDF2.setText(bundle.getString("GUI.draftDF2.text")); // NOI18N
+
+        draftTDF2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTDF2.setText(bundle.getString("GUI.draftTDF2.text")); // NOI18N
+
+        draftTOF2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTOF2.setText(bundle.getString("GUI.draftTOF2.text")); // NOI18N
+
+        draftPOA2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPOA2.setText(bundle.getString("GUI.draftPOA2.text")); // NOI18N
+
+        draftPDF2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPDF2.setText(bundle.getString("GUI.draftPDF2.text")); // NOI18N
+
+        draftPOF2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPOF2.setText(bundle.getString("GUI.draftPOF2.text")); // NOI18N
+
+        draftOA2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftOA2.setText(bundle.getString("GUI.draftOA2.text")); // NOI18N
+
+        draftPOF3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPOF3.setText(bundle.getString("GUI.draftPOF3.text")); // NOI18N
+
+        draftOA3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftOA3.setText(bundle.getString("GUI.draftOA3.text")); // NOI18N
+
+        draftPOA3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPOA3.setText(bundle.getString("GUI.draftPOA3.text")); // NOI18N
+
+        draftPDF3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPDF3.setText(bundle.getString("GUI.draftPDF3.text")); // NOI18N
+
+        draftTDF3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTDF3.setText(bundle.getString("GUI.draftTDF3.text")); // NOI18N
+
+        draftTOF3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTOF3.setText(bundle.getString("GUI.draftTOF3.text")); // NOI18N
+
+        draftTOA3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTOA3.setText(bundle.getString("GUI.draftTOA3.text")); // NOI18N
+
+        draftDF3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftDF3.setText(bundle.getString("GUI.draftDF3.text")); // NOI18N
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setText(bundle.getString("GUI.jLabel6.text")); // NOI18N
+
+        draftOF3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftOF3.setText(bundle.getString("GUI.draftOF3.text")); // NOI18N
+
+        draftPOF4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPOF4.setText(bundle.getString("GUI.draftPOF4.text")); // NOI18N
+
+        draftOA4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftOA4.setText(bundle.getString("GUI.draftOA4.text")); // NOI18N
+
+        draftPOA4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPOA4.setText(bundle.getString("GUI.draftPOA4.text")); // NOI18N
+
+        draftPDF4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPDF4.setText(bundle.getString("GUI.draftPDF4.text")); // NOI18N
+
+        draftTDF4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTDF4.setText(bundle.getString("GUI.draftTDF4.text")); // NOI18N
+
+        draftTOF4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTOF4.setText(bundle.getString("GUI.draftTOF4.text")); // NOI18N
+
+        draftTOA4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTOA4.setText(bundle.getString("GUI.draftTOA4.text")); // NOI18N
+
+        draftDF4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftDF4.setText(bundle.getString("GUI.draftDF4.text")); // NOI18N
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel7.setText(bundle.getString("GUI.jLabel7.text")); // NOI18N
+
+        draftOF4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftOF4.setText(bundle.getString("GUI.draftOF4.text")); // NOI18N
+
+        draftPOF5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPOF5.setText(bundle.getString("GUI.draftPOF5.text")); // NOI18N
+
+        draftOA5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftOA5.setText(bundle.getString("GUI.draftOA5.text")); // NOI18N
+
+        draftPOA5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPOA5.setText(bundle.getString("GUI.draftPOA5.text")); // NOI18N
+
+        draftPDF5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftPDF5.setText(bundle.getString("GUI.draftPDF5.text")); // NOI18N
+
+        draftTDF5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTDF5.setText(bundle.getString("GUI.draftTDF5.text")); // NOI18N
+
+        draftTOF5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTOF5.setText(bundle.getString("GUI.draftTOF5.text")); // NOI18N
+
+        draftTOA5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftTOA5.setText(bundle.getString("GUI.draftTOA5.text")); // NOI18N
+
+        draftDF5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftDF5.setText(bundle.getString("GUI.draftDF5.text")); // NOI18N
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel8.setText(bundle.getString("GUI.jLabel8.text")); // NOI18N
+
+        draftOF5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        draftOF5.setText(bundle.getString("GUI.draftOF5.text")); // NOI18N
 
         javax.swing.GroupLayout draftTabLayout = new javax.swing.GroupLayout(draftTab);
         draftTab.setLayout(draftTabLayout);
@@ -3384,27 +3554,27 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(draftTabLayout.createSequentialGroup()
                         .addComponent(draftYearList, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addGap(47, 47, 47)
-                                .addComponent(lwListLabel1)
-                                .addGap(141, 141, 141)
-                                .addComponent(cListLabel1))
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(draftTabLayout.createSequentialGroup()
                                 .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                             .addGroup(draftTabLayout.createSequentialGroup()
-                                .addGap(353, 353, 353)
-                                .addComponent(rwListLabel1)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(47, 47, 47)
+                                .addComponent(lwListLabel1)
+                                .addGap(141, 141, 141)
+                                .addComponent(cListLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(rwListLabel1)
+                                .addGap(84, 84, 84)))
                         .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(draftTabLayout.createSequentialGroup()
                                 .addGap(80, 80, 80)
                                 .addComponent(dListLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 156, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
                                 .addComponent(gListLabel1)
                                 .addGap(75, 75, 75))
                             .addGroup(draftTabLayout.createSequentialGroup()
@@ -3412,84 +3582,158 @@ public class GUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(395, 395, 395))
+                    .addComponent(numPlayersLabel4)
                     .addGroup(draftTabLayout.createSequentialGroup()
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(numPlayersLabel4)
+                        .addGap(74, 74, 74)
+                        .addComponent(draftOFLabel)
+                        .addGap(35, 35, 35)
+                        .addComponent(draftDLabel)
+                        .addGap(38, 38, 38)
+                        .addComponent(draftOALabel)
+                        .addGap(32, 32, 32)
+                        .addComponent(draftOFLabel1)
+                        .addGap(28, 28, 28)
+                        .addComponent(draftDLabel1)
+                        .addGap(30, 30, 30)
+                        .addComponent(draftOALabel1)
+                        .addGap(27, 27, 27)
+                        .addComponent(draftOFLabel2)
+                        .addGap(31, 31, 31)
+                        .addComponent(draftDLabel2)
+                        .addGap(28, 28, 28)
+                        .addComponent(draftOALabel2)
+                        .addContainerGap())
+                    .addGroup(draftTabLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(numPlayersDraft, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(1236, Short.MAX_VALUE))
+                    .addGroup(draftTabLayout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(draftOF2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftDF2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftOA2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftPOF2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftPDF2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftPOA2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftTOF2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftTDF2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftTOA2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(781, Short.MAX_VALUE))
+                    .addGroup(draftTabLayout.createSequentialGroup()
+                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(draftTabLayout.createSequentialGroup()
+                                .addComponent(jLabel3)
                                 .addGap(18, 18, 18)
-                                .addComponent(numPlayersDraft, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(903, Short.MAX_VALUE))
+                                .addComponent(draftOF, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftDF, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftOA, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftPOF, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftPDF, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftPOA, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftTOF, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftTDF, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftTOA, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(draftTabLayout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(draftOF1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftDF1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftOA1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftPOF1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftPDF1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftPOA1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftTOF1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftTDF1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(draftTOA1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(781, Short.MAX_VALUE))
                     .addGroup(draftTabLayout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addComponent(draftOF, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, draftTabLayout.createSequentialGroup()
-                                .addComponent(draftOFLabel)
-                                .addGap(26, 26, 26))
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addComponent(draftOF1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(draftDLabel))
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(draftDF, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(draftOA, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addComponent(draftOALabel)))
+                        .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addComponent(draftPOF, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, draftTabLayout.createSequentialGroup()
-                                .addComponent(draftOFLabel1)
-                                .addGap(26, 26, 26)))
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(draftDLabel1))
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(draftPDF, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(draftPOA, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addComponent(draftOALabel1)))
+                        .addComponent(draftOF3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftDF3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftOA3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftPOF3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftPDF3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftPOA3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftTOF3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftTDF3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftTOA3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(781, Short.MAX_VALUE))
+                    .addGroup(draftTabLayout.createSequentialGroup()
+                        .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addComponent(draftTOF, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, draftTabLayout.createSequentialGroup()
-                                .addComponent(draftOFLabel2)
-                                .addGap(26, 26, 26)))
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(draftDLabel2))
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(draftTDF, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(draftTOA, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(draftTabLayout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addComponent(draftOALabel2)))
-                        .addContainerGap(366, Short.MAX_VALUE))))
+                        .addComponent(draftOF4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftDF4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftOA4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftPOF4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftPDF4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftPOA4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftTOF4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftTDF4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftTOA4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(781, Short.MAX_VALUE))
+                    .addGroup(draftTabLayout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(draftOF5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftDF5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftOA5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftPOF5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftPDF5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftPOA5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftTOF5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftTDF5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(draftTOA5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(781, Short.MAX_VALUE))))
         );
         draftTabLayout.setVerticalGroup(
             draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3499,7 +3743,8 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(draftTabLayout.createSequentialGroup()
                         .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(dListLabel1)
-                            .addComponent(gListLabel1))
+                            .addComponent(gListLabel1)
+                            .addComponent(rwListLabel1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
@@ -3507,8 +3752,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(draftTabLayout.createSequentialGroup()
                         .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lwListLabel1)
-                            .addComponent(cListLabel1)
-                            .addComponent(rwListLabel1))
+                            .addComponent(cListLabel1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane10)
@@ -3521,47 +3765,97 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(numPlayersDraft, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(draftTabLayout.createSequentialGroup()
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(draftOFLabel)
-                            .addComponent(draftDLabel)
-                            .addComponent(draftOALabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(draftOF, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(draftDF, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(draftOA, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(draftTabLayout.createSequentialGroup()
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(draftOFLabel1)
-                            .addComponent(draftDLabel1)
-                            .addComponent(draftOALabel1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(draftPOF, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(draftPDF, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(draftPOA, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(draftTabLayout.createSequentialGroup()
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(draftOFLabel2)
-                            .addComponent(draftDLabel2)
-                            .addComponent(draftOALabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(draftTOF, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(draftTDF, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(draftTOA, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(draftOFLabel)
+                    .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(draftOALabel2)
+                        .addComponent(draftDLabel2)
+                        .addComponent(draftOFLabel2)
+                        .addComponent(draftOALabel1)
+                        .addComponent(draftDLabel1)
+                        .addComponent(draftOFLabel1)
+                        .addComponent(draftOALabel)
+                        .addComponent(draftDLabel)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(draftOF1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(239, 239, 239))
+                .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(draftOF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftOA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPOF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPOA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTOF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTOA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(draftOF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftDF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftOA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPOF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPDF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPOA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTOF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTDF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTOA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(draftDF2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftOA2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPOF2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPDF2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPOA2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTOF2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTDF2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTOA2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(draftOF2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(draftDF3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftOA3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPOF3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPDF3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPOA3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTOF3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTDF3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTOA3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(draftOF3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(draftDF4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftOA4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPOF4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPDF4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPOA4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTOF4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTDF4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTOA4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(draftOF4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(draftTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(draftDF5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftOA5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPOF5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPDF5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftPOA5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTOF5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTDF5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(draftTOA5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8)
+                    .addComponent(draftOF5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(133, 133, 133))
         );
 
-        playerTab.addTab(bundle1.getString("GUI.draftTab.TabConstraints.tabTitle"), draftTab); // NOI18N
+        playerTab.addTab(bundle.getString("GUI.draftTab.TabConstraints.tabTitle"), draftTab); // NOI18N
 
-        jMenu1.setText(bundle1.getString("GUI.jMenu1.text")); // NOI18N
+        jMenu1.setText(bundle.getString("GUI.jMenu1.text")); // NOI18N
 
         openMenu.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        openMenu.setText(bundle1.getString("GUI.openMenu.text")); // NOI18N
+        openMenu.setText(bundle.getString("GUI.openMenu.text")); // NOI18N
         openMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 openMenuActionPerformed(evt);
@@ -3570,12 +3864,12 @@ public class GUI extends javax.swing.JFrame {
         jMenu1.add(openMenu);
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Z, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem2.setText(bundle1.getString("GUI.jMenuItem2.text")); // NOI18N
+        jMenuItem2.setText(bundle.getString("GUI.jMenuItem2.text")); // NOI18N
         jMenu1.add(jMenuItem2);
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText(bundle1.getString("GUI.jMenu2.text")); // NOI18N
+        jMenu2.setText(bundle.getString("GUI.jMenu2.text")); // NOI18N
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -3591,7 +3885,7 @@ public class GUI extends javax.swing.JFrame {
             .addComponent(playerTab, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        playerTab.getAccessibleContext().setAccessibleName(bundle.getString("GUI.jTabbedPane1.AccessibleContext.accessibleName")); // NOI18N
+        playerTab.getAccessibleContext().setAccessibleName(bundle1.getString("GUI.jTabbedPane1.AccessibleContext.accessibleName")); // NOI18N
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -3968,6 +4262,52 @@ public class GUI extends javax.swing.JFrame {
             double tOf = 0;
             double tDF = 0;
             double tOA = 0;
+            double tempOf1 = 0;
+            double tempDf1= 0;
+            double tempOA1 = 0;
+            double pOf1 = 0;
+            double pDf1 = 0;
+            double pOA1 = 0;
+            double tOf1 = 0;
+            double tDF1 = 0;
+            double tOA1 = 0;
+            double tempOf2 = 0;
+            double tempDf2 = 0;
+            double tempOA2 = 0;
+            double pOf2 = 0;
+            double pDf2 = 0;
+            double pOA2 = 0;
+            double tOf2 = 0;
+            double tDF2 = 0;
+            double tOA2 = 0;
+            double tempOf3 = 0;
+            double tempDf3= 0;
+            double tempOA3 = 0;
+            double pOf3 = 0;
+            double pDf3 = 0;
+            double pOA3 = 0;
+            double tOf3 = 0;
+            double tDF3 = 0;
+            double tOA3 = 0;
+            double tempOf4 = 0;
+            double tempDf4= 0;
+            double tempOA4 = 0;
+            double pOf4 = 0;
+            double pDf4 = 0;
+            double pOA4 = 0;
+            double tOf4 = 0;
+            double tDF4 = 0;
+            double tOA4 = 0;
+            double tempOf5 = 0;
+            double tempDf5 = 0;
+            double tempOA5 = 0;
+            double pOf5 = 0;
+            double pDf5 = 0;
+            double pOA5 = 0;
+            double tOf5 = 0;
+            double tDF5 = 0;
+            double tOA5 = 0;
+            int numRd1=0;int numRd2=0;int numRd3=0;int numRd4=0;int numRd5=0;
                 draftLwList.setListData(draft.getLeftWing(p));
                 draftCList.setListData(draft.getCenter(p));
                 draftRwList.setListData(draft.getRightWing(p));
@@ -3983,7 +4323,70 @@ public class GUI extends javax.swing.JFrame {
                     tempOA += d.getOA();
                     pOA += d.getpOA() / 6;
                     tOA += d.getTROA();
+
+                    if (d.getDraftRd()==1){
+                        numRd1++;
+                        tempOf1 += d.getOffense();
+                        pOf1 += d.getpOFF();
+                        tOf1 += d.getTRO();
+                        tempDf1 += d.getDefense();
+                        pDf1 += d.getpDF();
+                        tDF1 += d.getTRD();
+                        tempOA1 += d.getOA();
+                        pOA1 += d.getpOA() / 6;
+                        tOA1 += d.getTROA();
+                    }
+                    else if (d.getDraftRd()==2){
+                        numRd2++;
+                        tempOf2 += d.getOffense();
+                        pOf2 += d.getpOFF();
+                        tOf2 += d.getTRO();
+                        tempDf2 += d.getDefense();
+                        pDf2 += d.getpDF();
+                        tDF2 += d.getTRD();
+                        tempOA2 += d.getOA();
+                        pOA2 += d.getpOA() / 6;
+                        tOA2 += d.getTROA();
+                    }
+                    else if (d.getDraftRd()==3){
+                        numRd3++;
+                        tempOf3 += d.getOffense();
+                        pOf3 += d.getpOFF();
+                        tOf3 += d.getTRO();
+                        tempDf3 += d.getDefense();
+                        pDf3 += d.getpDF();
+                        tDF3 += d.getTRD();
+                        tempOA3 += d.getOA();
+                        pOA3 += d.getpOA() / 6;
+                        tOA3 += d.getTROA();
+                    }
+                    else if (d.getDraftRd() == 4) {
+                        numRd4++;
+                        tempOf4 += d.getOffense();
+                        pOf4 += d.getpOFF();
+                        tOf4 += d.getTRO();
+                        tempDf4 += d.getDefense();
+                        pDf4 += d.getpDF();
+                        tDF4 += d.getTRD();
+                        tempOA4 += d.getOA();
+                        pOA4 += d.getpOA() / 6;
+                        tOA4 += d.getTROA();
+                    }
+                    else if (d.getDraftRd()==5){
+                        numRd5++;
+                        tempOf5 += d.getOffense();
+                        pOf5 += d.getpOFF();
+                        tOf5 += d.getTRO();
+                        tempDf5 += d.getDefense();
+                        pDf5 += d.getpDF();
+                        tDF5 += d.getTRD();
+                        tempOA5 += d.getOA();
+                        pOA5 += d.getpOA() / 6;
+                        tOA5 += d.getTROA();
+                    }
                 }
+
+                if (numRd1!=0){
                 String temp = "" + tempOf / p.size();
                 if (temp.length() > 5) {
                     temp = temp.substring(0, 6);
@@ -4030,8 +4433,250 @@ public class GUI extends javax.swing.JFrame {
                     temp = temp.substring(0, 6);
                 }
                 draftTOA.setText(temp);
+
+
+
+                temp = "" + tempOf1 / numRd1;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOF1.setText("" + temp);
+                temp = "" + tempDf1 / numRd1;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftDF1.setText(temp);
+                temp = "" + tempOA1 / numRd1;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOA1.setText(temp);
+                temp = "" + pOf1 / numRd1;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOF1.setText("" + temp);
+                temp = "" + pDf1 / numRd1;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPDF1.setText(temp);
+                temp = "" + pOA1 / numRd1;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOA1.setText(temp);
+
+                temp = "" + tOf1 / numRd1;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOF1.setText("" + temp);
+                temp = "" + tDF1 / numRd1;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTDF1.setText(temp);
+                temp = "" + tOA1 / numRd1;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOA1.setText(temp);
+
+
+
+                temp = "" + tempOf2 / numRd2;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOF2.setText("" + temp);
+                temp = "" + tempDf2 / numRd2;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftDF2.setText(temp);
+                temp = "" + tempOA2 / numRd2;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOA2.setText(temp);
+                temp = "" + pOf2 / numRd2;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOF2.setText("" + temp);
+                temp = "" + pDf2 / numRd2;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPDF2.setText(temp);
+                temp = "" + pOA2 / numRd2;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOA2.setText(temp);
+
+                temp = "" + tOf2 / numRd2;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOF2.setText("" + temp);
+                temp = "" + tDF2 / numRd2;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTDF2.setText(temp);
+                temp = "" + tOA2 / numRd2;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOA2.setText(temp);
+
+                temp = "" + tempOf3 / numRd3;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOF3.setText("" + temp);
+                temp = "" + tempDf3 / numRd3;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftDF3.setText(temp);
+                temp = "" + tempOA3 / numRd3;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOA3.setText(temp);
+                temp = "" + pOf3 / numRd3;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOF3.setText("" + temp);
+                temp = "" + pDf3 / numRd3;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPDF3.setText(temp);
+                temp = "" + pOA3 / numRd3;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOA3.setText(temp);
+
+                temp = "" + tOf3 / numRd3;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOF3.setText("" + temp);
+                temp = "" + tDF3 / numRd3;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTDF3.setText(temp);
+                temp = "" + tOA3 / numRd3;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOA3.setText(temp);
+
+
+                temp = "" + tempOf4 / numRd4;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOF4.setText("" + temp);
+                temp = "" + tempDf4 / numRd4;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftDF4.setText(temp);
+                temp = "" + tempOA4 / numRd4;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOA4.setText(temp);
+                temp = "" + pOf4 / numRd4;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOF4.setText("" + temp);
+                temp = "" + pDf4 / numRd4;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPDF4.setText(temp);
+                temp = "" + pOA4 / numRd4;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOA4.setText(temp);
+
+                temp = "" + tOf4 / numRd4;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOF4.setText("" + temp);
+                temp = "" + tDF4 / numRd4;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTDF4.setText(temp);
+                temp = "" + tOA4 / numRd4;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOA4.setText(temp);
+
+
+                temp = "" + tempOf5 / numRd5;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOF5.setText("" + temp);
+                temp = "" + tempDf5 / numRd5;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftDF5.setText(temp);
+                temp = "" + tempOA5 / numRd5;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftOA5.setText(temp);
+                temp = "" + pOf5 / numRd5;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOF5.setText("" + temp);
+                temp = "" + pDf5 / numRd5;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPDF5.setText(temp);
+                temp = "" + pOA5 / numRd5;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftPOA5.setText(temp);
+
+                temp = "" + tOf5 / numRd5;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOF5.setText("" + temp);
+                temp = "" + tDF5 / numRd5;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTDF5.setText(temp);
+                temp = "" + tOA5 / numRd5;
+                if (temp.length() > 5) {
+                    temp = temp.substring(0, 6);
+                }
+                draftTOA5.setText(temp);
+        }
                 numPlayersDraft.setText(""+p.size());
-                searchPlayer.doClick();
+
     }
     public void avgProOverall() {
         double d = 0;
@@ -4137,6 +4782,9 @@ public class GUI extends javax.swing.JFrame {
         return "99999";
     }
 
+    public void separateDraftRounds(){
+
+    }
     private void createDraftList(){
          try {
             if (league.getCurrentDraftYear()==-1){
@@ -4299,6 +4947,11 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField dpairRPP1;
     private javax.swing.JList draftCList;
     private javax.swing.JFormattedTextField draftDF;
+    private javax.swing.JFormattedTextField draftDF1;
+    private javax.swing.JFormattedTextField draftDF2;
+    private javax.swing.JFormattedTextField draftDF3;
+    private javax.swing.JFormattedTextField draftDF4;
+    private javax.swing.JFormattedTextField draftDF5;
     private javax.swing.JLabel draftDLabel;
     private javax.swing.JLabel draftDLabel1;
     private javax.swing.JLabel draftDLabel2;
@@ -4308,23 +4961,62 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel draftLabel;
     private javax.swing.JList draftLwList;
     private javax.swing.JFormattedTextField draftOA;
+    private javax.swing.JFormattedTextField draftOA1;
+    private javax.swing.JFormattedTextField draftOA2;
+    private javax.swing.JFormattedTextField draftOA3;
+    private javax.swing.JFormattedTextField draftOA4;
+    private javax.swing.JFormattedTextField draftOA5;
     private javax.swing.JLabel draftOALabel;
     private javax.swing.JLabel draftOALabel1;
     private javax.swing.JLabel draftOALabel2;
     private javax.swing.JFormattedTextField draftOF;
     private javax.swing.JFormattedTextField draftOF1;
+    private javax.swing.JFormattedTextField draftOF2;
+    private javax.swing.JFormattedTextField draftOF3;
+    private javax.swing.JFormattedTextField draftOF4;
+    private javax.swing.JFormattedTextField draftOF5;
     private javax.swing.JLabel draftOFLabel;
     private javax.swing.JLabel draftOFLabel1;
     private javax.swing.JLabel draftOFLabel2;
     private javax.swing.JFormattedTextField draftPDF;
+    private javax.swing.JFormattedTextField draftPDF1;
+    private javax.swing.JFormattedTextField draftPDF2;
+    private javax.swing.JFormattedTextField draftPDF3;
+    private javax.swing.JFormattedTextField draftPDF4;
+    private javax.swing.JFormattedTextField draftPDF5;
     private javax.swing.JFormattedTextField draftPOA;
+    private javax.swing.JFormattedTextField draftPOA1;
+    private javax.swing.JFormattedTextField draftPOA2;
+    private javax.swing.JFormattedTextField draftPOA3;
+    private javax.swing.JFormattedTextField draftPOA4;
+    private javax.swing.JFormattedTextField draftPOA5;
     private javax.swing.JFormattedTextField draftPOF;
+    private javax.swing.JFormattedTextField draftPOF1;
+    private javax.swing.JFormattedTextField draftPOF2;
+    private javax.swing.JFormattedTextField draftPOF3;
+    private javax.swing.JFormattedTextField draftPOF4;
+    private javax.swing.JFormattedTextField draftPOF5;
     private javax.swing.JFormattedTextField draftPos;
     private javax.swing.JFormattedTextField draftRd;
     private javax.swing.JList draftRwList;
     private javax.swing.JFormattedTextField draftTDF;
+    private javax.swing.JFormattedTextField draftTDF1;
+    private javax.swing.JFormattedTextField draftTDF2;
+    private javax.swing.JFormattedTextField draftTDF3;
+    private javax.swing.JFormattedTextField draftTDF4;
+    private javax.swing.JFormattedTextField draftTDF5;
     private javax.swing.JFormattedTextField draftTOA;
+    private javax.swing.JFormattedTextField draftTOA1;
+    private javax.swing.JFormattedTextField draftTOA2;
+    private javax.swing.JFormattedTextField draftTOA3;
+    private javax.swing.JFormattedTextField draftTOA4;
+    private javax.swing.JFormattedTextField draftTOA5;
     private javax.swing.JFormattedTextField draftTOF;
+    private javax.swing.JFormattedTextField draftTOF1;
+    private javax.swing.JFormattedTextField draftTOF2;
+    private javax.swing.JFormattedTextField draftTOF3;
+    private javax.swing.JFormattedTextField draftTOF4;
+    private javax.swing.JFormattedTextField draftTOF5;
     private javax.swing.JPanel draftTab;
     private javax.swing.JFormattedTextField draftTeam;
     private javax.swing.JLabel draftTeamLabel;
@@ -4355,6 +5047,12 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel injLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
