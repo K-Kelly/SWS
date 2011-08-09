@@ -700,7 +700,10 @@ public class Player implements Comparable{
 		if (height> 9) {
 			return getCeilHIT() * POT / 100;
 		}
-		return getCeilHIT() * POT / 100;
+                int temp= getCeilHIT() * POT / 100;
+                if (temp>99)
+                    return 99;
+		return temp;
 	}
 
 	/**

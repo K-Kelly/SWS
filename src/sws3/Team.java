@@ -1,6 +1,7 @@
 package sws3;
 
 import java.util.ArrayList;
+import java.util.TreeMap;
 import javax.swing.ImageIcon;
 
 public class Team {
@@ -294,4 +295,31 @@ public class Team {
         }
             return g.toArray();
 }
+        public ArrayList<Player> getTop150(){
+            int n=150;
+            if (allPlayers.size()<150)
+                n=allPlayers.size();
+
+            Player[]sort=new Player[allPlayers.size()];
+            for (int i=0;i<sort.length;i++){
+                sort[i]=allPlayers.get(i);
+            }
+            for (int i=0;i<sort.length-1;i++){
+                for (int j=i+1;j<sort.length;j++){
+                    if (sort[j].getpOA()>sort[i].getpOA()){
+                        Player temp=sort[j];
+                        sort[j]=sort[i];
+                        sort[i]=temp;
+                    }
+                }
+            }
+            ArrayList<Player>top=new ArrayList<Player>(n);
+            int sum0=0;
+            for (int i=0;i<n;i++){
+                top.add(sort[i]);
+                sum0+=sort[i].getpOA();
+            }
+            System.out.println("\nSUM0: "+sum0);
+            return top;
+        }
 }

@@ -42,10 +42,10 @@ public class GUI extends javax.swing.JFrame {
         teamList = league.createTeams();
         playerSet = fH.getSortedPlayers();
         System.out.println("Num Players: " + playerSet.size());
-        playerTab.setMnemonicAt(0,KeyEvent.VK_1);
-        playerTab.setMnemonicAt(1,KeyEvent.VK_2);
-        playerTab.setMnemonicAt(2,KeyEvent.VK_3);
-       // createDraftList();
+        playerTab.setMnemonicAt(0, KeyEvent.VK_1);
+        playerTab.setMnemonicAt(1, KeyEvent.VK_2);
+        playerTab.setMnemonicAt(2, KeyEvent.VK_3);
+        // createDraftList();
         //create list
         list.add(wGP);
         list.add(wG);
@@ -4075,9 +4075,9 @@ public class GUI extends javax.swing.JFrame {
             String yr = (String) draftYearList.getSelectedItem();
             Team draft = teamList.get(30);
             if (yr.equalsIgnoreCase("2017")) {//need to detect what current draft year is
-                updateGUIToDraft(draft.getAllPlayers(),draft);
+                updateGUIToDraft(draft.getTop150(), draft);
             } else {
-                updateGUIToDraft(league.getDrafts().get(yr),draft);
+                updateGUIToDraft(league.getDrafts().get(yr), draft);
             }
         }//GEN-LAST:event_draftYearListActionPerformed
 
@@ -4096,93 +4096,93 @@ public class GUI extends javax.swing.JFrame {
         }//GEN-LAST:event_teamSearchFieldKeyPressed
 
         private void lwListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lwListMouseClicked
-           if (evt.getClickCount()==2){
-               String name=(String)lwList.getSelectedValue();
-               playerTab.setSelectedIndex(0);
-               searchField.setText(name);
-               searchPlayer.doClick();
-           }
+            if (evt.getClickCount() == 2) {
+                String name = (String) lwList.getSelectedValue();
+                playerTab.setSelectedIndex(0);
+                searchField.setText(name);
+                searchPlayer.doClick();
+            }
         }//GEN-LAST:event_lwListMouseClicked
 
         private void cListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cListMouseClicked
-            if (evt.getClickCount()==2){
-               String name=(String)cList.getSelectedValue();
-               playerTab.setSelectedIndex(0);
-               searchField.setText(name);
-               searchPlayer.doClick();
-           }
+            if (evt.getClickCount() == 2) {
+                String name = (String) cList.getSelectedValue();
+                playerTab.setSelectedIndex(0);
+                searchField.setText(name);
+                searchPlayer.doClick();
+            }
         }//GEN-LAST:event_cListMouseClicked
 
         private void rwListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rwListMouseClicked
-           if (evt.getClickCount()==2){
-               String name=(String)rwList.getSelectedValue();
-               playerTab.setSelectedIndex(0);
-               searchField.setText(name);
-               searchPlayer.doClick();
-           }
+            if (evt.getClickCount() == 2) {
+                String name = (String) rwList.getSelectedValue();
+                playerTab.setSelectedIndex(0);
+                searchField.setText(name);
+                searchPlayer.doClick();
+            }
         }//GEN-LAST:event_rwListMouseClicked
 
         private void dListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dListMouseClicked
-            if (evt.getClickCount()==2){
-               String name=(String)dList.getSelectedValue();
-               playerTab.setSelectedIndex(0);
-               searchField.setText(name);
-               searchPlayer.doClick();
-           }
+            if (evt.getClickCount() == 2) {
+                String name = (String) dList.getSelectedValue();
+                playerTab.setSelectedIndex(0);
+                searchField.setText(name);
+                searchPlayer.doClick();
+            }
         }//GEN-LAST:event_dListMouseClicked
 
         private void gListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gListMouseClicked
-            if (evt.getClickCount()==2){
-               String name=(String)gList.getSelectedValue();
-               playerTab.setSelectedIndex(0);
-               searchField.setText(name);
-               searchPlayer.doClick();
-           }
+            if (evt.getClickCount() == 2) {
+                String name = (String) gList.getSelectedValue();
+                playerTab.setSelectedIndex(0);
+                searchField.setText(name);
+                searchPlayer.doClick();
+            }
         }//GEN-LAST:event_gListMouseClicked
 
         private void draftLwListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftLwListMouseClicked
-            if (evt.getClickCount()==2){
-               String name=(String)draftLwList.getSelectedValue();
-               playerTab.setSelectedIndex(0);
-               searchField.setText(name);
-               searchPlayer.doClick();
-           }
+            if (evt.getClickCount() == 2) {
+                String name = (String) draftLwList.getSelectedValue();
+                playerTab.setSelectedIndex(0);
+                searchField.setText(name);
+                searchPlayer.doClick();
+            }
         }//GEN-LAST:event_draftLwListMouseClicked
 
         private void draftCListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftCListMouseClicked
-            if (evt.getClickCount()==2){
-               String name=(String)draftCList.getSelectedValue();
-               playerTab.setSelectedIndex(0);
-               searchField.setText(name);
-               searchPlayer.doClick();
-           }
+            if (evt.getClickCount() == 2) {
+                String name = (String) draftCList.getSelectedValue();
+                playerTab.setSelectedIndex(0);
+                searchField.setText(name);
+                searchPlayer.doClick();
+            }
         }//GEN-LAST:event_draftCListMouseClicked
 
         private void draftRwListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftRwListMouseClicked
-            if (evt.getClickCount()==2){
-               String name=(String)draftRwList.getSelectedValue();
-               playerTab.setSelectedIndex(0);
-               searchField.setText(name);
-               searchPlayer.doClick();
-           }
+            if (evt.getClickCount() == 2) {
+                String name = (String) draftRwList.getSelectedValue();
+                playerTab.setSelectedIndex(0);
+                searchField.setText(name);
+                searchPlayer.doClick();
+            }
         }//GEN-LAST:event_draftRwListMouseClicked
 
         private void draftDListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftDListMouseClicked
-            if (evt.getClickCount()==2){
-               String name=(String)draftDList.getSelectedValue();
-               playerTab.setSelectedIndex(0);
-               searchField.setText(name);
-               searchPlayer.doClick();
-           }
+            if (evt.getClickCount() == 2) {
+                String name = (String) draftDList.getSelectedValue();
+                playerTab.setSelectedIndex(0);
+                searchField.setText(name);
+                searchPlayer.doClick();
+            }
         }//GEN-LAST:event_draftDListMouseClicked
 
         private void draftGListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftGListMouseClicked
-            if (evt.getClickCount()==2){
-               String name=(String)draftGList.getSelectedValue();
-               playerTab.setSelectedIndex(0);
-               searchField.setText(name);
-               searchPlayer.doClick();
-           }
+            if (evt.getClickCount() == 2) {
+                String name = (String) draftGList.getSelectedValue();
+                playerTab.setSelectedIndex(0);
+                searchField.setText(name);
+                searchPlayer.doClick();
+            }
         }//GEN-LAST:event_draftGListMouseClicked
 
     public void updateGUIToPlayer() {
@@ -4252,432 +4252,422 @@ public class GUI extends javax.swing.JFrame {
 
     }
 
-    public void updateGUIToDraft(ArrayList<Player>p,Team draft){
-            double tempOf = 0;
-            double tempDf = 0;
-            double tempOA = 0;
-            double pOf = 0;
-            double pDf = 0;
-            double pOA = 0;
-            double tOf = 0;
-            double tDF = 0;
-            double tOA = 0;
-            double tempOf1 = 0;
-            double tempDf1= 0;
-            double tempOA1 = 0;
-            double pOf1 = 0;
-            double pDf1 = 0;
-            double pOA1 = 0;
-            double tOf1 = 0;
-            double tDF1 = 0;
-            double tOA1 = 0;
-            double tempOf2 = 0;
-            double tempDf2 = 0;
-            double tempOA2 = 0;
-            double pOf2 = 0;
-            double pDf2 = 0;
-            double pOA2 = 0;
-            double tOf2 = 0;
-            double tDF2 = 0;
-            double tOA2 = 0;
-            double tempOf3 = 0;
-            double tempDf3= 0;
-            double tempOA3 = 0;
-            double pOf3 = 0;
-            double pDf3 = 0;
-            double pOA3 = 0;
-            double tOf3 = 0;
-            double tDF3 = 0;
-            double tOA3 = 0;
-            double tempOf4 = 0;
-            double tempDf4= 0;
-            double tempOA4 = 0;
-            double pOf4 = 0;
-            double pDf4 = 0;
-            double pOA4 = 0;
-            double tOf4 = 0;
-            double tDF4 = 0;
-            double tOA4 = 0;
-            double tempOf5 = 0;
-            double tempDf5 = 0;
-            double tempOA5 = 0;
-            double pOf5 = 0;
-            double pDf5 = 0;
-            double pOA5 = 0;
-            double tOf5 = 0;
-            double tDF5 = 0;
-            double tOA5 = 0;
-            int numRd1=0;int numRd2=0;int numRd3=0;int numRd4=0;int numRd5=0;
-                draftLwList.setListData(draft.getLeftWing(p));
-                draftCList.setListData(draft.getCenter(p));
-                draftRwList.setListData(draft.getRightWing(p));
-                draftDList.setListData(draft.getDefense(p));
-                draftGList.setListData(draft.getGoalie(p));
-                for (Player d : p) {
-                    tempOf += d.getOffense();
-                    pOf += d.getpOFF();
-                    tOf += d.getTRO();
-                    tempDf += d.getDefense();
-                    pDf += d.getpDF();
-                    tDF += d.getTRD();
-                    tempOA += d.getOA();
-                    pOA += d.getpOA() / 6;
-                    tOA += d.getTROA();
+    public void updateGUIToDraft(ArrayList<Player> p, Team draft) {
+        double tempOf = 0;
+        double tempDf = 0;
+        double tempOA = 0;
+        double pOf = 0;
+        double pDf = 0;
+        double pOA = 0;
+        double tOf = 0;
+        double tDF = 0;
+        double tOA = 0;
+        double tempOf1 = 0;
+        double tempDf1 = 0;
+        double tempOA1 = 0;
+        double pOf1 = 0;
+        double pDf1 = 0;
+        double pOA1 = 0;
+        double tOf1 = 0;
+        double tDF1 = 0;
+        double tOA1 = 0;
+        double tempOf2 = 0;
+        double tempDf2 = 0;
+        double tempOA2 = 0;
+        double pOf2 = 0;
+        double pDf2 = 0;
+        double pOA2 = 0;
+        double tOf2 = 0;
+        double tDF2 = 0;
+        double tOA2 = 0;
+        double tempOf3 = 0;
+        double tempDf3 = 0;
+        double tempOA3 = 0;
+        double pOf3 = 0;
+        double pDf3 = 0;
+        double pOA3 = 0;
+        double tOf3 = 0;
+        double tDF3 = 0;
+        double tOA3 = 0;
+        double tempOf4 = 0;
+        double tempDf4 = 0;
+        double tempOA4 = 0;
+        double pOf4 = 0;
+        double pDf4 = 0;
+        double pOA4 = 0;
+        double tOf4 = 0;
+        double tDF4 = 0;
+        double tOA4 = 0;
+        double tempOf5 = 0;
+        double tempDf5 = 0;
+        double tempOA5 = 0;
+        double pOf5 = 0;
+        double pDf5 = 0;
+        double pOA5 = 0;
+        double tOf5 = 0;
+        double tDF5 = 0;
+        double tOA5 = 0;
+        int numRd1 = 0;
+        int numRd2 = 0;
+        int numRd3 = 0;
+        int numRd4 = 0;
+        int numRd5 = 0;
+        draftLwList.setListData(draft.getLeftWing(p));
+        draftCList.setListData(draft.getCenter(p));
+        draftRwList.setListData(draft.getRightWing(p));
+        draftDList.setListData(draft.getDefense(p));
+        draftGList.setListData(draft.getGoalie(p));
+        for (Player d : p) {
+            tempOf += d.getOffense();
+            pOf += d.getpOFF();
+            tOf += d.getTRO();
+            tempDf += d.getDefense();
+            pDf += d.getpDF();
+            tDF += d.getTRD();
+            tempOA += d.getOA();
+            pOA += d.getpOA() / 6;
+            tOA += d.getTROA();
 
-                    if (d.getDraftRd()==1){
-                        numRd1++;
-                        tempOf1 += d.getOffense();
-                        pOf1 += d.getpOFF();
-                        tOf1 += d.getTRO();
-                        tempDf1 += d.getDefense();
-                        pDf1 += d.getpDF();
-                        tDF1 += d.getTRD();
-                        tempOA1 += d.getOA();
-                        pOA1 += d.getpOA() / 6;
-                        tOA1 += d.getTROA();
-                    }
-                    else if (d.getDraftRd()==2){
-                        numRd2++;
-                        tempOf2 += d.getOffense();
-                        pOf2 += d.getpOFF();
-                        tOf2 += d.getTRO();
-                        tempDf2 += d.getDefense();
-                        pDf2 += d.getpDF();
-                        tDF2 += d.getTRD();
-                        tempOA2 += d.getOA();
-                        pOA2 += d.getpOA() / 6;
-                        tOA2 += d.getTROA();
-                    }
-                    else if (d.getDraftRd()==3){
-                        numRd3++;
-                        tempOf3 += d.getOffense();
-                        pOf3 += d.getpOFF();
-                        tOf3 += d.getTRO();
-                        tempDf3 += d.getDefense();
-                        pDf3 += d.getpDF();
-                        tDF3 += d.getTRD();
-                        tempOA3 += d.getOA();
-                        pOA3 += d.getpOA() / 6;
-                        tOA3 += d.getTROA();
-                    }
-                    else if (d.getDraftRd() == 4) {
-                        numRd4++;
-                        tempOf4 += d.getOffense();
-                        pOf4 += d.getpOFF();
-                        tOf4 += d.getTRO();
-                        tempDf4 += d.getDefense();
-                        pDf4 += d.getpDF();
-                        tDF4 += d.getTRD();
-                        tempOA4 += d.getOA();
-                        pOA4 += d.getpOA() / 6;
-                        tOA4 += d.getTROA();
-                    }
-                    else if (d.getDraftRd()==5){
-                        numRd5++;
-                        tempOf5 += d.getOffense();
-                        pOf5 += d.getpOFF();
-                        tOf5 += d.getTRO();
-                        tempDf5 += d.getDefense();
-                        pDf5 += d.getpDF();
-                        tDF5 += d.getTRD();
-                        tempOA5 += d.getOA();
-                        pOA5 += d.getpOA() / 6;
-                        tOA5 += d.getTROA();
-                    }
-                }
-
-                if (numRd1!=0){
-                String temp = "" + tempOf / p.size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOF.setText("" + temp);
-                temp = "" + tempDf / p.size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftDF.setText(temp);
-                temp = "" + tempOA / p.size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOA.setText(temp);
-                temp = "" + pOf / p.size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOF.setText("" + temp);
-                temp = "" + pDf / p.size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPDF.setText(temp);
-                temp = "" + pOA / p.size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOA.setText(temp);
-
-                temp = "" + tOf / p.size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOF.setText("" + temp);
-                temp = "" + tDF / p.size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTDF.setText(temp);
-                temp = "" + tOA / p.size();
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOA.setText(temp);
-
-
-
-                temp = "" + tempOf1 / numRd1;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOF1.setText("" + temp);
-                temp = "" + tempDf1 / numRd1;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftDF1.setText(temp);
-                temp = "" + tempOA1 / numRd1;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOA1.setText(temp);
-                temp = "" + pOf1 / numRd1;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOF1.setText("" + temp);
-                temp = "" + pDf1 / numRd1;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPDF1.setText(temp);
-                temp = "" + pOA1 / numRd1;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOA1.setText(temp);
-
-                temp = "" + tOf1 / numRd1;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOF1.setText("" + temp);
-                temp = "" + tDF1 / numRd1;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTDF1.setText(temp);
-                temp = "" + tOA1 / numRd1;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOA1.setText(temp);
-
-
-
-                temp = "" + tempOf2 / numRd2;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOF2.setText("" + temp);
-                temp = "" + tempDf2 / numRd2;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftDF2.setText(temp);
-                temp = "" + tempOA2 / numRd2;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOA2.setText(temp);
-                temp = "" + pOf2 / numRd2;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOF2.setText("" + temp);
-                temp = "" + pDf2 / numRd2;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPDF2.setText(temp);
-                temp = "" + pOA2 / numRd2;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOA2.setText(temp);
-
-                temp = "" + tOf2 / numRd2;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOF2.setText("" + temp);
-                temp = "" + tDF2 / numRd2;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTDF2.setText(temp);
-                temp = "" + tOA2 / numRd2;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOA2.setText(temp);
-
-                temp = "" + tempOf3 / numRd3;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOF3.setText("" + temp);
-                temp = "" + tempDf3 / numRd3;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftDF3.setText(temp);
-                temp = "" + tempOA3 / numRd3;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOA3.setText(temp);
-                temp = "" + pOf3 / numRd3;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOF3.setText("" + temp);
-                temp = "" + pDf3 / numRd3;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPDF3.setText(temp);
-                temp = "" + pOA3 / numRd3;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOA3.setText(temp);
-
-                temp = "" + tOf3 / numRd3;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOF3.setText("" + temp);
-                temp = "" + tDF3 / numRd3;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTDF3.setText(temp);
-                temp = "" + tOA3 / numRd3;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOA3.setText(temp);
-
-
-                temp = "" + tempOf4 / numRd4;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOF4.setText("" + temp);
-                temp = "" + tempDf4 / numRd4;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftDF4.setText(temp);
-                temp = "" + tempOA4 / numRd4;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOA4.setText(temp);
-                temp = "" + pOf4 / numRd4;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOF4.setText("" + temp);
-                temp = "" + pDf4 / numRd4;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPDF4.setText(temp);
-                temp = "" + pOA4 / numRd4;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOA4.setText(temp);
-
-                temp = "" + tOf4 / numRd4;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOF4.setText("" + temp);
-                temp = "" + tDF4 / numRd4;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTDF4.setText(temp);
-                temp = "" + tOA4 / numRd4;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOA4.setText(temp);
-
-
-                temp = "" + tempOf5 / numRd5;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOF5.setText("" + temp);
-                temp = "" + tempDf5 / numRd5;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftDF5.setText(temp);
-                temp = "" + tempOA5 / numRd5;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftOA5.setText(temp);
-                temp = "" + pOf5 / numRd5;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOF5.setText("" + temp);
-                temp = "" + pDf5 / numRd5;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPDF5.setText(temp);
-                temp = "" + pOA5 / numRd5;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftPOA5.setText(temp);
-
-                temp = "" + tOf5 / numRd5;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOF5.setText("" + temp);
-                temp = "" + tDF5 / numRd5;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTDF5.setText(temp);
-                temp = "" + tOA5 / numRd5;
-                if (temp.length() > 5) {
-                    temp = temp.substring(0, 6);
-                }
-                draftTOA5.setText(temp);
+            if (d.getDraftRd() == 1) {
+                numRd1++;
+                tempOf1 += d.getOffense();
+                pOf1 += d.getpOFF();
+                tOf1 += d.getTRO();
+                tempDf1 += d.getDefense();
+                pDf1 += d.getpDF();
+                tDF1 += d.getTRD();
+                tempOA1 += d.getOA();
+                pOA1 += d.getpOA() / 6;
+                tOA1 += d.getTROA();
+            } else if (d.getDraftRd() == 2) {
+                numRd2++;
+                tempOf2 += d.getOffense();
+                pOf2 += d.getpOFF();
+                tOf2 += d.getTRO();
+                tempDf2 += d.getDefense();
+                pDf2 += d.getpDF();
+                tDF2 += d.getTRD();
+                tempOA2 += d.getOA();
+                pOA2 += d.getpOA() / 6;
+                tOA2 += d.getTROA();
+            } else if (d.getDraftRd() == 3) {
+                numRd3++;
+                tempOf3 += d.getOffense();
+                pOf3 += d.getpOFF();
+                tOf3 += d.getTRO();
+                tempDf3 += d.getDefense();
+                pDf3 += d.getpDF();
+                tDF3 += d.getTRD();
+                tempOA3 += d.getOA();
+                pOA3 += d.getpOA() / 6;
+                tOA3 += d.getTROA();
+            } else if (d.getDraftRd() == 4) {
+                numRd4++;
+                tempOf4 += d.getOffense();
+                pOf4 += d.getpOFF();
+                tOf4 += d.getTRO();
+                tempDf4 += d.getDefense();
+                pDf4 += d.getpDF();
+                tDF4 += d.getTRD();
+                tempOA4 += d.getOA();
+                pOA4 += d.getpOA() / 6;
+                tOA4 += d.getTROA();
+            } else if (d.getDraftRd() == 5) {
+                numRd5++;
+                tempOf5 += d.getOffense();
+                pOf5 += d.getpOFF();
+                tOf5 += d.getTRO();
+                tempDf5 += d.getDefense();
+                pDf5 += d.getpDF();
+                tDF5 += d.getTRD();
+                tempOA5 += d.getOA();
+                pOA5 += d.getpOA() / 6;
+                tOA5 += d.getTROA();
+            }
         }
-                numPlayersDraft.setText(""+p.size());
+        System.out.println("POA is: "+pOA);
+            String temp = "" + tempOf / p.size();
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftOF.setText("" + temp);
+            temp = "" + tempDf / p.size();
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftDF.setText(temp);
+            temp = "" + tempOA / p.size();
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftOA.setText(temp);
+            temp = "" + pOf / p.size();
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPOF.setText("" + temp);
+            temp = "" + pDf / p.size();
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPDF.setText(temp);
+            temp = "" + pOA / p.size();
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPOA.setText(temp);
 
+            temp = "" + tOf / p.size();
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTOF.setText("" + temp);
+            temp = "" + tDF / p.size();
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTDF.setText(temp);
+            temp = "" + tOA / p.size();
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTOA.setText(temp);
+            temp = "" + tempOf1 / numRd1;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+
+            if (numRd1 != 0) {
+            draftOF1.setText("" + temp);
+            temp = "" + tempDf1 / numRd1;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftDF1.setText(temp);
+            temp = "" + tempOA1 / numRd1;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftOA1.setText(temp);
+            temp = "" + pOf1 / numRd1;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPOF1.setText("" + temp);
+            temp = "" + pDf1 / numRd1;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPDF1.setText(temp);
+            temp = "" + pOA1 / numRd1;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPOA1.setText(temp);
+
+            temp = "" + tOf1 / numRd1;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTOF1.setText("" + temp);
+            temp = "" + tDF1 / numRd1;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTDF1.setText(temp);
+            temp = "" + tOA1 / numRd1;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTOA1.setText(temp);
+            temp = "" + tempOf2 / numRd2;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftOF2.setText("" + temp);
+            temp = "" + tempDf2 / numRd2;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftDF2.setText(temp);
+            temp = "" + tempOA2 / numRd2;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftOA2.setText(temp);
+            temp = "" + pOf2 / numRd2;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPOF2.setText("" + temp);
+            temp = "" + pDf2 / numRd2;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPDF2.setText(temp);
+            temp = "" + pOA2 / numRd2;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPOA2.setText(temp);
+
+            temp = "" + tOf2 / numRd2;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTOF2.setText("" + temp);
+            temp = "" + tDF2 / numRd2;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTDF2.setText(temp);
+            temp = "" + tOA2 / numRd2;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTOA2.setText(temp);
+
+            temp = "" + tempOf3 / numRd3;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftOF3.setText("" + temp);
+            temp = "" + tempDf3 / numRd3;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftDF3.setText(temp);
+            temp = "" + tempOA3 / numRd3;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftOA3.setText(temp);
+            temp = "" + pOf3 / numRd3;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPOF3.setText("" + temp);
+            temp = "" + pDf3 / numRd3;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPDF3.setText(temp);
+            temp = "" + pOA3 / numRd3;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPOA3.setText(temp);
+            temp = "" + tOf3 / numRd3;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTOF3.setText("" + temp);
+            temp = "" + tDF3 / numRd3;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTDF3.setText(temp);
+            temp = "" + tOA3 / numRd3;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTOA3.setText(temp);
+            temp = "" + tempOf4 / numRd4;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftOF4.setText("" + temp);
+            temp = "" + tempDf4 / numRd4;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftDF4.setText(temp);
+            temp = "" + tempOA4 / numRd4;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftOA4.setText(temp);
+            temp = "" + pOf4 / numRd4;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPOF4.setText("" + temp);
+            temp = "" + pDf4 / numRd4;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPDF4.setText(temp);
+            temp = "" + pOA4 / numRd4;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPOA4.setText(temp);
+
+            temp = "" + tOf4 / numRd4;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTOF4.setText("" + temp);
+            temp = "" + tDF4 / numRd4;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTDF4.setText(temp);
+            temp = "" + tOA4 / numRd4;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTOA4.setText(temp);
+            temp = "" + tempOf5 / numRd5;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftOF5.setText("" + temp);
+            temp = "" + tempDf5 / numRd5;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftDF5.setText(temp);
+            temp = "" + tempOA5 / numRd5;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftOA5.setText(temp);
+            temp = "" + pOf5 / numRd5;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPOF5.setText("" + temp);
+            temp = "" + pDf5 / numRd5;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPDF5.setText(temp);
+            temp = "" + pOA5 / numRd5;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftPOA5.setText(temp);
+
+            temp = "" + tOf5 / numRd5;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTOF5.setText("" + temp);
+            temp = "" + tDF5 / numRd5;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTDF5.setText(temp);
+            temp = "" + tOA5 / numRd5;
+            if (temp.length() > 5) {
+                temp = temp.substring(0, 6);
+            }
+            draftTOA5.setText(temp);
+        }
+        numPlayersDraft.setText("" + p.size());
     }
+
     public void avgProOverall() {
         double d = 0;
         double counter = 0;
@@ -4782,27 +4772,27 @@ public class GUI extends javax.swing.JFrame {
         return "99999";
     }
 
-    public void separateDraftRounds(){
-
+    public void separateDraftRounds() {
     }
-    private void createDraftList(){
-         try {
-            if (league.getCurrentDraftYear()==-1){
-            TreeSet<Integer>draftSort=new TreeSet<Integer>();
-            for(String s:league.getDrafts().keySet()){
-                draftSort.add(Integer.parseInt(s));
+
+    private void createDraftList() {
+        try {
+            if (league.getCurrentDraftYear() == -1) {
+                TreeSet<Integer> draftSort = new TreeSet<Integer>();
+                for (String s : league.getDrafts().keySet()) {
+                    draftSort.add(Integer.parseInt(s));
+                }
+                System.out.println(draftSort);
+                draftYearList = new JComboBox();
+                for (Integer i : draftSort) {
+                    draftYearList.addItem("" + i);
+                }
+                league.setCurrentDraftYear(draftSort.last() + 1);
+                draftYearList.addItem("" + (draftSort.last() + 1));
             }
-            System.out.println(draftSort);
-            draftYearList=new JComboBox();
-            for (Integer i:draftSort){
-                draftYearList.addItem(""+i);
-            }
-            league.setCurrentDraftYear(draftSort.last()+1);
-            draftYearList.addItem(""+(draftSort.last()+1));
-            }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void initializeNewFile() {
