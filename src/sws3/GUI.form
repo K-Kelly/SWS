@@ -156,10 +156,10 @@
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Component id="weeklyLabel" alignment="0" pref="78" max="32767" attributes="1"/>
-                                                      <Component id="weeklyLabel1" alignment="0" pref="78" max="32767" attributes="1"/>
-                                                      <Component id="ceilingLabel" alignment="0" pref="78" max="32767" attributes="0"/>
-                                                      <Component id="jLabel2" alignment="0" pref="78" max="32767" attributes="1"/>
+                                                      <Component id="weeklyLabel" alignment="0" pref="110" max="32767" attributes="1"/>
+                                                      <Component id="weeklyLabel1" alignment="0" pref="110" max="32767" attributes="1"/>
+                                                      <Component id="ceilingLabel" alignment="0" pref="110" max="32767" attributes="0"/>
+                                                      <Component id="jLabel2" alignment="0" pref="110" max="32767" attributes="1"/>
                                                   </Group>
                                                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                               </Group>
@@ -183,7 +183,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                           <Component id="weeklyLabel3" min="-2" max="-2" attributes="1"/>
-                                          <EmptySpace pref="28" max="32767" attributes="0"/>
+                                          <EmptySpace pref="60" max="32767" attributes="0"/>
                                           <Component id="bStreakGP" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -321,7 +321,7 @@
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="country" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
-                                                  <Component id="countryLabel" pref="125" max="32767" attributes="0"/>
+                                                  <Component id="countryLabel" pref="157" max="32767" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -586,7 +586,7 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="playerID" min="-2" pref="28" max="-2" attributes="0"/>
-                      <EmptySpace pref="1088" max="32767" attributes="0"/>
+                      <EmptySpace pref="1152" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -6129,205 +6129,221 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="draftYearList" min="-2" pref="68" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jScrollPane14" min="-2" pref="160" max="-2" attributes="1"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jScrollPane10" min="-2" pref="164" max="-2" attributes="1"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jScrollPane12" min="-2" pref="158" max="-2" attributes="1"/>
-                                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="draftYearList" min="-2" pref="68" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                                                  <Component id="lwListLabel1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
+                                                  <Component id="cListLabel1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
+                                                  <Component id="rwListLabel1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
+                                                  <Component id="dListLabel1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
+                                                  <Component id="gListLabel1" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jScrollPane14" min="-2" pref="160" max="-2" attributes="1"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jScrollPane10" min="-2" pref="164" max="-2" attributes="1"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jScrollPane12" min="-2" pref="158" max="-2" attributes="1"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" attributes="0">
+                                                          <EmptySpace min="10" pref="10" max="10" attributes="0"/>
+                                                          <Component id="bestAvailableLabel" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                                                          <Component id="draftQueue" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="jScrollPane11" min="-2" pref="158" max="-2" attributes="1"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="jScrollPane13" min="-2" pref="161" max="-2" attributes="1"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" attributes="1">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                                                  <Component id="draftOFLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                                  <Component id="draftDLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                                  <Component id="draftOALabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="draftOFLabel1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                                  <Component id="draftDLabel1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Component id="draftOALabel1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                                  <Component id="draftOFLabel2" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                                  <Component id="draftDLabel2" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                                  <Component id="draftOALabel2" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="draftOF2" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftDF2" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftOA2" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftPOF2" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftPDF2" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftPOA2" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftTOF2" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftTDF2" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftTOA2" min="-2" pref="45" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="draftOF" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftDF" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftOA" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftPOF" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftPDF" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftPOA" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftTOF" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftTDF" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftTOA" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="draftOF1" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftDF1" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftOA1" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftPOF1" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftPDF1" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftPOA1" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftTOF1" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftTDF1" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="draftTOA1" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="draftOF3" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftDF3" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftOA3" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftPOF3" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftPDF3" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftPOA3" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftTOF3" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftTDF3" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftTOA3" min="-2" pref="45" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="draftOF4" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftDF4" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftOA4" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftPOF4" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftPDF4" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftPOA4" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftTOF4" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftTDF4" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftTOA4" min="-2" pref="45" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="draftOF5" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftDF5" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftOA5" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftPOF5" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftPDF5" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftPOA5" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftTOF5" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftTDF5" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="draftTOA5" min="-2" pref="45" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                                  <Component id="numPlayersDraft" min="-2" pref="36" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jScrollPane2" min="-2" pref="178" max="-2" attributes="1"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jScrollPane3" pref="188" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="1">
-                                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                                      <Component id="lwListLabel1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
-                                      <Component id="cListLabel1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="rwListLabel1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace pref="271" max="32767" attributes="0"/>
                               </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="80" pref="80" max="80" attributes="0"/>
-                                      <Component id="dListLabel1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="150" max="32767" attributes="0"/>
-                                      <Component id="gListLabel1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="75" pref="75" max="75" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jScrollPane11" min="-2" pref="158" max="-2" attributes="1"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jScrollPane13" min="-2" pref="157" max="-2" attributes="1"/>
-                                  </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="numPlayersLabel4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="576" max="-2" attributes="0"/>
+                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="395" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="numPlayersLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                              <Component id="draftOFLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                              <Component id="draftDLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="draftOALabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="draftOFLabel1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="draftDLabel1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="draftOALabel1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="draftOFLabel2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="draftDLabel2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="draftOALabel2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="numPlayersDraft" min="-2" pref="36" max="-2" attributes="0"/>
-                              <EmptySpace pref="1236" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="draftOF2" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftDF2" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftOA2" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftPOF2" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftPDF2" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftPOA2" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftTOF2" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftTDF2" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftTOA2" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace pref="781" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="draftOF" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftDF" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftOA" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftPOF" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftPDF" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftPOA" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftTOF" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftTDF" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftTOA" min="-2" pref="45" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="draftOF1" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftDF1" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftOA1" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftPOF1" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftPDF1" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftPOA1" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftTOF1" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftTDF1" min="-2" pref="45" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="draftTOA1" min="-2" pref="45" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace pref="781" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="draftOF3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftDF3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftOA3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftPOF3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftPDF3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftPOA3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftTOF3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftTDF3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftTOA3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace pref="781" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="draftOF4" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftDF4" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftOA4" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftPOF4" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftPDF4" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftPOA4" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftTOF4" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftTDF4" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftTOA4" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace pref="781" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="draftOF5" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftDF5" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftOA5" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftPOF5" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftPDF5" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftPOA5" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftTOF5" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftTDF5" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="draftTOA5" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace pref="781" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="queueButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="316" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -6335,132 +6351,137 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="dListLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="gListLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cListLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lwListLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="rwListLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane13" pref="130" max="32767" attributes="1"/>
+                          <Component id="jScrollPane11" alignment="0" pref="130" max="32767" attributes="1"/>
+                          <Component id="jScrollPane10" max="32767" attributes="1"/>
+                          <Component id="jScrollPane12" min="-2" max="-2" attributes="1"/>
+                          <Component id="jScrollPane14" alignment="0" min="-2" max="-2" attributes="1"/>
+                          <Component id="draftYearList" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="bestAvailableLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="draftQueue" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="numPlayersLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel9" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="dListLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="gListLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="rwListLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="numPlayersDraft" min="-2" pref="19" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="draftOFLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                      <Component id="draftOALabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="draftDLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="draftOFLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="draftOALabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="draftDLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="draftOFLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="draftOALabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="draftDLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jScrollPane13" pref="130" max="32767" attributes="1"/>
-                                  <Component id="jScrollPane11" alignment="0" pref="130" max="32767" attributes="1"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lwListLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cListLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftOF" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftDF" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftOA" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPOF" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPDF" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPOA" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTOF" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTDF" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTOA" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jScrollPane10" max="32767" attributes="1"/>
-                                  <Component id="jScrollPane12" min="-2" max="-2" attributes="1"/>
-                                  <Component id="jScrollPane14" alignment="0" min="-2" max="-2" attributes="1"/>
-                                  <Component id="draftYearList" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="draftOF1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftDF1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftOA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPOF1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPDF1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPOA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTOF1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTDF1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTOA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="draftDF2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftOA2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPOF2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPDF2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPOA2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTOF2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTDF2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTOA2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftOF2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="draftDF3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftOA3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPOF3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPDF3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPOA3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTOF3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTDF3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTOA3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftOF3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="draftDF4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftOA4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPOF4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPDF4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPOA4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTOF4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTDF4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTOA4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftOF4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="draftDF5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftOA5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPOF5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPDF5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftPOA5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTOF5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTDF5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftTOA5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="draftOF5" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="numPlayersLabel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="numPlayersDraft" min="-2" pref="19" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="draftOFLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                              <Component id="draftOALabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="draftDLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="draftOFLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="draftOALabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="draftDLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="draftOFLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="draftOALabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="draftDLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jScrollPane3" alignment="0" pref="252" max="32767" attributes="1"/>
+                          <Component id="jScrollPane2" alignment="0" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="draftOF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftDF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftOA" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPOF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPDF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPOA" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTOF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTDF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTOA" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="draftOF1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftDF1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftOA1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPOF1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPDF1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPOA1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTOF1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTDF1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTOA1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="draftDF2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftOA2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPOF2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPDF2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPOA2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTOF2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTDF2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTOA2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftOF2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="draftDF3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftOA3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPOF3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPDF3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPOA3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTOF3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTDF3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTOA3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftOF3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="draftDF4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftOA4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPOF4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPDF4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPOA4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTOF4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTDF4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTOA4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftOF4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="draftDF5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftOA5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPOF5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPDF5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftPOA5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTOF5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTDF5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftTOA5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="draftOF5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
+                      <Component id="queueButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="1302" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -7357,6 +7378,90 @@
                   <ResourceString bundle="sws3/Bundle.properties" key="GUI.draftOF5.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JList" name="draftBestAvailable">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
+                    <Property name="dragEnabled" type="boolean" value="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="draftBestAvailableMouseClicked"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JList" name="myDraftList">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
+                    <Property name="dragEnabled" type="boolean" value="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="myDraftListMouseClicked"/>
+                    <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="myDraftListKeyPressed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="bestAvailableLabel">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="sws3/Bundle.properties" key="GUI.bestAvailableLabel.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="draftQueue">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="sws3/Bundle.properties" key="GUI.draftQueue.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel9">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="sws3/Bundle.properties" key="GUI.jLabel9.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="queueButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="sws3/Bundle.properties" key="GUI.queueButton.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="sws3/Bundle.properties" key="GUI.queueButton.toolTipText" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="queueButtonActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

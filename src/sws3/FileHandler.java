@@ -480,4 +480,15 @@ public class FileHandler {
                 t.printStackTrace();
             }
     }
+        public void writeDraftQueue(ArrayList<String>queue,String fileName){
+            try {
+                PrintWriter out = new PrintWriter(filePath+fileName+".txt");
+                for (String s: queue){
+                    out.println(s);
+                }
+                out.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 }
