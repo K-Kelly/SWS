@@ -2572,28 +2572,32 @@ public class Player implements Comparable{
                 dif.add(this.getpFAC()-other.getpFAC());
                 dif.add(this.getpSTR()-other.getpSTR());
                 dif.add(this.getpFGT()-other.getpFGT());
-                dif.add(this.getpOFF()-other.getpOFF());
-
+                
                 dif.add(this.getOffense()-other.getOffense());
                 dif.add(this.getDefense()-other.getDefense());
                 dif.add(this.getOA()-other.getOA());
+                dif.add(this.getpOFF()-other.getpOFF());
                 dif.add(this.getpDF()-other.getpDF());
                 dif.add(this.getpOA()-other.getpOA());
                 dif.add(this.getTRO()-other.getTRO());
                 dif.add(this.getTRD()-other.getTRD());
                 dif.add(this.getTROA()-other.getTROA());
+                dif.add(this.getFarmOFF()-other.getFarmOFF());
+                dif.add(this.getFarmDF()-other.getFarmDF());
+                dif.add(this.getFarmOA()-other.getFarmOA());
 
                 dif.add(this.getPEN()-other.getPEN());
                 dif.add(this.getCurEND()-other.getCurEND());
                 dif.add(this.getPOT()-other.getPOT());
                 dif.add(this.getCON()-other.getCON());
                 dif.add(this.getGRD()-other.getGRD());
+                dif.add(this.getInjProne()-other.getInjProne());
+                dif.add(this.getLEA()-other.getLEA());
 
                 dif.add(this.getSalary()-other.getSalary());
                 dif.add(this.getContractYr()-other.getContractYr());
-                //age
 
-		throw new Error ("NOT IMPLEMENTED YET");
+                return dif;
 	}
 
 
