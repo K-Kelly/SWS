@@ -62,10 +62,12 @@ public class GUI extends javax.swing.JFrame {
         list.add(wGP);
         list.add(wG);
         list.add(wA);
+        list.add(wP);
         list.add(wGWG);
         list.add(mGP);
         list.add(mG);
         list.add(mA);
+        list.add(mP);
         list.add(mGWG);
         list.add(careerG);
         list.add(careerA);
@@ -78,7 +80,7 @@ public class GUI extends javax.swing.JFrame {
         list.add(bStreakA);
         list.add(bStreakP);
         list.add(bStreakG);
-        ///
+        ///19
         list.add(mainPOSI);
         list.add(altPOSI);
         list.add(rightsField);
@@ -537,6 +539,8 @@ public class GUI extends javax.swing.JFrame {
         weeklyLabel4 = new javax.swing.JLabel();
         similarPlayerLabel = new javax.swing.JLabel();
         playerID = new javax.swing.JLabel();
+        playerTypeP1 = new javax.swing.JFormattedTextField();
+        playerTypeP2 = new javax.swing.JFormattedTextField();
         comparePlayersTab = new javax.swing.JPanel();
         comparePlayerField1 = new javax.swing.JTextField();
         comparePlayerField2 = new javax.swing.JTextField();
@@ -613,11 +617,21 @@ public class GUI extends javax.swing.JFrame {
         compareResult = new javax.swing.JFormattedTextField();
         ageLabel1 = new javax.swing.JLabel();
         age1 = new javax.swing.JFormattedTextField();
+        playerTypeC1 = new javax.swing.JFormattedTextField();
+        playerTypeC2 = new javax.swing.JFormattedTextField();
+        playerTypeC3 = new javax.swing.JFormattedTextField();
+        playerTypeC4 = new javax.swing.JFormattedTextField();
+        posiC1 = new javax.swing.JFormattedTextField();
+        posiC2 = new javax.swing.JFormattedTextField();
+        posiC3 = new javax.swing.JFormattedTextField();
+        posiC4 = new javax.swing.JFormattedTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         openMenu = new javax.swing.JMenuItem();
+        writePlayersFile = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        faq = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("sws3/Bundle"); // NOI18N
@@ -883,43 +897,58 @@ public class GUI extends javax.swing.JFrame {
 
         lwLine1.setText(bundle.getString("GUI.lwLine1.text")); // NOI18N
 
-        lwLine2.setText(bundle.getString("GUI.lwLine2.text")); // NOI18N
+        lwLine2.setText(bundle.getString("GUI.timeLine2.text")); // NOI18N
+        lwLine2.setToolTipText(bundle.getString("GUI.lwLine2.toolTipText")); // NOI18N
 
         lwLine3.setText(bundle.getString("GUI.lwLine3.text")); // NOI18N
+        lwLine3.setToolTipText(bundle.getString("GUI.lwLine3.toolTipText")); // NOI18N
 
         lwLine4.setText(bundle.getString("GUI.lwLine4.text")); // NOI18N
+        lwLine4.setToolTipText(bundle.getString("GUI.lwLine4.toolTipText")); // NOI18N
 
         cLine1.setText(bundle.getString("GUI.cLine1.text")); // NOI18N
 
-        cLine2.setText(bundle.getString("GUI.cLine2.text")); // NOI18N
+        cLine2.setText(bundle.getString("GUI.timeLine2.text")); // NOI18N
+        cLine2.setToolTipText(bundle.getString("GUI.cLine2.toolTipText")); // NOI18N
 
         cLine3.setText(bundle.getString("GUI.cLine3.text")); // NOI18N
+        cLine3.setToolTipText(bundle.getString("GUI.cLine3.toolTipText")); // NOI18N
 
         cLine4.setText(bundle.getString("GUI.cLine4.text")); // NOI18N
+        cLine4.setToolTipText(bundle.getString("GUI.cLine4.toolTipText")); // NOI18N
 
         rwLine1.setText(bundle.getString("GUI.rwLine1.text")); // NOI18N
 
-        rwLine2.setText(bundle.getString("GUI.rwLine2.text")); // NOI18N
+        rwLine2.setText(bundle.getString("GUI.timeLine2.text")); // NOI18N
+        rwLine2.setToolTipText(bundle.getString("GUI.rwLine2.toolTipText")); // NOI18N
 
         rwLine3.setText(bundle.getString("GUI.rwLine3.text")); // NOI18N
+        rwLine3.setToolTipText(bundle.getString("GUI.rwLine3.toolTipText")); // NOI18N
 
         rwLine4.setText(bundle.getString("GUI.rwLine4.text")); // NOI18N
+        rwLine4.setToolTipText(bundle.getString("GUI.rwLine4.toolTipText")); // NOI18N
 
         gStarting.setText(bundle.getString("GUI.gStarting.text")); // NOI18N
 
         gBackup.setText(bundle.getString("GUI.gBackup.text")); // NOI18N
 
         dpair1L.setText(bundle.getString("GUI.dpair1L.text")); // NOI18N
+        dpair1L.setToolTipText(bundle.getString("GUI.dpair1L.toolTipText")); // NOI18N
 
         dpair1R.setText(bundle.getString("GUI.dpair1R.text")); // NOI18N
+        dpair1R.setToolTipText(bundle.getString("GUI.dpair1R.toolTipText")); // NOI18N
 
         dPair2R.setText(bundle.getString("GUI.dPair2R.text")); // NOI18N
+        dPair2R.setToolTipText(bundle.getString("GUI.dPair2R.toolTipText")); // NOI18N
 
         dpair2L.setText(bundle.getString("GUI.dpair2L.text")); // NOI18N
+        dpair2L.setToolTipText(bundle.getString("GUI.dpair2L.toolTipText")); // NOI18N
 
         dpair3R.setText(bundle.getString("GUI.dpair3R.text")); // NOI18N
+        dpair3R.setToolTipText(bundle.getString("GUI.dpair3R.toolTipText")); // NOI18N
 
         dpair3L.setText(bundle.getString("GUI.dpair3L.text")); // NOI18N
+        dpair3L.setToolTipText(bundle.getString("GUI.dpair3L.toolTipText")); // NOI18N
 
         linesTacticsLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         linesTacticsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -930,10 +959,13 @@ public class GUI extends javax.swing.JFrame {
         timeLine1.setText(bundle.getString("GUI.timeLine1.text")); // NOI18N
 
         timeLine2.setText(bundle.getString("GUI.timeLine2.text")); // NOI18N
+        timeLine2.setToolTipText(bundle.getString("GUI.timeLine2.toolTipText")); // NOI18N
 
         timeLine3.setText(bundle.getString("GUI.timeLine3.text")); // NOI18N
+        timeLine3.setToolTipText(bundle.getString("GUI.timeLine3.toolTipText")); // NOI18N
 
         timeLine4.setText(bundle.getString("GUI.timeLine4.text")); // NOI18N
+        timeLine4.setToolTipText(bundle.getString("GUI.timeLine4.toolTipText")); // NOI18N
 
         buttonGroup1.add(proTeamButton);
         proTeamButton.setSelected(true);
@@ -1002,12 +1034,16 @@ public class GUI extends javax.swing.JFrame {
         TacticsPP2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Shooting", "Screen & Shoot", "Passing Plays", "Crash the Net", "Shot From Point" }));
 
         rwPK1.setText(bundle.getString("GUI.rwPK1.text")); // NOI18N
+        rwPK1.setToolTipText(bundle.getString("GUI.rwPK1.toolTipText")); // NOI18N
 
         dPairRPK1.setText(bundle.getString("GUI.dPairRPK1.text")); // NOI18N
+        dPairRPK1.setToolTipText(bundle.getString("GUI.dPairRPK1.toolTipText")); // NOI18N
 
         dpairLPK1.setText(bundle.getString("GUI.dpairLPK1.text")); // NOI18N
+        dpairLPK1.setToolTipText(bundle.getString("GUI.dpairLPK1.toolTipText")); // NOI18N
 
         lwPK1.setText(bundle.getString("GUI.lwPK1.text")); // NOI18N
+        lwPK1.setToolTipText(bundle.getString("GUI.lwPK1.toolTipText")); // NOI18N
 
         TacticsLine2.setMaximumRowCount(5);
         TacticsLine2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Run & Gun", "Passing Plays", "Dump & Chase", "Hit & Grind", "Neutral Zone Trap" }));
@@ -1031,12 +1067,16 @@ public class GUI extends javax.swing.JFrame {
         linesLabel2.setToolTipText(bundle.getString("GUI.linesLabel2.toolTipText")); // NOI18N
 
         dPairRPK2.setText(bundle.getString("GUI.dPairRPK2.text")); // NOI18N
+        dPairRPK2.setToolTipText(bundle.getString("GUI.dPairRPK2.toolTipText")); // NOI18N
 
         rwPK2.setText(bundle.getString("GUI.rwPK2.text")); // NOI18N
+        rwPK2.setToolTipText(bundle.getString("GUI.rwPK2.toolTipText")); // NOI18N
 
         lwPK2.setText(bundle.getString("GUI.lwPK2.text")); // NOI18N
+        lwPK2.setToolTipText(bundle.getString("GUI.lwPK2.toolTipText")); // NOI18N
 
         dpairLPK2.setText(bundle.getString("GUI.dpairLPK2.text")); // NOI18N
+        dpairLPK2.setToolTipText(bundle.getString("GUI.dpairLPK2.toolTipText")); // NOI18N
 
         linesLabel3.setFont(new java.awt.Font("Tahoma", 1, 11));
         linesLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1054,11 +1094,13 @@ public class GUI extends javax.swing.JFrame {
         TacticsPK1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Aggressive", "Loose Box", "Passive Box", "Small Box", "Tight Box" }));
 
         timePK1.setText(bundle.getString("GUI.timePK1.text")); // NOI18N
+        timePK1.setToolTipText(bundle.getString("GUI.timePK1.toolTipText")); // NOI18N
 
         TacticsPK2.setMaximumRowCount(5);
         TacticsPK2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Aggressive", "Loose Box", "Passive Box", "Small Box", "Tight Box" }));
 
         timePK2.setText(bundle.getString("GUI.timePK2.text")); // NOI18N
+        timePK2.setToolTipText(bundle.getString("GUI.timePK2.toolTipText")); // NOI18N
 
         linesLabel5.setFont(new java.awt.Font("Tahoma", 1, 11));
         linesLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1099,14 +1141,14 @@ public class GUI extends javax.swing.JFrame {
                                                 .addComponent(gListLabel))
                                             .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(proListLabelLayout.createSequentialGroup()
-                                                .addGap(4, 4, 4)
-                                                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, proListLabelLayout.createSequentialGroup()
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(linesLabel1)
-                                                .addGap(19, 19, 19))))
+                                                .addGap(19, 19, 19))
+                                            .addGroup(proListLabelLayout.createSequentialGroup()
+                                                .addGap(4, 4, 4)
+                                                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))))
                                     .addGroup(proListLabelLayout.createSequentialGroup()
                                         .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(linesLabel3)
@@ -1140,6 +1182,7 @@ public class GUI extends javax.swing.JFrame {
                                                 .addGap(118, 118, 118)
                                                 .addComponent(linesLabel))
                                             .addGroup(proListLabelLayout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(lwLine1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(cLine1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1382,22 +1425,21 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(dListLabel)
                             .addComponent(gListLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane9, javax.swing.GroupLayout.Alignment.TRAILING, 0, 0, Short.MAX_VALUE)
-                            .addComponent(jScrollPane8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                            .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)))
                     .addGroup(proListLabelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(linesLabel)
                             .addComponent(linesTacticsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lwLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(cLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(rwLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(timeLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(TacticsLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rwLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(timeLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TacticsLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lwLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(proListLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(dpair1L, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1498,7 +1540,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(gBackup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(linesLabel5)
                     .addComponent(createLinesButton))
-                .addGap(1293, 1293, 1293))
+                .addGap(1267, 1267, 1267))
         );
 
         playerTab.addTab(bundle.getString("GUI.proListLabel.TabConstraints.tabTitle"), proListLabel); // NOI18N
@@ -2196,6 +2238,15 @@ public class GUI extends javax.swing.JFrame {
         playerTab.addTab(bundle.getString("GUI.draftTab.TabConstraints.tabTitle"), draftTab); // NOI18N
 
         playerPanel.setMaximumSize(new java.awt.Dimension(15000, 15000));
+        playerPanel.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                playerPanelAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
         playerIcon.setText(bundle.getString("GUI.playerIcon.text")); // NOI18N
         playerIcon.setIconTextGap(2);
@@ -2228,6 +2279,11 @@ public class GUI extends javax.swing.JFrame {
         mainPOSI.setMaximumSize(new java.awt.Dimension(15, 25));
         mainPOSI.setMinimumSize(new java.awt.Dimension(15, 25));
         mainPOSI.setPreferredSize(new java.awt.Dimension(15, 25));
+        mainPOSI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mainPOSIActionPerformed(evt);
+            }
+        });
 
         altPOSI.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         altPOSI.setText(bundle.getString("GUI.altPOSI.text")); // NOI18N
@@ -2236,12 +2292,22 @@ public class GUI extends javax.swing.JFrame {
         altPOSI.setMaximumSize(new java.awt.Dimension(15, 25));
         altPOSI.setMinimumSize(new java.awt.Dimension(15, 25));
         altPOSI.setPreferredSize(new java.awt.Dimension(15, 25));
+        altPOSI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                altPOSIActionPerformed(evt);
+            }
+        });
 
         rightsField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         rightsField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         rightsField.setText(bundle.getString("GUI.rightsField.text")); // NOI18N
         rightsField.setToolTipText(bundle.getString("GUI.rightsField.toolTipText")); // NOI18N
         rightsField.setPreferredSize(new java.awt.Dimension(30, 20));
+        rightsField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rightsFieldActionPerformed(evt);
+            }
+        });
 
         rightsLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         rightsLabel.setLabelFor(rightsField);
@@ -2260,6 +2326,11 @@ public class GUI extends javax.swing.JFrame {
         draftYr.setMaximumSize(new java.awt.Dimension(25, 25));
         draftYr.setMinimumSize(new java.awt.Dimension(25, 25));
         draftYr.setPreferredSize(new java.awt.Dimension(25, 25));
+        draftYr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                draftYrActionPerformed(evt);
+            }
+        });
 
         draftRd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         draftRd.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2267,6 +2338,11 @@ public class GUI extends javax.swing.JFrame {
         draftRd.setToolTipText(bundle.getString("GUI.draftRd.toolTipText")); // NOI18N
         draftRd.setMaximumSize(new java.awt.Dimension(25, 25));
         draftRd.setMinimumSize(new java.awt.Dimension(25, 25));
+        draftRd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                draftRdActionPerformed(evt);
+            }
+        });
 
         draftPos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         draftPos.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2275,6 +2351,11 @@ public class GUI extends javax.swing.JFrame {
         draftPos.setMaximumSize(new java.awt.Dimension(25, 25));
         draftPos.setMinimumSize(new java.awt.Dimension(25, 25));
         draftPos.setPreferredSize(new java.awt.Dimension(25, 25));
+        draftPos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                draftPosActionPerformed(evt);
+            }
+        });
 
         draftTeam.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         draftTeam.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2282,6 +2363,11 @@ public class GUI extends javax.swing.JFrame {
         draftTeam.setToolTipText(bundle.getString("GUI.draftTeam.toolTipText")); // NOI18N
         draftTeam.setMaximumSize(new java.awt.Dimension(25, 25));
         draftTeam.setMinimumSize(new java.awt.Dimension(25, 25));
+        draftTeam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                draftTeamActionPerformed(evt);
+            }
+        });
 
         draftTeamLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         draftTeamLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2300,12 +2386,22 @@ public class GUI extends javax.swing.JFrame {
         salaryYr.setMaximumSize(new java.awt.Dimension(25, 25));
         salaryYr.setMinimumSize(new java.awt.Dimension(25, 25));
         salaryYr.setPreferredSize(new java.awt.Dimension(25, 25));
+        salaryYr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salaryYrActionPerformed(evt);
+            }
+        });
 
         salaryAmt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         salaryAmt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         salaryAmt.setText(bundle.getString("GUI.salaryAmt.text")); // NOI18N
         salaryAmt.setMaximumSize(new java.awt.Dimension(61, 25));
         salaryAmt.setMinimumSize(new java.awt.Dimension(25, 25));
+        salaryAmt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salaryAmtActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2336,6 +2432,11 @@ public class GUI extends javax.swing.JFrame {
         height.setToolTipText(bundle.getString("GUI.height.toolTipText")); // NOI18N
         height.setMaximumSize(new java.awt.Dimension(25, 25));
         height.setMinimumSize(new java.awt.Dimension(25, 25));
+        height.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                heightActionPerformed(evt);
+            }
+        });
 
         weightLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         weightLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2349,6 +2450,11 @@ public class GUI extends javax.swing.JFrame {
         weight.setToolTipText(bundle.getString("GUI.weight.toolTipText")); // NOI18N
         weight.setMaximumSize(new java.awt.Dimension(40, 25));
         weight.setMinimumSize(new java.awt.Dimension(40, 25));
+        weight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                weightActionPerformed(evt);
+            }
+        });
 
         ageLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         ageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2357,6 +2463,7 @@ public class GUI extends javax.swing.JFrame {
         ageLabel.setToolTipText(bundle.getString("GUI.ageLabel.toolTipText")); // NOI18N
 
         age.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        age.setEditable(false);
         age.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         age.setText(bundle.getString("GUI.age.text")); // NOI18N
         age.setToolTipText(bundle.getString("GUI.age.toolTipText")); // NOI18N
@@ -2369,6 +2476,11 @@ public class GUI extends javax.swing.JFrame {
         twoWay.setToolTipText(bundle.getString("GUI.twoWay.toolTipText")); // NOI18N
         twoWay.setMaximumSize(new java.awt.Dimension(25, 25));
         twoWay.setMinimumSize(new java.awt.Dimension(25, 25));
+        twoWay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                twoWayActionPerformed(evt);
+            }
+        });
 
         twoWayLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         twoWayLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2397,6 +2509,11 @@ public class GUI extends javax.swing.JFrame {
         hand.setMaximumSize(new java.awt.Dimension(25, 25));
         hand.setMinimumSize(new java.awt.Dimension(25, 25));
         hand.setPreferredSize(new java.awt.Dimension(7, 25));
+        hand.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                handActionPerformed(evt);
+            }
+        });
 
         handLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         handLabel.setLabelFor(hand);
@@ -2417,6 +2534,11 @@ public class GUI extends javax.swing.JFrame {
         click.setMaximumSize(new java.awt.Dimension(25, 25));
         click.setMinimumSize(new java.awt.Dimension(25, 25));
         click.setPreferredSize(new java.awt.Dimension(25, 25));
+        click.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clickActionPerformed(evt);
+            }
+        });
 
         shoLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
         shoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2584,6 +2706,11 @@ public class GUI extends javax.swing.JFrame {
         curSHO.setMaximumSize(new java.awt.Dimension(30, 25));
         curSHO.setMinimumSize(new java.awt.Dimension(30, 25));
         curSHO.setPreferredSize(new java.awt.Dimension(30, 25));
+        curSHO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                curSHOActionPerformed(evt);
+            }
+        });
 
         curPLA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curPLA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2592,6 +2719,11 @@ public class GUI extends javax.swing.JFrame {
         curPLA.setMaximumSize(new java.awt.Dimension(30, 25));
         curPLA.setMinimumSize(new java.awt.Dimension(30, 25));
         curPLA.setPreferredSize(new java.awt.Dimension(30, 25));
+        curPLA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                curPLAActionPerformed(evt);
+            }
+        });
 
         curSTK.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curSTK.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2600,6 +2732,11 @@ public class GUI extends javax.swing.JFrame {
         curSTK.setMaximumSize(new java.awt.Dimension(30, 25));
         curSTK.setMinimumSize(new java.awt.Dimension(30, 25));
         curSTK.setPreferredSize(new java.awt.Dimension(30, 25));
+        curSTK.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                curSTKActionPerformed(evt);
+            }
+        });
 
         curCHK.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curCHK.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2608,6 +2745,11 @@ public class GUI extends javax.swing.JFrame {
         curCHK.setMaximumSize(new java.awt.Dimension(30, 25));
         curCHK.setMinimumSize(new java.awt.Dimension(30, 25));
         curCHK.setPreferredSize(new java.awt.Dimension(30, 25));
+        curCHK.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                curCHKActionPerformed(evt);
+            }
+        });
 
         curPOS.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curPOS.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2616,6 +2758,11 @@ public class GUI extends javax.swing.JFrame {
         curPOS.setMaximumSize(new java.awt.Dimension(30, 25));
         curPOS.setMinimumSize(new java.awt.Dimension(30, 25));
         curPOS.setPreferredSize(new java.awt.Dimension(30, 25));
+        curPOS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                curPOSActionPerformed(evt);
+            }
+        });
 
         curHIT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curHIT.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2624,6 +2771,11 @@ public class GUI extends javax.swing.JFrame {
         curHIT.setMaximumSize(new java.awt.Dimension(30, 25));
         curHIT.setMinimumSize(new java.awt.Dimension(30, 25));
         curHIT.setPreferredSize(new java.awt.Dimension(30, 25));
+        curHIT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                curHITActionPerformed(evt);
+            }
+        });
 
         curSKA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curSKA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2632,6 +2784,11 @@ public class GUI extends javax.swing.JFrame {
         curSKA.setMaximumSize(new java.awt.Dimension(30, 25));
         curSKA.setMinimumSize(new java.awt.Dimension(30, 25));
         curSKA.setPreferredSize(new java.awt.Dimension(30, 25));
+        curSKA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                curSKAActionPerformed(evt);
+            }
+        });
 
         curEND.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curEND.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2640,6 +2797,11 @@ public class GUI extends javax.swing.JFrame {
         curEND.setMaximumSize(new java.awt.Dimension(30, 25));
         curEND.setMinimumSize(new java.awt.Dimension(30, 25));
         curEND.setPreferredSize(new java.awt.Dimension(30, 25));
+        curEND.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                curENDActionPerformed(evt);
+            }
+        });
 
         curPEN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curPEN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2648,6 +2810,11 @@ public class GUI extends javax.swing.JFrame {
         curPEN.setMaximumSize(new java.awt.Dimension(30, 25));
         curPEN.setMinimumSize(new java.awt.Dimension(30, 25));
         curPEN.setPreferredSize(new java.awt.Dimension(30, 25));
+        curPEN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                curPENActionPerformed(evt);
+            }
+        });
 
         curFAC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curFAC.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2656,6 +2823,11 @@ public class GUI extends javax.swing.JFrame {
         curFAC.setMaximumSize(new java.awt.Dimension(30, 25));
         curFAC.setMinimumSize(new java.awt.Dimension(30, 25));
         curFAC.setPreferredSize(new java.awt.Dimension(30, 25));
+        curFAC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                curFACActionPerformed(evt);
+            }
+        });
 
         curLEA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curLEA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2664,6 +2836,11 @@ public class GUI extends javax.swing.JFrame {
         curLEA.setMaximumSize(new java.awt.Dimension(30, 25));
         curLEA.setMinimumSize(new java.awt.Dimension(30, 25));
         curLEA.setPreferredSize(new java.awt.Dimension(30, 25));
+        curLEA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                curLEAActionPerformed(evt);
+            }
+        });
 
         curFIG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curFIG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2672,6 +2849,11 @@ public class GUI extends javax.swing.JFrame {
         curFIG.setMaximumSize(new java.awt.Dimension(30, 25));
         curFIG.setMinimumSize(new java.awt.Dimension(30, 25));
         curFIG.setPreferredSize(new java.awt.Dimension(30, 25));
+        curFIG.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                curFIGActionPerformed(evt);
+            }
+        });
 
         curSTR.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         curSTR.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2680,6 +2862,11 @@ public class GUI extends javax.swing.JFrame {
         curSTR.setMaximumSize(new java.awt.Dimension(30, 25));
         curSTR.setMinimumSize(new java.awt.Dimension(30, 25));
         curSTR.setPreferredSize(new java.awt.Dimension(30, 25));
+        curSTR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                curSTRActionPerformed(evt);
+            }
+        });
 
         POT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         POT.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2688,6 +2875,11 @@ public class GUI extends javax.swing.JFrame {
         POT.setMaximumSize(new java.awt.Dimension(30, 25));
         POT.setMinimumSize(new java.awt.Dimension(30, 25));
         POT.setPreferredSize(new java.awt.Dimension(30, 25));
+        POT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                POTActionPerformed(evt);
+            }
+        });
 
         CON.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         CON.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2696,6 +2888,11 @@ public class GUI extends javax.swing.JFrame {
         CON.setMaximumSize(new java.awt.Dimension(30, 25));
         CON.setMinimumSize(new java.awt.Dimension(30, 25));
         CON.setPreferredSize(new java.awt.Dimension(30, 25));
+        CON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CONActionPerformed(evt);
+            }
+        });
 
         GRD.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         GRD.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2704,6 +2901,11 @@ public class GUI extends javax.swing.JFrame {
         GRD.setMaximumSize(new java.awt.Dimension(30, 25));
         GRD.setMinimumSize(new java.awt.Dimension(30, 25));
         GRD.setPreferredSize(new java.awt.Dimension(30, 25));
+        GRD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GRDActionPerformed(evt);
+            }
+        });
 
         INJ.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         INJ.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2755,6 +2957,11 @@ public class GUI extends javax.swing.JFrame {
         salaryAmtConsidering.setToolTipText(bundle.getString("GUI.salaryAmtConsidering.toolTipText")); // NOI18N
         salaryAmtConsidering.setMaximumSize(new java.awt.Dimension(61, 25));
         salaryAmtConsidering.setMinimumSize(new java.awt.Dimension(25, 25));
+        salaryAmtConsidering.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salaryAmtConsideringActionPerformed(evt);
+            }
+        });
 
         salaryYrConsidering.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         salaryYrConsidering.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2763,6 +2970,11 @@ public class GUI extends javax.swing.JFrame {
         salaryYrConsidering.setMaximumSize(new java.awt.Dimension(25, 25));
         salaryYrConsidering.setMinimumSize(new java.awt.Dimension(25, 25));
         salaryYrConsidering.setPreferredSize(new java.awt.Dimension(25, 25));
+        salaryYrConsidering.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salaryYrConsideringActionPerformed(evt);
+            }
+        });
 
         salaryYrLabelConsidering.setFont(new java.awt.Font("Tahoma", 1, 11));
         salaryYrLabelConsidering.setLabelFor(salaryYrConsidering);
@@ -2796,6 +3008,11 @@ public class GUI extends javax.swing.JFrame {
         ceilSHO.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSHO.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSHO.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilSHO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilSHOActionPerformed(evt);
+            }
+        });
 
         ceilPLA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilPLA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2804,6 +3021,11 @@ public class GUI extends javax.swing.JFrame {
         ceilPLA.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilPLA.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilPLA.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilPLA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilPLAActionPerformed(evt);
+            }
+        });
 
         ceilSTK.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilSTK.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2812,6 +3034,11 @@ public class GUI extends javax.swing.JFrame {
         ceilSTK.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSTK.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSTK.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilSTK.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilSTKActionPerformed(evt);
+            }
+        });
 
         ceilCHK.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilCHK.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2820,6 +3047,11 @@ public class GUI extends javax.swing.JFrame {
         ceilCHK.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilCHK.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilCHK.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilCHK.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilCHKActionPerformed(evt);
+            }
+        });
 
         ceilPOS.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilPOS.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2828,6 +3060,11 @@ public class GUI extends javax.swing.JFrame {
         ceilPOS.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilPOS.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilPOS.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilPOS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilPOSActionPerformed(evt);
+            }
+        });
 
         ceilHIT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilHIT.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2836,6 +3073,11 @@ public class GUI extends javax.swing.JFrame {
         ceilHIT.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilHIT.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilHIT.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilHIT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilHITActionPerformed(evt);
+            }
+        });
 
         ceilSKA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilSKA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2844,6 +3086,11 @@ public class GUI extends javax.swing.JFrame {
         ceilSKA.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSKA.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSKA.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilSKA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilSKAActionPerformed(evt);
+            }
+        });
 
         ceilEND.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilEND.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2852,6 +3099,11 @@ public class GUI extends javax.swing.JFrame {
         ceilEND.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilEND.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilEND.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilEND.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilENDActionPerformed(evt);
+            }
+        });
 
         ceilPEN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilPEN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2860,6 +3112,11 @@ public class GUI extends javax.swing.JFrame {
         ceilPEN.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilPEN.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilPEN.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilPEN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilPENActionPerformed(evt);
+            }
+        });
 
         ceilFAC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilFAC.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2868,6 +3125,11 @@ public class GUI extends javax.swing.JFrame {
         ceilFAC.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilFAC.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilFAC.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilFAC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilFACActionPerformed(evt);
+            }
+        });
 
         ceilLEA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilLEA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2876,6 +3138,11 @@ public class GUI extends javax.swing.JFrame {
         ceilLEA.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilLEA.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilLEA.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilLEA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilLEAActionPerformed(evt);
+            }
+        });
 
         ceilFIG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilFIG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2884,6 +3151,11 @@ public class GUI extends javax.swing.JFrame {
         ceilFIG.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilFIG.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilFIG.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilFIG.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilFIGActionPerformed(evt);
+            }
+        });
 
         ceilSTR.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ceilSTR.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2892,110 +3164,193 @@ public class GUI extends javax.swing.JFrame {
         ceilSTR.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSTR.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSTR.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilSTR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilSTRActionPerformed(evt);
+            }
+        });
 
         ceilSHO1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ceilSHO1.setEditable(false);
         ceilSHO1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ceilSHO1.setText(bundle.getString("GUI.ceilSHO1.text")); // NOI18N
         ceilSHO1.setToolTipText(bundle.getString("GUI.ceilSHO1.toolTipText")); // NOI18N
         ceilSHO1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSHO1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSHO1.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilSHO1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilSHO1ActionPerformed(evt);
+            }
+        });
 
         ceilPLA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ceilPLA1.setEditable(false);
         ceilPLA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ceilPLA1.setText(bundle.getString("GUI.ceilPLA1.text")); // NOI18N
         ceilPLA1.setToolTipText(bundle.getString("GUI.ceilPLA1.toolTipText")); // NOI18N
         ceilPLA1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilPLA1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilPLA1.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilPLA1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilPLA1ActionPerformed(evt);
+            }
+        });
 
         ceilSTK1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ceilSTK1.setEditable(false);
         ceilSTK1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ceilSTK1.setText(bundle.getString("GUI.ceilSTK1.text")); // NOI18N
         ceilSTK1.setToolTipText(bundle.getString("GUI.ceilSTK1.toolTipText")); // NOI18N
         ceilSTK1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSTK1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSTK1.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilSTK1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilSTK1ActionPerformed(evt);
+            }
+        });
 
         ceilCHK1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ceilCHK1.setEditable(false);
         ceilCHK1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ceilCHK1.setText(bundle.getString("GUI.ceilCHK1.text")); // NOI18N
         ceilCHK1.setToolTipText(bundle.getString("GUI.ceilCHK1.toolTipText")); // NOI18N
         ceilCHK1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilCHK1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilCHK1.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilCHK1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilCHK1ActionPerformed(evt);
+            }
+        });
 
         ceilPOS1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ceilPOS1.setEditable(false);
         ceilPOS1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ceilPOS1.setText(bundle.getString("GUI.ceilPOS1.text")); // NOI18N
         ceilPOS1.setToolTipText(bundle.getString("GUI.ceilPOS1.toolTipText")); // NOI18N
         ceilPOS1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilPOS1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilPOS1.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilPOS1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilPOS1ActionPerformed(evt);
+            }
+        });
 
         ceilHIT1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ceilHIT1.setEditable(false);
         ceilHIT1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ceilHIT1.setText(bundle.getString("GUI.ceilHIT1.text")); // NOI18N
         ceilHIT1.setToolTipText(bundle.getString("GUI.ceilHIT1.toolTipText")); // NOI18N
         ceilHIT1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilHIT1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilHIT1.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilHIT1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilHIT1ActionPerformed(evt);
+            }
+        });
 
         ceilSKA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ceilSKA1.setEditable(false);
         ceilSKA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ceilSKA1.setText(bundle.getString("GUI.ceilSKA1.text")); // NOI18N
         ceilSKA1.setToolTipText(bundle.getString("GUI.ceilSKA1.toolTipText")); // NOI18N
         ceilSKA1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSKA1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSKA1.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilSKA1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilSKA1ActionPerformed(evt);
+            }
+        });
 
         ceilEND1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ceilEND1.setEditable(false);
         ceilEND1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ceilEND1.setText(bundle.getString("GUI.ceilEND1.text")); // NOI18N
         ceilEND1.setToolTipText(bundle.getString("GUI.ceilEND1.toolTipText")); // NOI18N
         ceilEND1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilEND1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilEND1.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilEND1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilEND1ActionPerformed(evt);
+            }
+        });
 
         ceilPEN1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ceilPEN1.setEditable(false);
         ceilPEN1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ceilPEN1.setText(bundle.getString("GUI.ceilPEN1.text")); // NOI18N
         ceilPEN1.setToolTipText(bundle.getString("GUI.ceilPEN1.toolTipText")); // NOI18N
         ceilPEN1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilPEN1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilPEN1.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilPEN1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilPEN1ActionPerformed(evt);
+            }
+        });
 
         ceilFAC1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ceilFAC1.setEditable(false);
         ceilFAC1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ceilFAC1.setText(bundle.getString("GUI.ceilFAC1.text")); // NOI18N
         ceilFAC1.setToolTipText(bundle.getString("GUI.ceilFAC1.toolTipText")); // NOI18N
         ceilFAC1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilFAC1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilFAC1.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilFAC1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilFAC1ActionPerformed(evt);
+            }
+        });
 
         ceilLEA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ceilLEA1.setEditable(false);
         ceilLEA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ceilLEA1.setText(bundle.getString("GUI.ceilLEA1.text")); // NOI18N
         ceilLEA1.setToolTipText(bundle.getString("GUI.ceilLEA1.toolTipText")); // NOI18N
         ceilLEA1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilLEA1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilLEA1.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilLEA1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilLEA1ActionPerformed(evt);
+            }
+        });
 
         ceilFIG1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ceilFIG1.setEditable(false);
         ceilFIG1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ceilFIG1.setText(bundle.getString("GUI.ceilFIG1.text")); // NOI18N
         ceilFIG1.setToolTipText(bundle.getString("GUI.ceilFIG1.toolTipText")); // NOI18N
         ceilFIG1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilFIG1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilFIG1.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilFIG1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilFIG1ActionPerformed(evt);
+            }
+        });
 
         ceilSTR1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ceilSTR1.setEditable(false);
         ceilSTR1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ceilSTR1.setText(bundle.getString("GUI.ceilSTR1.text")); // NOI18N
         ceilSTR1.setToolTipText(bundle.getString("GUI.ceilSTR1.toolTipText")); // NOI18N
         ceilSTR1.setMaximumSize(new java.awt.Dimension(30, 25));
         ceilSTR1.setMinimumSize(new java.awt.Dimension(30, 25));
         ceilSTR1.setPreferredSize(new java.awt.Dimension(30, 25));
+        ceilSTR1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceilSTR1ActionPerformed(evt);
+            }
+        });
 
         ceilingLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
         ceilingLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -3005,6 +3360,7 @@ public class GUI extends javax.swing.JFrame {
         ceilingLabel1.setMinimumSize(new java.awt.Dimension(30, 25));
 
         projOF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projOF.setEditable(false);
         projOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projOF.setText(bundle.getString("GUI.projOF.text")); // NOI18N
         projOF.setToolTipText(bundle.getString("GUI.projOF.toolTipText")); // NOI18N
@@ -3013,6 +3369,7 @@ public class GUI extends javax.swing.JFrame {
         projOF.setPreferredSize(new java.awt.Dimension(30, 25));
 
         projDF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projDF.setEditable(false);
         projDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projDF.setText(bundle.getString("GUI.projDF.text")); // NOI18N
         projDF.setToolTipText(bundle.getString("GUI.projDF.toolTipText")); // NOI18N
@@ -3021,6 +3378,7 @@ public class GUI extends javax.swing.JFrame {
         projDF.setPreferredSize(new java.awt.Dimension(30, 25));
 
         projOA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projOA.setEditable(false);
         projOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projOA.setText(bundle.getString("GUI.projOA.text")); // NOI18N
         projOA.setToolTipText(bundle.getString("GUI.projOA.toolTipText")); // NOI18N
@@ -3034,6 +3392,7 @@ public class GUI extends javax.swing.JFrame {
         });
 
         trainOF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        trainOF.setEditable(false);
         trainOF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         trainOF.setText(bundle.getString("GUI.trainOF.text")); // NOI18N
         trainOF.setToolTipText(bundle.getString("GUI.trainOF.toolTipText")); // NOI18N
@@ -3042,6 +3401,7 @@ public class GUI extends javax.swing.JFrame {
         trainOF.setPreferredSize(new java.awt.Dimension(30, 25));
 
         trainDF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        trainDF.setEditable(false);
         trainDF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         trainDF.setText(bundle.getString("GUI.trainDF.text")); // NOI18N
         trainDF.setToolTipText(bundle.getString("GUI.trainDF.toolTipText")); // NOI18N
@@ -3050,6 +3410,7 @@ public class GUI extends javax.swing.JFrame {
         trainDF.setPreferredSize(new java.awt.Dimension(30, 25));
 
         trainOA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        trainOA.setEditable(false);
         trainOA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         trainOA.setText(bundle.getString("GUI.trainOA.text")); // NOI18N
         trainOA.setToolTipText(bundle.getString("GUI.trainOA.toolTipText")); // NOI18N
@@ -3070,6 +3431,7 @@ public class GUI extends javax.swing.JFrame {
         ceilingLabel2.setMinimumSize(new java.awt.Dimension(30, 25));
 
         farmOF1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        farmOF1.setEditable(false);
         farmOF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         farmOF1.setText(bundle.getString("GUI.farmOF1.text")); // NOI18N
         farmOF1.setToolTipText(bundle.getString("GUI.farmOF1.toolTipText")); // NOI18N
@@ -3078,6 +3440,7 @@ public class GUI extends javax.swing.JFrame {
         farmOF1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         farmDF1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        farmDF1.setEditable(false);
         farmDF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         farmDF1.setText(bundle.getString("GUI.farmDF1.text")); // NOI18N
         farmDF1.setToolTipText(bundle.getString("GUI.farmDF1.toolTipText")); // NOI18N
@@ -3086,6 +3449,7 @@ public class GUI extends javax.swing.JFrame {
         farmDF1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         farmOA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        farmOA1.setEditable(false);
         farmOA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         farmOA1.setText(bundle.getString("GUI.farmOA1.text")); // NOI18N
         farmOA1.setToolTipText(bundle.getString("GUI.farmOA1.toolTipText")); // NOI18N
@@ -3112,6 +3476,11 @@ public class GUI extends javax.swing.JFrame {
         status.setMaximumSize(new java.awt.Dimension(25, 25));
         status.setMinimumSize(new java.awt.Dimension(25, 25));
         status.setPreferredSize(new java.awt.Dimension(7, 25));
+        status.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statusActionPerformed(evt);
+            }
+        });
 
         statusLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         statusLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -3139,7 +3508,7 @@ public class GUI extends javax.swing.JFrame {
         weeklyLabel.setFont(new java.awt.Font("Tahoma", 1, 11));
         weeklyLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         weeklyLabel.setText(bundle.getString("GUI.weeklyLabel.text")); // NOI18N
-        weeklyLabel.setToolTipText(bundle.getString("GUI.weeklyLabel.toolTipText")); // NOI18N
+        weeklyLabel.setToolTipText(bundle.getString("GUI.weeklyLabel4.toolTipText")); // NOI18N
         weeklyLabel.setMaximumSize(new java.awt.Dimension(30, 25));
         weeklyLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
@@ -3179,6 +3548,7 @@ public class GUI extends javax.swing.JFrame {
         gwgLabel.setMinimumSize(new java.awt.Dimension(30, 25));
 
         wGP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        wGP.setEditable(false);
         wGP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         wGP.setText(bundle.getString("GUI.wGP.text")); // NOI18N
         wGP.setToolTipText(bundle.getString("GUI.wGP.toolTipText")); // NOI18N
@@ -3187,6 +3557,7 @@ public class GUI extends javax.swing.JFrame {
         wGP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         wG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        wG.setEditable(false);
         wG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         wG.setText(bundle.getString("GUI.wG.text")); // NOI18N
         wG.setToolTipText(bundle.getString("GUI.wG.toolTipText")); // NOI18N
@@ -3195,6 +3566,7 @@ public class GUI extends javax.swing.JFrame {
         wG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         wA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        wA.setEditable(false);
         wA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         wA.setText(bundle.getString("GUI.wA.text")); // NOI18N
         wA.setToolTipText(bundle.getString("GUI.wA.toolTipText")); // NOI18N
@@ -3203,6 +3575,7 @@ public class GUI extends javax.swing.JFrame {
         wA.setPreferredSize(new java.awt.Dimension(30, 25));
 
         wP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        wP.setEditable(false);
         wP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         wP.setText(bundle.getString("GUI.wP.text")); // NOI18N
         wP.setToolTipText(bundle.getString("GUI.wP.toolTipText")); // NOI18N
@@ -3211,6 +3584,7 @@ public class GUI extends javax.swing.JFrame {
         wP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         wGWG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        wGWG.setEditable(false);
         wGWG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         wGWG.setText(bundle.getString("GUI.wGWG.text")); // NOI18N
         wGWG.setToolTipText(bundle.getString("GUI.wGWG.toolTipText")); // NOI18N
@@ -3221,11 +3595,12 @@ public class GUI extends javax.swing.JFrame {
         weeklyLabel1.setFont(new java.awt.Font("Tahoma", 1, 11));
         weeklyLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         weeklyLabel1.setText(bundle.getString("GUI.weeklyLabel1.text")); // NOI18N
-        weeklyLabel1.setToolTipText(bundle.getString("GUI.weeklyLabel1.toolTipText")); // NOI18N
+        weeklyLabel1.setToolTipText(bundle.getString("GUI.weeklyLabel4.toolTipText")); // NOI18N
         weeklyLabel1.setMaximumSize(new java.awt.Dimension(30, 25));
         weeklyLabel1.setMinimumSize(new java.awt.Dimension(30, 25));
 
         mGP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        mGP.setEditable(false);
         mGP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         mGP.setText(bundle.getString("GUI.mGP.text")); // NOI18N
         mGP.setToolTipText(bundle.getString("GUI.mGP.toolTipText")); // NOI18N
@@ -3234,6 +3609,7 @@ public class GUI extends javax.swing.JFrame {
         mGP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         mG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        mG.setEditable(false);
         mG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         mG.setText(bundle.getString("GUI.mG.text")); // NOI18N
         mG.setToolTipText(bundle.getString("GUI.mG.toolTipText")); // NOI18N
@@ -3242,6 +3618,7 @@ public class GUI extends javax.swing.JFrame {
         mG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         mA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        mA.setEditable(false);
         mA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         mA.setText(bundle.getString("GUI.mA.text")); // NOI18N
         mA.setToolTipText(bundle.getString("GUI.mA.toolTipText")); // NOI18N
@@ -3250,6 +3627,7 @@ public class GUI extends javax.swing.JFrame {
         mA.setPreferredSize(new java.awt.Dimension(30, 25));
 
         mP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        mP.setEditable(false);
         mP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         mP.setText(bundle.getString("GUI.mP.text")); // NOI18N
         mP.setToolTipText(bundle.getString("GUI.mP.toolTipText")); // NOI18N
@@ -3258,6 +3636,7 @@ public class GUI extends javax.swing.JFrame {
         mP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         mGWG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        mGWG.setEditable(false);
         mGWG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         mGWG.setText(bundle.getString("GUI.mGWG.text")); // NOI18N
         mGWG.setToolTipText(bundle.getString("GUI.mGWG.toolTipText")); // NOI18N
@@ -3268,11 +3647,12 @@ public class GUI extends javax.swing.JFrame {
         weeklyLabel2.setFont(new java.awt.Font("Tahoma", 1, 11));
         weeklyLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         weeklyLabel2.setText(bundle.getString("GUI.weeklyLabel2.text")); // NOI18N
-        weeklyLabel2.setToolTipText(bundle.getString("GUI.weeklyLabel2.toolTipText")); // NOI18N
+        weeklyLabel2.setToolTipText(bundle.getString("GUI.weeklyLabel4.toolTipText")); // NOI18N
         weeklyLabel2.setMaximumSize(new java.awt.Dimension(30, 25));
         weeklyLabel2.setMinimumSize(new java.awt.Dimension(30, 25));
 
         curStreakGP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curStreakGP.setEditable(false);
         curStreakGP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curStreakGP.setText(bundle.getString("GUI.curStreakGP.text")); // NOI18N
         curStreakGP.setToolTipText(bundle.getString("GUI.curStreakGP.toolTipText")); // NOI18N
@@ -3281,6 +3661,7 @@ public class GUI extends javax.swing.JFrame {
         curStreakGP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curStreakG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curStreakG.setEditable(false);
         curStreakG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curStreakG.setText(bundle.getString("GUI.curStreakG.text")); // NOI18N
         curStreakG.setToolTipText(bundle.getString("GUI.curStreakG.toolTipText")); // NOI18N
@@ -3289,6 +3670,7 @@ public class GUI extends javax.swing.JFrame {
         curStreakG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curStreakP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curStreakP.setEditable(false);
         curStreakP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curStreakP.setText(bundle.getString("GUI.curStreakP.text")); // NOI18N
         curStreakP.setToolTipText(bundle.getString("GUI.curStreakP.toolTipText")); // NOI18N
@@ -3299,11 +3681,12 @@ public class GUI extends javax.swing.JFrame {
         weeklyLabel3.setFont(new java.awt.Font("Tahoma", 1, 11));
         weeklyLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         weeklyLabel3.setText(bundle.getString("GUI.weeklyLabel3.text")); // NOI18N
-        weeklyLabel3.setToolTipText(bundle.getString("GUI.weeklyLabel3.toolTipText")); // NOI18N
+        weeklyLabel3.setToolTipText(bundle.getString("GUI.weeklyLabel4.toolTipText")); // NOI18N
         weeklyLabel3.setMaximumSize(new java.awt.Dimension(30, 25));
         weeklyLabel3.setMinimumSize(new java.awt.Dimension(30, 25));
 
         bStreakGP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        bStreakGP.setEditable(false);
         bStreakGP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         bStreakGP.setText(bundle.getString("GUI.bStreakGP.text")); // NOI18N
         bStreakGP.setToolTipText(bundle.getString("GUI.bStreakGP.toolTipText")); // NOI18N
@@ -3312,6 +3695,7 @@ public class GUI extends javax.swing.JFrame {
         bStreakGP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         bStreakG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        bStreakG.setEditable(false);
         bStreakG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         bStreakG.setText(bundle.getString("GUI.bStreakG.text")); // NOI18N
         bStreakG.setToolTipText(bundle.getString("GUI.bStreakG.toolTipText")); // NOI18N
@@ -3320,6 +3704,7 @@ public class GUI extends javax.swing.JFrame {
         bStreakG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         bStreakA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        bStreakA.setEditable(false);
         bStreakA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         bStreakA.setText(bundle.getString("GUI.bStreakA.text")); // NOI18N
         bStreakA.setToolTipText(bundle.getString("GUI.bStreakA.toolTipText")); // NOI18N
@@ -3328,6 +3713,7 @@ public class GUI extends javax.swing.JFrame {
         bStreakA.setPreferredSize(new java.awt.Dimension(30, 25));
 
         bStreakP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        bStreakP.setEditable(false);
         bStreakP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         bStreakP.setText(bundle.getString("GUI.bStreakP.text")); // NOI18N
         bStreakP.setToolTipText(bundle.getString("GUI.bStreakP.toolTipText")); // NOI18N
@@ -3336,6 +3722,7 @@ public class GUI extends javax.swing.JFrame {
         bStreakP.setPreferredSize(new java.awt.Dimension(30, 25));
 
         bStreakGWG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        bStreakGWG.setEditable(false);
         bStreakGWG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         bStreakGWG.setText(bundle.getString("GUI.bStreakGWG.text")); // NOI18N
         bStreakGWG.setToolTipText(bundle.getString("GUI.bStreakGWG.toolTipText")); // NOI18N
@@ -3344,6 +3731,7 @@ public class GUI extends javax.swing.JFrame {
         bStreakGWG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         careerG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        careerG.setEditable(false);
         careerG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         careerG.setText(bundle.getString("GUI.careerG.text")); // NOI18N
         careerG.setToolTipText(bundle.getString("GUI.careerG.toolTipText")); // NOI18N
@@ -3352,6 +3740,7 @@ public class GUI extends javax.swing.JFrame {
         careerG.setPreferredSize(new java.awt.Dimension(30, 25));
 
         careerA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        careerA.setEditable(false);
         careerA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         careerA.setText(bundle.getString("GUI.careerA.text")); // NOI18N
         careerA.setToolTipText(bundle.getString("GUI.careerA.toolTipText")); // NOI18N
@@ -3360,6 +3749,7 @@ public class GUI extends javax.swing.JFrame {
         careerA.setPreferredSize(new java.awt.Dimension(30, 25));
 
         careerP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        careerP.setEditable(false);
         careerP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         careerP.setText(bundle.getString("GUI.careerP.text")); // NOI18N
         careerP.setToolTipText(bundle.getString("GUI.careerP.toolTipText")); // NOI18N
@@ -3383,6 +3773,18 @@ public class GUI extends javax.swing.JFrame {
 
         playerID.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         playerID.setText(bundle.getString("GUI.playerID.text")); // NOI18N
+
+        playerTypeP1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        playerTypeP1.setEditable(false);
+        playerTypeP1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        playerTypeP1.setText(bundle.getString("GUI.playerTypeP1.text")); // NOI18N
+        playerTypeP1.setToolTipText(bundle.getString("GUI.playerTypeP1.toolTipText")); // NOI18N
+
+        playerTypeP2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        playerTypeP2.setEditable(false);
+        playerTypeP2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        playerTypeP2.setText(bundle.getString("GUI.playerTypeP2.text")); // NOI18N
+        playerTypeP2.setToolTipText(bundle.getString("GUI.playerTypeP2.toolTipText")); // NOI18N
 
         javax.swing.GroupLayout playerPanelLayout = new javax.swing.GroupLayout(playerPanel);
         playerPanel.setLayout(playerPanelLayout);
@@ -3551,25 +3953,29 @@ public class GUI extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(hand, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(handLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(handLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(playerPanelLayout.createSequentialGroup()
+                                        .addComponent(searchPlayer)
+                                        .addGap(33, 33, 33)
+                                        .addComponent(playerTypeP1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(playerPanelLayout.createSequentialGroup()
-                                                .addComponent(click, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addGroup(playerPanelLayout.createSequentialGroup()
-                                                    .addComponent(mainPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(altPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(playerPanelLayout.createSequentialGroup()
-                                                    .addComponent(clickLabel)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(statusLabel))))
-                                        .addGap(18, 18, 18))
-                                    .addComponent(searchPlayer))
-                                .addGap(56, 56, 56))
+                                        .addComponent(playerTypeP2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(playerPanelLayout.createSequentialGroup()
+                                        .addComponent(click, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(playerPanelLayout.createSequentialGroup()
+                                            .addComponent(mainPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(altPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(playerPanelLayout.createSequentialGroup()
+                                            .addComponent(clickLabel)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(statusLabel))))
+                                .addGap(74, 74, 74))
                             .addGroup(playerPanelLayout.createSequentialGroup()
                                 .addComponent(chkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3710,11 +4116,11 @@ public class GUI extends javax.swing.JFrame {
                                                 .addGap(252, 252, 252)
                                                 .addComponent(ceilLEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(playerPanelLayout.createSequentialGroup()
-                                                .addGap(288, 288, 288)
-                                                .addComponent(ceilFIG1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(playerPanelLayout.createSequentialGroup()
                                                 .addGap(324, 324, 324)
-                                                .addComponent(ceilSTR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(ceilSTR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(playerPanelLayout.createSequentialGroup()
+                                                .addGap(288, 288, 288)
+                                                .addComponent(ceilFIG1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, playerPanelLayout.createSequentialGroup()
                                             .addComponent(curStreakP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -3779,7 +4185,9 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(searchPlayer)
                             .addComponent(mainPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(altPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(altPOSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(playerTypeP1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(playerTypeP2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rightsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4084,6 +4492,7 @@ public class GUI extends javax.swing.JFrame {
         chkLabel1.setMinimumSize(new java.awt.Dimension(30, 25));
 
         projSTR1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projSTR1.setEditable(false);
         projSTR1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projSTR1.setText(bundle.getString("GUI.projSTR1.text")); // NOI18N
         projSTR1.setToolTipText(bundle.getString("GUI.projSTR1.toolTipText")); // NOI18N
@@ -4092,6 +4501,7 @@ public class GUI extends javax.swing.JFrame {
         projSTR1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         projFIG1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projFIG1.setEditable(false);
         projFIG1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projFIG1.setText(bundle.getString("GUI.projFIG1.text")); // NOI18N
         projFIG1.setToolTipText(bundle.getString("GUI.projFIG1.toolTipText")); // NOI18N
@@ -4100,6 +4510,7 @@ public class GUI extends javax.swing.JFrame {
         projFIG1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         projFAC1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projFAC1.setEditable(false);
         projFAC1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projFAC1.setText(bundle.getString("GUI.projFAC1.text")); // NOI18N
         projFAC1.setToolTipText(bundle.getString("GUI.projFAC1.toolTipText")); // NOI18N
@@ -4108,6 +4519,7 @@ public class GUI extends javax.swing.JFrame {
         projFAC1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         projSKA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projSKA1.setEditable(false);
         projSKA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projSKA1.setText(bundle.getString("GUI.projSKA1.text")); // NOI18N
         projSKA1.setToolTipText(bundle.getString("GUI.projSKA1.toolTipText")); // NOI18N
@@ -4116,6 +4528,7 @@ public class GUI extends javax.swing.JFrame {
         projSKA1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         projHIT1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projHIT1.setEditable(false);
         projHIT1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projHIT1.setText(bundle.getString("GUI.projHIT1.text")); // NOI18N
         projHIT1.setToolTipText(bundle.getString("GUI.projHIT1.toolTipText")); // NOI18N
@@ -4124,6 +4537,7 @@ public class GUI extends javax.swing.JFrame {
         projHIT1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         projSTK1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projSTK1.setEditable(false);
         projSTK1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projSTK1.setText(bundle.getString("GUI.projSTK1.text")); // NOI18N
         projSTK1.setToolTipText(bundle.getString("GUI.projSTK1.toolTipText")); // NOI18N
@@ -4132,6 +4546,7 @@ public class GUI extends javax.swing.JFrame {
         projSTK1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         projPOS1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projPOS1.setEditable(false);
         projPOS1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projPOS1.setText(bundle.getString("GUI.projPOS1.text")); // NOI18N
         projPOS1.setToolTipText(bundle.getString("GUI.projPOS1.toolTipText")); // NOI18N
@@ -4140,6 +4555,7 @@ public class GUI extends javax.swing.JFrame {
         projPOS1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         projCHK1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projCHK1.setEditable(false);
         projCHK1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projCHK1.setText(bundle.getString("GUI.projCHK1.text")); // NOI18N
         projCHK1.setToolTipText(bundle.getString("GUI.projCHK1.toolTipText")); // NOI18N
@@ -4148,6 +4564,7 @@ public class GUI extends javax.swing.JFrame {
         projCHK1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         projPLA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projPLA1.setEditable(false);
         projPLA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projPLA1.setText(bundle.getString("GUI.projPLA1.text")); // NOI18N
         projPLA1.setToolTipText(bundle.getString("GUI.projPLA1.toolTipText")); // NOI18N
@@ -4156,6 +4573,7 @@ public class GUI extends javax.swing.JFrame {
         projPLA1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         projSHO1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projSHO1.setEditable(false);
         projSHO1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projSHO1.setText(bundle.getString("GUI.projSHO1.text")); // NOI18N
         projSHO1.setToolTipText(bundle.getString("GUI.projSHO1.toolTipText")); // NOI18N
@@ -4171,6 +4589,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel10.setMinimumSize(new java.awt.Dimension(30, 25));
 
         projDF1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projDF1.setEditable(false);
         projDF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projDF1.setText(bundle.getString("GUI.projDF1.text")); // NOI18N
         projDF1.setToolTipText(bundle.getString("GUI.projDF1.toolTipText")); // NOI18N
@@ -4186,6 +4605,7 @@ public class GUI extends javax.swing.JFrame {
         ceilingLabel4.setMinimumSize(new java.awt.Dimension(30, 25));
 
         projOF1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projOF1.setEditable(false);
         projOF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projOF1.setText(bundle.getString("GUI.projOF1.text")); // NOI18N
         projOF1.setToolTipText(bundle.getString("GUI.projOF1.toolTipText")); // NOI18N
@@ -4194,6 +4614,7 @@ public class GUI extends javax.swing.JFrame {
         projOF1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curLEA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curLEA1.setEditable(false);
         curLEA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curLEA1.setText(bundle.getString("GUI.curLEA1.text")); // NOI18N
         curLEA1.setToolTipText(bundle.getString("GUI.curLEA1.toolTipText")); // NOI18N
@@ -4202,6 +4623,7 @@ public class GUI extends javax.swing.JFrame {
         curLEA1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curFAC1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curFAC1.setEditable(false);
         curFAC1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curFAC1.setText(bundle.getString("GUI.curFAC1.text")); // NOI18N
         curFAC1.setToolTipText(bundle.getString("GUI.curFAC1.toolTipText")); // NOI18N
@@ -4217,6 +4639,7 @@ public class GUI extends javax.swing.JFrame {
         shoLabel2.setMinimumSize(new java.awt.Dimension(30, 25));
 
         curSTR1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curSTR1.setEditable(false);
         curSTR1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curSTR1.setText(bundle.getString("GUI.curSTR1.text")); // NOI18N
         curSTR1.setToolTipText(bundle.getString("GUI.curSTR1.toolTipText")); // NOI18N
@@ -4225,6 +4648,7 @@ public class GUI extends javax.swing.JFrame {
         curSTR1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curFIG1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curFIG1.setEditable(false);
         curFIG1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curFIG1.setText(bundle.getString("GUI.curFIG1.text")); // NOI18N
         curFIG1.setToolTipText(bundle.getString("GUI.curFIG1.toolTipText")); // NOI18N
@@ -4233,6 +4657,7 @@ public class GUI extends javax.swing.JFrame {
         curFIG1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         POT1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        POT1.setEditable(false);
         POT1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         POT1.setText(bundle.getString("GUI.POT1.text")); // NOI18N
         POT1.setToolTipText(bundle.getString("GUI.POT1.toolTipText")); // NOI18N
@@ -4241,6 +4666,7 @@ public class GUI extends javax.swing.JFrame {
         POT1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         CON1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        CON1.setEditable(false);
         CON1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         CON1.setText(bundle.getString("GUI.CON1.text")); // NOI18N
         CON1.setToolTipText(bundle.getString("GUI.CON1.toolTipText")); // NOI18N
@@ -4249,6 +4675,7 @@ public class GUI extends javax.swing.JFrame {
         CON1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         GRD1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        GRD1.setEditable(false);
         GRD1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         GRD1.setText(bundle.getString("GUI.GRD1.text")); // NOI18N
         GRD1.setToolTipText(bundle.getString("GUI.GRD1.toolTipText")); // NOI18N
@@ -4257,6 +4684,7 @@ public class GUI extends javax.swing.JFrame {
         GRD1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         INJ1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        INJ1.setEditable(false);
         INJ1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         INJ1.setText(bundle.getString("GUI.INJ1.text")); // NOI18N
         INJ1.setToolTipText(bundle.getString("GUI.INJ1.toolTipText")); // NOI18N
@@ -4265,6 +4693,7 @@ public class GUI extends javax.swing.JFrame {
         INJ1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curOF1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curOF1.setEditable(false);
         curOF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curOF1.setText(bundle.getString("GUI.curOF1.text")); // NOI18N
         curOF1.setToolTipText(bundle.getString("GUI.curOF1.toolTipText")); // NOI18N
@@ -4273,6 +4702,7 @@ public class GUI extends javax.swing.JFrame {
         curOF1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curDF1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curDF1.setEditable(false);
         curDF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curDF1.setText(bundle.getString("GUI.curDF1.text")); // NOI18N
         curDF1.setToolTipText(bundle.getString("GUI.curDF1.toolTipText")); // NOI18N
@@ -4281,6 +4711,7 @@ public class GUI extends javax.swing.JFrame {
         curDF1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curOA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curOA1.setEditable(false);
         curOA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curOA1.setText(bundle.getString("GUI.curOA1.text")); // NOI18N
         curOA1.setToolTipText(bundle.getString("GUI.curOA1.toolTipText")); // NOI18N
@@ -4294,6 +4725,7 @@ public class GUI extends javax.swing.JFrame {
         });
 
         curSTK1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curSTK1.setEditable(false);
         curSTK1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curSTK1.setText(bundle.getString("GUI.curSTK1.text")); // NOI18N
         curSTK1.setToolTipText(bundle.getString("GUI.curSTK1.toolTipText")); // NOI18N
@@ -4302,6 +4734,7 @@ public class GUI extends javax.swing.JFrame {
         curSTK1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curPLA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curPLA1.setEditable(false);
         curPLA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curPLA1.setText(bundle.getString("GUI.curPLA1.text")); // NOI18N
         curPLA1.setToolTipText(bundle.getString("GUI.curPLA1.toolTipText")); // NOI18N
@@ -4310,6 +4743,7 @@ public class GUI extends javax.swing.JFrame {
         curPLA1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curSHO1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curSHO1.setEditable(false);
         curSHO1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curSHO1.setText(bundle.getString("GUI.curSHO1.text")); // NOI18N
         curSHO1.setToolTipText(bundle.getString("GUI.curSHO1.toolTipText")); // NOI18N
@@ -4334,6 +4768,7 @@ public class GUI extends javax.swing.JFrame {
         dfLabel1.setMinimumSize(new java.awt.Dimension(30, 25));
 
         curEND1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curEND1.setEditable(false);
         curEND1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curEND1.setText(bundle.getString("GUI.curEND1.text")); // NOI18N
         curEND1.setToolTipText(bundle.getString("GUI.curEND1.toolTipText")); // NOI18N
@@ -4342,6 +4777,7 @@ public class GUI extends javax.swing.JFrame {
         curEND1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curPEN1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curPEN1.setEditable(false);
         curPEN1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curPEN1.setText(bundle.getString("GUI.curPEN1.text")); // NOI18N
         curPEN1.setToolTipText(bundle.getString("GUI.curPEN1.toolTipText")); // NOI18N
@@ -4350,6 +4786,7 @@ public class GUI extends javax.swing.JFrame {
         curPEN1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curHIT1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curHIT1.setEditable(false);
         curHIT1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curHIT1.setText(bundle.getString("GUI.curHIT1.text")); // NOI18N
         curHIT1.setToolTipText(bundle.getString("GUI.curHIT1.toolTipText")); // NOI18N
@@ -4358,6 +4795,7 @@ public class GUI extends javax.swing.JFrame {
         curHIT1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curSKA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curSKA1.setEditable(false);
         curSKA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curSKA1.setText(bundle.getString("GUI.curSKA1.text")); // NOI18N
         curSKA1.setToolTipText(bundle.getString("GUI.curSKA1.toolTipText")); // NOI18N
@@ -4366,6 +4804,7 @@ public class GUI extends javax.swing.JFrame {
         curSKA1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curCHK1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curCHK1.setEditable(false);
         curCHK1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curCHK1.setText(bundle.getString("GUI.curCHK1.text")); // NOI18N
         curCHK1.setToolTipText(bundle.getString("GUI.curCHK1.toolTipText")); // NOI18N
@@ -4374,6 +4813,7 @@ public class GUI extends javax.swing.JFrame {
         curCHK1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         curPOS1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        curPOS1.setEditable(false);
         curPOS1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         curPOS1.setText(bundle.getString("GUI.curPOS1.text")); // NOI18N
         curPOS1.setToolTipText(bundle.getString("GUI.curPOS1.toolTipText")); // NOI18N
@@ -4470,6 +4910,7 @@ public class GUI extends javax.swing.JFrame {
         potLabel1.setMinimumSize(new java.awt.Dimension(30, 25));
 
         projOA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        projOA1.setEditable(false);
         projOA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         projOA1.setText(bundle.getString("GUI.projOA1.text")); // NOI18N
         projOA1.setToolTipText(bundle.getString("GUI.projOA1.toolTipText")); // NOI18N
@@ -4483,12 +4924,14 @@ public class GUI extends javax.swing.JFrame {
         salaryYrLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         salaryAmt1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        salaryAmt1.setEditable(false);
         salaryAmt1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         salaryAmt1.setText(bundle.getString("GUI.salaryAmt1.text")); // NOI18N
         salaryAmt1.setMaximumSize(new java.awt.Dimension(61, 25));
         salaryAmt1.setMinimumSize(new java.awt.Dimension(25, 25));
 
         salaryYr1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        salaryYr1.setEditable(false);
         salaryYr1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         salaryYr1.setText(bundle.getString("GUI.salaryYr1.text")); // NOI18N
         salaryYr1.setToolTipText(bundle.getString("GUI.salaryYr1.toolTipText")); // NOI18N
@@ -4509,6 +4952,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel11.setToolTipText(bundle.getString("GUI.jLabel11.toolTipText")); // NOI18N
 
         trainOA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        trainOA1.setEditable(false);
         trainOA1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         trainOA1.setText(bundle.getString("GUI.trainOA1.text")); // NOI18N
         trainOA1.setToolTipText(bundle.getString("GUI.trainOA1.toolTipText")); // NOI18N
@@ -4529,6 +4973,7 @@ public class GUI extends javax.swing.JFrame {
         ceilingLabel5.setMinimumSize(new java.awt.Dimension(30, 25));
 
         trainOF1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        trainOF1.setEditable(false);
         trainOF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         trainOF1.setText(bundle.getString("GUI.trainOF1.text")); // NOI18N
         trainOF1.setToolTipText(bundle.getString("GUI.trainOF1.toolTipText")); // NOI18N
@@ -4537,6 +4982,7 @@ public class GUI extends javax.swing.JFrame {
         trainOF1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         trainDF1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        trainDF1.setEditable(false);
         trainDF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         trainDF1.setText(bundle.getString("GUI.trainDF1.text")); // NOI18N
         trainDF1.setToolTipText(bundle.getString("GUI.trainDF1.toolTipText")); // NOI18N
@@ -4545,6 +4991,7 @@ public class GUI extends javax.swing.JFrame {
         trainDF1.setPreferredSize(new java.awt.Dimension(30, 25));
 
         farmOF2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        farmOF2.setEditable(false);
         farmOF2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         farmOF2.setText(bundle.getString("GUI.farmOF2.text")); // NOI18N
         farmOF2.setToolTipText(bundle.getString("GUI.farmOF2.toolTipText")); // NOI18N
@@ -4553,6 +5000,7 @@ public class GUI extends javax.swing.JFrame {
         farmOF2.setPreferredSize(new java.awt.Dimension(30, 25));
 
         farmDF2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        farmDF2.setEditable(false);
         farmDF2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         farmDF2.setText(bundle.getString("GUI.farmDF2.text")); // NOI18N
         farmDF2.setToolTipText(bundle.getString("GUI.farmDF2.toolTipText")); // NOI18N
@@ -4568,6 +5016,7 @@ public class GUI extends javax.swing.JFrame {
         ceilingLabel6.setMinimumSize(new java.awt.Dimension(30, 25));
 
         farmOA2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        farmOA2.setEditable(false);
         farmOA2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         farmOA2.setText(bundle.getString("GUI.farmOA2.text")); // NOI18N
         farmOA2.setToolTipText(bundle.getString("GUI.farmOA2.toolTipText")); // NOI18N
@@ -4588,6 +5037,7 @@ public class GUI extends javax.swing.JFrame {
         ceilingLabel7.setMinimumSize(new java.awt.Dimension(30, 25));
 
         compareResult.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        compareResult.setEditable(false);
         compareResult.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         compareResult.setText(bundle.getString("GUI.compareResult.text")); // NOI18N
         compareResult.setToolTipText(bundle.getString("GUI.compareResult.toolTipText")); // NOI18N
@@ -4602,16 +5052,95 @@ public class GUI extends javax.swing.JFrame {
         ageLabel1.setToolTipText(bundle.getString("GUI.ageLabel1.toolTipText")); // NOI18N
 
         age1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        age1.setEditable(false);
         age1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         age1.setText(bundle.getString("GUI.age1.text")); // NOI18N
         age1.setToolTipText(bundle.getString("GUI.age1.toolTipText")); // NOI18N
         age1.setMaximumSize(new java.awt.Dimension(35, 25));
         age1.setMinimumSize(new java.awt.Dimension(35, 25));
 
+        playerTypeC1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        playerTypeC1.setEditable(false);
+        playerTypeC1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        playerTypeC1.setText(bundle.getString("GUI.playerTypeC1.text")); // NOI18N
+        playerTypeC1.setToolTipText(bundle.getString("GUI.playerTypeC1.toolTipText")); // NOI18N
+        playerTypeC1.setMaximumSize(new java.awt.Dimension(35, 25));
+        playerTypeC1.setMinimumSize(new java.awt.Dimension(35, 25));
+
+        playerTypeC2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        playerTypeC2.setEditable(false);
+        playerTypeC2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        playerTypeC2.setText(bundle.getString("GUI.playerTypeC2.text")); // NOI18N
+        playerTypeC2.setToolTipText(bundle.getString("GUI.playerTypeC1.toolTipText")); // NOI18N
+        playerTypeC2.setMaximumSize(new java.awt.Dimension(35, 25));
+        playerTypeC2.setMinimumSize(new java.awt.Dimension(35, 25));
+
+        playerTypeC3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        playerTypeC3.setEditable(false);
+        playerTypeC3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        playerTypeC3.setText(bundle.getString("GUI.playerTypeC3.text")); // NOI18N
+        playerTypeC3.setToolTipText(bundle.getString("GUI.playerTypeC3.toolTipText")); // NOI18N
+        playerTypeC3.setMaximumSize(new java.awt.Dimension(35, 25));
+        playerTypeC3.setMinimumSize(new java.awt.Dimension(35, 25));
+
+        playerTypeC4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        playerTypeC4.setEditable(false);
+        playerTypeC4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        playerTypeC4.setText(bundle.getString("GUI.playerTypeC4.text")); // NOI18N
+        playerTypeC4.setToolTipText(bundle.getString("GUI.playerTypeC3.toolTipText")); // NOI18N
+        playerTypeC4.setMaximumSize(new java.awt.Dimension(35, 25));
+        playerTypeC4.setMinimumSize(new java.awt.Dimension(35, 25));
+
+        posiC1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        posiC1.setEditable(false);
+        posiC1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        posiC1.setText(bundle.getString("GUI.posiC1.text")); // NOI18N
+        posiC1.setToolTipText(bundle.getString("GUI.posiC3.toolTipText")); // NOI18N
+        posiC1.setMaximumSize(new java.awt.Dimension(25, 25));
+        posiC1.setMinimumSize(new java.awt.Dimension(25, 25));
+        posiC1.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        posiC2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        posiC2.setEditable(false);
+        posiC2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        posiC2.setText(bundle.getString("GUI.posiC2.text")); // NOI18N
+        posiC2.setToolTipText(bundle.getString("GUI.posiC2.toolTipText")); // NOI18N
+        posiC2.setMaximumSize(new java.awt.Dimension(25, 25));
+        posiC2.setMinimumSize(new java.awt.Dimension(25, 25));
+        posiC2.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        posiC3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        posiC3.setEditable(false);
+        posiC3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        posiC3.setText(bundle.getString("GUI.posiC3.text")); // NOI18N
+        posiC3.setToolTipText(bundle.getString("GUI.posiC3.toolTipText")); // NOI18N
+        posiC3.setMaximumSize(new java.awt.Dimension(25, 25));
+        posiC3.setMinimumSize(new java.awt.Dimension(25, 25));
+        posiC3.setPreferredSize(new java.awt.Dimension(25, 25));
+
+        posiC4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        posiC4.setEditable(false);
+        posiC4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        posiC4.setText(bundle.getString("GUI.posiC4.text")); // NOI18N
+        posiC4.setToolTipText(bundle.getString("GUI.posiC2.toolTipText")); // NOI18N
+        posiC4.setMaximumSize(new java.awt.Dimension(25, 25));
+        posiC4.setMinimumSize(new java.awt.Dimension(25, 25));
+        posiC4.setPreferredSize(new java.awt.Dimension(25, 25));
+
         javax.swing.GroupLayout comparePlayersTabLayout = new javax.swing.GroupLayout(comparePlayersTab);
         comparePlayersTab.setLayout(comparePlayersTabLayout);
         comparePlayersTabLayout.setHorizontalGroup(
             comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                .addGap(308, 308, 308)
+                .addComponent(posiC1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(posiC2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 487, Short.MAX_VALUE)
+                .addComponent(posiC3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(posiC4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56))
             .addGroup(comparePlayersTabLayout.createSequentialGroup()
                 .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(comparePlayersTabLayout.createSequentialGroup()
@@ -4622,8 +5151,8 @@ public class GUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(comparePlayerField2, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(61, 61, 61)
+                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(comparePlayersTabLayout.createSequentialGroup()
                                 .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(shoLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4639,38 +5168,6 @@ public class GUI extends javax.swing.JFrame {
                                 .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(comparePlayersTabLayout.createSequentialGroup()
                                         .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(projPLA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                                .addGap(36, 36, 36)
-                                                .addComponent(projSTK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(projCHK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                                .addGap(36, 36, 36)
-                                                .addComponent(projPOS1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                                .addGap(72, 72, 72)
-                                                .addComponent(projHIT1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                                .addGap(216, 216, 216)
-                                                .addComponent(projFAC1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                                .addGap(288, 288, 288)
-                                                .addComponent(projFIG1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                                .addGap(324, 324, 324)
-                                                .addComponent(projSTR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                                .addGap(108, 108, 108)
-                                                .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                                        .addComponent(ceilingLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(compareResult, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addComponent(projSKA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                    .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(comparePlayersTabLayout.createSequentialGroup()
                                                 .addComponent(curPLA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4680,34 +5177,91 @@ public class GUI extends javax.swing.JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(stkLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                                                .addComponent(chkLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(posLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(hitLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(skaLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(endLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(penLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(facLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(leaLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(figLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(strLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(potLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(conLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(grdLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(injLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(ofLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(dfLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(oaLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                 .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                                    .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                        .addComponent(ceilingLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(ceilingLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                     .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                                            .addComponent(trainOF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(trainDF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(trainOA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addComponent(farmOF2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                                            .addGap(72, 72, 72)
-                                                            .addComponent(farmOA2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(projCHK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addGroup(comparePlayersTabLayout.createSequentialGroup()
                                                             .addGap(36, 36, 36)
-                                                            .addComponent(farmDF2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                                .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                                    .addComponent(projOF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(projDF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(projOA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                            .addComponent(projPOS1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                                                            .addGap(72, 72, 72)
+                                                            .addComponent(projHIT1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                                                            .addGap(216, 216, 216)
+                                                            .addComponent(projFAC1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                                                            .addGap(288, 288, 288)
+                                                            .addComponent(projFIG1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                                                            .addGap(324, 324, 324)
+                                                            .addComponent(projSTR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                                                            .addGap(108, 108, 108)
+                                                            .addComponent(projSKA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                    .addGap(100, 100, 100)
+                                                    .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                                                            .addComponent(ceilingLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addComponent(farmOF2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                                                                    .addGap(72, 72, 72)
+                                                                    .addComponent(farmOA2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                                                                    .addGap(36, 36, 36)
+                                                                    .addComponent(farmDF2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                            .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                                                                .addComponent(ceilingLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(trainOF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(trainDF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(trainOA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                            .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                                                                .addComponent(projOF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(projDF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(projOA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                                 .addGroup(comparePlayersTabLayout.createSequentialGroup()
                                                     .addComponent(curCHK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4743,43 +5297,26 @@ public class GUI extends javax.swing.JFrame {
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                     .addComponent(curOA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                             .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(156, 156, 156)
                                                 .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(ageLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                                        .addComponent(chkLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(posLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(hitLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(skaLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(endLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(penLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(facLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addComponent(age1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(leaLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(figLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(strLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(potLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(conLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(grdLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(injLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(ofLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(dfLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(oaLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                                    .addComponent(playerTypeC1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(playerTypeC2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(playerTypeC3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(playerTypeC4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(57, 57, 57))))
+                                    .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(projPLA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                                                .addGap(36, 36, 36)
+                                                .addComponent(projSTK1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(114, 114, 114)
+                                        .addComponent(ceilingLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(compareResult, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(comparePlayersTabLayout.createSequentialGroup()
                                 .addGap(166, 166, 166)
                                 .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4790,8 +5327,14 @@ public class GUI extends javax.swing.JFrame {
                                     .addGroup(comparePlayersTabLayout.createSequentialGroup()
                                         .addComponent(salaryYrLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(salaryAmtLabel1)))))))
-                .addContainerGap(129, Short.MAX_VALUE))
+                                        .addComponent(salaryAmtLabel1)))
+                                .addGap(18, 18, 18)
+                                .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                                        .addGap(12, 12, 12)
+                                        .addComponent(ageLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(age1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
         comparePlayersTabLayout.setVerticalGroup(
             comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4801,18 +5344,37 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(comparePlayerField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(comparePlayerButton)
                     .addComponent(comparePlayerField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(salaryAmtLabel1)
-                    .addComponent(salaryYrLabel1)
-                    .addComponent(ageLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(salaryYr1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(salaryAmt1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(age1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, comparePlayersTabLayout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(posiC1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(posiC2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(posiC3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(posiC4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(salaryAmtLabel1)
+                            .addComponent(salaryYrLabel1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(salaryYr1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(salaryAmt1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(playerTypeC3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(playerTypeC1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(ageLabel1)
+                            .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(playerTypeC4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(playerTypeC2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(age1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(13, 13, 13)
                 .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(comparePlayersTabLayout.createSequentialGroup()
@@ -4832,6 +5394,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(penLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(facLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(leaLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(stkLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(figLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(strLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(potLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4840,12 +5403,9 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(injLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ofLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(dfLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(oaLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(stkLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(oaLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(curPLA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(curSTK1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(POT1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(CON1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4863,21 +5423,29 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(curFAC1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(curLEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(curFIG1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(curSTR1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(curSTR1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(curPLA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(curSTK1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(6, 6, 6)
                 .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(projPLA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(projSHO1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(ceilingLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(projSTK1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(projCHK1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(projPOS1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(projHIT1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(projSKA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(projFAC1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(projFIG1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(projSTR1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(comparePlayersTabLayout.createSequentialGroup()
+                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(projPLA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(projSHO1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ceilingLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(projSTK1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(projCHK1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(projPOS1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(projHIT1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(projSKA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(projFAC1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(projFIG1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(projSTR1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29)
+                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(compareResult, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ceilingLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(comparePlayersTabLayout.createSequentialGroup()
                         .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(projOF1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4885,27 +5453,19 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(projOA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(trainOF1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ceilingLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(farmOF2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ceilingLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                .addComponent(trainDF1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(farmDF2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(comparePlayersTabLayout.createSequentialGroup()
-                                .addComponent(trainOA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(farmOA2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(29, 29, 29)
-                .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(compareResult, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ceilingLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(218, Short.MAX_VALUE))
+                            .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(trainOF1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ceilingLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(trainDF1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(trainOA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(comparePlayersTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(farmOF2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ceilingLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(farmDF2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(farmOA2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(190, Short.MAX_VALUE))
         );
 
         playerTab.addTab(bundle.getString("GUI.comparePlayersTab.TabConstraints.tabTitle"), comparePlayersTab); // NOI18N
@@ -4921,6 +5481,15 @@ public class GUI extends javax.swing.JFrame {
         });
         jMenu1.add(openMenu);
 
+        writePlayersFile.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        writePlayersFile.setText(bundle.getString("GUI.writePlayersFile.text")); // NOI18N
+        writePlayersFile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                writePlayersFileActionPerformed(evt);
+            }
+        });
+        jMenu1.add(writePlayersFile);
+
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Z, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem2.setText(bundle.getString("GUI.jMenuItem2.text")); // NOI18N
         jMenu1.add(jMenuItem2);
@@ -4928,6 +5497,15 @@ public class GUI extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText(bundle.getString("GUI.jMenu2.text")); // NOI18N
+
+        faq.setText(bundle.getString("GUI.faq.text")); // NOI18N
+        faq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                faqActionPerformed(evt);
+            }
+        });
+        jMenu2.add(faq);
+
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -5162,7 +5740,7 @@ public class GUI extends javax.swing.JFrame {
         private void lwListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lwListMouseClicked
             if (evt.getClickCount() == 2) {
                 String name = (String) lwList.getSelectedValue();
-                playerTab.setSelectedIndex(3);
+                playerTab.setSelectedIndex(2);
                 searchField.setText(name);
                 searchPlayer.doClick();
             }
@@ -5171,7 +5749,7 @@ public class GUI extends javax.swing.JFrame {
         private void cListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cListMouseClicked
             if (evt.getClickCount() == 2) {
                 String name = (String) cList.getSelectedValue();
-                playerTab.setSelectedIndex(3);
+                playerTab.setSelectedIndex(2);
                 searchField.setText(name);
                 searchPlayer.doClick();
             }
@@ -5180,7 +5758,7 @@ public class GUI extends javax.swing.JFrame {
         private void rwListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rwListMouseClicked
             if (evt.getClickCount() == 2) {
                 String name = (String) rwList.getSelectedValue();
-                playerTab.setSelectedIndex(3);
+                playerTab.setSelectedIndex(2);
                 searchField.setText(name);
                 searchPlayer.doClick();
             }
@@ -5189,7 +5767,7 @@ public class GUI extends javax.swing.JFrame {
         private void dListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dListMouseClicked
             if (evt.getClickCount() == 2) {
                 String name = (String) dList.getSelectedValue();
-                playerTab.setSelectedIndex(3);
+                playerTab.setSelectedIndex(2);
                 searchField.setText(name);
                 searchPlayer.doClick();
             }
@@ -5198,7 +5776,7 @@ public class GUI extends javax.swing.JFrame {
         private void gListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gListMouseClicked
             if (evt.getClickCount() == 2) {
                 String name = (String) gList.getSelectedValue();
-                playerTab.setSelectedIndex(3);
+                playerTab.setSelectedIndex(2);
                 searchField.setText(name);
                 searchPlayer.doClick();
             }
@@ -5207,7 +5785,7 @@ public class GUI extends javax.swing.JFrame {
         private void draftLwListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftLwListMouseClicked
             if (evt.getClickCount() == 2) {
                 String name = (String) draftLwList.getSelectedValue();
-                playerTab.setSelectedIndex(3);
+                playerTab.setSelectedIndex(2);
                 searchField.setText(name);
                 searchPlayer.doClick();
             }
@@ -5216,7 +5794,7 @@ public class GUI extends javax.swing.JFrame {
         private void draftCListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftCListMouseClicked
             if (evt.getClickCount() == 2) {
                 String name = (String) draftCList.getSelectedValue();
-                playerTab.setSelectedIndex(3);
+                playerTab.setSelectedIndex(2);
                 searchField.setText(name);
                 searchPlayer.doClick();
             }
@@ -5225,7 +5803,7 @@ public class GUI extends javax.swing.JFrame {
         private void draftRwListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftRwListMouseClicked
             if (evt.getClickCount() == 2) {
                 String name = (String) draftRwList.getSelectedValue();
-                playerTab.setSelectedIndex(3);
+                playerTab.setSelectedIndex(2);
                 searchField.setText(name);
                 searchPlayer.doClick();
             }
@@ -5234,7 +5812,7 @@ public class GUI extends javax.swing.JFrame {
         private void draftDListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftDListMouseClicked
             if (evt.getClickCount() == 2) {
                 String name = (String) draftDList.getSelectedValue();
-                playerTab.setSelectedIndex(3);
+                playerTab.setSelectedIndex(2);
                 searchField.setText(name);
                 searchPlayer.doClick();
             }
@@ -5243,7 +5821,7 @@ public class GUI extends javax.swing.JFrame {
         private void draftGListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftGListMouseClicked
             if (evt.getClickCount() == 2) {
                 String name = (String) draftGList.getSelectedValue();
-                playerTab.setSelectedIndex(3);
+                playerTab.setSelectedIndex(2);
                 searchField.setText(name);
                 searchPlayer.doClick();
             }
@@ -5265,7 +5843,7 @@ public class GUI extends javax.swing.JFrame {
                 String name = (String) draftBestAvailable.getSelectedValue();
                 int space=name.indexOf(" ")+1;
                 name=name.substring(space, name.length()-3);
-                playerTab.setSelectedIndex(3);
+                playerTab.setSelectedIndex(2);
                 searchField.setText(name);
                 searchPlayer.doClick();
             }
@@ -5276,7 +5854,7 @@ public class GUI extends javax.swing.JFrame {
                 String name = (String)myDraftList.getSelectedValue();
                 int space=name.indexOf(" ")+1;
                 name=name.substring(space, name.length()-3);
-                playerTab.setSelectedIndex(3);
+                playerTab.setSelectedIndex(2);
                 searchField.setText(name);
                 searchPlayer.doClick();
             }
@@ -5304,7 +5882,9 @@ public class GUI extends javax.swing.JFrame {
         }//GEN-LAST:event_comparePlayerField1KeyPressed
 
         private void comparePlayerField2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_comparePlayerField2KeyPressed
-            // TODO add your handling code here:
+            if (evt.getKeyCode() == 10) {
+                comparePlayers();
+            }
         }//GEN-LAST:event_comparePlayerField2KeyPressed
 
         private void curOA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curOA1ActionPerformed
@@ -5323,6 +5903,482 @@ public class GUI extends javax.swing.JFrame {
             comparePlayers();
         }//GEN-LAST:event_comparePlayerButtonActionPerformed
 
+        private void curSHOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curSHOActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCurSHO(Integer.parseInt(curSHO.getText()));
+        }//GEN-LAST:event_curSHOActionPerformed
+
+        private void curPLAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curPLAActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCurPLA(Integer.parseInt(curPLA.getText()));
+}//GEN-LAST:event_curPLAActionPerformed
+
+        private void curSTKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curSTKActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCurSTK(Integer.parseInt(curSTK.getText()));
+        }//GEN-LAST:event_curSTKActionPerformed
+
+        private void curCHKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curCHKActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCurCHK(Integer.parseInt(curCHK.getText()));
+        }//GEN-LAST:event_curCHKActionPerformed
+
+        private void curPOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curPOSActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCurPOS(Integer.parseInt(curPOS.getText()));
+        }//GEN-LAST:event_curPOSActionPerformed
+
+        private void curHITActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curHITActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCurHIT(Integer.parseInt(curHIT.getText()));
+        }//GEN-LAST:event_curHITActionPerformed
+
+        private void curSKAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curSKAActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCurSKA(Integer.parseInt(curSKA.getText()));
+        }//GEN-LAST:event_curSKAActionPerformed
+
+        private void curENDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curENDActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCurEND(Integer.parseInt(curEND.getText()));
+        }//GEN-LAST:event_curENDActionPerformed
+
+        private void curPENActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curPENActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setPEN(Integer.parseInt(curPEN.getText()));
+        }//GEN-LAST:event_curPENActionPerformed
+
+        private void curFACActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curFACActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCurFAC(Integer.parseInt(curFAC.getText()));
+        }//GEN-LAST:event_curFACActionPerformed
+
+        private void curLEAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curLEAActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setLEA(Integer.parseInt(curLEA.getText()));
+        }//GEN-LAST:event_curLEAActionPerformed
+
+        private void curFIGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curFIGActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCurFGT(Integer.parseInt(curFIG.getText()));
+        }//GEN-LAST:event_curFIGActionPerformed
+
+        private void curSTRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curSTRActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCurSTR(Integer.parseInt(curSTR.getText()));
+        }//GEN-LAST:event_curSTRActionPerformed
+
+        private void POTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_POTActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setPOT(Integer.parseInt(POT.getText()));
+        }//GEN-LAST:event_POTActionPerformed
+
+        private void CONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CONActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCON(Integer.parseInt(CON.getText()));
+        }//GEN-LAST:event_CONActionPerformed
+
+        private void GRDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GRDActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setGRD(Integer.parseInt(GRD.getText()));
+        }//GEN-LAST:event_GRDActionPerformed
+
+        private void ceilSHOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilSHOActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCeilSHO(Integer.parseInt(ceilSHO.getText()));
+        }//GEN-LAST:event_ceilSHOActionPerformed
+
+        private void ceilPLAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilPLAActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCeilPLA(Integer.parseInt(ceilPLA.getText()));
+        }//GEN-LAST:event_ceilPLAActionPerformed
+
+        private void ceilSTKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilSTKActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCeilSTK(Integer.parseInt(ceilSTK.getText()));
+        }//GEN-LAST:event_ceilSTKActionPerformed
+
+        private void ceilCHKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilCHKActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCeilCHK(Integer.parseInt(ceilCHK.getText()));
+        }//GEN-LAST:event_ceilCHKActionPerformed
+
+        private void ceilPOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilPOSActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCeilPOS(Integer.parseInt(ceilPOS.getText()));
+        }//GEN-LAST:event_ceilPOSActionPerformed
+
+        private void ceilHITActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilHITActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCeilHIT(Integer.parseInt(ceilHIT.getText()));
+        }//GEN-LAST:event_ceilHITActionPerformed
+
+        private void ceilSKAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilSKAActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCeilSKA(Integer.parseInt(ceilSKA.getText()));
+        }//GEN-LAST:event_ceilSKAActionPerformed
+
+        private void ceilENDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilENDActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCeilEND(Integer.parseInt(ceilEND.getText()));
+        }//GEN-LAST:event_ceilENDActionPerformed
+
+        private void ceilPENActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilPENActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCeilPEN(Integer.parseInt(ceilPEN.getText()));
+        }//GEN-LAST:event_ceilPENActionPerformed
+
+        private void ceilFACActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilFACActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCeilFAC(Integer.parseInt(ceilFAC.getText()));
+        }//GEN-LAST:event_ceilFACActionPerformed
+
+        private void ceilLEAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilLEAActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCeilLEA(Integer.parseInt(ceilLEA.getText()));
+        }//GEN-LAST:event_ceilLEAActionPerformed
+
+        private void ceilFIGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilFIGActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCeilFGT(Integer.parseInt(ceilFIG.getText()));
+        }//GEN-LAST:event_ceilFIGActionPerformed
+
+        private void ceilSTRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilSTRActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCeilSTR(Integer.parseInt(ceilSTR.getText()));
+        }//GEN-LAST:event_ceilSTRActionPerformed
+
+        private void playerPanelAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_playerPanelAncestorAdded
+
+        }//GEN-LAST:event_playerPanelAncestorAdded
+
+        private void writePlayersFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_writePlayersFileActionPerformed
+                fH.writePlayersFile(playerSet);
+        }//GEN-LAST:event_writePlayersFileActionPerformed
+
+        private void ceilSHO1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilSHO1ActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_ceilSHO1ActionPerformed
+
+        private void ceilPLA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilPLA1ActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_ceilPLA1ActionPerformed
+
+        private void ceilSTK1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilSTK1ActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_ceilSTK1ActionPerformed
+
+        private void ceilCHK1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilCHK1ActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_ceilCHK1ActionPerformed
+
+        private void ceilPOS1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilPOS1ActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_ceilPOS1ActionPerformed
+
+        private void ceilHIT1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilHIT1ActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_ceilHIT1ActionPerformed
+
+        private void ceilSKA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilSKA1ActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_ceilSKA1ActionPerformed
+
+        private void ceilEND1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilEND1ActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_ceilEND1ActionPerformed
+
+        private void ceilPEN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilPEN1ActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_ceilPEN1ActionPerformed
+
+        private void ceilFAC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilFAC1ActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_ceilFAC1ActionPerformed
+
+        private void ceilLEA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilLEA1ActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_ceilLEA1ActionPerformed
+
+        private void ceilFIG1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilFIG1ActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_ceilFIG1ActionPerformed
+
+        private void ceilSTR1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceilSTR1ActionPerformed
+            // TODO add your handling code here:
+        }//GEN-LAST:event_ceilSTR1ActionPerformed
+
+        private void statusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setpStatus(Integer.parseInt(status.getText()));// TODO add your handling code here:
+        }//GEN-LAST:event_statusActionPerformed
+
+        private void clickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clickActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setCLK(Integer.parseInt(click.getText()));
+        }//GEN-LAST:event_clickActionPerformed
+
+        private void handActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_handActionPerformed
+            if (foundPlayer!=null){
+                int handed=0;
+                if (hand.getText().equalsIgnoreCase("L"))
+                    handed=1;
+                foundPlayer.setHanded(handed);
+            }
+        }//GEN-LAST:event_handActionPerformed
+
+        private void weightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_weightActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setWeight(Integer.parseInt(weight.getText()));
+        }//GEN-LAST:event_weightActionPerformed
+
+        private void heightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_heightActionPerformed
+            if (foundPlayer!=null){
+                String h=height.getText();
+                int s=0;
+                if (h.equalsIgnoreCase("5-5"))
+			s=0;
+		else if (h.equalsIgnoreCase("5-6"))
+			s=1;
+		else if (h.equalsIgnoreCase("5-7"))
+			s=2;
+		else if (h.equalsIgnoreCase("5-8"))
+			s=3;
+		else if (h.equalsIgnoreCase("5-9"))
+			s=4;
+		else if (h.equalsIgnoreCase("5-10"))
+			s=5;
+		else if (h.equalsIgnoreCase("5-11"))
+			s=6;
+		else if (h.equalsIgnoreCase("6-0"))
+			s=7;
+		else if (h.equalsIgnoreCase("6-1"))
+			s=8;
+		else if (h.equalsIgnoreCase("6-2"))
+			s=9;
+		else if (h.equalsIgnoreCase("6-3"))
+			s=10;
+		else if (h.equalsIgnoreCase("6-4"))
+			s=11;
+		else if (h.equalsIgnoreCase("6-5"))
+			s=12;
+		else if (h.equalsIgnoreCase("6-6"))
+			s=13;
+		else if (h.equalsIgnoreCase("6-7"))
+			s=14;
+		else if (h.equalsIgnoreCase("6-8"))
+			s=15;
+		else if (h.equalsIgnoreCase("6-9"))
+			s=16;
+		else if (h.equalsIgnoreCase("6-10"))
+			s=17;
+		else if (h.equalsIgnoreCase("6-11"))
+			s=18;
+		else if (h.equalsIgnoreCase("7-0")) {
+			s=19;
+		}
+                foundPlayer.setHeight(s);
+            }
+        }//GEN-LAST:event_heightActionPerformed
+
+        private void salaryAmtConsideringActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salaryAmtConsideringActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setOfferData(Integer.parseInt(salaryAmt.getText()));
+        }//GEN-LAST:event_salaryAmtConsideringActionPerformed
+
+        private void salaryYrConsideringActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salaryYrConsideringActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setTimeConsidering(Integer.parseInt(salaryYrConsidering.getText()));
+        }//GEN-LAST:event_salaryYrConsideringActionPerformed
+
+        private void twoWayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoWayActionPerformed
+            if (foundPlayer!=null){
+                int way2=0;
+                if (twoWay.getText().equalsIgnoreCase("Yes"))
+                    way2=1;
+                foundPlayer.setTwoWay(way2);
+            }
+        }//GEN-LAST:event_twoWayActionPerformed
+
+        private void salaryAmtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salaryAmtActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setSalary(Integer.parseInt(salaryAmt.getText()));
+        }//GEN-LAST:event_salaryAmtActionPerformed
+
+        private void salaryYrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salaryYrActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setContractYr(Integer.parseInt(salaryYr.getText()));
+        }//GEN-LAST:event_salaryYrActionPerformed
+
+        private void draftTeamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftTeamActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setDraftTeam(Integer.parseInt(draftTeam.getText()));
+        }//GEN-LAST:event_draftTeamActionPerformed
+
+        private void draftPosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftPosActionPerformed
+            if (foundPlayer!=null){
+                JOptionPane.showMessageDialog(this, "To successfully alter draft position, first make sure the draft round is what you want.  The utility also does not support rounds with more than 30 picks");
+                int overallDFT=(foundPlayer.getDraftRd()-1)*30+Integer.parseInt(draftPos.getText());
+                foundPlayer.setOverallDraft(overallDFT);
+            }
+        }//GEN-LAST:event_draftPosActionPerformed
+
+        private void draftRdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftRdActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setDraftRd(Integer.parseInt(draftRd.getText()));
+        }//GEN-LAST:event_draftRdActionPerformed
+
+        private void draftYrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_draftYrActionPerformed
+            if (foundPlayer!=null)
+                foundPlayer.setDraftYr(Integer.parseInt(draftYr.getText()));
+        }//GEN-LAST:event_draftYrActionPerformed
+
+        private void rightsFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rightsFieldActionPerformed
+            if (foundPlayer!=null){
+                String rights=rightsField.getText();
+                int num=98;
+                if (rights.equalsIgnoreCase("DFT")||rights.equalsIgnoreCase("Draft"))
+			num=99;
+		else if (rights.equalsIgnoreCase("ANA"))
+			num=1;
+		else if (rights.equalsIgnoreCase("ATL"))
+			num=2;
+		else if (rights.equalsIgnoreCase("BOS"))
+			num=3;
+		else if (rights.equalsIgnoreCase("BUF"))
+			num=4;
+		else if (rights.equalsIgnoreCase("CGY"))
+			num=5;
+		else if (rights.equalsIgnoreCase("CAR"))
+			num=6;
+		else if (rights.equalsIgnoreCase("CHI"))
+			num=7;
+		else if (rights.equalsIgnoreCase("COL"))
+			num=8;
+		else if (rights.equalsIgnoreCase("CBS")||rights.equalsIgnoreCase("CBJ"))
+			num=9;
+		else if (rights.equalsIgnoreCase("DAL"))
+			num=10;
+		else if (rights.equalsIgnoreCase("DET"))
+			num=11;
+		else if (rights.equalsIgnoreCase("EDM"))
+			num=12;
+		else if (rights.equalsIgnoreCase("FLA"))
+			num=13;
+		else if (rights.equalsIgnoreCase("LA"))
+			num=14;
+		else if (rights.equalsIgnoreCase("MIN"))
+			num=15;
+		else if (rights.equalsIgnoreCase("MTL")||rights.equalsIgnoreCase("MON"))
+			num=16;
+		else if (rights.equalsIgnoreCase("NYI"))
+			num=17;
+		else if (rights.equalsIgnoreCase("NYR"))
+			num=18;
+		else if (rights.equalsIgnoreCase("NSH")||rights.equalsIgnoreCase("NAS"))
+			num=19;
+		else if (rights.equalsIgnoreCase("NJ"))
+			num=20;
+		else if (rights.equalsIgnoreCase("OTT"))
+			num=21;
+		else if (rights.equalsIgnoreCase("PHI"))
+			num=22;
+		else if (rights.equalsIgnoreCase("PHO")||rights.equalsIgnoreCase("PHX"))
+			num=23;
+		else if (rights.equalsIgnoreCase("PIT"))
+			num=24;
+		else if (rights.equalsIgnoreCase("SJ"))
+			num=25;
+		else if (rights.equalsIgnoreCase("STL"))
+			num=26;
+		else if (rights.equalsIgnoreCase("TB"))
+			num=27;
+		else if (rights.equalsIgnoreCase("TOR"))
+			num=28;
+		else if (rights.equalsIgnoreCase("VAN"))
+			num=29;
+                else if(rights.equalsIgnoreCase("WSH") || rights.equalsIgnoreCase("WAS")) {
+			num=30;
+		}
+                foundPlayer.setRights(num);
+                foundPlayer.setNhlRights(num);
+                foundPlayer.setTEAM(num);
+            }
+        }//GEN-LAST:event_rightsFieldActionPerformed
+
+        private void altPOSIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_altPOSIActionPerformed
+            if (foundPlayer!=null){
+             String POSI=altPOSI.getText();
+             int num=1;
+                if (POSI.equalsIgnoreCase("G")) 
+                    num=1;
+		else if (POSI.equalsIgnoreCase("D"))
+                    num=2;
+		else if (POSI.equalsIgnoreCase("L"))
+                    num=3;
+		else if (POSI.equalsIgnoreCase("C"))
+                    num=4;
+		else if (POSI.equalsIgnoreCase("R"))
+                    num=5;
+		foundPlayer.setAltPOSI(num);   
+            }
+        }//GEN-LAST:event_altPOSIActionPerformed
+
+        private void mainPOSIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainPOSIActionPerformed
+            if (foundPlayer!=null){
+             String POSI=mainPOSI.getText();
+             int num=1;
+                if (POSI.equalsIgnoreCase("G"))
+                    num=1;
+		else if (POSI.equalsIgnoreCase("D"))
+                    num=2;
+		else if (POSI.equalsIgnoreCase("L"))
+                    num=3;
+		else if (POSI.equalsIgnoreCase("C"))
+                    num=4;
+		else if (POSI.equalsIgnoreCase("R"))
+                    num=5;
+		foundPlayer.setPOSI(num);   
+            }
+        }//GEN-LAST:event_mainPOSIActionPerformed
+
+        private void faqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_faqActionPerformed
+             JOptionPane.showMessageDialog(this,"FAQ: Players Tab:\n"
+                     + "Q: Why can't I edit the projected skills?\n"
+                     + "A: Projected skills are not saved in the players file; the only way to change them is to change the ceiling for that skill and/or POT.\n"
+                     + "Q: Why can't I edit the Player types?\n"
+                     + "A: Player types are represented by the second number of the POT in the players file, thus change the second number of the pot to change player types.\n"
+                     + "Q: Why isn't there a GP record, GP GWG, current assist streak, or current GWG streak?\n"
+                     + "A: The players file doesn't keep track of those.\n"
+                     + "Q: What is the similar players list?\n"
+                     + "A: A list of players with the same POT and CON.\n"
+                     + "Q: Why can't I change the Age?\n"
+                     + "A: EHM only keeps track of the birth year, day, and month; therefore, you would have to change each of those and right now they're not displayed on the GUI.\n"
+                     + "Q: Why can't I change the team to a farm team?\n"
+                     + "A: This feature is not currently implemented.\n"
+                     + "Q: Why doesn't editing the height, position, or handedness work?\n"
+                     + "A: Make sure you're editing it in the right format.  For Height it must be between '5-5' and '7-0'. For Position it must be either 'G', 'D', 'L', 'C', or 'R'. Handedness must be either 'L' or 'R'.\n"
+                     + "Q: Why are unusual numbers appearing for the stats?\n"
+                     + "A: The stats are just raw data from the players file, so that's how EHM stores it.\n"
+                     + "\nTeam tab:\n"
+                     + "Q: What is the format for the team search?\n"
+                     + "A: Enter the full name for the team. For example: Columbus, Florida, Boston, etc. For teams with the same city/state name and example of the format is New York I and New York R. Enter 'Draft' for draft and 'Free agent' for free agency.\n"
+                     + "\nCompare Players Tab:\n"
+                     + "Q: What do the green and red backgrounds signify?\n"
+                     + "A: Green means the first player has more of that than the second player. Red means the first player has less of that than the second player.\n"
+                     + "Q: What skills are taken into account for the result area?\n"
+                     + "A: All current and projected skills except the offense, defense, and overall average.\n"
+                     + "\nDraft Tab:\n"
+                     + "Q: Why doesn't the draft drop down list have all the years?\n"
+                     + "A: Currently the draft drop down only supports 2009-2016 and the current draft year which may be listed under 2017. Hopefully this will be better implemented in the future.\n"
+                     + "Q: Why does the current draft year only have 150 players.\n"
+                     + "A: The top 150 players according to projected overall are used to give an indication of the strength of the draft. To get the full list of draft picks use the team tab.\n"
+                     + "Q: How does the draft queue work?\n"
+                     + "A: simply drag and drop from the other lists. To delete an item on the queue just select it and presse 'delete'. To save your list, you can create a text file of it using the button.\n"
+                     + "Q: Is it possible to load a draft list?\n"
+                     + "A: No, but this may be added in the future.\n");
+        }//GEN-LAST:event_faqActionPerformed
+
     public void updateGUIToPlayer() {
         searchField.setText(foundPlayer.getFullName());
         ArrayList<String> skills = foundPlayer.getAllInfoList();
@@ -5336,7 +6392,19 @@ public class GUI extends javax.swing.JFrame {
             a[i] = ap.get(i).getFullName();
         }
         similarPlayerList.setListData(a);
+
+        
         playerID.setText("" + foundPlayer.getId());
+        if (foundPlayer.getRights()==99)
+            playerIcon.setIcon(teamList.get(30).getImageIcon(fH.getFilePath()));
+        else if(foundPlayer.getRights() == 98)
+            playerIcon.setIcon(teamList.get(31).getImageIcon(fH.getFilePath()));
+        else
+            playerIcon.setIcon(teamList.get(foundPlayer.getRights()-1).getImageIcon(fH.getFilePath()));
+
+        playerIcon.setText("");
+        playerTypeP1.setText(""+foundPlayer.playerType());
+        playerTypeP2.setText(""+foundPlayer.playerType2());
 
     }
 
@@ -5348,6 +6416,21 @@ public class GUI extends javax.swing.JFrame {
         proSalary.setText("" + team.getProSalary());
         farmSalary.setText("" + team.getFarmSalary());
         numPlayers.setText("" + team.getAllPlayers().size());
+        if (team.getName().equalsIgnoreCase("Draft")||team.getName().equalsIgnoreCase("Free Agent")){
+            allButton.setSelected(true);
+            proOffense.setText("");
+            proDefense.setText("");
+            proOA.setText("");
+            numPlayersPro.setText("");
+            numPlayersFarm.setText("");
+            numPlayersProsp.setText("");
+            lwList.setListData(team.getLeftWing(team.getAllPlayers()));
+            cList.setListData(team.getCenter(team.getAllPlayers()));
+            rwList.setListData(team.getRightWing(team.getAllPlayers()));
+            dList.setListData(team.getDefense(team.getAllPlayers()));
+            gList.setListData(team.getGoalie(team.getAllPlayers()));
+        }
+        else{
         proOffense.setText("" + team.offenseAverage());
         proDefense.setText("" + team.defenseAverage());
         proOA.setText("" + team.overallAverage());
@@ -5386,8 +6469,8 @@ public class GUI extends javax.swing.JFrame {
         avgProOverall();
         avgProDefense();
         avgProOffense();
-        strengthOfDrafts();
-
+        //strengthOfDrafts();
+        }
     }
 
     public void updateGUIToDraft(ArrayList<Player> p, Team draft) {
@@ -5913,26 +6996,6 @@ public class GUI extends javax.swing.JFrame {
     public void separateDraftRounds() {
     }
 
-    private void createDraftList() {
-        try {
-            if (league.getCurrentDraftYear() == -1) {
-                TreeSet<Integer> draftSort = new TreeSet<Integer>();
-                for (String s : league.getDrafts().keySet()) {
-                    draftSort.add(Integer.parseInt(s));
-                }
-                System.out.println(draftSort);
-                draftYearList = new JComboBox();
-                for (Integer i : draftSort) {
-                    draftYearList.addItem("" + i);
-                }
-                league.setCurrentDraftYear(draftSort.last() + 1);
-                draftYearList.addItem("" + (draftSort.last() + 1));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public void initializeNewFile() {
         fH.readFromPlayersFile();
         league = new League(fH.getSortedPlayers(), salaryCap);
@@ -6022,8 +7085,19 @@ public class GUI extends javax.swing.JFrame {
               ArrayList<Integer>comparisons=player1.comparePlayers(player2);
               ArrayList<JFormattedTextField> sft=getCompareTextFieldList();
               int sum=0;
+
+              playerTypeC1.setText(""+player1.playerType());
+              playerTypeC2.setText(""+player1.playerType2());
+              playerTypeC3.setText(""+player2.playerType());
+              playerTypeC4.setText(""+player2.playerType2());
+
+              posiC1.setText(""+player1.getStringPosition());
+              posiC2.setText(""+player1.getStringAlternatePosition());
+              posiC3.setText(""+player2.getStringPosition());
+              posiC4.setText(""+player2.getStringAlternatePosition());
+
               for (int i=0;i<sft.size();i++){
-                  if (i==sft.size()-1||i==sft.size()-2){}
+                  if (i==sft.size()-1||i==sft.size()-2||i==20||i==21||i==22||i==23||i==24||i==25||i==29||i==30||i==31){}
                   else{
                       sum+=comparisons.get(i);
                   }
@@ -6035,10 +7109,16 @@ public class GUI extends javax.swing.JFrame {
                       sft.get(i).setBackground(Color.RED);
                       sft.get(i).setText(""+comparisons.get(i));
                   }
-                  else
+                  else{
                       sft.get(i).setText(""+comparisons.get(i));
+                      sft.get(i).setBackground(Color.WHITE);}
               }
               double ageDif=player1.getAge()-player2.getAge();
+              String ageDifS=""+ageDif;
+                if (ageDifS.length()>5){
+                    ageDifS=ageDifS.substring(0,5);
+                    ageDif=Double.parseDouble(ageDifS);
+                                }
               if (ageDif>0){
                       age1.setBackground(Color.GREEN);
                       age1.setText("+"+ageDif);
@@ -6047,8 +7127,10 @@ public class GUI extends javax.swing.JFrame {
                       age1.setBackground(Color.RED);
                       age1.setText(""+ageDif);
                   }
-                  else
+                  else{
                       age1.setText(""+ageDif);
+                      age1.setBackground(Color.WHITE);
+              }
               if (sum>0){
                       compareResult.setBackground(Color.GREEN);
                       compareResult.setText("+"+sum);
@@ -6057,8 +7139,10 @@ public class GUI extends javax.swing.JFrame {
                       compareResult.setBackground(Color.RED);
                       compareResult.setText(""+sum);
                   }
-                  else
+                  else{
                       compareResult.setText(""+sum);
+                     compareResult.setBackground(Color.WHITE);
+              }
         }
         else
             JOptionPane.showMessageDialog(this,"Player(s) not found");
@@ -6396,6 +7480,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel endLabel1;
     private javax.swing.JLabel facLabel;
     private javax.swing.JLabel facLabel1;
+    private javax.swing.JMenuItem faq;
     private javax.swing.JFormattedTextField farmDF1;
     private javax.swing.JFormattedTextField farmDF2;
     private javax.swing.JFormattedTextField farmOA1;
@@ -6503,8 +7588,18 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel playerIcon;
     private javax.swing.JPanel playerPanel;
     private javax.swing.JTabbedPane playerTab;
+    private javax.swing.JFormattedTextField playerTypeC1;
+    private javax.swing.JFormattedTextField playerTypeC2;
+    private javax.swing.JFormattedTextField playerTypeC3;
+    private javax.swing.JFormattedTextField playerTypeC4;
+    private javax.swing.JFormattedTextField playerTypeP1;
+    private javax.swing.JFormattedTextField playerTypeP2;
     private javax.swing.JLabel posLabel;
     private javax.swing.JLabel posLabel1;
+    private javax.swing.JFormattedTextField posiC1;
+    private javax.swing.JFormattedTextField posiC2;
+    private javax.swing.JFormattedTextField posiC3;
+    private javax.swing.JFormattedTextField posiC4;
     private javax.swing.JLabel potLabel;
     private javax.swing.JLabel potLabel1;
     private javax.swing.JLabel proDFLabel;
@@ -6606,5 +7701,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel weeklyLabel4;
     private javax.swing.JFormattedTextField weight;
     private javax.swing.JLabel weightLabel;
+    private javax.swing.JMenuItem writePlayersFile;
     // End of variables declaration//GEN-END:variables
 }

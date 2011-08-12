@@ -2445,10 +2445,12 @@ public class Player implements Comparable{
 		list.add(""+this.getwGames());
 		list.add(""+this.getwGoals());
 		list.add(""+this.getwAssists());
+                list.add(""+(this.getwGoals()+this.getwAssists()));
 		list.add(""+this.getwGWG());
 		list.add(""+this.getmGames());
 		list.add(""+this.getmGoals());
 		list.add(""+this.getmAssists());
+                list.add(""+(this.getmGoals()+this.getmAssists()));
 		list.add(""+this.getmGWG());
 		list.add(""+this.getGoals());
 		list.add(""+this.getAssists());
@@ -2573,7 +2575,7 @@ public class Player implements Comparable{
                 dif.add(this.getpSTR()-other.getpSTR());
                 dif.add(this.getpFGT()-other.getpFGT());
                 
-                dif.add(this.getOffense()-other.getOffense());
+                dif.add(this.getOffense()-other.getOffense());//index 20
                 dif.add(this.getDefense()-other.getDefense());
                 dif.add(this.getOA()-other.getOA());
                 dif.add(this.getpOFF()-other.getpOFF());

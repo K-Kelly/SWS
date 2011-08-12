@@ -3,6 +3,8 @@ package sws3;
 import java.io.*;
 import java.math.BigDecimal;
 import java.util.*;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 public class FileHandler {
 	private File playersFile;
@@ -439,6 +441,7 @@ public class FileHandler {
 		}
 		try {
 			PrintWriter out = new PrintWriter(filePath+"players.ehm");
+                        System.out.println("This running?");
 			out.println(" 3500");
 			for(Player p: hash){
 				out.println(" "+p.getCurSHO()+"  "+p.getCurPLA()+"  "+p.getCurSTK()+"  "+p.getCurCHK()+"  "+p.getCurPOS()+"  "+p.getCurHIT()+"  "+p.getCurSKA()+"  "+p.getCurEND()+"  "+p.getPEN()+"  "+p.getCurFAC()+" ");
@@ -463,6 +466,7 @@ public class FileHandler {
 				out.println(" "+p.getAttitude()+"  "+p.getAltPOSI()+"  "+p.getNhlRights()+"  "+p.getInjProne()+"  "+p.getOverallDraft()+" ");
 			}
 			out.close();
+                        JOptionPane.showMessageDialog(new JPanel(), "Changes Successfully Saved");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
